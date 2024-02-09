@@ -104,6 +104,10 @@ module top_vgatest
     .locked(clk_locked)
   );
   // VGA signal generator
+  reg [7:0] r_i, g_i, b_i;
+  initial r_i= 8'b11111111;
+  initial g_i= 8'b11111111;
+  initial b_i= 8'b11111111;
   wire [7:0] vga_r, vga_g, vga_b;
   wire vga_hsync, vga_vsync, vga_blank;
   vga
@@ -124,6 +128,9 @@ module top_vgatest
     .clk_pixel(clk_pixel),
     .clk_pixel_ena(1'b1),
     .test_picture(1'b1), // enable test picture generation
+    .r_i(r_i),
+    .g_i(g_i),
+    .b_i(b_i),
     .vga_r(vga_r),
     .vga_g(vga_g),
     .vga_b(vga_b),
