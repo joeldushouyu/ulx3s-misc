@@ -106,7 +106,7 @@ reg R_hsync; reg R_vsync; reg R_blank; reg R_disp;  // disp = not blank
 reg R_disp_early; reg R_vdisp;  // blank generation
 reg R_blank_early; reg R_vblank;  // blank generation
 reg R_fetch_next;
-reg [7:0] R_vga_r; reg [7:0] R_vga_g; reg [7:0] R_vga_b;  // test picture generation
+// reg [7:0] R_vga_r; reg [7:0] R_vga_g; reg [7:0] R_vga_b;  // test picture generation
 wire [7:0] W; wire [7:0] A; wire [7:0] T;
 wire [5:0] Z;
 
@@ -185,22 +185,22 @@ wire [5:0] Z;
   always @(posedge clk_pixel) begin
     if(R_blank == 1'b1) begin
       // analog VGA needs this, DVI doesn't
-      R_vga_r <= {8{1'b0}};
-      R_vga_g <= {8{1'b0}};
-      R_vga_b <= {8{1'b0}};
+      r_i <= {8{1'b0}};
+      g_i <= {8{1'b0}};
+      b_i <= {8{1'b0}};
     end
-    else begin
-      R_vga_r <= (({(CounterX[5:0]) & Z,2'b00}) | W) &  ~A;
-      R_vga_g <= (((CounterX[7:0]) & T) | W) &  ~A;
-      R_vga_b <= (CounterY[7:0]) | W | A;
-    end
+    // else begin
+    //   R_vga_r <= (({(CounterX[5:0]) & Z,2'b00}) | W) &  ~A;
+    //   R_vga_g <= (((CounterX[7:0]) & T) | W) &  ~A;
+    //   R_vga_b <= (CounterY[7:0]) | W | A;
+    // end
     R_blank <= R_blank_early;
     R_disp <= R_disp_early;
   end
 
-  assign vga_r = R_vga_r;
-  assign vga_g = R_vga_g;
-  assign vga_b = R_vga_b;
+  assign vga_r = r_i;
+  assign vga_g = g_i;
+  assign vga_b = b_i;
   assign vga_hsync = R_hsync;
   assign vga_vsync = R_vsync;
   assign vga_blank = R_blank;
