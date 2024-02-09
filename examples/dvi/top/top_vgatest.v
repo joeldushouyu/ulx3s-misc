@@ -26,6 +26,9 @@ module top_vgatest
 (
   input        clk_25mhz,
   input  [6:0] btn,
+  input [7:0] r_i,
+  input [7:0] g_i,
+  input [7:0] b_i,
   output [7:0] led,
   output [3:0] gpdi_dp,
   output       user_programn,
@@ -104,10 +107,6 @@ module top_vgatest
     .locked(clk_locked)
   );
   // VGA signal generator
-  reg [7:0] r_i, g_i, b_i;
-  initial r_i= 8'b11111111;
-  initial g_i= 8'b11111111;
-  initial b_i= 8'b11111111;
   wire [7:0] vga_r, vga_g, vga_b;
   wire vga_hsync, vga_vsync, vga_blank;
   vga
