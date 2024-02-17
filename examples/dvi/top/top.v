@@ -27,14 +27,18 @@ module top #(
     input [6:0] btn,
     output [7:0] led,
     output [3:0] gpdi_dp,
-    output user_programn,
     output wifi_gpio0
 );
 
   reg [7:0] r_i, g_i, b_i;
   initial r_i = 8'b11111111;
   initial g_i = 8'b11111111;
-  initial b_i = 8'b11111111;
+  initial b_i = 8'b00000000;
+
+
+  reg fetch_next_pixel_signal;
+
+
   top_vgatest #(
       .x(x),
       .y(y),
@@ -47,12 +51,36 @@ module top #(
       .btn(btn),
       .led(led),
       .gpdi_dp(gpdi_dp),
-      .user_programn(user_programn),
       .wifi_gpio0(wifi_gpio0),
       .r_i(r_i),
       .g_i(g_i),
       .b_i(b_i),
+      .fetch_next_pixel(fetch_next_pixel_signal),
 
   );
+
+  reg [1:0] pixelState;
+  initial pixelState = 2'b00;
+  always @( posedge  fetch_next_pixel_signal) begin
+
+    if (pixelState == 2'b00) begin
+      r_i <= 8'b11111111;
+      g_i <= 8'b00000000;
+      b_i <= 8'b00000000;
+
+      pixelState = 2'b01;
+    end else if (pixelState == 2'b01) begin
+      r_i <= 8'b00000000;
+      g_i <= 8'b11111111;
+      b_i <= 8'b00000000;
+      pixelState = 2'b10;
+    end else begin
+      r_i <= 8'b00000000;
+      g_i <= 8'b00000000;
+      b_i <= 8'b11111111;
+      pixelState = 2'b00;
+    end
+  end
+
 
 endmodule
