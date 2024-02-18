@@ -1,6 +1,6 @@
-module top_vgatest #(parameter x = 1280,     // pixels
-                     parameter y = 768,      // pixels
-                     parameter f = 60,       // Hz 60, 50, 30
+module top_vgatest #(parameter x = 1920,     // pixels
+                     parameter y = 1080,     // pixels
+                     parameter f = 30,       // Hz 60, 50, 30
                      parameter xadjustf = 0, // or to fine-tune f
                      parameter yadjustf = 0, // or to fine-tune f
                      parameter c_ddr = 1,    // 0:SDR 1:DDR
@@ -54,16 +54,18 @@ module top_vgatest #(parameter x = 1280,     // pixels
     //   if (R_delay_reload[19] == 0)
     //     R_delay_reload <= R_delay_reload+1;
     // assign user_programn = btn[0] | ~R_delay_reload[19];
-    
     // clock generator
     wire clk_locked;
     wire [3:0] clocks;
-    wire clk_shift = clocks[0];
-    wire clk_pixel = clocks[1];
+    wire clk_shift = clocks[1];
+    wire clk_pixel = clocks[2];
+    wire sram_clk = clock[0]; // it is 164000000 + 1500000, which is 165.5MHZ
     ecp5pll #(
     .in_hz  (25000000),
-    .out0_hz(pixel_f * 5 * (c_ddr ? 1 : 2)),
-    .out1_hz(pixel_f)
+    .out1_hz(pixel_f * 5 * (c_ddr ? 1 : 2)),
+    .out2_hz(pixel_f),  // this is a 183.02MHZ at 1080p 30hz
+    .out0_hz(164000000),
+    .out0_tol_hz(1500000),
     ) ecp5pll_inst (
     .clk_i (clk_25mhz),
     .clk_o (clocks),
@@ -111,31 +113,31 @@ module top_vgatest #(parameter x = 1280,     // pixels
     
     reg [9:0] x_current = 10'b0;
     reg [9:0] y_current = 10'b0;
-      
+    
     reg [20:0] countx = 0;    reg [20:0] county = 0;
-    always@( posedge clk_pixel) begin
-
-      if(fetch_next) begin
-        if(countx == x-1 )begin
-
-          countx <= 0;
-          if(county == (y/2)-1) begin
-              pixelState <= pixelNextState;
-              county <= 0;
-          end
-          else begin
-            county<= county+1;
-           end
-
+    always@(posedge clk_pixel) begin
+        
+        if (fetch_next) begin
+            if (countx == x-1)begin
+                
+                countx <= 0;
+                if (county == (y/2)-1) begin
+                    pixelState <= pixelNextState;
+                    county     <= 0;
+                end
+                else begin
+                    county <= county+1;
+                end
+                
+            end
+            else begin
+                countx <= countx + 1;
+            end
+            
         end
-        else begin
-          countx <= countx + 1;
-        end
-
-      end
-
+        
     end
-
+    
     // always @(posedge vga_hsync) begin
     //     if (count == 100) begin
     //         pixelState <= pixelNextState;
@@ -144,9 +146,9 @@ module top_vgatest #(parameter x = 1280,     // pixels
     //     else begin
     //         count <= count + 1;
     //     end
-        
-        
-        
+    
+    
+    
     // end
     
     
@@ -170,13 +172,13 @@ module top_vgatest #(parameter x = 1280,     // pixels
                 g_i            <= 0;
             end
             
-            // green:
-            // begin
-            //     pixelNextState <= red;
-            //     r_i            <= 0;
-            //     b_i            <= 0;
-            //     g_i            <= 255;
-            // end
+                // green:
+                // begin
+                //     pixelNextState <= red;
+                //     r_i            <= 0;
+                //     b_i            <= 0;
+                //     g_i            <= 255;
+                // end
             
             
             default: pixelNextState <= red;
