@@ -129,9 +129,18 @@ module ecp5pll
   endfunction
 
   // FIXME it is inefficient to call F_ecp5pll multiple times
-  localparam params_refclk_div       = F_ecp5pll(0);
+  localparam  params_refclk_div       = F_ecp5pll(0);
   localparam params_feedback_div     = F_ecp5pll(1);
   localparam params_output_div       = F_ecp5pll(2);
+
+ initial begin
+    // Print out the values during simulation
+    $display("params_refclk_div = %0d", params_refclk_div);
+    $display("params_feedback_div = %0d", params_feedback_div);
+    $display("params_output_div = %0d", params_output_div);
+
+    // Rest of your initial block code...
+  end
   localparam params_fout             = in_hz * params_feedback_div / params_refclk_div;
   localparam params_fvco             = params_fout * params_output_div;
 
@@ -183,7 +192,10 @@ module ecp5pll
   localparam error_out3_hz = out3_hz > 0 ? abs(out3_hz - params_fvco / params_secondary3_div) > out3_tol_hz : 0;
   // diamond: won't compile this, comment it out. Workaround follows using division by zero
 
-  if(error_out0_hz) $error("out0_hz tolerance exceeds out0_tol_hz");
+  if(error_out0_hz)begin
+
+     $error("out0_hz tolerance exceeds out0_tol_hz");
+  end
   if(error_out1_hz) $error("out1_hz tolerance exceeds out1_tol_hz");
   if(error_out2_hz) $error("out2_hz tolerance exceeds out2_tol_hz");
   if(error_out3_hz) $error("out3_hz tolerance exceeds out3_tol_hz");
