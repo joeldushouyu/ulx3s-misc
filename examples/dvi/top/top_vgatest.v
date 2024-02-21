@@ -10,6 +10,16 @@ module top_vgatest #(parameter x = 1920,     // pixels
                      output [7:0] led,
                      output [3:0] gpdi_dp,
                      output wifi_gpio0,
+                     output sdram_clk,
+                     output sdram_cke,
+                     output sdram_csn,
+                     output sdram_wen,
+                     output sdram_rasn,
+                     output sdram_casn,
+                     output [12:0]sdram_a,
+                     output [1:0]sdram_ba,
+                     output [1:0]sdram_dqm,
+                     inout [15:0]sdram_d 
                      );
     
     
@@ -59,7 +69,7 @@ module top_vgatest #(parameter x = 1920,     // pixels
     wire [3:0] clocks;
     wire clk_shift = clocks[1];
     wire clk_pixel = clocks[2];
-    wire sram_clk = clock[0]; // it is 164000000 + 1500000, which is 165.5MHZ
+    wire sram_clk = clocks[0]; // it is 164000000 + 1500000, which is 165.5MHZ
     ecp5pll #(
     .in_hz  (25000000),
     .out1_hz(pixel_f * 5 * (c_ddr ? 1 : 2)),
@@ -106,6 +116,45 @@ module top_vgatest #(parameter x = 1920,     // pixels
     .vga_blank(vga_blank)
     );
     
+
+    // the sram test case
+    reg rst_n=1'b1;
+    reg [7:0] seg_out;
+    reg [5:0] sel_out;
+    
+    reg [2:0] input_key;
+    assign input_key[0] = btn[3];
+    assign input_key[1] = btn[4];
+    assign input_key[2] = btn[5];
+
+    assign led[7:4] = 0;
+    reg [3:0] o_led;
+    assign o_led[0] = led[0];
+    assign o_led[1] = led[1];
+    assign o_led[2] = led[2];
+    assign o_led[3] = led[3];
+    comprehensive_tb #() SRAMTest(
+        .clk(sram_clk),
+        .rst_n(rst_n),
+        .key(input_key),
+        .led(o_led),
+        // .seg_out(seg_out),
+        // .sel_out(sel_out),
+        .sdram_clk(sdram_clk),
+        .sdram_cke(sdram_cke),
+        .sdram_cs_n(sdram_csn),
+        .sdram_ras_n(sdram_rasn),
+        .sdram_cas_n(sdram_casn),
+        .sdram_we_n(sdram_wen),
+        .sdram_addr(sdram_a),
+        .sdram_ba(sdram_ba),
+        .sdram_dqm(sdram_dqm),
+        .sdram_dq(sdram_d)
+    );
+    
+
+
+
     reg [1:0] pixelState, pixelNextState;
     reg changed;
     parameter red = 2'b00, green = 2'b01, blue = 2'b10;
@@ -186,13 +235,11 @@ module top_vgatest #(parameter x = 1920,     // pixels
         
     end
     
-    // LED blinky
-    assign led[7:6] = 0;
-    assign led[0]   = vga_vsync;
-    assign led[1]   = vga_hsync;
-    assign led[2]   = vga_blank;
-    
-    
+    // // // LED blinky
+    // // assign led[7:6] = 0;
+    // // assign led[0]   = vga_vsync;
+    // // assign led[1]   = vga_hsync;
+    // // assign led[2]   = vga_blank;
     
     
     // VGA to digital video converter
