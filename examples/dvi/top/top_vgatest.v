@@ -3,7 +3,7 @@ module top_vgatest #(parameter x = 1920,     // pixels
                      parameter f = 30,       // Hz 60, 50, 30
                      parameter xadjustf = 0, // or to fine-tune f
                      parameter yadjustf = 0, // or to fine-tune f
-                     parameter c_ddr = 1,    // 0:SDR 1:DDR
+                     parameter c_ddr = 1    // 0:SDR 1:DDR
                      )
                     (input clk_25mhz,
                      input [6:0] btn,
@@ -19,7 +19,8 @@ module top_vgatest #(parameter x = 1920,     // pixels
                      output [12:0]sdram_a,
                      output [1:0]sdram_ba,
                      output [1:0]sdram_dqm,
-                     inout [15:0]sdram_d 
+                     inout [15:0]sdram_d,
+                     output  wire [1:0] gp
                      );
     
     
@@ -67,15 +68,14 @@ module top_vgatest #(parameter x = 1920,     // pixels
     // clock generator
     wire clk_locked;
     wire [3:0] clocks;
-    wire clk_shift = clocks[1];
-    wire clk_pixel = clocks[2];
-    wire sram_clk = clocks[0]; // it is 164000000 + 1500000, which is 165.5MHZ
+    wire clk_shift = clocks[0];
+    wire clk_pixel = clocks[1];
+    //assign gp[0] = clocks[2]; 
     ecp5pll #(
-    .in_hz  (25000000),
-    .out1_hz(pixel_f * 5 * (c_ddr ? 1 : 2)),
-    .out2_hz(pixel_f),  // this is a 183.02MHZ at 1080p 30hz
-    .out0_hz(164000000),
-    .out0_tol_hz(1500000),
+    .in_hz(25000000),
+    .out0_hz(pixel_f*5*(c_ddr?1:2)),
+    .out1_hz(pixel_f)
+
     ) ecp5pll_inst (
     .clk_i (clk_25mhz),
     .clk_o (clocks),
@@ -86,13 +86,18 @@ module top_vgatest #(parameter x = 1920,     // pixels
     wire vga_hsync, vga_vsync, vga_blank;
     // wire fetch_next;
     
-    
     reg [7:0] r_i, g_i, b_i;
-    
-    
-    //  initial r_i = 0;
-    //  initial g_i = 250;
-    //  initial b_i = 255;
+    reg [7:0] r_i_n, g_i_n, b_i_n;
+    initial r_i_n = 255;
+    initial g_i_n = 0;
+    initial b_i_n = 0; 
+
+    // initial gp[0] = 0;
+    // always @(posedge clk_25mhz) begin
+    //     gp[0] = ~gp[0];
+    // end
+
+    assign gp[0] = clocks[0];
     wire  fetch_next;
     
     vga #(
@@ -116,62 +121,84 @@ module top_vgatest #(parameter x = 1920,     // pixels
     .vga_blank(vga_blank)
     );
     
+    // buffer logic 
+    reg bufferreset, endOfRead, endOfWrite;
+    reg hasResetBuffer = 0;
+    reg ableToWrite, ableToRead;
+    reg [23:0] readPixel, writePixel;
+    reg [20:0]readPixelX , readPixelY,  writePixelX, writePixelY;
+    reg readPixelSignal = 1, writePixelSignal = 1;
 
-    // the sram test case
-    reg rst_n=1'b1;
-    reg [7:0] seg_out;
-    reg [5:0] sel_out;
-    
-    reg [2:0] input_key;
-    assign input_key[0] = btn[3];
-    assign input_key[1] = btn[4];
-    assign input_key[2] = btn[5];
 
-    assign led[7:4] = 0;
-    reg [3:0] o_led;
-    assign o_led[0] = led[0];
-    assign o_led[1] = led[1];
-    assign o_led[2] = led[2];
-    assign o_led[3] = led[3];
-    comprehensive_tb #() SRAMTest(
-        .clk(sram_clk),
-        .rst_n(rst_n),
-        .key(input_key),
-        .led(o_led),
-        // .seg_out(seg_out),
-        // .sel_out(sel_out),
-        .sdram_clk(sdram_clk),
-        .sdram_cke(sdram_cke),
-        .sdram_cs_n(sdram_csn),
-        .sdram_ras_n(sdram_rasn),
-        .sdram_cas_n(sdram_casn),
-        .sdram_we_n(sdram_wen),
-        .sdram_addr(sdram_a),
-        .sdram_ba(sdram_ba),
-        .sdram_dqm(sdram_dqm),
-        .sdram_dq(sdram_d)
-    );
-    
 
+    // frameBuffer #(
+
+    //     .x(x),
+    //     .y(y)
+    // ) bufferInstance (
+
+    //     .reset(bufferreset),
+    //     .endOfRead(endOfRead),
+    //     .endOfWrite(endOfWrite),
+    //     .ableToWrite(ableToWrite),
+    //     .ableToRead(ableToRead),
+    //     .readPixel(readPixel),
+    //     .writePixel(writePixel),
+    //     .readPixelX(readPixelX),
+    //     .readPixelY(readPixelY),
+    //     .readPixelSignal(readPixelSignal),
+    //     .writePixelX(writePixelX),
+    //     .writePixelY(writePixelY),
+    //     .writePixelSignal(writePixelSignal)
+
+    // );
 
 
     reg [1:0] pixelState, pixelNextState;
     reg changed;
     parameter red = 2'b00, green = 2'b01, blue = 2'b10;
     
-    
-    reg [9:0] x_current = 10'b0;
-    reg [9:0] y_current = 10'b0;
-    
     reg [20:0] countx = 0;    reg [20:0] county = 0;
+
+    assign led[0] = ableToRead;
+
+
+    reg [63:0] clk_pixel_count = 0;
+    reg [63:0] clear_count = 0;
+    reg [7:0] countInMHZ = 0;
     always@(posedge clk_pixel) begin
+
+        clk_pixel_count = clk_pixel_count + 1;
+        if(fetch_next == 1)
+        begin
+            clear_count = clear_count + 1;
+            if(clear_count==  1000000)begin
+                countInMHZ = countInMHZ + 1;
+                clear_count = 0;
+            end
         
-        if (fetch_next) begin
+        
+
+        end
+        if(clk_pixel_count == 65000000) begin
+            led = countInMHZ;
+            countInMHZ = 0;
+            clear_count = 0;
+            clk_pixel_count = 0;
+        end
+
+        //add every 1000
+
+
+        if (fetch_next == 1 ) begin
+            r_i <= r_i_n;
+            g_i <= g_i_n;
+            b_i <= b_i_n;
             if (countx == x-1)begin
                 
                 countx <= 0;
                 if (county == (y/2)-1) begin
-                    pixelState <= pixelNextState;
+                    //pixelState <= pixelNextState;
                     county     <= 0;
                 end
                 else begin
@@ -183,57 +210,54 @@ module top_vgatest #(parameter x = 1920,     // pixels
                 countx <= countx + 1;
             end
             
+            // fetch a new pixel
+            readPixelSignal = ~ readPixelSignal;
+            
+            r_i_n = 255;
+            g_i_n = 255;
+            b_i_n = 0;
+            // r_i_n = r_i_n + 1;
+            // g_i_n = 255;
+            // b_i_n = 0;
         end
         
     end
     
-    // always @(posedge vga_hsync) begin
-    //     if (count == 100) begin
-    //         pixelState <= pixelNextState;
-    //         count      <= 0;
-    //     end
-    //     else begin
-    //         count <= count + 1;
-    //     end
+
     
-    
-    
-    // end
-    
-    
-    always @(posedge fetch_next) begin
+    // always @(posedge fetch_next) begin
         
-        case (pixelState)
-            red:
-            begin
-                // pixelNextState <= blue ;
-                r_i               <= 255;
-                b_i               <= 0;
-                g_i               <= 0;
-                pixelNextState    <= blue ;
+    //     case (pixelState)
+    //         red:
+    //         begin
+    //             // pixelNextState <= blue ;
+    //             r_i_n               <= 255;
+    //             b_i_n               <= 0;
+    //             g_i_n               <= 0;
+    //             pixelNextState    <= blue ;
                 
-            end
-            blue:
-            begin
-                pixelNextState <= red;
-                r_i            <= 0;
-                b_i            <= 255;
-                g_i            <= 0;
-            end
+    //         end
+    //         blue:
+    //         begin
+    //             pixelNextState <= red;
+    //             r_i_n            <= 0;
+    //             b_i_n           <= 255;
+    //             g_i_n            <= 0;
+    //         end
             
-                // green:
-                // begin
-                //     pixelNextState <= red;
-                //     r_i            <= 0;
-                //     b_i            <= 0;
-                //     g_i            <= 255;
-                // end
+    //             // green:
+    //             // begin
+    //             //     pixelNextState <= red;
+    //             //     r_i            <= 0;
+    //             //     b_i            <= 0;
+    //             //     g_i            <= 255;
+    //             // end
             
             
-            default: pixelNextState <= red;
-        endcase
+    //         default: pixelNextState <= red;
+    //     endcase
         
-    end
+    // end
     
     // // // LED blinky
     // // assign led[7:6] = 0;
@@ -312,3 +336,5 @@ module top_vgatest #(parameter x = 1920,     // pixels
      */
     
 endmodule
+
+
