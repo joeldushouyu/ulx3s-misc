@@ -1,0 +1,79 @@
+%%% protect protected_file
+#OPTIONS:"|-bldtbl|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-lattice|-dfltencoding|onehot|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-work_is_curlib|0|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work"
+#CUR:"/usr/local/diamond/3.13/synpbase/linux_a_64/c_vhdl":1693507371
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/location.map":1693436612
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/std.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/snps_haps_pkg.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/std1164.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/numeric.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/umr_capim.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/arith.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/unsigned.vhd":1691686318
+#CUR:"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga.vhd":1707451665
+#CUR:"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/tmds_encoder.vhd":1707451665
+#CUR:"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga2dvid.vhd":1707451665
+@E8lFkRDCP.oN88PH
+LDHs$NsRsIF	N
+bsCNl0RCsOE_#H_V0OODF	$_#MsOEFxMHC#sR0D8_FOoH
+sbNN0lCCOsR_sbNNCDDD0R#8F_Do
+HObNNslCC0s_RO#HCsN#DR0D8_FOoH
+sbNN0lCCOsR_s88R8#0_oDFHbO
+NlsNCs0CR8O_CEb0R0HMCsoC
+bHMkO0RDb	_HDGCR
+-4HkMb0DRO	E_#HRV0-H4
+M0bkR_HMsRC8-H4
+M0bkR_HMoCsCM4R-
+bHMkH0RMD_Lk-CR4M
+HbRk0HLM_D	NMR
+-4HkMb0MRH_$E#M-OR4M
+HbRk0HPM_#O$MR
+-4Fbk0kF0Rk_0bsRC8-F4
+kk0b0kRF0ob_sMCCR
+-4Fbk0kF0Rk_0bLCDkR
+-4Fbk0kF0Rks0_C-8R4k
+F00bkR0Fk_CosC-MR4k
+F00bkR0Fk_kLDC4R-
+0FkbRk0F_k0OODF	4R-
+8CMlkF8DlC
+FD8kClR08C#_M8OFCDs
+HNLssI$RF
+s	HkMb0DRO	
+R4HkMb0NR80UNR
+bHMkO0RRH.
+M0bkRNLDM4	R
+0FkbRk0CFMO8RC84Cj
+MF8l8CkD
+8lFkRDCP
+oNDsHLNRs$I	Fs
+sbNN0lCCOsR_#sCF0DkH_FMGMRH0CCosN
+bsCNl0RCsO#_E$_MOVMsF0F_bsROEHCM0o
+CsbNNslCC0s_ROEM#$Ok_bDR#CHCM0o
+CsbNNslCC0s_ROEM#$ON_LOb	_FEsOR0HMCsoC
+sbNN0lCCOsR_#sCF0DkH_FM$MRH0CCosN
+bsCNl0RCsO#_P$_MOVMsF0F_bsROEHCM0o
+CsbNNslCC0s_ROPM#$Ok_bDR#CHCM0o
+CsbNNslCC0s_ROPM#$ON_LOb	_FEsOR0HMCsoC
+sbNN0lCCOsR_0LH#R_GHCM0o
+CsbNNslCC0s_ROL#H0_H$RMo0CCbs
+NlsNCs0CR8O_LGD_R0HMCsoC
+sbNN0lCCOsR_D8L_H$RMo0CCHs
+M0bkR	OD_GbHC-DR4M
+HbRk0O_D	bCHGDM_CN4R-
+bHMk00RC_#0b0HOkRsC-F4
+kk0b0CRV0_OEM0CGR
+-4Fbk0kL0RC_NlG4R-
+0FkbRk0LlCN_-$R4M
+HbRk0sR_H-H4
+M0bkRHo_R
+-4HkMb0_RLH4R-
+0FkbRk0P_oNs4R-
+0FkbRk0P_oNo4R-
+0FkbRk0P_oNL4R-
+0FkbRk0P_oNEM#$O4R-
+0FkbRk0P_oNPM#$O4R-
+0FkbRk0P_oNPNLDM-	R4k
+F00bkRNPo_NLDM-	R4k
+F00bkRNPo_R8C-C4
+MF8l8CkD
+
+@ 

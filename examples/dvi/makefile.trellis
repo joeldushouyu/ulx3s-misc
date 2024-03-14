@@ -19,13 +19,18 @@ OPENOCD_INTERFACE=$(SCRIPTS)/ft231x.ocd
 
 # ******* design files *******
 CONSTRAINTS = ../../constraints/ulx3s_v20.lpf
-TOP_MODULE = top_vgatest
+TOP_MODULE = top_usbtest
 TOP_MODULE_FILE = top/$(TOP_MODULE).v 
 
 VERILOG_FILES = \
   $(TOP_MODULE_FILE) \
   hdl/vga.v \
   ../ecp5pll/hdl/sv/ecp5pll.sv \
+  top/usb_stream_in.v\
+  top/usb_stream_out.v\
+  top/usb_stream_in_example.v\
+  top/usb_stream_out_example.v\
+  top/usb_fifo_example.v
 
 
 # *.vhd those files will be converted to *.v files with vhdl2vl (warning overwriting/deleting)

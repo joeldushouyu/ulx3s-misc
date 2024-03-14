@@ -1,0 +1,3 @@
+@E: CG426 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":160:12:160:14|Assignment target led must be of type reg or genvar
+@E::Verilog compiler failed
+

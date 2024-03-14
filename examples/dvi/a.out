@@ -1,0 +1,94 @@
+
+
+
+
+module usb_stream_in_test;
+
+    
+
+
+reg clk = 0;
+
+reg rst_n; 
+reg [2:0] master_mode;
+reg [ 31:0] data_out;
+wire [1:0] A;
+reg FLAGA, FLAGB;
+wire PKTEND, SLOE, SLRD, SLCS, SLWR;
+wire [1:0] current_stream_in_mode;
+wire [31:0] DQ;
+
+
+usb_stream_in #(.write_watermark(water_mark)) testModule(
+    .clk(clk),
+    .rst_n(rst_n),
+    .master_mode(master_mode),
+    .data_out(data_out),
+    .PKTEND(PKTEND),
+    .SLOE(SLOE),
+    .SLRD(SLRD),
+    .SLCS(SLCS),
+    .SLWR(SLWR),
+    .A(A),
+    .FLAGA(FLAGA),
+    .FLAGB(FLAGB),
+    .DQ(DQ),
+    .current_stream_in_mode(current_stream_in_mode)
+
+
+);
+
+initial begin
+
+    master_mode = 3'b101; // the idle state
+    rst_n = 1;
+    data_out = 32'd100;
+    FLAGA = 0;
+    FLAGB = 0;
+
+    $monitor("State: %2b PKTEND %b SLOE %b SLRD %b SLCS %b SLWR %b A %2b dataReg %h" 
+    , current_stream_in_mode, PKTEND, SLOE, SLRD, SLCS, SLWR, A, DQ);
+
+end
+
+
+// setupt clock
+always #1 clk = !clk;
+
+always begin
+    // should do nothing, since master not in stream_in mode
+    #2 rst_n = 0; // reset
+    #2 rst_n = 1;
+
+    #2 master_mode=3'b010; 
+    //State: xx PKTEND x SLOE x SLRD x SLCS x SLWR 1 A 00 dataReg xx
+    #2 ;// wait
+    #2; //wait
+
+
+    #2 rst_n = 0; // reset
+    #2 rst_n = 1;
+    // State: 00 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 1 A 00 dataReg xx
+
+    #2 FLAGA = 1; 
+    //State: 01 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 1 A 00 dataReg x  // keep as above 
+
+    #2 FLAGB = 1; data_out = 31'h30;
+    //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 30  // keep as above 
+
+    #2 data_out = 31'h100; // try another one
+    //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 100  // keep as above 
+    #2 data_out = 31'h10; // another one 
+    //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 10  // keep as above 
+
+    #2 FLAGB = 0; //should trigger into the stream_in_wr
+    //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 10  // keep as above
+
+    #2 ; // idealy, SLWR =1 and should match Figure 13.
+    #2 ; // should stil be in 11 TODO:
+    // #2 ;
+    // #2 ;
+    $finish;
+end
+endmodule
+

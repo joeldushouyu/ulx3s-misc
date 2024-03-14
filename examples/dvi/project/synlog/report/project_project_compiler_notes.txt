@@ -1,0 +1,10 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N|stack limit increased to max
+@N:"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga2dvid.vhd":48:7:48:14|Top entity is set to vga2dvid.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/tmds_encoder.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga2dvid.vhd'.
+@N|Running in 64-bit mode
+@N|stack limit increased to max
+

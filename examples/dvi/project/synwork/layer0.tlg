@@ -1,0 +1,83 @@
+@W: CG188 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/ecp5pll/hdl/sv/ecp5pll.sv":147:51:147:51|All paths in the function do not assign a return value
+@W: CG1246 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/ecp5pll/hdl/sv/ecp5pll.sv":147:51:147:51|Function return value is unassigned - returning 0
+@W: CG188 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/ecp5pll/hdl/sv/ecp5pll.sv":147:51:147:51|All paths in the function do not assign a return value
+@W: CG1246 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/ecp5pll/hdl/sv/ecp5pll.sv":147:51:147:51|Function return value is unassigned - returning 0
+@N: CG364 :"/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+Running optimization stage 1 on EHXPLLL .......
+Finished optimization stage 1 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 133MB peak: 133MB)
+@N: CG364 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/ecp5pll/hdl/sv/ecp5pll.sv":11:7:11:13|Synthesizing module ecp5pll in library work.
+
+	in_hz=32'b00000001011111010111100001000000
+	out0_hz=32'b00001001110001100111000100000000
+	out0_deg=32'b00000000000000000000000000000000
+	out0_tol_hz=32'b00000000000101101110001101100000
+	out1_hz=32'b00010011010111110001101101000000
+	out1_deg=32'b00000000000000000000000000000000
+	out1_tol_hz=32'b00000000000000000000000000000000
+	out2_hz=32'b00000011110111111101001001000000
+	out2_deg=32'b00000000000000000000000000000000
+	out2_tol_hz=32'b00000000000000000000000000000000
+	out3_hz=32'b00000000000000000000000000000000
+	out3_deg=32'b00000000000000000000000000000000
+	out3_tol_hz=32'b00000000000000000000000000000000
+	reset_en=32'b00000000000000000000000000000000
+	standby_en=32'b00000000000000000000000000000000
+	dynamic_en=32'b00000000000000000000000000000000
+	PFD_MIN=32'b00000000001011111010111100001000
+	PFD_MAX=32'b00010111110101111000010000000000
+	VCO_MIN=32'b00010111110101111000010000000000
+	VCO_MAX=32'b00101111101011110000100000000000
+	VCO_OPTIMAL=32'b00100011110000110100011000000000
+	params_refclk_div=32'b00000000000000000000000000000010
+	params_feedback_div=32'b00000000000000000000000000001101
+	params_output_div=32'b00000000000000000000000000000100
+	params_fout=32'b00001001101011111000110110100000
+	params_fvco=32'b00100110101111100011011010000000
+	params_primary_phase_x8=32'b00000000000000000000000000000000
+	params_primary_cphase=32'b00000000000000000000000000000011
+	params_primary_fphase=32'b00000000000000000000000000000000
+	params_secondary1_div=32'b00000000000000000000000000000010
+	params_secondary1_cphase=32'b00000000000000000000000000000001
+	params_secondary1_fphase=32'b00000000000000000000000000000000
+	params_secondary2_div=32'b00000000000000000000000000001010
+	params_secondary2_cphase=32'b00000000000000000000000000001001
+	params_secondary2_fphase=32'b00000000000000000000000000000000
+	params_secondary3_div=32'b00000000000000000000000000000001
+	params_secondary3_cphase=32'b00000000000000000000000000000000
+	params_secondary3_fphase=32'b00000000000000000000000000000000
+	error_out0_hz=1'b0
+	error_out1_hz=32'b00000000000000000000000000000000
+	error_out2_hz=32'b00000000000000000000000000000000
+	error_out3_hz=32'b00000000000000000000000000000000
+	trig_out0_hz=32'b00000000000000000000000000000000
+	trig_out1_hz=32'b00000000000000000000000000000000
+	trig_out2_hz=32'b00000000000000000000000000000000
+	trig_out3_hz=32'b00000000000000000000000000000000
+   Generated name = ecp5pll_Z1_layer0
+@W: CG532 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/ecp5pll/hdl/sv/ecp5pll.sv":136:1:136:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG532 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/ecp5pll/hdl/sv/ecp5pll.sv":194:1:194:7|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+Running optimization stage 1 on ecp5pll_Z1_layer0 .......
+Finished optimization stage 1 on ecp5pll_Z1_layer0 (CPU Time 0h:00m:00s, Memory Used current: 133MB peak: 133MB)
+@N: CG364 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":313:7:313:17|Synthesizing module frameBuffer in library work.
+
+	x=32'b00000000000000000000010011110010
+	y=32'b00000000000000000000001100000000
+	totalBufferSize=32'b00000000000000000000000000000011
+	readable=2'b00
+	writeable=2'b01
+   Generated name = frameBuffer_1266s_768s_3s_0_1
+@N: CG512 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":353:8:353:16|System task $readmemh is not supported yet
+@W: CG296 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":374:13:374:27|Incomplete sensitivity list; assuming completeness. Make sure all referenced variables in message CG290 are included in the sensitivity list.
+@W: CG290 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":375:12:375:21|Referenced variable ableToRead is not in sensitivity list.
+@W: CG290 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":378:45:378:54|Referenced variable readPixelX is not in sensitivity list.
+@W: CG290 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":378:58:378:67|Referenced variable readPixelY is not in sensitivity list.
+@W: CG290 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":378:24:378:30|Referenced variable buffers is not in sensitivity list.
+@W: CG290 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":375:31:375:42|Referenced variable alreadyReset is not in sensitivity list.
+@W: CG290 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":378:32:378:42|Referenced variable currentRead is not in sensitivity list.
+Running optimization stage 1 on frameBuffer_1266s_768s_3s_0_1 .......
+@W: CL169 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":341:4:341:9|Pruning unused register frameState[0][1:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":341:4:341:9|Pruning unused register frameState[1][1:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":341:4:341:9|Pruning unused register frameState[2][1:0]. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":341:4:341:9|Pruning unused register nextReadable. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":341:4:341:9|Pruning unused register nextWriteable. Make sure that there are no unused intermediate registers.
+@W: CL169 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":341:4:341:9|Pruning unused register currentWrite. Make sure that there are no unused intermediate registers.

@@ -1,0 +1,1 @@
+project -fileorder "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga.vhd" "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/tmds_encoder.vhd" "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga2dvid.vhd" 

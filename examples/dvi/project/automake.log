@@ -1,0 +1,294 @@
+
+synpwrap -msg -prj "project_project_synplify.tcl" -log "project_project.srf"
+Copyright (C) 1992-2023 Lattice Semiconductor Corporation. All rights reserved.
+Lattice Diamond Version 3.13.0.56.2
+    <postMsg mid="2011000" type="Info"    dynamic="0" navigation="0"  />
+/proc/sys/vm/admin_reserve_kbytes:8192
+/proc/sys/vm/compact_unevictable_allowed:1
+/proc/sys/vm/compaction_proactiveness:20
+/proc/sys/vm/dirty_background_bytes:0
+/proc/sys/vm/dirty_background_ratio:10
+/proc/sys/vm/dirty_bytes:0
+/proc/sys/vm/dirty_expire_centisecs:3000
+/proc/sys/vm/dirty_ratio:20
+/proc/sys/vm/dirty_writeback_centisecs:500
+/proc/sys/vm/dirtytime_expire_seconds:43200
+/proc/sys/vm/extfrag_threshold:500
+/proc/sys/vm/hugetlb_shm_group:0
+/proc/sys/vm/laptop_mode:0
+/proc/sys/vm/legacy_va_layout:0
+/proc/sys/vm/lowmem_reserve_ratio:256	256	32	0	0
+/proc/sys/vm/max_map_count:65530
+/proc/sys/vm/memory_failure_early_kill:0
+/proc/sys/vm/memory_failure_recovery:1
+/proc/sys/vm/min_free_kbytes:90112
+/proc/sys/vm/min_slab_ratio:5
+/proc/sys/vm/min_unmapped_ratio:1
+/proc/sys/vm/mmap_min_addr:65536
+/proc/sys/vm/nr_hugepages:0
+/proc/sys/vm/nr_hugepages_mempolicy:0
+/proc/sys/vm/nr_overcommit_hugepages:0
+/proc/sys/vm/numa_stat:1
+/proc/sys/vm/numa_zonelist_order:Node
+/proc/sys/vm/oom_dump_tasks:1
+/proc/sys/vm/oom_kill_allocating_task:0
+/proc/sys/vm/overcommit_kbytes:0
+/proc/sys/vm/overcommit_memory:0
+/proc/sys/vm/overcommit_ratio:50
+/proc/sys/vm/page-cluster:3
+/proc/sys/vm/page_lock_unfairness:5
+/proc/sys/vm/panic_on_oom:0
+/proc/sys/vm/percpu_pagelist_high_fraction:0
+/proc/sys/vm/stat_interval:1
+/proc/sys/vm/swappiness:60
+/proc/sys/vm/unprivileged_userfaultfd:0
+/proc/sys/vm/user_reserve_kbytes:131072
+/proc/sys/vm/vfs_cache_pressure:100
+/proc/sys/vm/watermark_boost_factor:15000
+/proc/sys/vm/watermark_scale_factor:10
+/proc/sys/vm/zone_reclaim_mode:0
+EDT
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages    
+0x000003e9 0          shouyu     600        2002         2           
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+0x00000000 98305      shouyu     600        212992     2          dest         
+0x00000000 98306      shouyu     600        212992     2          dest         
+0x00000000 98307      shouyu     600        45056      2          dest         
+0x00000000 4          shouyu     600        524288     2          dest         
+0x00000000 98309      shouyu     600        45056      2          dest         
+0x00000000 98310      shouyu     600        4194304    2          dest         
+0x00000000 98312      shouyu     600        524288     2          dest         
+0x00000000 12         shouyu     600        524288     2          dest         
+0x00000000 13         shouyu     600        524288     2          dest         
+0x00000000 16         shouyu     600        524288     2          dest         
+0x00000000 65553      shouyu     600        4194304    2          dest         
+0x00000000 65554      shouyu     600        16777216   2          dest         
+0x00000000 98324      shouyu     600        524288     2          dest         
+0x00000000 21         shouyu     600        524288     2          dest         
+0x00000000 23         shouyu     600        4194304    2          dest         
+0x00000000 32         shouyu     600        356352     2          dest         
+0x00000000 33         shouyu     600        356352     2          dest         
+0x00000000 65570      shouyu     600        401408     2          dest         
+0x00000000 65571      shouyu     600        401408     2          dest         
+0x00000000 32804      shouyu     600        290816     2          dest         
+0x00000000 32805      shouyu     600        290816     2          dest         
+0x00000000 65574      shouyu     600        81920      2          dest         
+0x00000000 65575      shouyu     600        81920      2          dest         
+0x00000000 42         shouyu     600        212992     2          dest         
+0x00000000 32811      shouyu     600        524288     2          dest         
+0x00000000 32812      shouyu     600        4194304    2          dest         
+0x00000000 32813      shouyu     700        7864320    2          dest         
+0x00000000 32816      shouyu     600        806400     2          dest         
+0x00000000 32817      shouyu     600        8294400    2          dest         
+0x00000000 50         shouyu     600        524288     2          dest         
+0x51040069 32820      shouyu     600        1          0                       
+0x00000000 53         shouyu     600        524288     2          dest         
+0x00000000 32823      shouyu     600        7562016    2          dest         
+0x00000000 32824      shouyu     600        914292     2          dest         
+0x00000000 65594      shouyu     600        368640     2          dest         
+0x00000000 65595      shouyu     600        368640     2          dest         
+0x00000000 65596      shouyu     600        524288     2          dest         
+
+------ Semaphore Arrays --------
+key        semid      owner      perms      nsems     
+0x51040068 2          shouyu     600        1         
+
+Ubuntu 20.04.6 LTS
+###########################################################[
+Running in Lattice mode
+
+                               Synplify Pro (R) 
+
+               Version U-2023.03L-SP1 for linux64 - Aug 10, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Starting:    /usr/local/diamond/3.13/synpbase/linux_a_64/mbin/synbatch
+Install:     /usr/local/diamond/3.13/synpbase
+Hostname:    shouyu-LOQ-15APH8
+Date:        Wed Mar 13 18:39:31 2024
+Version:     U-2023.03L-SP1
+
+Arguments:   -product synplify_base -batch project_project_synplify.tcl
+ProductType: synplify_pro
+
+
+
+
+log file: "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project/project_project.srr"
+Running: hdl_info_gen in foreground
+
+Generating HDL info...
+Process ID: 328706
+Copied /home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project/project_project.srr to /home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project/project_project.srf
+
+hdl_info_gen completed
+# Wed Mar 13 18:39:31 2024
+
+Return Code: 0
+Run Time:00h:00m:00s
+log file: "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project/project_project.srr"
+Running: project in foreground
+
+Running proj_1|project
+
+Running Flow: compile (Compile) on proj_1|project
+# Wed Mar 13 18:39:32 2024
+
+Running Flow: compile_flow (Compile Process) on proj_1|project
+# Wed Mar 13 18:39:32 2024
+
+Running: compiler (Compile Input) on proj_1|project
+# Wed Mar 13 18:39:32 2024
+Process ID: 328722
+compiler exited with errors
+Job failed on: proj_1|project
+
+Job: "compiler" terminated with error status: 2
+See log file: "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project/synlog/project_project_compiler.srr"
+# Wed Mar 13 18:39:32 2024
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on proj_1|project
+Complete: Compile on proj_1|project
+Complete: Logic Synthesis on proj_1|project
+Copied /home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project/project_project.srr to /home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project/project_project.srf
+Error: At line 69 while processing "project_project_synplify.tcl"
+2
+TCL script complete: "project_project_synplify.tcl"
+TCL script had errors: "project_project_synplify.tcl"
+exit status=9
+exit status=9
+Save changes for project:
+/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project/proj_1.prj
+batch mode default:no
+Child process exit with 9.
+
+==contents of project_project.srf
+#Build: Synplify Pro (R) U-2023.03L-SP1, Build 153R, Aug 10 2023
+#install: /usr/local/diamond/3.13/synpbase
+#OS: Linux 
+#Hostname: shouyu-LOQ-15APH8
+
+# Wed Mar 13 18:39:32 2024
+
+#Implementation: project
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /usr/local/diamond/3.13/synpbase
+OS: Ubuntu 20.04.6 LTS
+Hostname: shouyu-LOQ-15APH8
+max virtual memory: unlimited (bytes)
+max user processes: 92689
+max stack size: 8388608 (bytes)
+
+
+Implementation : project
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /usr/local/diamond/3.13/synpbase
+OS: Ubuntu 20.04.6 LTS
+Hostname: shouyu-LOQ-15APH8
+max virtual memory: unlimited (bytes)
+max user processes: 92689
+max stack size: 8388608 (bytes)
+
+
+Implementation : project
+Synopsys VHDL Compiler, Version comp202303synp1, Build 173R, Built Aug 31 2023 03:52:31, @4910518
+
+@N|Running in 64-bit mode
+Location map warning "/usr/local/diamond/3.13/synpbase/lib/vhd/location.map":46 - Attempted redefinition of package mach.components
+@N|stack limit increased to max
+@N:"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga2dvid.vhd":48:7:48:14|Top entity is set to vga2dvid.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/tmds_encoder.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga2dvid.vhd'.
+VHDL syntax check successful!
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 122MB peak: 122MB)
+
+
+Process completed successfully.
+# Wed Mar 13 18:39:32 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /usr/local/diamond/3.13/synpbase
+OS: Ubuntu 20.04.6 LTS
+Hostname: shouyu-LOQ-15APH8
+max virtual memory: unlimited (bytes)
+max user processes: 92689
+max stack size: 8388608 (bytes)
+
+
+Implementation : project
+Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+@I::"/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v" (library work)
+@E: CG426 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v":160:12:160:14|Assignment target led must be of type reg or genvar
+@I::"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/ecp5pll/hdl/sv/ecp5pll.sv" (library work)
+@N|stack limit increased to max
+1 syntax errors
+# Wed Mar 13 18:39:32 2024
+
+###########################################################]
+@E::Verilog compiler failed
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Wed Mar 13 18:39:32 2024
+
+###########################################################]
+
+
+Synthesis exit by 9.

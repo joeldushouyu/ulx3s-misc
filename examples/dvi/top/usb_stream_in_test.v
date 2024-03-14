@@ -62,71 +62,71 @@ always begin
     //State: xx PKTEND x SLOE x SLRD x SLCS x SLWR 1 A 00 dataReg xx
 
 
-    #2 rst_n = 0; // reset
-    #2 rst_n = 1;
+    // #2 rst_n = 0; // reset
+    // #2 rst_n = 1;
     FLAGA = 1; 
-    // State: 00 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 1 A 00 dataReg xx
+    //xxx State: 00 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 1 A 00 dataReg xx
 
     #2 clk = 0; 
     #2 clk = 1;
-    //State: 01 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 1 A 00 dataReg x  // keep as above 
+    //State: 00 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 1 A 00 dataReg x  // keep as above 
 
     FLAGB = 1; data_out = 31'h30;
     #2 clk = 0; 
     #2 clk = 1;
-    //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 30  // keep as above 
-
+    // //State: 01 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg xx  // keep as above 
+   
     data_out = 31'h100; // try another one
     #2 clk = 0; 
     #2 clk = 1;
-    //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 100  // keep as above 
+    // //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 100  // keep as above 
     data_out = 31'h007F007F; // another one 
     #2 clk = 0; 
     #2 clk = 1;
-    // State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 007F007F  // keep as above 
-    // if( water_mark == 6) begin
-    //     FLAGB = 0; //should trigger into the stream_in_wr
-    //     #2 clk = 0; 
-    //     #2 clk = 1;
-    //     //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 10  // keep as above
+    // // State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 007F007F  // keep as above 
+    // // // if( water_mark == 6) begin
+    // // //     FLAGB = 0; //should trigger into the stream_in_wr
+    // // //     #2 clk = 0; 
+    // // //     #2 clk = 1;
+    // // //     //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 0 A 00 dataReg 10  // keep as above
 
-    //     #2 clk = 0; 
-    //     #2 clk = 1;
-    //      // idealy, SLWR =0 and should match Figure 13.
-    //             // TODO: but in page 38 tell us to only assert 1 time, so SLWR
-    //     //State: 11 PKTEND 1 SLOE 1 SLRD 1 SLCS 1 SLWR 0 A 00 dataReg 10  // keep as above
-    //     #2 clk = 0; 
-    //     #2 clk = 1;
-    //     // should stil be in 11 TODO:
-    //     //State: 11 PKTEND 1 SLOE 1 SLRD 1 SLCS 1 SLWR 1 A 00 dataReg 0 // keep as above
+    // // //     #2 clk = 0; 
+    // // //     #2 clk = 1;
+    // // //      // idealy, SLWR =0 and should match Figure 13.
+    // // //             // TODO: but in page 38 tell us to only assert 1 time, so SLWR
+    // // //     //State: 11 PKTEND 1 SLOE 1 SLRD 1 SLCS 1 SLWR 0 A 00 dataReg 10  // keep as above
+    // // //     #2 clk = 0; 
+    // // //     #2 clk = 1;
+    // // //     // should stil be in 11 TODO:
+    // // //     //State: 11 PKTEND 1 SLOE 1 SLRD 1 SLCS 1 SLWR 1 A 00 dataReg 0 // keep as above
 
-    //     #2 clk = 0; 
-    //     #2 clk = 1;
+    // // //     #2 clk = 0; 
+    // // //     #2 clk = 1;
 
-    //     //State: 00 PKTEND 1 SLOE 1 SLRD 1 SLCS 1 SLWR 1 A 00 dataReg 10 // keep as above
+    // // //     //State: 00 PKTEND 1 SLOE 1 SLRD 1 SLCS 1 SLWR 1 A 00 dataReg 10 // keep as above
 
 
-    // end
-    // else if (water_mark == 4)begin
+    // // // end
+    // // // else if (water_mark == 4)begin
 
-    //     // SEE Figure 11 for more explanation
+    // //     // SEE Figure 11 for more explanation
         FLAGB = 0; //should trigger into the stream_in_wr
         data_out = 31'h800080; // another one 
         #2 clk = 0; 
         #2 clk = 1;
-    //     //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 1 A 00 dataReg 800080  // keep as above
+    // //     //State: 10 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 1 A 00 dataReg 800080  // keep as above
         
         
         #2 clk = 0; 
         #2 clk = 1;
-        // since water mark is 4,
-        //State: 00 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 1 A 00 dataReg 800080  // keep as above
+    //     // since water mark is 4,
+    //     //State: 00 PKTEND 1 SLOE 1 SLRD 1 SLCS 0 SLWR 1 A 00 dataReg 800080  // keep as above
 
-    // end
+    // // end
 
 
 
-    #2;
+
     $finish;
 end
 endmodule

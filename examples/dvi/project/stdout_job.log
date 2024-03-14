@@ -1,0 +1,103 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "18:39:32    13-Mar-2024",
+	"Working Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project",
+	"CDPL Log file" : "-",
+	"Install" : "/usr/local/diamond/3.13/synpbase"
+},
+"hdl_info_gen" :{
+   "Start Time" : "18:39:31",
+   "Runtime" : "00s",
+   "Executable Run Time" : "00s",
+   "hdl_info_gen" : {
+      "executable" : "bin/c_vhdl",
+      "Run Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project",
+      "Run State" : "Complete",
+      "Return Code" : "0",
+      "Has Errors" : "no",
+      "Run Start Time" : "18:39:31",
+      "Run Time" : "00s",
+      "Exe Run Time" : "00s",
+      "Memory Usage" : "-",
+      "CDPL" : "off",
+      "Up-to-date (run skipped)" : "no"
+   }
+},
+"project" :{
+   "Start Time" : "18:39:32",
+   "Runtime" : "00s",
+   "Executable Run Time" : "00s",
+   "synthesis" : {
+      "Start Time" : "18:39:32",
+      "Runtime" : "00s",
+      "Executable Run Time" : "00s",
+      "compile" : {
+         "Start Time" : "18:39:32",
+         "Runtime" : "00s",
+         "Executable Run Time" : "00s",
+         "compile_flow" : {
+            "Start Time" : "18:39:32",
+            "Runtime" : "00s",
+            "Executable Run Time" : "00s",
+            "compiler" : {
+               "executable" : "bin/c_hdl",
+               "Run Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project",
+               "Run State" : "Complete",
+               "Return Code" : "2",
+               "Has Errors" : "yes",
+               "Run Start Time" : "18:39:32",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "2.632000",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin/syn_nfilter",
+               "Run Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project",
+               "Run State" : "Canceled",
+               "Return Code" : "-",
+               "Has Errors" : "yes",
+               "Run Start Time" : "-",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "-",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin/m_gen_lattice",
+            "Run Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project",
+            "Run State" : "Canceled",
+            "Return Code" : "-",
+            "Has Errors" : "yes",
+            "Run Start Time" : "-",
+            "Run Time" : "00s",
+            "Exe Run Time" : "00s",
+            "Memory Usage" : "-",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Start Time" : "-",
+         "Runtime" : "00s",
+         "Executable Run Time" : "00s",
+         "fpga_mapper" : {
+            "executable" : "bin/m_gen_lattice",
+            "Run Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project",
+            "Run State" : "Canceled",
+            "Return Code" : "-",
+            "Has Errors" : "yes",
+            "Run Start Time" : "-",
+            "Run Time" : "00s",
+            "Exe Run Time" : "00s",
+            "Memory Usage" : "-",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

@@ -1,5 +1,5 @@
-module top_vgatest #(parameter x = 1920,     // pixels
-                     parameter y = 1080,     // pixels
+module top_vgatest #(parameter x = 640,     // pixels
+                     parameter y = 400,     // pixels
                      parameter f = 30,       // Hz 60, 50, 30
                      parameter xadjustf = 0, // or to fine-tune f
                      parameter yadjustf = 0, // or to fine-tune f
@@ -70,7 +70,7 @@ module top_vgatest #(parameter x = 1920,     // pixels
     wire [3:0] clocks;
     wire clk_shift = clocks[0];
     wire clk_pixel = clocks[1];
-    //assign gp[0] = clocks[2]; 
+    assign gp[0] = clk_shift; 
     ecp5pll #(
     .in_hz(25000000),
     .out0_hz(pixel_f*5*(c_ddr?1:2)),
@@ -128,30 +128,6 @@ module top_vgatest #(parameter x = 1920,     // pixels
     reg [23:0] readPixel, writePixel;
     reg [20:0]readPixelX , readPixelY,  writePixelX, writePixelY;
     reg readPixelSignal = 1, writePixelSignal = 1;
-
-
-
-    // frameBuffer #(
-
-    //     .x(x),
-    //     .y(y)
-    // ) bufferInstance (
-
-    //     .reset(bufferreset),
-    //     .endOfRead(endOfRead),
-    //     .endOfWrite(endOfWrite),
-    //     .ableToWrite(ableToWrite),
-    //     .ableToRead(ableToRead),
-    //     .readPixel(readPixel),
-    //     .writePixel(writePixel),
-    //     .readPixelX(readPixelX),
-    //     .readPixelY(readPixelY),
-    //     .readPixelSignal(readPixelSignal),
-    //     .writePixelX(writePixelX),
-    //     .writePixelY(writePixelY),
-    //     .writePixelSignal(writePixelSignal)
-
-    // );
 
 
     reg [1:0] pixelState, pixelNextState;

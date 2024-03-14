@@ -1,0 +1,11 @@
+|__hyper__lib__|syn_hyper_source|2|/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v|0|
+|__hyper__lib__|syn_hyper_connect|4|/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v|0|
+|__hyper__lib__|syn_hyper_source_internal|1|/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v|0|
+|__hyper__lib__|syn_hyper_connect_internal|1|/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v|0|
+|snps_haps|SceMiMessageOutPort|1|/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v|0|
+|snps_haps|SceMiMessageInPort|1|/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v|0|
+|snps_haps|SceMiClockPort|7|/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v|0|
+|snps_haps|SceMiClockControl|1|/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v|0|
+|snps_haps|SceMiClockPortP|6|/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v|0|
+|work|top_vgatest|23|/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/top/top_vgatest.v|0|
+|work|ecp5pll|46|/home/shouyu/4.2/designProblem/ulx3s-misc/examples/ecp5pll/hdl/sv/ecp5pll.sv|0|

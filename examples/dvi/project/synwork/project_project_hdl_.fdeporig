@@ -1,0 +1,36 @@
+#defaultlanguage:vhdl
+#OPTIONS:"|-top|top_vgatest|-prodtype|synplify_pro|-dspmac|-fixsmult|-infer_seqShift|-nram|-sdff_counter|-divnmod|-nostructver|-lattice|-dfltencoding|onehot|-encrypt|-pro|-lite|-ui|-fid2|-ram|-sharing|on|-ll|2000|-autosm|-work_is_curlib|0|-ignore_undefined_lib|-lib|work|-lib|work|-lib|work|-fileorder|/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/project/syntmp/hdlorder.tcl"
+#CUR:"/usr/local/diamond/3.13/synpbase/linux_a_64/c_vhdl":1693507371
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/location.map":1693436612
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/std.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/snps_haps_pkg.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/std1164.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/numeric.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/umr_capim.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/arith.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/unsigned.vhd":1691686318
+#CUR:"/usr/local/diamond/3.13/synpbase/lib/vhd/hyperents.vhd":1691686318
+#CUR:"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga.vhd":1707451665
+#CUR:"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga2dvid.vhd":1707451665
+#CUR:"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/tmds_encoder.vhd":1707451665
+0 "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga.vhd" vhdl
+1 "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/vga2dvid.vhd" vhdl
+2 "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/dvi/hdl/tmds_encoder.vhd" vhdl
+
+# Dependency Lists (Uses list)
+0 -1
+1 2 
+2 -1
+
+# Dependency Lists (Users Of)
+0 -1
+1 -1
+2 1 
+
+# Design Unit to File Association
+arch work vga syn 0
+module work vga 0
+arch work vga2dvid behavioral 1
+module work vga2dvid 1
+arch work tmds_encoder behavioral 2
+module work tmds_encoder 2

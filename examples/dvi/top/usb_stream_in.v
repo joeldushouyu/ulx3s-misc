@@ -14,7 +14,7 @@ module usb_stream_in(input clk,
                      output reg  [1:0] A,
                      input FLAGA, 
                      input FLAGB,
-                     output reg [31:0] DQ,
+                     output  [31:0] DQ,
                      // expose the current mode, for debug
                      output [1:0] current_stream_in_mode
                      );
@@ -39,25 +39,30 @@ module usb_stream_in(input clk,
         // stream_in_write_wr to idle by 1 clock
     
     // state variable
-    localparam stream_in_idle           = 2'b00;
-    localparam stream_in_wait_flagb     = 2'b01;
-    localparam stream_in_write          = 2'b10;
-    localparam stream_in_write_wr_delay = 2'b11;
+    parameter stream_in_idle           = 2'b00;
+    parameter stream_in_wait_flagb     = 2'b01;
+    parameter stream_in_write          = 2'b10;
+    parameter stream_in_write_wr_delay = 2'b11;
     
     
     reg [1:0] current_state, next_state;
-
+    // // lets write the data
+    // for(integer i = 0; i < 32; i = i+1)begin
+    //     assign DQ[i] = data_out[i];
+    // end  
+    assign DQ = data_out;
     
-    always @(posedge clk or negedge rst_n)begin
+    always @(posedge clk )begin
         
-        if (rst_n == 0 || master_mode != master_mode_stream_in)begin
-            // reset happens
-            SLWR          <= 1'b1;
-            next_state    <= stream_in_idle;
-            current_state <= stream_in_idle;
-            //$strobe("Current state is %2b ", current_stream_in_mode);
-            end 
-        else begin
+        // if (rst_n == 0 || master_mode != master_mode_stream_in)begin
+        //     // reset happens
+        //     //SLWR          <= 1'b1;
+        //     next_state    <= stream_in_idle;
+        //     current_state <= stream_in_idle;
+        //     //$strobe("Current state is %2b ", current_stream_in_mode);
+        //     end 
+        // else 
+        // begin
             // normal, update variable if needed
             current_state <= next_state;
 
@@ -65,7 +70,7 @@ module usb_stream_in(input clk,
             if(delayCounter >0  ) begin
                 delayCounter <= delayCounter-1;
             end 
-        end
+        // end
 
     end
     
@@ -85,10 +90,10 @@ module usb_stream_in(input clk,
             // do nothing, wait for flagB turn 1
         end
         else begin
-            // lets write the data
-            for(integer i = 0; i < 32; i = i+1)begin
-                DQ[i] = data_out[i];
-            end
+            // // lets write the data
+            // for(integer i = 0; i < 32; i = i+1)begin
+            //     DQ[i] = data_out[i];
+            // end
 
             if(current_state == stream_in_write) begin
                 PKTEND = 1;
