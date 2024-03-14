@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+BOARD	proj/ulx3s_sdram_hex_v/makefile	/^BOARD = ulx3s$/;"	m
+CLK0_FILE_NAME	proj/ulx3s_sdram_hex_v/makefile	/^CLK0_FILE_NAME = ..\/..\/..\/sdram_16bit\/hdl\/top\/$(CLK0_NAME).v$/;"	m
+CLK0_NAME	proj/ulx3s_sdram_hex_v/makefile	/^CLK0_NAME = clk_25_125_25_12_100$/;"	m
+CLK0_OPTIONS	proj/ulx3s_sdram_hex_v/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CONSTRAINTS	proj/ulx3s_sdram_hex_v/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+FPGA_SIZE	proj/ulx3s_sdram_hex_v/makefile	/^FPGA_SIZE = 12$/;"	m
+OPENOCD	proj/ulx3s_sdram_hex_v/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD_INTERFACE	proj/ulx3s_sdram_hex_v/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+PROJECT	proj/ulx3s_sdram_hex_v/makefile	/^PROJECT = init$/;"	m
+SCRIPTS	proj/ulx3s_sdram_hex_v/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/scripts\/$/;"	m
+TOP_MODULE	proj/ulx3s_sdram_hex_v/makefile	/^TOP_MODULE = sdram_hex_oled$/;"	m
+TOP_MODULE_FILE	proj/ulx3s_sdram_hex_v/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/sdram_16bit\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+VERILOG_FILES	proj/ulx3s_sdram_hex_v/makefile	/^VERILOG_FILES = \\$/;"	m
+VHDL_FILES	proj/ulx3s_sdram_hex_v/makefile	/^VHDL_FILES = $/;"	m

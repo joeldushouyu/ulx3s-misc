@@ -30,7 +30,9 @@ VERILOG_FILES = \
   top/usb_stream_out.v\
   top/usb_stream_in_example.v\
   top/usb_stream_out_example.v\
-  top/usb_fifo_example.v
+  top/usb_fifo_example.v\
+  top/slaveFIFO2b_streamIN.v\
+  top/slaveFIFO2b_streamOUT.v\
 
 
 # *.vhd those files will be converted to *.v files with vhdl2vl (warning overwriting/deleting)

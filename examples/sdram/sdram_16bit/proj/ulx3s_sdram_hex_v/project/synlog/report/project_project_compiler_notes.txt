@@ -1,0 +1,16 @@
+@N|Running in 64-bit mode
+@N|Running in 64-bit mode
+@N|stack limit increased to max
+@N: CG364 :"/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+@N: CG364 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/top/clk_25_125_25_12_100.v":5:7:5:26|Synthesizing module clk_25_125_25_12_100 in library work.
+@N: CG364 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/sdram_16bit.v":46:7:46:17|Synthesizing module sdram_16bit in library work.
+@N: CL134 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/sdram_16bit.v":99:1:99:6|Found RAM actLine, depth=4, width=13
+@N: CG364 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":7:7:7:17|Synthesizing module hex_decoder in library work.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[0] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[1] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[5] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[6] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[7] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[11] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[12] is always 0.
+

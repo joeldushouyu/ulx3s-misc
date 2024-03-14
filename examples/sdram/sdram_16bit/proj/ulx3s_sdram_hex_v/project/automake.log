@@ -1,0 +1,284 @@
+
+synpwrap -msg -prj "project_project_synplify.tcl" -log "project_project.srf"
+Copyright (C) 1992-2023 Lattice Semiconductor Corporation. All rights reserved.
+Lattice Diamond Version 3.13.0.56.2
+    <postMsg mid="2011000" type="Info"    dynamic="0" navigation="0"  />
+Ubuntu 20.04.6 LTS
+
+------ Message Queues --------
+key        msqid      owner      perms      used-bytes   messages    
+
+------ Shared Memory Segments --------
+key        shmid      owner      perms      bytes      nattch     status      
+0x00000000 3          shouyu     600        524288     2          dest         
+0x00000000 8          shouyu     600        524288     2          dest         
+0x00000000 18         shouyu     600        167936     2          dest         
+0x00000000 19         shouyu     600        167936     2          dest         
+0x00000000 22         shouyu     600        905216     2          dest         
+0x00000000 23         shouyu     600        905216     2          dest         
+0x00000000 24         shouyu     600        212992     2          dest         
+0x00000000 25         shouyu     600        212992     2          dest         
+0x00000000 26         shouyu     600        73728      2          dest         
+0x00000000 27         shouyu     600        73728      2          dest         
+0x00000000 28         shouyu     600        356352     2          dest         
+0x00000000 29         shouyu     600        356352     2          dest         
+0x00000000 35         shouyu     600        4194304    2          dest         
+0x00000000 41         shouyu     600        524288     2          dest         
+0x00000000 46         shouyu     600        167936     2          dest         
+0x00000000 47         shouyu     600        167936     2          dest         
+
+------ Semaphore Arrays --------
+key        semid      owner      perms      nsems     
+
+EST
+/proc/sys/vm/admin_reserve_kbytes:8192
+/proc/sys/vm/compact_unevictable_allowed:1
+/proc/sys/vm/compaction_proactiveness:20
+/proc/sys/vm/dirty_background_bytes:0
+/proc/sys/vm/dirty_background_ratio:10
+/proc/sys/vm/dirty_bytes:0
+/proc/sys/vm/dirty_expire_centisecs:3000
+/proc/sys/vm/dirty_ratio:20
+/proc/sys/vm/dirty_writeback_centisecs:500
+/proc/sys/vm/dirtytime_expire_seconds:43200
+/proc/sys/vm/extfrag_threshold:500
+/proc/sys/vm/hugetlb_shm_group:0
+/proc/sys/vm/laptop_mode:0
+/proc/sys/vm/legacy_va_layout:0
+/proc/sys/vm/lowmem_reserve_ratio:256	256	32	0	0
+/proc/sys/vm/max_map_count:65530
+/proc/sys/vm/memory_failure_early_kill:0
+/proc/sys/vm/memory_failure_recovery:1
+/proc/sys/vm/min_free_kbytes:90112
+/proc/sys/vm/min_slab_ratio:5
+/proc/sys/vm/min_unmapped_ratio:1
+/proc/sys/vm/mmap_min_addr:65536
+/proc/sys/vm/nr_hugepages:0
+/proc/sys/vm/nr_hugepages_mempolicy:0
+/proc/sys/vm/nr_overcommit_hugepages:0
+/proc/sys/vm/numa_stat:1
+/proc/sys/vm/numa_zonelist_order:Node
+/proc/sys/vm/oom_dump_tasks:1
+/proc/sys/vm/oom_kill_allocating_task:0
+/proc/sys/vm/overcommit_kbytes:0
+/proc/sys/vm/overcommit_memory:0
+/proc/sys/vm/overcommit_ratio:50
+/proc/sys/vm/page-cluster:3
+/proc/sys/vm/page_lock_unfairness:5
+/proc/sys/vm/panic_on_oom:0
+/proc/sys/vm/percpu_pagelist_high_fraction:0
+/proc/sys/vm/stat_interval:1
+/proc/sys/vm/swappiness:60
+/proc/sys/vm/unprivileged_userfaultfd:0
+/proc/sys/vm/user_reserve_kbytes:131072
+/proc/sys/vm/vfs_cache_pressure:100
+/proc/sys/vm/watermark_boost_factor:15000
+/proc/sys/vm/watermark_scale_factor:10
+/proc/sys/vm/zone_reclaim_mode:0
+###########################################################[
+Running in Lattice mode
+
+                               Synplify Pro (R) 
+
+               Version U-2023.03L-SP1 for linux64 - Aug 10, 2023 
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+Starting:    /usr/local/diamond/3.13/synpbase/linux_a_64/mbin/synbatch
+Install:     /usr/local/diamond/3.13/synpbase
+Hostname:    shouyu-LOQ-15APH8
+Date:        Tue Feb 13 12:26:21 2024
+Version:     U-2023.03L-SP1
+
+Arguments:   -product synplify_base -batch project_project_synplify.tcl
+ProductType: synplify_pro
+
+
+
+
+log file: "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/project/project_project.srr"
+Running: project in foreground
+
+Running proj_1|project
+
+Running Flow: compile (Compile) on proj_1|project
+# Tue Feb 13 12:26:21 2024
+
+Running Flow: compile_flow (Compile Process) on proj_1|project
+# Tue Feb 13 12:26:21 2024
+
+Running: compiler (Compile Input) on proj_1|project
+# Tue Feb 13 12:26:21 2024
+Process ID: 24227
+compiler exited with errors
+Job failed on: proj_1|project
+
+Job: "compiler" terminated with error status: 2
+See log file: "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/project/synlog/project_project_compiler.srr"
+# Tue Feb 13 12:26:21 2024
+
+Return Code: 2
+Run Time:00h:00m:00s
+Complete: Compile Process on proj_1|project
+Complete: Compile on proj_1|project
+Complete: Logic Synthesis on proj_1|project
+Copied /home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/project/project_project.srr to /home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/project/project_project.srf
+Error: At line 68 while processing "project_project_synplify.tcl"
+2
+TCL script complete: "project_project_synplify.tcl"
+TCL script had errors: "project_project_synplify.tcl"
+exit status=9
+exit status=9
+Save changes for project:
+/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/project/proj_1.prj
+batch mode default:no
+Child process exit with 9.
+
+==contents of project_project.srf
+#Build: Synplify Pro (R) U-2023.03L-SP1, Build 153R, Aug 10 2023
+#install: /usr/local/diamond/3.13/synpbase
+#OS: Linux 
+#Hostname: shouyu-LOQ-15APH8
+
+# Tue Feb 13 12:26:21 2024
+
+#Implementation: project
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /usr/local/diamond/3.13/synpbase
+OS: Ubuntu 20.04.6 LTS
+Hostname: shouyu-LOQ-15APH8
+max virtual memory: unlimited (bytes)
+max user processes: 92689
+max stack size: 8388608 (bytes)
+
+
+Implementation : project
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /usr/local/diamond/3.13/synpbase
+OS: Ubuntu 20.04.6 LTS
+Hostname: shouyu-LOQ-15APH8
+max virtual memory: unlimited (bytes)
+max user processes: 92689
+max stack size: 8388608 (bytes)
+
+
+Implementation : project
+Synopsys Verilog Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+@I::"/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v" (library work)
+@I::"/usr/local/diamond/3.13/synpbase/lib/lucent/pmi_def.v" (library work)
+@I::"/usr/local/diamond/3.13/synpbase/lib/vlog/hypermods.v" (library __hyper__lib__)
+@I::"/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_objects.v" (library snps_haps)
+@I::"/usr/local/diamond/3.13/synpbase/lib/vlog/scemi_pipes.svh" (library snps_haps)
+@I::"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/top/sdram_hex_oled.v" (library work)
+@I::"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/top/clk_25_125_25_12_100.v" (library work)
+@I::"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/sdram_16bit.v" (library work)
+@I::"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/oled_video.v" (library work)
+@I::"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v" (library work)
+@N|stack limit increased to max
+Verilog syntax check successful!
+Selecting top level module sdram_hex_oled
+@N: CG364 :"/usr/local/diamond/3.13/synpbase/lib/lucent/ecp5u.v":1696:7:1696:13|Synthesizing module EHXPLLL in library work.
+Running optimization stage 1 on EHXPLLL .......
+Finished optimization stage 1 on EHXPLLL (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/top/clk_25_125_25_12_100.v":5:7:5:26|Synthesizing module clk_25_125_25_12_100 in library work.
+@W: CG781 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/top/clk_25_125_25_12_100.v":48:6:48:10|Input ENCLKOS on instance pll_i is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/top/clk_25_125_25_12_100.v":48:6:48:10|Input ENCLKOS2 on instance pll_i is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+@W: CG781 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/top/clk_25_125_25_12_100.v":48:6:48:10|Input ENCLKOS3 on instance pll_i is undriven; assigning to 0.  Simulation mismatch possible. Either assign the input or remove the declaration. 
+Running optimization stage 1 on clk_25_125_25_12_100 .......
+Finished optimization stage 1 on clk_25_125_25_12_100 (CPU Time 0h:00m:00s, Memory Used current: 126MB peak: 126MB)
+@N: CG364 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/sdram_16bit.v":46:7:46:17|Synthesizing module sdram_16bit in library work.
+Running optimization stage 1 on sdram_16bit .......
+@N: CL134 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/sdram_16bit.v":99:1:99:6|Found RAM actLine, depth=4, width=13
+Finished optimization stage 1 on sdram_16bit (CPU Time 0h:00m:00s, Memory Used current: 129MB peak: 129MB)
+@N: CG364 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":7:7:7:17|Synthesizing module hex_decoder in library work.
+
+	C_data_len=32'b00000000000000000000000010000000
+	C_debounce=1'b0
+	C_font_file=104'b01101111011011000110010101100100010111110110011001101111011011100111010000101110011011010110010101101101
+	C_font_size=32'b00000000000000000000000010001000
+	C_color_bits=32'b00000000000000000000000000010000
+	C_x_bits=32'b00000000000000000000000000000111
+	C_y_bits=32'b00000000000000000000000000000110
+	C_holding_bits=32'b00000000000000000000000000010111
+	C_char_line_bits=32'b00000000000000000000000000000101
+	C_color_black=16'b0000000000000000
+	C_color_dark_red=16'b0100000000000000
+	C_color_dark_brown=16'b0010000100000000
+	C_color_dark_yellow=16'b0100001000000000
+	C_color_dark_green=16'b0000001000000000
+	C_color_dark_cyan=16'b0000001000001000
+	C_color_dark_blue=16'b0000000000001000
+	C_color_dark_violett=16'b0100000000001000
+	C_color_gray=16'b0110001100001100
+	C_color_light_red=16'b1000000000000000
+	C_color_orange=16'b0100001000000000
+	C_color_light_yellow=16'b1000010000000000
+	C_color_light_green=16'b0000010000000000
+	C_color_light_cyan=16'b0000010000010000
+	C_color_light_blue=16'b0000000000010000
+	C_color_light_violett=16'b1000000000010000
+	C_color_white=16'b1111111111111111
+   Generated name = hex_decoder_Z1
+Opening data file oled_font.mem from directory /home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v
+@W: CG532 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":32:2:32:8|Within an initial block, only Verilog force statements and memory initialization statements and initialization of entire variable are recognized, and all other content is ignored. Simulation mismatch may occur
+@W: CG133 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":137:13:137:21|Object R_counter is declared but not assigned. Either assign a value or remove the declaration.
+Running optimization stage 1 on hex_decoder_Z1 .......
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[0] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[1] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[5] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[6] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[7] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[11] is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Register bit R_indexed_color[12] is always 0.
+@W: CL279 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Pruning register bits 12 to 11 of R_indexed_color[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Pruning register bits 7 to 5 of R_indexed_color[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_video_verilog/hex_decoder.v":138:2:138:7|Pruning register bits 1 to 0 of R_indexed_color[15:0]. If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+Finished optimization stage 1 on hex_decoder_Z1 (CPU Time 0h:00m:00s, Memory Used current: 132MB peak: 132MB)
+@E: CG596 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/top/sdram_hex_oled.v":153:9:153:20|Parameter C_color_bits cannot be found in module oled_video.
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Feb 13 12:26:21 2024
+
+###########################################################]
+@END
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+# Tue Feb 13 12:26:21 2024
+
+###########################################################]
+
+
+Synthesis exit by 9.

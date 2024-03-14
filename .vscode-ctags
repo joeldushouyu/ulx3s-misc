@@ -1,0 +1,1470 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_OUTPUT_MODE	u-ctags	/u-ctags or e-ctags/
+!_TAG_PROGRAM_AUTHOR	Universal Ctags Team	//
+!_TAG_PROGRAM_NAME	Universal Ctags	/Derived from Exuberant Ctags/
+!_TAG_PROGRAM_URL	https://ctags.io/	/official site/
+!_TAG_PROGRAM_VERSION	0.0.0	//
+$(BITSTREAM0_FILE)	examples/multiboot/Makefile	/^$(BITSTREAM0_FILE):$/;"	t
+$(BITSTREAM1_FILE)	examples/multiboot/Makefile	/^$(BITSTREAM1_FILE):$/;"	t
+$(BITSTREAM2_FILE)	examples/multiboot/Makefile	/^$(BITSTREAM2_FILE):$/;"	t
+$(BOARD)_$(FPGA_SIZE)f.ocd	scripts/diamond_main.mk	/^$(BOARD)_$(FPGA_SIZE)f.ocd: $(SCRIPTS)\/ecp5-ocd.sh$/;"	t
+$(BOARD)_$(FPGA_SIZE)f.ocd	scripts/trellis_main.mk	/^$(BOARD)_$(FPGA_SIZE)f.ocd: $(SCRIPTS)\/ecp5-ocd.sh$/;"	t
+$(BOARD)_$(FPGA_SIZE)f.ocd	scripts/trellis_main_ghdl.mk	/^$(BOARD)_$(FPGA_SIZE)f.ocd: $(SCRIPTS)\/ecp5-ocd.sh$/;"	t
+$(BOARD)_$(FPGA_SIZE)f.ocd	scripts/trellis_main_sv.mk	/^$(BOARD)_$(FPGA_SIZE)f.ocd: makefile $(SCRIPTS)\/ecp5-ocd.sh$/;"	t
+$(BOARD)_$(FPGA_SIZE)f.xcf	scripts/diamond_main.mk	/^$(BOARD)_$(FPGA_SIZE)f.xcf: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(SCRIPTS)\/$(BOARD)_sram.xcf /;"	t
+$(BOARD)_$(FPGA_SIZE)f.xcf	scripts/trellis_main.mk	/^$(BOARD)_$(FPGA_SIZE)f.xcf: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(SCRIPTS)\/$(BOARD)_sram.xcf /;"	t
+$(BOARD)_$(FPGA_SIZE)f.xcf	scripts/trellis_main_ghdl.mk	/^$(BOARD)_$(FPGA_SIZE)f.xcf: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(SCRIPTS)\/$(BOARD)_sram.xcf /;"	t
+$(BOARD)_$(FPGA_SIZE)f.xcf	scripts/trellis_main_sv.mk	/^$(BOARD)_$(FPGA_SIZE)f.xcf: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(SCRIPTS)\/$(BOARD)_sram.xcf /;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit	scripts/diamond_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit: project\/project_project.bit$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit	scripts/trellis_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit	scripts/trellis_main_ghdl.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit	scripts/trellis_main_sv.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config	scripts/diamond_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config: $(PROJECT).json $(BASECFG)$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config	scripts/trellis_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config: $(PROJECT).json $(BASECFG)$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config	scripts/trellis_main_ghdl.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config: $(PROJECT).json $(BASECFG)$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config	scripts/trellis_main_sv.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config: $(PROJECT).json $(BASECFG)$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf	scripts/diamond_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf: $(SCRIPTS)\/project.ldf $(SCRIPTS)\/ldf.xsl $(SCRIPTS)\/$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf	scripts/diamond_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf: $(BOARD)_$(FPGA_SIZE)f.xcf $(BOARD)_$(FPGA_SIZE)f_$(PROJE/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf	scripts/trellis_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf	scripts/trellis_main_ghdl.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf	scripts/trellis_main_sv.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).config$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme	scripts/diamond_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme: $(BOARD)_$(FPGA_SIZE)f.xcf $(BOARD)_$(FPGA_SIZE)f_$(PROJE/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme	scripts/trellis_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme: $(BOARD)_$(FPGA_SIZE)f.xcf $(BOARD)_$(FPGA_SIZE)f_$(PROJE/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme	scripts/trellis_main_ghdl.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme: $(BOARD)_$(FPGA_SIZE)f.xcf $(BOARD)_$(FPGA_SIZE)f_$(PROJE/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme	scripts/trellis_main_sv.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme: $(BOARD)_$(FPGA_SIZE)f.xcf $(BOARD)_$(FPGA_SIZE)f_$(PROJE/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash.mcs	scripts/diamond_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash.mcs: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash_$(FLASH_CHIP).vme	scripts/diamond_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash_$(FLASH_CHIP).vme: $(BOARD)_$(FPGA_SIZE)f_flash_$(FLASH_/;"	t
+$(BOARD)_$(FPGA_SIZE)f_flash_$(FLASH_CHIP).xcf	scripts/diamond_main.mk	/^$(BOARD)_$(FPGA_SIZE)f_flash_$(FLASH_CHIP).xcf: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(SCRIPTS)/;"	t
+$(BUILD_TMP)/multiboot.img	examples/multiboot/Makefile	/^$(BUILD_TMP)\/multiboot.img: $(BITSTREAM0_FILE) $(BITSTREAM1_FILE) $(BITSTREAM2_FILE) $/;"	t
+$(BUILD_TMP)/multiboot.img.gz	examples/multiboot/Makefile	/^$(BUILD_TMP)\/multiboot.img.gz: $(BUILD_TMP)\/multiboot.img$/;"	t
+$(CLK0_FILE_NAME)	scripts/diamond_main.mk	/^$(CLK0_FILE_NAME):$/;"	t
+$(CLK0_FILE_NAME)	scripts/trellis_main.mk	/^$(CLK0_FILE_NAME):$/;"	t
+$(CLK0_FILE_NAME)	scripts/trellis_main_ghdl.mk	/^$(CLK0_FILE_NAME):$/;"	t
+$(CLK0_FILE_NAME)	scripts/trellis_main_sv.mk	/^$(CLK0_FILE_NAME):$/;"	t
+$(CLK1_FILE_NAME)	scripts/diamond_main.mk	/^$(CLK1_FILE_NAME):$/;"	t
+$(CLK1_FILE_NAME)	scripts/trellis_main.mk	/^$(CLK1_FILE_NAME):$/;"	t
+$(CLK1_FILE_NAME)	scripts/trellis_main_ghdl.mk	/^$(CLK1_FILE_NAME):$/;"	t
+$(CLK1_FILE_NAME)	scripts/trellis_main_sv.mk	/^$(CLK1_FILE_NAME):$/;"	t
+$(CLK2_FILE_NAME)	scripts/diamond_main.mk	/^$(CLK2_FILE_NAME):$/;"	t
+$(CLK2_FILE_NAME)	scripts/trellis_main.mk	/^$(CLK2_FILE_NAME):$/;"	t
+$(CLK2_FILE_NAME)	scripts/trellis_main_ghdl.mk	/^$(CLK2_FILE_NAME):$/;"	t
+$(CLK2_FILE_NAME)	scripts/trellis_main_sv.mk	/^$(CLK2_FILE_NAME):$/;"	t
+$(CLK3_FILE_NAME)	scripts/diamond_main.mk	/^$(CLK3_FILE_NAME):$/;"	t
+$(CLK3_FILE_NAME)	scripts/trellis_main.mk	/^$(CLK3_FILE_NAME):$/;"	t
+$(CLK3_FILE_NAME)	scripts/trellis_main_ghdl.mk	/^$(CLK3_FILE_NAME):$/;"	t
+$(CLK3_FILE_NAME)	scripts/trellis_main_sv.mk	/^$(CLK3_FILE_NAME):$/;"	t
+$(PROJ).bit	examples/vhdlib/Makefile	/^$(PROJ).bit: $(PROJ).config$/;"	t
+$(PROJ).config	examples/vhdlib/Makefile	/^$(PROJ).config: $(PROJ).json$/;"	t
+$(PROJ).json	examples/vhdlib/Makefile	/^$(PROJ).json: $(FILES) synth.ys Makefile$/;"	t
+$(PROJECT).json	scripts/diamond_main.mk	/^$(PROJECT).json: $(VERILOG_FILES) $(VHDL_TO_VERILOG_FILES)$/;"	t
+$(PROJECT).json	scripts/trellis_main.mk	/^$(PROJECT).json: $(VERILOG_FILES) $(VHDL_TO_VERILOG_FILES)$/;"	t
+$(PROJECT).json	scripts/trellis_main_ghdl.mk	/^$(PROJECT).json: $(VERILOG_FILES) $(VHDL_TO_VERILOG_FILES) $(VHDL_FILES)$/;"	t
+$(PROJECT).json	scripts/trellis_main_sv.mk	/^$(PROJECT).json: $(VERILOG_FILES) $(SYSTEMVERILOG_FILES) $(VHDL_TO_VERILOG_FILES)$/;"	t
+$(bitfile)	examples/usb/proj/xilinx/include/vivado.mk	/^$(bitfile): clean$/;"	t
+$(bitfile)	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^$(bitfile): clean$/;"	t
+$(project).bin	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).bin: $(project)_par.ncd$/;"	t
+$(project).bit	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).bit: $(project)_par.ncd$/;"	t
+$(project).mcs	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).mcs: $(project).bit$/;"	t
+$(project).ncd	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).ncd: $(project).ngd$/;"	t
+$(project).ngc	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).ngc: $(vfiles) $(vhdfiles) $(local_corengcs) $(project).scr $(project).prj$/;"	t
+$(project).ngd	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).ngd: $(project).ngc $(project).ucf$/;"	t
+$(project).post_map.twr	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).post_map.twr: $(project).ncd$/;"	t
+$(project).prj	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).prj: $(vfiles) $(vhdfiles) # $(mkfiles)$/;"	t
+$(project).scr	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).scr: $(optfile) .\/xilinx.opt # $(mkfiles)$/;"	t
+$(project).svf	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).svf: $(project).bit$/;"	t
+$(project).twr	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).twr: $(project)_par.ncd$/;"	t
+$(project).xsvf	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project).xsvf: $(project).bit$/;"	t
+$(project)_err.twr	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project)_err.twr: $(project)_par.ncd$/;"	t
+$(project)_flash.svf	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project)_flash.svf: $(project).mcs$/;"	t
+$(project)_par.ncd	examples/usb/proj/xilinx/include/xilinx.mk	/^$(project)_par.ncd: $(project).ncd$/;"	t
+%.ngc	examples/usb/proj/xilinx/include/xilinx.mk	/^%.ngc %.v: %.xco$/;"	t
+%.v	examples/usb/proj/xilinx/include/xilinx.mk	/^%.ngc %.v: %.xco$/;"	t
+%.v	scripts/trellis_main.mk	/^%.v: %.vhd$/;"	t
+%.v	scripts/trellis_main_ghdl.mk	/^%.v: %.vhd$/;"	t
+%.v	scripts/trellis_main_sv.mk	/^%.v: %.vhd$/;"	t
+.gitignore	examples/usb/proj/xilinx/include/xilinx.mk	/^.gitignore: $(mkfiles)$/;"	t
+BIT2SVF	scripts/diamond_main.mk	/^BIT2SVF ?= $(TRELLIS)\/tools\/bit_to_svf.py$/;"	m
+BIT2SVF	scripts/trellis_main.mk	/^BIT2SVF ?= $(TRELLIS)\/tools\/bit_to_svf.py$/;"	m
+BIT2SVF	scripts/trellis_main_ghdl.mk	/^BIT2SVF ?= $(TRELLIS)\/tools\/bit_to_svf.py$/;"	m
+BIT2SVF	scripts/trellis_main_sv.mk	/^BIT2SVF ?= $(TRELLIS)\/tools\/bit_to_svf.py$/;"	m
+BITSTREAM	scripts/diamond_main.mk	/^BITSTREAM ?= $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	m
+BITSTREAM0_ADDR	examples/multiboot/Makefile	/^BITSTREAM0_ADDR := 0x000000 # always 0$/;"	m
+BITSTREAM0_FILE	examples/multiboot/Makefile	/^BITSTREAM0_FILE := bitstream0\/ulx3s_12f_bitstream0.bit$/;"	m
+BITSTREAM1_ADDR	examples/multiboot/Makefile	/^BITSTREAM1_ADDR := 0x200000$/;"	m
+BITSTREAM1_FILE	examples/multiboot/Makefile	/^BITSTREAM1_FILE := bitstream1\/ulx3s_12f_bitstream1.bit$/;"	m
+BITSTREAM2_ADDR	examples/multiboot/Makefile	/^BITSTREAM2_ADDR := 0x400000$/;"	m
+BITSTREAM2_FILE	examples/multiboot/Makefile	/^BITSTREAM2_FILE := bitstream2\/ulx3s_12f_bitstream2.bit$/;"	m
+BOARD	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/adxl355/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/adxl355/projbig/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/audio/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/collatz/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/db9joy/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/dvi/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/dvi_in/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/dvi_osd/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/ecp5pll/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/eink/eink154/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/eink/epaper290/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/esp32_passthru/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/esp32_rmii/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/eth/rmii/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/flash_passthru/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/fm/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/gray_counter/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/hex/dvi_hex/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/hex/lcd_lvds_hex/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/hex/lcd_st7789_hex/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/hex/oled_ssd1306_hex/proj/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/hex/oled_ssd1331_hex/proj/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/hex/oled_ssd1351_hex/proj/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/lvds_passthru/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/multiboot/bitstream0/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/multiboot/bitstream1/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/multiboot/bitstream2/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/oled/proj/ulx3s_checkered_v/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/oled/proj/ulx3s_terminal/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/onchip_osc_blink/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/onchip_osc_blink_ffm/makefile	/^BOARD = ffmlfe5$/;"	m
+BOARD	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/rtc/i2c_master/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/rtc/micropython-mcp7940n/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/sdcard/micropython/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/sdram/sdram_mistery/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/sdram/sdram_pnru/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/sdram/sdram_pnru_68k/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/serdes/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/serdes_dvi/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/usb/ch376/proj/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/usb/proj/lattice/ulx3s/usbethernet/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/usb/proj/lattice/ulx3s/usbhid_host/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^BOARD = ulx3s$/;"	m
+BOARD	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/makefile	/^BOARD = ulx3s$/;"	m
+BOARD	scripts/diamond_main.mk	/^BOARD ?= board$/;"	m
+BOARD	scripts/trellis_main.mk	/^BOARD ?= board$/;"	m
+BOARD	scripts/trellis_main_ghdl.mk	/^BOARD ?= board$/;"	m
+BOARD	scripts/trellis_main_sv.mk	/^BOARD ?= board$/;"	m
+BUILD_TMP	examples/multiboot/Makefile	/^BUILD_TMP := \/tmp\/$/;"	m
+CHIP_ID	scripts/diamond_main.mk	/^  CHIP_ID=0x21111043$/;"	m
+CHIP_ID	scripts/diamond_main.mk	/^  CHIP_ID=0x41111043$/;"	m
+CHIP_ID	scripts/diamond_main.mk	/^  CHIP_ID=0x41112043$/;"	m
+CHIP_ID	scripts/diamond_main.mk	/^  CHIP_ID=0x41113043$/;"	m
+CHIP_ID	scripts/trellis_main.mk	/^  CHIP_ID=0x21111043$/;"	m
+CHIP_ID	scripts/trellis_main.mk	/^  CHIP_ID=0x41111043$/;"	m
+CHIP_ID	scripts/trellis_main.mk	/^  CHIP_ID=0x41112043$/;"	m
+CHIP_ID	scripts/trellis_main.mk	/^  CHIP_ID=0x41113043$/;"	m
+CHIP_ID	scripts/trellis_main_ghdl.mk	/^  CHIP_ID=0x21111043$/;"	m
+CHIP_ID	scripts/trellis_main_ghdl.mk	/^  CHIP_ID=0x41111043$/;"	m
+CHIP_ID	scripts/trellis_main_ghdl.mk	/^  CHIP_ID=0x41112043$/;"	m
+CHIP_ID	scripts/trellis_main_ghdl.mk	/^  CHIP_ID=0x41113043$/;"	m
+CHIP_ID	scripts/trellis_main_sv.mk	/^  CHIP_ID=0x21111043$/;"	m
+CHIP_ID	scripts/trellis_main_sv.mk	/^  CHIP_ID=0x41111043$/;"	m
+CHIP_ID	scripts/trellis_main_sv.mk	/^  CHIP_ID=0x41112043$/;"	m
+CHIP_ID	scripts/trellis_main_sv.mk	/^  CHIP_ID=0x41113043$/;"	m
+CLK0_FILE_NAME	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^CLK0_FILE_NAME = clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	examples/hex/lcd_lvds_hex/proj/Makefile	/^CLK0_FILE_NAME = ..\/..\/..\/..\/clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^CLK0_FILE_NAME = clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^CLK0_FILE_NAME = clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^CLK0_FILE_NAME = clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^CLK0_FILE_NAME = clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^CLK0_FILE_NAME = clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^CLK0_FILE_NAME = clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^CLK0_FILE_NAME = clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^CLK0_FILE_NAME = ..\/..\/..\/sdram_16bit\/hdl\/top\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^CLK0_FILE_NAME = ..\/..\/..\/sdram_ctrl\/hdl\/top\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	scripts/diamond_main.mk	/^CLK0_FILE_NAME ?= clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	scripts/trellis_main.mk	/^CLK0_FILE_NAME ?= clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	scripts/trellis_main_ghdl.mk	/^CLK0_FILE_NAME ?= clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_FILE_NAME	scripts/trellis_main_sv.mk	/^CLK0_FILE_NAME ?= clocks\/$(CLK0_NAME).v$/;"	m
+CLK0_NAME	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^CLK0_NAME = clk_25_250_125_25$/;"	m
+CLK0_NAME	examples/hex/lcd_lvds_hex/proj/Makefile	/^CLK0_NAME = clk_25_175_25$/;"	m
+CLK0_NAME	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^CLK0_NAME = clk_25_50_25$/;"	m
+CLK0_NAME	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^CLK0_NAME = clk_25_250_125_25$/;"	m
+CLK0_NAME	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^CLK0_NAME = clk_100_250_125_25$/;"	m
+CLK0_NAME	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^CLK0_NAME = clk_25_250_125_25$/;"	m
+CLK0_NAME	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^CLK0_NAME = clk_25_250_125_25$/;"	m
+CLK0_NAME	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^CLK0_NAME = clk_25_250_125_25$/;"	m
+CLK0_NAME	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^CLK0_NAME = clk_25_250_125_25$/;"	m
+CLK0_NAME	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^CLK0_NAME = clk_25_125_25_12_100$/;"	m
+CLK0_NAME	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^CLK0_NAME = clk_25_125_25_12_100$/;"	m
+CLK0_NAME	scripts/diamond_main.mk	/^CLK0_NAME ?= clk0$/;"	m
+CLK0_NAME	scripts/trellis_main.mk	/^CLK0_NAME ?= clk0$/;"	m
+CLK0_NAME	scripts/trellis_main_ghdl.mk	/^CLK0_NAME ?= clk0$/;"	m
+CLK0_NAME	scripts/trellis_main_sv.mk	/^CLK0_NAME ?= clk0$/;"	m
+CLK0_OPTIONS	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	examples/hex/lcd_lvds_hex/proj/Makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^CLK0_OPTIONS = \\$/;"	m
+CLK0_OPTIONS	scripts/diamond_main.mk	/^CLK0_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK0_OPTIONS	scripts/trellis_main.mk	/^CLK0_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK0_OPTIONS	scripts/trellis_main_ghdl.mk	/^CLK0_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK0_OPTIONS	scripts/trellis_main_sv.mk	/^CLK0_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK0_OPTIONS_OLD	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^CLK0_OPTIONS_OLD = \\$/;"	m
+CLK0_OPTIONS_OLD	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^CLK0_OPTIONS_OLD = \\$/;"	m
+CLK0_OPTIONS_OLD	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^CLK0_OPTIONS_OLD = \\$/;"	m
+CLK1_FILE_NAME	scripts/diamond_main.mk	/^CLK1_FILE_NAME ?= clocks\/$(CLK1_NAME).v$/;"	m
+CLK1_FILE_NAME	scripts/trellis_main.mk	/^CLK1_FILE_NAME ?= clocks\/$(CLK1_NAME).v$/;"	m
+CLK1_FILE_NAME	scripts/trellis_main_ghdl.mk	/^CLK1_FILE_NAME ?= clocks\/$(CLK1_NAME).v$/;"	m
+CLK1_FILE_NAME	scripts/trellis_main_sv.mk	/^CLK1_FILE_NAME ?= clocks\/$(CLK1_NAME).v$/;"	m
+CLK1_NAME	scripts/diamond_main.mk	/^CLK1_NAME ?= clk1$/;"	m
+CLK1_NAME	scripts/trellis_main.mk	/^CLK1_NAME ?= clk1$/;"	m
+CLK1_NAME	scripts/trellis_main_ghdl.mk	/^CLK1_NAME ?= clk1$/;"	m
+CLK1_NAME	scripts/trellis_main_sv.mk	/^CLK1_NAME ?= clk1$/;"	m
+CLK1_OPTIONS	scripts/diamond_main.mk	/^CLK1_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK1_OPTIONS	scripts/trellis_main.mk	/^CLK1_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK1_OPTIONS	scripts/trellis_main_ghdl.mk	/^CLK1_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK1_OPTIONS	scripts/trellis_main_sv.mk	/^CLK1_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK2_FILE_NAME	scripts/diamond_main.mk	/^CLK2_FILE_NAME ?= clocks\/$(CLK2_NAME).v$/;"	m
+CLK2_FILE_NAME	scripts/trellis_main.mk	/^CLK2_FILE_NAME ?= clocks\/$(CLK2_NAME).v$/;"	m
+CLK2_FILE_NAME	scripts/trellis_main_ghdl.mk	/^CLK2_FILE_NAME ?= clocks\/$(CLK2_NAME).v$/;"	m
+CLK2_FILE_NAME	scripts/trellis_main_sv.mk	/^CLK2_FILE_NAME ?= clocks\/$(CLK2_NAME).v$/;"	m
+CLK2_NAME	scripts/diamond_main.mk	/^CLK2_NAME ?= clk2$/;"	m
+CLK2_NAME	scripts/trellis_main.mk	/^CLK2_NAME ?= clk2$/;"	m
+CLK2_NAME	scripts/trellis_main_ghdl.mk	/^CLK2_NAME ?= clk2$/;"	m
+CLK2_NAME	scripts/trellis_main_sv.mk	/^CLK2_NAME ?= clk2$/;"	m
+CLK2_OPTIONS	scripts/diamond_main.mk	/^CLK2_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK2_OPTIONS	scripts/trellis_main.mk	/^CLK2_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK2_OPTIONS	scripts/trellis_main_ghdl.mk	/^CLK2_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK2_OPTIONS	scripts/trellis_main_sv.mk	/^CLK2_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK3_FILE_NAME	scripts/diamond_main.mk	/^CLK3_FILE_NAME ?= clocks\/$(CLK3_NAME).v$/;"	m
+CLK3_FILE_NAME	scripts/trellis_main.mk	/^CLK3_FILE_NAME ?= clocks\/$(CLK3_NAME).v$/;"	m
+CLK3_FILE_NAME	scripts/trellis_main_ghdl.mk	/^CLK3_FILE_NAME ?= clocks\/$(CLK3_NAME).v$/;"	m
+CLK3_FILE_NAME	scripts/trellis_main_sv.mk	/^CLK3_FILE_NAME ?= clocks\/$(CLK3_NAME).v$/;"	m
+CLK3_NAME	scripts/diamond_main.mk	/^CLK3_NAME ?= clk3$/;"	m
+CLK3_NAME	scripts/trellis_main.mk	/^CLK3_NAME ?= clk3$/;"	m
+CLK3_NAME	scripts/trellis_main_ghdl.mk	/^CLK3_NAME ?= clk3$/;"	m
+CLK3_NAME	scripts/trellis_main_sv.mk	/^CLK3_NAME ?= clk3$/;"	m
+CLK3_OPTIONS	scripts/diamond_main.mk	/^CLK3_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK3_OPTIONS	scripts/trellis_main.mk	/^CLK3_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK3_OPTIONS	scripts/trellis_main_ghdl.mk	/^CLK3_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CLK3_OPTIONS	scripts/trellis_main_sv.mk	/^CLK3_OPTIONS ?= --input 25 --output 100 --s1 50 --p1 0 --s2 25 --p2 0 --s3 125 --p3 0$/;"	m
+CONSTRAINTS	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^CONSTRAINTS = constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/adxl355/proj/Makefile	/^CONSTRAINTS = constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/adxl355/projbig/Makefile	/^CONSTRAINTS = constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/audio/Makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/collatz/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/constraints\/ulx3s_v316.lpf$/;"	m
+CONSTRAINTS	examples/db9joy/Makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/dvi/Makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/dvi_in/proj/Makefile	/^CONSTRAINTS = constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/dvi_osd/Makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/ecp5pll/Makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/eink/eink154/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/eink/epaper290/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/esp32_passthru/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/esp32_rmii/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/constraints\/ulx3s_v316.lpf$/;"	m
+CONSTRAINTS	examples/eth/rmii/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/flash_passthru/proj/Makefile	/^CONSTRAINTS = constraints\/ulx3s_v20_flash.lpf$/;"	m
+CONSTRAINTS	examples/fm/Makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/gray_counter/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/hex/dvi_hex/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/hex/lcd_lvds_hex/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/hex/lcd_st7789_hex/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/hex/oled_ssd1306_hex/proj/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/hex/oled_ssd1331_hex/proj/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/hex/oled_ssd1351_hex/proj/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^CONSTRAINTS = constraints\/ulx3s_v20_sdio_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/constraints\/ulx3s_v316.lpf$/;"	m
+CONSTRAINTS	examples/lvds_passthru/Makefile	/^CONSTRAINTS = constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/multiboot/bitstream0/Makefile	/^CONSTRAINTS = ..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/multiboot/bitstream1/Makefile	/^CONSTRAINTS = ..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/multiboot/bitstream2/Makefile	/^CONSTRAINTS = ..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/oled/proj/ulx3s_checkered_v/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/oled/proj/ulx3s_terminal/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/onchip_osc_blink/Makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/onchip_osc_blink_ffm/makefile	/^CONSTRAINTS = ..\/..\/constraints\/FFM-LFE5U-V0r0_mit_FFC-CA7-V2r0.lpf$/;"	m
+CONSTRAINTS	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/..\/constraints\/FFM-LFE5U-V0r0_mit_FFC-CA7-V2r0.lpf$/;"	m
+CONSTRAINTS	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/rtc/i2c_master/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/rtc/micropython-mcp7940n/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/sdcard/micropython/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_sd4bit.lpf$/;"	m
+CONSTRAINTS	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/constraints\/FFM-LFE5U-V0r0_mit_FFC-CA7-V2r0.lpf$/;"	m
+CONSTRAINTS	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/sdram/sdram_mistery/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/sdram/sdram_pnru/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/sdram/sdram_pnru_68k/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/serdes/Makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v316.lpf$/;"	m
+CONSTRAINTS	examples/serdes_dvi/Makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v31.lpf$/;"	m
+CONSTRAINTS	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20_segpdi.lpf$/;"	m
+CONSTRAINTS	examples/usb/ch376/proj/Makefile	/^CONSTRAINTS = ..\/..\/..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/usb/proj/lattice/ulx3s/usbethernet/makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v20_dif.lpf$/;"	m
+CONSTRAINTS	examples/usb/proj/lattice/ulx3s/usbhid_host/Makefile	/^CONSTRAINTS = constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^CONSTRAINTS = constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/makefile	/^CONSTRAINTS = ..\/..\/constraints\/ulx3s_v20_dif.lpf$/;"	m
+CONSTRAINTS	examples/vhdlib/Makefile	/^CONSTRAINTS=..\/..\/constraints\/ulx3s_v20.lpf$/;"	m
+CONSTRAINTS	scripts/diamond_main.mk	/^CONSTRAINTS ?= board_constraints.lpf$/;"	m
+CONSTRAINTS	scripts/trellis_main.mk	/^CONSTRAINTS ?= board_constraints.lpf$/;"	m
+CONSTRAINTS	scripts/trellis_main_ghdl.mk	/^CONSTRAINTS ?= board_constraints.lpf$/;"	m
+CONSTRAINTS	scripts/trellis_main_sv.mk	/^CONSTRAINTS ?= board_constraints.lpf$/;"	m
+DDTCMD	scripts/diamond_main.mk	/^  DDTCMD := $(shell find ${DIAMOND_BIN}\/ -name ddtcmd)$/;"	m
+DDTCMD	scripts/trellis_main.mk	/^  DDTCMD := $(shell find ${DIAMOND_BIN}\/ -name ddtcmd)$/;"	m
+DDTCMD	scripts/trellis_main_ghdl.mk	/^  DDTCMD := $(shell find ${DIAMOND_BIN}\/ -name ddtcmd)$/;"	m
+DDTCMD	scripts/trellis_main_sv.mk	/^  DDTCMD := $(shell find ${DIAMOND_BIN}\/ -name ddtcmd)$/;"	m
+DFU_UTIL	scripts/diamond_main.mk	/^DFU_UTIL ?= dfu-util$/;"	m
+DFU_UTIL	scripts/trellis_main.mk	/^DFU_UTIL ?= dfu-util$/;"	m
+DFU_UTIL	scripts/trellis_main_ghdl.mk	/^DFU_UTIL ?= dfu-util$/;"	m
+DIAMONDC	scripts/diamond_main.mk	/^  DIAMONDC := $(shell find ${DIAMOND_BIN}\/ -name diamondc)$/;"	m
+DIAMONDC	scripts/trellis_main.mk	/^  DIAMONDC := $(shell find ${DIAMOND_BIN}\/ -name diamondc)$/;"	m
+DIAMONDC	scripts/trellis_main_ghdl.mk	/^  DIAMONDC := $(shell find ${DIAMOND_BIN}\/ -name diamondc)$/;"	m
+DIAMONDC	scripts/trellis_main_sv.mk	/^  DIAMONDC := $(shell find ${DIAMOND_BIN}\/ -name diamondc)$/;"	m
+DIAMOND_BASE	scripts/diamond_path.mk	/^DIAMOND_BASE ?= \/usr\/local\/diamond$/;"	m
+DIAMOND_BIN	scripts/diamond_main.mk	/^  DIAMOND_BIN :=  $(shell find ${DIAMOND_BASE}\/ -maxdepth 2 -name bin | sort -rn | head -1)$/;"	m
+DIAMOND_BIN	scripts/trellis_main.mk	/^  DIAMOND_BIN :=  $(shell find ${DIAMOND_BASE}\/ -maxdepth 2 -name bin | sort -rn | head -1)$/;"	m
+DIAMOND_BIN	scripts/trellis_main_ghdl.mk	/^  DIAMOND_BIN :=  $(shell find ${DIAMOND_BASE}\/ -maxdepth 2 -name bin | sort -rn | head -1)$/;"	m
+DIAMOND_BIN	scripts/trellis_main_sv.mk	/^  DIAMOND_BIN :=  $(shell find ${DIAMOND_BASE}\/ -maxdepth 2 -name bin | sort -rn | head -1)$/;"	m
+ECPPACK	scripts/diamond_main.mk	/^ECPPACK ?= $(TRELLIS)\/libtrellis\/ecppack$/;"	m
+ECPPACK	scripts/trellis_main.mk	/^ECPPACK ?= LANG=C ecppack # LANG=C LD_LIBRARY_PATH=$(LIBTRELLIS) $(TRELLIS)\/libtrellis\/ecppack/;"	m
+ECPPACK	scripts/trellis_main_ghdl.mk	/^ECPPACK ?= LANG=C ecppack # LANG=C LD_LIBRARY_PATH=$(LIBTRELLIS) $(TRELLIS)\/libtrellis\/ecppack/;"	m
+ECPPACK	scripts/trellis_main_sv.mk	/^ECPPACK ?= LANG=C LD_LIBRARY_PATH=$(LIBTRELLIS) $(TRELLIS)\/libtrellis\/ecppack --db $(TRELLISDB/;"	m
+ECPPACK	scripts/trellis_path.mk	/^ECPPACK ?= LANG=C ecppack$/;"	m
+ECPPLL	scripts/diamond_main.mk	/^ECPPLL ?= $(TRELLIS)\/libtrellis\/ecppll$/;"	m
+ECPPLL	scripts/trellis_main.mk	/^ECPPLL ?= LANG=C ecppll # LANG=C LD_LIBRARY_PATH=$(LIBTRELLIS) $(TRELLIS)\/libtrellis\/ecppll$/;"	m
+ECPPLL	scripts/trellis_main_ghdl.mk	/^ECPPLL ?= LANG=C ecppll # LANG=C LD_LIBRARY_PATH=$(LIBTRELLIS) $(TRELLIS)\/libtrellis\/ecppll$/;"	m
+ECPPLL	scripts/trellis_main_sv.mk	/^ECPPLL ?= LANG=C LD_LIBRARY_PATH=$(LIBTRELLIS) $(TRELLIS)\/libtrellis\/ecppll$/;"	m
+ECPPLL	scripts/trellis_path.mk	/^ECPPLL ?= LANG=C ecppll$/;"	m
+FILES	examples/vhdlib/Makefile	/^FILES=vhd\/top_blink.vhd vhd\/blink.vhd$/;"	m
+FLASH_CHIP	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/dvi_in/proj/Makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/eink/eink154/proj/Makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/eink/epaper290/proj/Makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/lvds_passthru/Makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/usb/ch376/proj/Makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/usb/proj/lattice/ulx3s/usbethernet/makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/makefile	/^FLASH_CHIP = is25lp128f$/;"	m
+FLASH_CHIP	scripts/diamond_main.mk	/^FLASH_CHIP ?= is25lp032d$/;"	m
+FLASH_READ_MHZ	examples/esp32_passthru/proj/Makefile	/^FLASH_READ_MHZ = 62.0$/;"	m
+FLASH_READ_MHZ	examples/esp32_rmii/proj/Makefile	/^FLASH_READ_MHZ = 62.0$/;"	m
+FLASH_READ_MHZ	examples/flash_passthru/proj/Makefile	/^FLASH_READ_MHZ = 62.0$/;"	m
+FLASH_READ_MHZ	scripts/trellis_main.mk	/^FLASH_READ_MHZ ?= 62.0$/;"	m
+FLASH_READ_MODE	examples/esp32_passthru/proj/Makefile	/^FLASH_READ_MODE = qspi$/;"	m
+FLASH_READ_MODE	examples/esp32_rmii/proj/Makefile	/^FLASH_READ_MODE = fast-read$/;"	m
+FLASH_READ_MODE	examples/flash_passthru/proj/Makefile	/^FLASH_READ_MODE = fast-read$/;"	m
+FLASH_READ_MODE	scripts/trellis_main.mk	/^FLASH_READ_MODE ?= fast-read$/;"	m
+FLASH_SIZE_MBIT	examples/multiboot/Makefile	/^FLASH_SIZE_MBIT := 128$/;"	m
+FLASH_SPI	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/dvi_in/proj/Makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/eink/eink154/proj/Makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/eink/epaper290/proj/Makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/lvds_passthru/Makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/usb/ch376/proj/Makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/usb/proj/lattice/ulx3s/usbethernet/makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/makefile	/^FLASH_SPI = 4$/;"	m
+FLASH_SPI	scripts/diamond_main.mk	/^FLASH_SPI ?= 1$/;"	m
+FLEAFPGA_JTAG	scripts/diamond_main.mk	/^FLEAFPGA_JTAG ?= FleaFPGA-JTAG $/;"	m
+FLEAFPGA_JTAG	scripts/trellis_main.mk	/^FLEAFPGA_JTAG ?= FleaFPGA-JTAG $/;"	m
+FLEAFPGA_JTAG	scripts/trellis_main_ghdl.mk	/^FLEAFPGA_JTAG ?= FleaFPGA-JTAG $/;"	m
+FLEAFPGA_JTAG	scripts/trellis_main_sv.mk	/^FLEAFPGA_JTAG ?= FleaFPGA-JTAG $/;"	m
+FPGA_CHIP	scripts/diamond_main.mk	/^FPGA_CHIP ?= lfe5u-$(FPGA_SIZE)f$/;"	m
+FPGA_CHIP	scripts/trellis_main.mk	/^FPGA_CHIP ?= lfe5u-$(FPGA_SIZE)f$/;"	m
+FPGA_CHIP	scripts/trellis_main_ghdl.mk	/^FPGA_CHIP ?= lfe5u-$(FPGA_SIZE)f$/;"	m
+FPGA_CHIP	scripts/trellis_main_sv.mk	/^FPGA_CHIP ?= lfe5u-$(FPGA_SIZE)f$/;"	m
+FPGA_CHIP_EQUIVALENT	scripts/diamond_main.mk	/^FPGA_CHIP_EQUIVALENT ?= lfe5u-$(FPGA_K)f$/;"	m
+FPGA_CHIP_EQUIVALENT	scripts/trellis_main.mk	/^FPGA_CHIP_EQUIVALENT ?= lfe5u-$(FPGA_K)f$/;"	m
+FPGA_CHIP_EQUIVALENT	scripts/trellis_main_ghdl.mk	/^FPGA_CHIP_EQUIVALENT ?= lfe5u-$(FPGA_K)f$/;"	m
+FPGA_CHIP_EQUIVALENT	scripts/trellis_main_sv.mk	/^FPGA_CHIP_EQUIVALENT ?= lfe5u-$(FPGA_K)f$/;"	m
+FPGA_CHIP_UPPERCASE	scripts/diamond_main.mk	/^FPGA_CHIP_UPPERCASE := $(shell echo $(FPGA_CHIP) | tr '[:lower:]' '[:upper:]')$/;"	m
+FPGA_CHIP_UPPERCASE	scripts/trellis_main.mk	/^FPGA_CHIP_UPPERCASE := $(shell echo $(FPGA_CHIP) | tr '[:lower:]' '[:upper:]')$/;"	m
+FPGA_CHIP_UPPERCASE	scripts/trellis_main_ghdl.mk	/^FPGA_CHIP_UPPERCASE := $(shell echo $(FPGA_CHIP) | tr '[:lower:]' '[:upper:]')$/;"	m
+FPGA_CHIP_UPPERCASE	scripts/trellis_main_sv.mk	/^FPGA_CHIP_UPPERCASE := $(shell echo $(FPGA_CHIP) | tr '[:lower:]' '[:upper:]')$/;"	m
+FPGA_K	scripts/diamond_main.mk	/^  FPGA_K=$(FPGA_SIZE)$/;"	m
+FPGA_K	scripts/trellis_main.mk	/^  FPGA_K=$(FPGA_PREFIX)$(FPGA_SIZE)$/;"	m
+FPGA_K	scripts/trellis_main_ghdl.mk	/^  FPGA_K=$(FPGA_PREFIX)$(FPGA_SIZE)$/;"	m
+FPGA_K	scripts/trellis_main_sv.mk	/^  FPGA_K=$(FPGA_PREFIX)$(FPGA_SIZE)$/;"	m
+FPGA_K	scripts/trellis_main_sv.mk	/^  FPGA_K=$(FPGA_PREFIX)25$/;"	m
+FPGA_PACKAGE	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/adxl355/proj/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/adxl355/projbig/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/db9joy/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/dvi/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/dvi_in/proj/Makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/dvi_osd/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/eink/eink154/proj/Makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/eink/epaper290/proj/Makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/esp32_passthru/proj/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/esp32_rmii/proj/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/flash_passthru/proj/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/fm/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/gray_counter/proj/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/hex/dvi_hex/proj/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/hex/lcd_lvds_hex/proj/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/lvds_passthru/Makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/onchip_osc_blink_ffm/makefile	/^FPGA_PACKAGE = CABGA554$/;"	m
+FPGA_PACKAGE	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^FPGA_PACKAGE = CABGA554$/;"	m
+FPGA_PACKAGE	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^FPGA_PACKAGE = CABGA554$/;"	m
+FPGA_PACKAGE	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^FPGA_PACKAGE = CABGA381$/;"	m
+FPGA_PACKAGE	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/usb/ch376/proj/Makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/usb/proj/lattice/ulx3s/usbethernet/makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/makefile	/^FPGA_PACKAGE = 6bg381c$/;"	m
+FPGA_PACKAGE	scripts/diamond_main.mk	/^FPGA_PACKAGE ?= 6bg381c$/;"	m
+FPGA_PACKAGE	scripts/trellis_main.mk	/^FPGA_PACKAGE ?= CABGA381$/;"	m
+FPGA_PACKAGE	scripts/trellis_main_ghdl.mk	/^FPGA_PACKAGE ?= CABGA381$/;"	m
+FPGA_PACKAGE	scripts/trellis_main_sv.mk	/^FPGA_PACKAGE ?= CABGA381$/;"	m
+FPGA_PACKAGE_UPPERCASE	scripts/diamond_main.mk	/^FPGA_PACKAGE_UPPERCASE := $(shell echo $(FPGA_PACKAGE) | tr '[:lower:]' '[:upper:]')$/;"	m
+FPGA_PREFIX	examples/serdes_dvi/Makefile	/^FPGA_PREFIX = um-$/;"	m
+FPGA_PREFIX	scripts/trellis_main.mk	/^FPGA_PREFIX ?=$/;"	m
+FPGA_PREFIX	scripts/trellis_main_ghdl.mk	/^FPGA_PREFIX ?=$/;"	m
+FPGA_PREFIX	scripts/trellis_main_sv.mk	/^FPGA_PREFIX ?=$/;"	m
+FPGA_SIZE	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/adxl355/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/adxl355/projbig/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/audio/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/collatz/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/db9joy/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/dvi/Makefile	/^FPGA_SIZE = 45$/;"	m
+FPGA_SIZE	examples/dvi_in/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/dvi_osd/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/ecp5pll/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/eink/eink154/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/eink/epaper290/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/esp32_passthru/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/esp32_rmii/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/eth/rmii/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/flash_passthru/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/fm/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/gray_counter/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/hex/dvi_hex/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/hex/lcd_lvds_hex/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/hex/lcd_st7789_hex/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/hex/oled_ssd1306_hex/proj/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/hex/oled_ssd1331_hex/proj/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/hex/oled_ssd1351_hex/proj/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^FPGA_SIZE = 25$/;"	m
+FPGA_SIZE	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/lvds_passthru/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/multiboot/bitstream0/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/multiboot/bitstream1/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/multiboot/bitstream2/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/oled/proj/ulx3s_checkered_v/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^FPGA_SIZE = 85$/;"	m
+FPGA_SIZE	examples/oled/proj/ulx3s_terminal/makefile	/^FPGA_SIZE = 85$/;"	m
+FPGA_SIZE	examples/onchip_osc_blink/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/onchip_osc_blink_ffm/makefile	/^FPGA_SIZE = 85$/;"	m
+FPGA_SIZE	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^FPGA_SIZE = 25$/;"	m
+FPGA_SIZE	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^FPGA_SIZE = 85$/;"	m
+FPGA_SIZE	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/rtc/i2c_master/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/rtc/micropython-mcp7940n/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/sdcard/micropython/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^FPGA_SIZE = 85$/;"	m
+FPGA_SIZE	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/sdram/sdram_mistery/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/sdram/sdram_pnru/proj/Makefile	/^FPGA_SIZE = 85$/;"	m
+FPGA_SIZE	examples/sdram/sdram_pnru_68k/proj/Makefile	/^FPGA_SIZE = 85$/;"	m
+FPGA_SIZE	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/serdes/Makefile	/^FPGA_SIZE = um-25$/;"	m
+FPGA_SIZE	examples/serdes_dvi/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/usb/ch376/proj/Makefile	/^FPGA_SIZE = 25$/;"	m
+FPGA_SIZE	examples/usb/proj/lattice/ulx3s/usbethernet/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/usb/proj/lattice/ulx3s/usbhid_host/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/makefile	/^FPGA_SIZE = 12$/;"	m
+FPGA_SIZE	examples/vhdlib/Makefile	/^FPGA_SIZE=12$/;"	m
+FPGA_SIZE	scripts/diamond_main.mk	/^FPGA_SIZE ?= 12$/;"	m
+FPGA_SIZE	scripts/trellis_main.mk	/^FPGA_SIZE ?= 12$/;"	m
+FPGA_SIZE	scripts/trellis_main_ghdl.mk	/^FPGA_SIZE ?= 12$/;"	m
+FPGA_SIZE	scripts/trellis_main_sv.mk	/^FPGA_SIZE ?= 12$/;"	m
+IDCODE_CHIPID	scripts/diamond_main.mk	/^  IDCODE_CHIPID=$/;"	m
+IDCODE_CHIPID	scripts/trellis_main.mk	/^  IDCODE_CHIPID=$/;"	m
+IDCODE_CHIPID	scripts/trellis_main_ghdl.mk	/^  IDCODE_CHIPID=$/;"	m
+IDCODE_CHIPID	scripts/trellis_main_sv.mk	/^  IDCODE_CHIPID=$/;"	m
+IDCODE_CHIPID	scripts/trellis_main_sv.mk	/^  IDCODE_CHIPID=--idcode $(CHIP_ID)$/;"	m
+JUNK	scripts/diamond_main.mk	/^JUNK = *~$/;"	m
+JUNK	scripts/trellis_main.mk	/^JUNK = *~$/;"	m
+JUNK	scripts/trellis_main_ghdl.mk	/^JUNK = *~$/;"	m
+JUNK	scripts/trellis_main_sv.mk	/^JUNK = *~$/;"	m
+JUNK_DIR	scripts/diamond_main.mk	/^JUNK_DIR = project$/;"	m
+LIBTRELLIS	scripts/diamond_main.mk	/^LIBTRELLIS ?= $(TRELLIS)\/libtrellis$/;"	m
+LIBTRELLIS	scripts/trellis_main.mk	/^LIBTRELLIS ?= $(TRELLIS)\/libtrellis$/;"	m
+LIBTRELLIS	scripts/trellis_main_ghdl.mk	/^LIBTRELLIS ?= $(TRELLIS)\/libtrellis$/;"	m
+LIBTRELLIS	scripts/trellis_main_sv.mk	/^LIBTRELLIS ?= $(TRELLIS)\/libtrellis$/;"	m
+LIBXSVF_H	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^#define LIBXSVF_H$/;"	d
+LIBXSVF_MEM_NUM	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_NUM = 36$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_COMMANDBUF	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_COMMANDBUF = 5,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_HDR_RET_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_HDR_RET_MASK = 20,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_HDR_TDI_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_HDR_TDI_DATA = 16,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_HDR_TDI_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_HDR_TDI_MASK = 17,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_HDR_TDO_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_HDR_TDO_DATA = 18,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_HDR_TDO_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_HDR_TDO_MASK = 19,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_HIR_RET_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_HIR_RET_MASK = 25,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_HIR_TDI_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_HIR_TDI_DATA = 21,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_HIR_TDI_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_HIR_TDI_MASK = 22,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_HIR_TDO_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_HIR_TDO_DATA = 23,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_HIR_TDO_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_HIR_TDO_MASK = 24,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_SDR_RET_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_SDR_RET_MASK = 10,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_SDR_TDI_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_SDR_TDI_DATA = 6,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_SDR_TDI_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_SDR_TDI_MASK = 7,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_SDR_TDO_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_SDR_TDO_DATA = 8,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_SDR_TDO_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_SDR_TDO_MASK = 9,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_SIR_RET_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_SIR_RET_MASK = 15,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_SIR_TDI_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_SIR_TDI_DATA = 11,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_SIR_TDI_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_SIR_TDI_MASK = 12,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_SIR_TDO_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_SIR_TDO_DATA = 13,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_SIR_TDO_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_SIR_TDO_MASK = 14,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_TDR_RET_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_TDR_RET_MASK = 30,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_TDR_TDI_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_TDR_TDI_DATA = 26,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_TDR_TDI_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_TDR_TDI_MASK = 27,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_TDR_TDO_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_TDR_TDO_DATA = 28,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_TDR_TDO_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_TDR_TDO_MASK = 29,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_TIR_RET_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_TIR_RET_MASK = 35,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_TIR_TDI_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_TIR_TDI_DATA = 31,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_TIR_TDI_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_TIR_TDI_MASK = 32,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_TIR_TDO_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_TIR_TDO_DATA = 33,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_SVF_TIR_TDO_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_SVF_TIR_TDO_MASK = 34,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_XSVF_ADDR_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_XSVF_ADDR_MASK = 3,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_XSVF_DATA_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_XSVF_DATA_MASK = 4,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_XSVF_TDI_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_XSVF_TDI_DATA = 0,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_XSVF_TDO_DATA	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_XSVF_TDO_DATA = 1,$/;"	e	enum:libxsvf_mem
+LIBXSVF_MEM_XSVF_TDO_MASK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_MEM_XSVF_TDO_MASK = 2,$/;"	e	enum:libxsvf_mem
+LIBXSVF_TAP_DRCAPTURE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_DRCAPTURE = 4,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_DREXIT1	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_DREXIT1 = 6,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_DREXIT2	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_DREXIT2 = 8,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_DRPAUSE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_DRPAUSE = 7,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_DRSELECT	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_DRSELECT = 3,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_DRSHIFT	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_DRSHIFT = 5,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_DRUPDATE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_DRUPDATE = 9,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_IDLE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_IDLE = 2,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_INIT	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_INIT = 0,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_IRCAPTURE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_IRCAPTURE = 11,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_IREXIT1	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_IREXIT1 = 13,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_IREXIT2	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_IREXIT2 = 15,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_IRPAUSE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_IRPAUSE = 14,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_IRSELECT	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_IRSELECT = 10,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_IRSHIFT	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_IRSHIFT = 12,$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_IRUPDATE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_IRUPDATE = 16$/;"	e	enum:libxsvf_tap_state
+LIBXSVF_TAP_RESET	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	LIBXSVF_TAP_RESET = 1,$/;"	e	enum:libxsvf_tap_state
+MASK_FILE	scripts/diamond_main.mk	/^  MASK_FILE=LFE5U-45F.msk$/;"	m
+MASK_FILE	scripts/diamond_main.mk	/^  MASK_FILE=LFE5U-85F.msk$/;"	m
+MASK_PATH	scripts/diamond_main.mk	/^  MASK_PATH := $(shell find ${DIAMOND_BASE}\/ -maxdepth 5 -name xpga -type d)\/ecp5$/;"	m
+NEXTPNR-ECP5	scripts/trellis_path.mk	/^NEXTPNR-ECP5 ?= nextpnr-ecp5$/;"	m
+NEXTPNR_OPTIONS	examples/adxl355/proj/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/adxl355/projbig/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/collatz/proj/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail --ignore-loops$/;"	m
+NEXTPNR_OPTIONS	examples/db9joy/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/dvi/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/dvi_osd/Makefile	/^NEXTPNR_OPTIONS = --router router2 --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/ecp5pll/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/eth/rmii/proj/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/fm/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/gray_counter/proj/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/hex/lcd_st7789_hex/proj/Makefile	/^NEXTPNR_OPTIONS = --router router2 --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/hex/oled_ssd1306_hex/proj/makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/hex/oled_ssd1331_hex/proj/makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/hex/oled_ssd1351_hex/proj/makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/onchip_osc_blink/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/rtc/i2c_master/proj/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/sdcard/micropython/proj/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^NEXTPNR_OPTIONS = --router router2 --timing-allow-fail --ignore-loops$/;"	m
+NEXTPNR_OPTIONS	examples/sdram/sdram_mistery/proj/Makefile	/^NEXTPNR_OPTIONS = --router router2 --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/sdram/sdram_pnru/proj/Makefile	/^NEXTPNR_OPTIONS = --router router2 --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/sdram/sdram_pnru_68k/proj/Makefile	/^NEXTPNR_OPTIONS = --router router2 --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^NEXTPNR_OPTIONS = --router router2 --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/serdes/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/serdes_dvi/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/usb/proj/lattice/ulx3s/usbhid_host/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^NEXTPNR_OPTIONS = --timing-allow-fail$/;"	m
+NEXTPNR_OPTIONS	scripts/trellis_main.mk	/^NEXTPNR_OPTIONS ?=$/;"	m
+NEXTPNR_OPTIONS	scripts/trellis_main_ghdl.mk	/^NEXTPNR_OPTIONS ?=$/;"	m
+NEXTPNR_OPTIONS	scripts/trellis_main_sv.mk	/^NEXTPNR_OPTIONS ?=$/;"	m
+OPENFPGALOADER	scripts/diamond_main.mk	/^OPENFPGALOADER ?= openFPGALoader$/;"	m
+OPENFPGALOADER	scripts/trellis_main.mk	/^OPENFPGALOADER ?= openFPGALoader$/;"	m
+OPENFPGALOADER	scripts/trellis_main_ghdl.mk	/^OPENFPGALOADER ?= openFPGALoader$/;"	m
+OPENFPGALOADER_OPTIONS	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^OPENFPGALOADER_OPTIONS=--cable ft4232$/;"	m
+OPENFPGALOADER_OPTIONS	scripts/diamond_main.mk	/^OPENFPGALOADER_OPTIONS ?= --board ulx3s$/;"	m
+OPENFPGALOADER_OPTIONS	scripts/trellis_main.mk	/^OPENFPGALOADER_OPTIONS ?= --board ulx3s$/;"	m
+OPENOCD	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/audio/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/dvi_in/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/dvi_osd/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/ecp5pll/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/eth/rmii/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/hex/dvi_hex/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/hex/lcd_lvds_hex/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/hex/lcd_st7789_hex/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/hex/oled_ssd1306_hex/proj/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/hex/oled_ssd1331_hex/proj/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/hex/oled_ssd1351_hex/proj/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^OPENOCD=openocd$/;"	m
+OPENOCD	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/lvds_passthru/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/oled/proj/ulx3s_checkered_v/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/oled/proj/ulx3s_terminal/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/onchip_osc_blink/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/onchip_osc_blink_ffm/makefile	/^OPENOCD=openocd$/;"	m
+OPENOCD	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^OPENOCD=openocd$/;"	m
+OPENOCD	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/rtc/i2c_master/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/rtc/micropython-mcp7940n/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/sdcard/micropython/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/sdram/sdram_mistery/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/sdram/sdram_pnru/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/sdram/sdram_pnru_68k/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/serdes/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/serdes_dvi/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/usb/ch376/proj/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^OPENOCD=openocd_ft232r$/;"	m
+OPENOCD	scripts/diamond_main.mk	/^OPENOCD ?= openocd$/;"	m
+OPENOCD	scripts/trellis_main.mk	/^OPENOCD ?= openocd$/;"	m
+OPENOCD	scripts/trellis_main_ghdl.mk	/^OPENOCD ?= openocd$/;"	m
+OPENOCD	scripts/trellis_main_sv.mk	/^OPENOCD ?= openocd$/;"	m
+OPENOCD_INTERFACE	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/adxl355/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/adxl355/projbig/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/audio/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/collatz/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/db9joy/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/dvi/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/dvi_in/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/dvi_osd/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/ecp5pll/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/eink/eink154/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/eink/epaper290/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/esp32_passthru/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/esp32_rmii/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/eth/rmii/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/flash_passthru/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/fm/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/gray_counter/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/hex/dvi_hex/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/hex/lcd_lvds_hex/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/hex/lcd_st7789_hex/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/hex/oled_ssd1306_hex/proj/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/hex/oled_ssd1331_hex/proj/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/hex/oled_ssd1351_hex/proj/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/lvds_passthru/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/oled/proj/ulx3s_checkered_v/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/oled/proj/ulx3s_terminal/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/onchip_osc_blink_ffm/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft4232.ocd$/;"	m
+OPENOCD_INTERFACE	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft4232.ocd$/;"	m
+OPENOCD_INTERFACE	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/rtc/i2c_master/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/rtc/micropython-mcp7940n/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/sdcard/micropython/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft4232.ocd$/;"	m
+OPENOCD_INTERFACE	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/sdram/sdram_mistery/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/sdram/sdram_pnru/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/sdram/sdram_pnru_68k/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/serdes/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/serdes_dvi/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/usb/ch376/proj/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/usb/proj/lattice/ulx3s/usbhid_host/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^OPENOCD_INTERFACE=$(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	scripts/diamond_main.mk	/^OPENOCD_INTERFACE ?= $(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	scripts/trellis_main.mk	/^OPENOCD_INTERFACE ?= $(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	scripts/trellis_main_ghdl.mk	/^OPENOCD_INTERFACE ?= $(SCRIPTS)\/ft231x.ocd$/;"	m
+OPENOCD_INTERFACE	scripts/trellis_main_sv.mk	/^OPENOCD_INTERFACE ?= $(SCRIPTS)\/ft231x.ocd$/;"	m
+PROJ	examples/vhdlib/Makefile	/^PROJ=blink$/;"	m
+PROJECT	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^PROJECT = adc_lcd_lvds$/;"	m
+PROJECT	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^PROJECT = ps2mouse_oled$/;"	m
+PROJECT	examples/adxl355/proj/Makefile	/^PROJECT = adxl355$/;"	m
+PROJECT	examples/adxl355/projbig/Makefile	/^PROJECT = adxl355$/;"	m
+PROJECT	examples/audio/Makefile	/^PROJECT = audio$/;"	m
+PROJECT	examples/collatz/proj/Makefile	/^PROJECT = collatz$/;"	m
+PROJECT	examples/db9joy/Makefile	/^PROJECT = db9joy$/;"	m
+PROJECT	examples/dvi/Makefile	/^PROJECT = dvi$/;"	m
+PROJECT	examples/dvi_in/proj/Makefile	/^PROJECT = dvi_in$/;"	m
+PROJECT	examples/dvi_osd/Makefile	/^PROJECT = dvi_osd$/;"	m
+PROJECT	examples/ecp5pll/Makefile	/^PROJECT = ecp5pll$/;"	m
+PROJECT	examples/eink/eink154/proj/Makefile	/^PROJECT = eink154$/;"	m
+PROJECT	examples/eink/epaper290/proj/Makefile	/^PROJECT = epaper290$/;"	m
+PROJECT	examples/esp32_passthru/proj/Makefile	/^PROJECT = passthru$/;"	m
+PROJECT	examples/esp32_rmii/proj/Makefile	/^PROJECT = esp32rmii$/;"	m
+PROJECT	examples/eth/rmii/proj/Makefile	/^PROJECT = eth_hex$/;"	m
+PROJECT	examples/flash_passthru/proj/Makefile	/^PROJECT = flash_passthru$/;"	m
+PROJECT	examples/fm/Makefile	/^PROJECT = fm$/;"	m
+PROJECT	examples/gray_counter/proj/Makefile	/^PROJECT = gray_counter$/;"	m
+PROJECT	examples/hex/dvi_hex/proj/Makefile	/^PROJECT = hexdvi$/;"	m
+PROJECT	examples/hex/lcd_lvds_hex/proj/Makefile	/^PROJECT = hexlvds$/;"	m
+PROJECT	examples/hex/lcd_st7789_hex/proj/Makefile	/^PROJECT = st7789_hex$/;"	m
+PROJECT	examples/hex/oled_ssd1306_hex/proj/makefile	/^PROJECT = ssd1306_hex$/;"	m
+PROJECT	examples/hex/oled_ssd1331_hex/proj/makefile	/^PROJECT = ssd1331_hex$/;"	m
+PROJECT	examples/hex/oled_ssd1351_hex/proj/makefile	/^PROJECT = ssd1351_hex$/;"	m
+PROJECT	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^PROJECT = oled_spi_hex$/;"	m
+PROJECT	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^PROJECT = oled_spi_hex$/;"	m
+PROJECT	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^PROJECT = jtagg_spi_hex$/;"	m
+PROJECT	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^PROJECT = init$/;"	m
+PROJECT	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^PROJECT = st7789$/;"	m
+PROJECT	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^PROJECT = st7789_spi_slave$/;"	m
+PROJECT	examples/lvds_passthru/Makefile	/^PROJECT = lvds_passthru$/;"	m
+PROJECT	examples/multiboot/bitstream0/Makefile	/^PROJECT = bitstream0$/;"	m
+PROJECT	examples/multiboot/bitstream1/Makefile	/^PROJECT = bitstream1$/;"	m
+PROJECT	examples/multiboot/bitstream2/Makefile	/^PROJECT = bitstream2$/;"	m
+PROJECT	examples/oled/proj/ulx3s_checkered_v/makefile	/^PROJECT = init$/;"	m
+PROJECT	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^PROJECT = dvi$/;"	m
+PROJECT	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^PROJECT = oled_vga$/;"	m
+PROJECT	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^PROJECT = oled_spi_hex$/;"	m
+PROJECT	examples/oled/proj/ulx3s_terminal/makefile	/^PROJECT = terminal$/;"	m
+PROJECT	examples/onchip_osc_blink/Makefile	/^PROJECT = oscg_blink$/;"	m
+PROJECT	examples/onchip_osc_blink_ffm/makefile	/^PROJECT = oscg_blink$/;"	m
+PROJECT	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^PROJECT = init$/;"	m
+PROJECT	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^PROJECT = ps2mouse$/;"	m
+PROJECT	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^PROJECT = ps2mouse$/;"	m
+PROJECT	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^PROJECT = ps2mouse_dvi$/;"	m
+PROJECT	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^PROJECT = ps2mouse_dvi$/;"	m
+PROJECT	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^PROJECT = ps2mouse_dvi_gui$/;"	m
+PROJECT	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^PROJECT = ps2mouse_oled$/;"	m
+PROJECT	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^PROJECT = ps2mouse_oled_dvi$/;"	m
+PROJECT	examples/rtc/i2c_master/proj/Makefile	/^PROJECT = mcp7940n$/;"	m
+PROJECT	examples/rtc/micropython-mcp7940n/proj/Makefile	/^PROJECT = i2c_bridge$/;"	m
+PROJECT	examples/sdcard/micropython/proj/Makefile	/^PROJECT = sd_pullup$/;"	m
+PROJECT	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^PROJECT = memtest_32MB_$(FREQ)MHz_$(PHASE)deg$/;"	m
+PROJECT	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^PROJECT = memtest$/;"	m
+PROJECT	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^PROJECT = init$/;"	m
+PROJECT	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^PROJECT = init$/;"	m
+PROJECT	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^PROJECT = sdram_fpga$/;"	m
+PROJECT	examples/sdram/sdram_mistery/proj/Makefile	/^PROJECT = oled_spirw_sdram_hex$/;"	m
+PROJECT	examples/sdram/sdram_pnru/proj/Makefile	/^PROJECT = oled_spirw_sdram_hex$/;"	m
+PROJECT	examples/sdram/sdram_pnru_68k/proj/Makefile	/^PROJECT = oled_spirw_sdram_hex$/;"	m
+PROJECT	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^PROJECT = oled_spirw_sdram_hex$/;"	m
+PROJECT	examples/serdes/Makefile	/^PROJECT = serdes$/;"	m
+PROJECT	examples/serdes_dvi/Makefile	/^PROJECT = serdes$/;"	m
+PROJECT	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^PROJECT = ssd1331vga$/;"	m
+PROJECT	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^PROJECT = st7789_vga$/;"	m
+PROJECT	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^PROJECT = st7789_vga$/;"	m
+PROJECT	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^PROJECT = dvi$/;"	m
+PROJECT	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^PROJECT = oled_spi_ram$/;"	m
+PROJECT	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^PROJECT = oled_spirw_hex$/;"	m
+PROJECT	examples/usb/ch376/proj/Makefile	/^PROJECT = ch376$/;"	m
+PROJECT	examples/usb/proj/lattice/ulx3s/usbethernet/makefile	/^PROJECT = ulx3s_usbeth$/;"	m
+PROJECT	examples/usb/proj/lattice/ulx3s/usbhid_host/Makefile	/^PROJECT = usbhost_test$/;"	m
+PROJECT	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^PROJECT = usbhost_test$/;"	m
+PROJECT	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/makefile	/^PROJECT = ulx3s_usbtest$/;"	m
+PROJECT	scripts/diamond_main.mk	/^PROJECT ?= project$/;"	m
+PROJECT	scripts/trellis_main.mk	/^PROJECT ?= project$/;"	m
+PROJECT	scripts/trellis_main_ghdl.mk	/^PROJECT ?= project$/;"	m
+PROJECT	scripts/trellis_main_sv.mk	/^PROJECT ?= project$/;"	m
+SBX_FILES	scripts/diamond_main.mk	/^SBX_FILES ?=$/;"	m
+SCRIPTS	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/adxl355/proj/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/adxl355/projbig/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/audio/Makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/collatz/proj/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/db9joy/Makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/dvi/Makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/dvi_in/proj/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/dvi_osd/Makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/ecp5pll/Makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/eink/eink154/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/eink/epaper290/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/esp32_passthru/proj/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/esp32_rmii/proj/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/eth/rmii/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/flash_passthru/proj/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/fm/Makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/gray_counter/proj/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/hex/dvi_hex/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/hex/lcd_lvds_hex/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/hex/lcd_st7789_hex/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/hex/oled_ssd1306_hex/proj/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/hex/oled_ssd1331_hex/proj/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/hex/oled_ssd1351_hex/proj/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/lvds_passthru/Makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/multiboot/bitstream0/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/multiboot/bitstream1/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/multiboot/bitstream2/Makefile	/^SCRIPTS = ..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/oled/proj/ulx3s_checkered_v/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/oled/proj/ulx3s_terminal/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/onchip_osc_blink/Makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/onchip_osc_blink_ffm/makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/rtc/i2c_master/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/rtc/micropython-mcp7940n/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/sdcard/micropython/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/sdram/sdram_mistery/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/sdram/sdram_pnru/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/sdram/sdram_pnru_68k/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/serdes/Makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/serdes_dvi/Makefile	/^SCRIPTS = ..\/..\/scripts$/;"	m
+SCRIPTS	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/usb/ch376/proj/Makefile	/^SCRIPTS = ..\/..\/..\/..\/scripts\/$/;"	m
+SCRIPTS	examples/usb/proj/lattice/ulx3s/usbethernet/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/usb/proj/lattice/ulx3s/usbhid_host/Makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/makefile	/^SCRIPTS = ..\/..\/..\/..\/..\/..\/scripts$/;"	m
+SCRIPTS	scripts/diamond_main.mk	/^SCRIPTS ?= scripts$/;"	m
+SCRIPTS	scripts/trellis_main.mk	/^SCRIPTS ?= scripts$/;"	m
+SCRIPTS	scripts/trellis_main_ghdl.mk	/^SCRIPTS ?= scripts$/;"	m
+SCRIPTS	scripts/trellis_main_sv.mk	/^SCRIPTS ?= scripts$/;"	m
+STRATEGY	scripts/diamond_main.mk	/^STRATEGY ?= $(SCRIPTS)\/ulx3s.sty$/;"	m
+SYSTEMVERILOG_FILES	scripts/trellis_main_sv.mk	/^SYSTEMVERILOG_FILES ?=$/;"	m
+TAP_H	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/tap.h	/^#define TAP_H$/;"	d
+TCK	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/tap.h	/^#define TCK /;"	d
+TDI	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/tap.h	/^#define TDI /;"	d
+TDO	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/tap.h	/^#define TDO /;"	d
+TINYFPGASP	scripts/diamond_main.mk	/^TINYFPGASP ?= tinyfpgasp$/;"	m
+TINYFPGASP	scripts/trellis_main.mk	/^TINYFPGASP ?= tinyfpgasp$/;"	m
+TINYFPGASP	scripts/trellis_main_ghdl.mk	/^TINYFPGASP ?= tinyfpgasp$/;"	m
+TINYFPGASP	scripts/trellis_main_sv.mk	/^TINYFPGASP ?= tinyfpgasp$/;"	m
+TMS	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/tap.h	/^#define TMS /;"	d
+TOP_MODULE	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^TOP_MODULE = top_hex_480x272$/;"	m
+TOP_MODULE	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^TOP_MODULE = ulx3s_adc_oled$/;"	m
+TOP_MODULE	examples/adxl355/proj/Makefile	/^TOP_MODULE = top_adxl355$/;"	m
+TOP_MODULE	examples/adxl355/projbig/Makefile	/^TOP_MODULE = top_adxl355log$/;"	m
+TOP_MODULE	examples/audio/Makefile	/^TOP_MODULE = top_audio$/;"	m
+TOP_MODULE	examples/collatz/proj/Makefile	/^TOP_MODULE = ulx3s_collatz_test$/;"	m
+TOP_MODULE	examples/db9joy/Makefile	/^TOP_MODULE = db9joy$/;"	m
+TOP_MODULE	examples/dvi/Makefile	/^TOP_MODULE = top_vgatest$/;"	m
+TOP_MODULE	examples/dvi_in/proj/Makefile	/^TOP_MODULE = top_v20_dvi_in$/;"	m
+TOP_MODULE	examples/dvi_osd/Makefile	/^TOP_MODULE = top_spi_char$/;"	m
+TOP_MODULE	examples/ecp5pll/Makefile	/^TOP_MODULE = top_ecp5pll$/;"	m
+TOP_MODULE	examples/eink/eink154/proj/Makefile	/^TOP_MODULE = top_eink$/;"	m
+TOP_MODULE	examples/eink/epaper290/proj/Makefile	/^TOP_MODULE = top_eink$/;"	m
+TOP_MODULE	examples/esp32_passthru/proj/Makefile	/^TOP_MODULE = top_esp32_passthru$/;"	m
+TOP_MODULE	examples/esp32_rmii/proj/Makefile	/^TOP_MODULE = esp32rmii$/;"	m
+TOP_MODULE	examples/eth/rmii/proj/Makefile	/^TOP_MODULE = top_eth_hex_demo$/;"	m
+TOP_MODULE	examples/flash_passthru/proj/Makefile	/^TOP_MODULE = flash_passthru$/;"	m
+TOP_MODULE	examples/fm/Makefile	/^TOP_MODULE = top_fm$/;"	m
+TOP_MODULE	examples/gray_counter/proj/Makefile	/^TOP_MODULE = ulx3s_gray_counter$/;"	m
+TOP_MODULE	examples/hex/dvi_hex/proj/Makefile	/^TOP_MODULE = top_hex_640x480$/;"	m
+TOP_MODULE	examples/hex/lcd_lvds_hex/proj/Makefile	/^TOP_MODULE = top_hex_480x272$/;"	m
+TOP_MODULE	examples/hex/lcd_st7789_hex/proj/Makefile	/^TOP_MODULE = top_hex_demo$/;"	m
+TOP_MODULE	examples/hex/oled_ssd1306_hex/proj/makefile	/^TOP_MODULE = top_hex_demo$/;"	m
+TOP_MODULE	examples/hex/oled_ssd1331_hex/proj/makefile	/^TOP_MODULE = top_hex_demo$/;"	m
+TOP_MODULE	examples/hex/oled_ssd1351_hex/proj/makefile	/^TOP_MODULE = top_hex_demo$/;"	m
+TOP_MODULE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^TOP_MODULE = top_jtag_slave_passthru$/;"	m
+TOP_MODULE	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^TOP_MODULE = top_jtag_slave$/;"	m
+TOP_MODULE	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^TOP_MODULE = top_jtagg_slave$/;"	m
+TOP_MODULE	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^TOP_MODULE = jtagthru$/;"	m
+TOP_MODULE	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^TOP_MODULE = top_st7789$/;"	m
+TOP_MODULE	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^TOP_MODULE = top_st7789_spi_slave_polyline_v316$/;"	m
+TOP_MODULE	examples/lvds_passthru/Makefile	/^TOP_MODULE = top_lvds_passthru$/;"	m
+TOP_MODULE	examples/multiboot/bitstream0/Makefile	/^TOP_MODULE = ${PROJECT}$/;"	m
+TOP_MODULE	examples/multiboot/bitstream1/Makefile	/^TOP_MODULE = ${PROJECT}$/;"	m
+TOP_MODULE	examples/multiboot/bitstream2/Makefile	/^TOP_MODULE = ${PROJECT}$/;"	m
+TOP_MODULE	examples/oled/proj/ulx3s_checkered_v/makefile	/^TOP_MODULE = top_checkered$/;"	m
+TOP_MODULE	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^TOP_MODULE = ulx3s_oledtest$/;"	m
+TOP_MODULE	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^TOP_MODULE = ulx3s_oled_vga$/;"	m
+TOP_MODULE	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^TOP_MODULE = top_spi_hex$/;"	m
+TOP_MODULE	examples/oled/proj/ulx3s_terminal/makefile	/^TOP_MODULE = top$/;"	m
+TOP_MODULE	examples/onchip_osc_blink/Makefile	/^TOP_MODULE = oscg_blink$/;"	m
+TOP_MODULE	examples/onchip_osc_blink_ffm/makefile	/^TOP_MODULE = oscg_blink$/;"	m
+TOP_MODULE	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^TOP_MODULE = top_OV7640$/;"	m
+TOP_MODULE	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^TOP_MODULE = kbd_top$/;"	m
+TOP_MODULE	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^TOP_MODULE = ulx3s_ps2mouse$/;"	m
+TOP_MODULE	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^TOP_MODULE = ffm_ps2mouse_dvi$/;"	m
+TOP_MODULE	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^TOP_MODULE = ulx3s_ps2mouse_dvi$/;"	m
+TOP_MODULE	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^TOP_MODULE = ulx3s_ps2mouse_dvi_gui$/;"	m
+TOP_MODULE	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^TOP_MODULE = ulx3s_ps2mouse_oled$/;"	m
+TOP_MODULE	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^TOP_MODULE = ulx3s_ps2mouse_oled_dvi$/;"	m
+TOP_MODULE	examples/rtc/i2c_master/proj/Makefile	/^TOP_MODULE = top_mcp7940n_rtc$/;"	m
+TOP_MODULE	examples/rtc/micropython-mcp7940n/proj/Makefile	/^TOP_MODULE = top_i2c_bridge_eink$/;"	m
+TOP_MODULE	examples/sdcard/micropython/proj/Makefile	/^TOP_MODULE = top_sd_pullup$/;"	m
+TOP_MODULE	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^TOP_MODULE = top_ffm_memtest$/;"	m
+TOP_MODULE	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^TOP_MODULE = top_memtest$/;"	m
+TOP_MODULE	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^TOP_MODULE = sdram_hex_oled$/;"	m
+TOP_MODULE	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^TOP_MODULE = sdram_hex_oled$/;"	m
+TOP_MODULE	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^TOP_MODULE = sdram_fpga_hex_oled$/;"	m
+TOP_MODULE	examples/sdram/sdram_mistery/proj/Makefile	/^TOP_MODULE = top_spirw_sdram_hex$/;"	m
+TOP_MODULE	examples/sdram/sdram_pnru/proj/Makefile	/^TOP_MODULE = top_spirw_sdram_hex$/;"	m
+TOP_MODULE	examples/sdram/sdram_pnru_68k/proj/Makefile	/^TOP_MODULE = top_spirw_sdram_hex$/;"	m
+TOP_MODULE	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^TOP_MODULE = top_spirw_sdram_hex$/;"	m
+TOP_MODULE	examples/serdes/Makefile	/^TOP_MODULE = top_serdes$/;"	m
+TOP_MODULE	examples/serdes_dvi/Makefile	/^TOP_MODULE = top_serdes_dvi$/;"	m
+TOP_MODULE	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^TOP_MODULE = top_vgatest$/;"	m
+TOP_MODULE	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^TOP_MODULE = top_st7789_vga$/;"	m
+TOP_MODULE	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^TOP_MODULE = top_st7789_vga$/;"	m
+TOP_MODULE	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^TOP_MODULE = top_vgatest$/;"	m
+TOP_MODULE	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^TOP_MODULE = ulx3s_spi_ram_oled$/;"	m
+TOP_MODULE	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^TOP_MODULE = top_spirw_hex$/;"	m
+TOP_MODULE	examples/usb/ch376/proj/Makefile	/^TOP_MODULE = ch376pt$/;"	m
+TOP_MODULE	examples/usb/proj/lattice/ulx3s/usbethernet/makefile	/^TOP_MODULE = ulx3s_usbeth$/;"	m
+TOP_MODULE	examples/usb/proj/lattice/ulx3s/usbhid_host/Makefile	/^TOP_MODULE = ulx3s_usbhost_test$/;"	m
+TOP_MODULE	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^TOP_MODULE = ulx3s_usbkbd_test$/;"	m
+TOP_MODULE	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/makefile	/^TOP_MODULE = ulx3s_usbtest$/;"	m
+TOP_MODULE	scripts/diamond_main.mk	/^TOP_MODULE ?= top$/;"	m
+TOP_MODULE	scripts/trellis_main.mk	/^TOP_MODULE ?= top$/;"	m
+TOP_MODULE	scripts/trellis_main_ghdl.mk	/^TOP_MODULE ?= top$/;"	m
+TOP_MODULE	scripts/trellis_main_sv.mk	/^TOP_MODULE ?= top$/;"	m
+TOP_MODULE_FILE	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^TOP_MODULE_FILE = ..\/..\/..\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/hdl\/top\/$(TOP_MODULE).vhd$/;"	m
+TOP_MODULE_FILE	examples/adxl355/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/adxl355/projbig/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/audio/Makefile	/^TOP_MODULE_FILE = hdl\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/collatz/proj/Makefile	/^TOP_MODULE_FILE = top\/verilog\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/db9joy/Makefile	/^TOP_MODULE_FILE = hdl\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/dvi/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/dvi_in/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).vhd$/;"	m
+TOP_MODULE_FILE	examples/dvi_osd/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/ecp5pll/Makefile	/^TOP_MODULE_FILE = top\/vhd\/$(TOP_MODULE).vhd$/;"	m
+TOP_MODULE_FILE	examples/eink/eink154/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/eink/epaper290/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/esp32_passthru/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/esp32_rmii/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/eth/rmii/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/flash_passthru/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/fm/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/gray_counter/proj/Makefile	/^TOP_MODULE_FILE = top\/v\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/hex/dvi_hex/proj/Makefile	/^TOP_MODULE_FILE = ..\/hdl\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/hex/lcd_lvds_hex/proj/Makefile	/^TOP_MODULE_FILE = ..\/hdl\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/hex/lcd_st7789_hex/proj/Makefile	/^TOP_MODULE_FILE = ..\/..\/..\/spi_display\/hdl\/spi_display_verilog\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/hex/oled_ssd1306_hex/proj/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/oled\/hdl\/ssd1306_video_verilog\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/hex/oled_ssd1331_hex/proj/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/oled\/hdl\/ssd1331_video_verilog\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/hex/oled_ssd1351_hex/proj/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/oled\/hdl\/ssd1351_video_verilog\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/jtag_slave\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/jtag_slave\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^TOP_MODULE_FILE = ..\/..\/..\/jtag_slave\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^TOP_MODULE_FILE = ..\/..\/hdl\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/lvds_passthru/Makefile	/^TOP_MODULE_FILE = hdl\/$(TOP_MODULE).vhd$/;"	m
+TOP_MODULE_FILE	examples/multiboot/bitstream0/Makefile	/^TOP_MODULE_FILE = $(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/multiboot/bitstream1/Makefile	/^TOP_MODULE_FILE = $(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/multiboot/bitstream2/Makefile	/^TOP_MODULE_FILE = $(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/oled/proj/ulx3s_checkered_v/makefile	/^TOP_MODULE_FILE = ..\/..\/hdl\/ssd1331_video_verilog\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).vhd$/;"	m
+TOP_MODULE_FILE	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).vhd$/;"	m
+TOP_MODULE_FILE	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^TOP_MODULE_FILE = ..\/..\/hdl\/ssd1331_video_verilog\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/oled/proj/ulx3s_terminal/makefile	/^TOP_MODULE_FILE = ..\/..\/hdl\/ssd1331_term_verilog\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/onchip_osc_blink/Makefile	/^TOP_MODULE_FILE = $(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/onchip_osc_blink_ffm/makefile	/^TOP_MODULE_FILE = $(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^TOP_MODULE_FILE = ..\/..\/hdl\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/rtc/i2c_master/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/rtc/micropython-mcp7940n/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/sdcard/micropython/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^TOP_MODULE_FILE = ..\/..\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^TOP_MODULE_FILE = ..\/..\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/sdram_16bit\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/sdram_ctrl\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/sdram_fpga\/hdl\/top\/$(TOP_MODULE).vhd$/;"	m
+TOP_MODULE_FILE	examples/sdram/sdram_mistery/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/sdram/sdram_pnru/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/sdram/sdram_pnru_68k/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/serdes/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/serdes_dvi/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).vhd$/;"	m
+TOP_MODULE_FILE	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^TOP_MODULE_FILE = top\/$(TOP_MODULE).vhd$/;"	m
+TOP_MODULE_FILE	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^TOP_MODULE_FILE = ..\/..\/hdl\/top\/$(TOP_MODULE).vhd$/;"	m
+TOP_MODULE_FILE	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^TOP_MODULE_FILE = ..\/..\/..\/spi_slave\/hdl\/top\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/usb/ch376/proj/Makefile	/^TOP_MODULE_FILE = ..\/hdl\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/usb/proj/lattice/ulx3s/usbethernet/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/..\/lattice\/ulx3s\/top\/ulx3s_usbeth.vhd$/;"	m
+TOP_MODULE_FILE	examples/usb/proj/lattice/ulx3s/usbhid_host/Makefile	/^TOP_MODULE_FILE = top\/verilog\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^TOP_MODULE_FILE = top\/verilog\/$(TOP_MODULE).v$/;"	m
+TOP_MODULE_FILE	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/makefile	/^TOP_MODULE_FILE = ..\/..\/..\/..\/lattice\/ulx3s\/top\/ulx3s_usbserial.vhd$/;"	m
+TOP_MODULE_FILE	scripts/diamond_main.mk	/^TOP_MODULE_FILE ?= $(TOP_MODULE).v$/;"	m
+TOP_VHDL_MODULE	examples/fm/Makefile	/^TOP_VHDL_MODULE = fmgen_test$/;"	m
+TOP_VHDL_MODULE	scripts/trellis_main_ghdl.mk	/^TOP_VHDL_MODULE ?= $(TOP_MODULE)$/;"	m
+TRELLIS	scripts/trellis_path.mk	/^TRELLIS ?= \/mt\/scratch\/tmp\/openfpga\/prjtrellis$/;"	m
+TRELLISDB	scripts/diamond_main.mk	/^TRELLISDB ?= $(TRELLIS)\/database$/;"	m
+TRELLISDB	scripts/trellis_main.mk	/^TRELLISDB ?= $(TRELLIS)\/database$/;"	m
+TRELLISDB	scripts/trellis_main_ghdl.mk	/^TRELLISDB ?= $(TRELLIS)\/database$/;"	m
+TRELLISDB	scripts/trellis_main_sv.mk	/^TRELLISDB ?= $(TRELLIS)\/database$/;"	m
+UJPROG	scripts/diamond_main.mk	/^UJPROG ?= fujprog$/;"	m
+UJPROG	scripts/trellis_main.mk	/^UJPROG ?= fujprog$/;"	m
+UJPROG	scripts/trellis_main_ghdl.mk	/^UJPROG ?= fujprog$/;"	m
+UJPROG	scripts/trellis_main_sv.mk	/^UJPROG ?= ujprog$/;"	m
+VERILOG_FILES	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/adxl355/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/adxl355/projbig/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/audio/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/collatz/proj/filesv.mk	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/db9joy/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/dvi/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/dvi_in/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/dvi_osd/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/ecp5pll/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/eink/eink154/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/eink/epaper290/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/esp32_passthru/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/esp32_rmii/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/eth/rmii/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/flash_passthru/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/fm/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/gray_counter/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/hex/dvi_hex/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/hex/lcd_lvds_hex/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/hex/lcd_st7789_hex/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/hex/oled_ssd1306_hex/proj/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/hex/oled_ssd1331_hex/proj/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/hex/oled_ssd1351_hex/proj/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/lvds_passthru/Makefile	/^VERILOG_FILES =$/;"	m
+VERILOG_FILES	examples/multiboot/bitstream0/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/multiboot/bitstream1/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/multiboot/bitstream2/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/oled/proj/ulx3s_checkered_v/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^VERILOG_FILES =$/;"	m
+VERILOG_FILES	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^VERILOG_FILES =$/;"	m
+VERILOG_FILES	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/oled/proj/ulx3s_terminal/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/onchip_osc_blink/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/onchip_osc_blink_ffm/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/ps2/kbd/proj/lattice/ulx3s/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/rtc/i2c_master/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/rtc/micropython-mcp7940n/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/sdcard/micropython/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/sdram/sdram_mistery/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/sdram/sdram_pnru/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/sdram/sdram_pnru_68k/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/serdes/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/serdes_dvi/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^VERILOG_FILES =$/;"	m
+VERILOG_FILES	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/usb/ch376/proj/Makefile	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/usb/proj/lattice/ulx3s/usbhid_host/files.mk	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/usb/proj/lattice/ulx3s/usbhid_host/filesv.mk	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	examples/usb/proj/lattice/ulx3s/usbkbd/filesv.mk	/^VERILOG_FILES = $(TOP_MODULE_FILE) \\$/;"	m
+VERILOG_FILES	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/files.mk	/^VERILOG_FILES = \\$/;"	m
+VERILOG_FILES	scripts/diamond_main.mk	/^VERILOG_FILES ?= $(TOP_MODULE_FILE)$/;"	m
+VERILOG_FILES	scripts/trellis_main.mk	/^VERILOG_FILES ?= $(TOP_MODULE).v$/;"	m
+VERILOG_FILES	scripts/trellis_main_ghdl.mk	/^VERILOG_FILES ?= $/;"	m
+VERILOG_FILES	scripts/trellis_main_sv.mk	/^VERILOG_FILES ?=$/;"	m
+VHD2VL_FILES	scripts/trellis_main_ghdl.mk	/^VHD2VL_FILES ?=$/;"	m
+VHDL2VL	scripts/trellis_path.mk	/^VHDL2VL ?= vhd2vl$/;"	m
+VHDL_FILES	examples/adc/adc_lcd_lvds/proj/lattice/ulx3s/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/adc/adc_oled/proj/lattice/ulx3s/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/adxl355/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/adxl355/projbig/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/audio/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/collatz/proj/filesv.mk	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/dvi/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/dvi_in/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/dvi_osd/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/ecp5pll/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/eink/eink154/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/eink/epaper290/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/esp32_passthru/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/esp32_rmii/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/eth/rmii/proj/Makefile	/^VHDL_FILES =  \\$/;"	m
+VHDL_FILES	examples/flash_passthru/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/fm/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/hex/dvi_hex/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/hex/lcd_lvds_hex/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/hex/oled_ssd1306_hex/proj/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/hex/oled_ssd1331_hex/proj/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/hex/oled_ssd1351_hex/proj/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/jtagthru/proj/ulx3s_jtagthru/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/lvds_passthru/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/oled/proj/ulx3s_checkered_v/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/oled/proj/ulx3s_hex_vhdl/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/oled/proj/ulx3s_oled_vga_vhdl/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/oled/proj/ulx3s_spi_hex_v/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/oled/proj/ulx3s_terminal/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/ps2/mouse/proj/lattice/ulx3s/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/ps2/mouse_dvi/proj/lattice/ffmlfe5/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/ps2/mouse_dvi/proj/lattice/ulx3s/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/ps2/mouse_dvi_gui/proj/lattice/ulx3s/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/ps2/mouse_oled/proj/lattice/ulx3s/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/ps2/mouse_oled_dvi/proj/lattice/ulx3s/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/rtc/i2c_master/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/rtc/micropython-mcp7940n/proj/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/sdram/sdram_ctrl/proj/ulx3s_sdram_hex_v/makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/sdram/sdram_mistery/proj/Makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/sdram/sdram_pnru/proj/Makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/sdram/sdram_pnru_68k/proj/Makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/sdram/sdram_pnru_68k_180deg/proj/Makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/serdes_dvi/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/spi_display/proj/ssd1331_vga_vhdl/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/spi_display/proj/st7789_vga_vhdl/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/spi_ram/proj/ulx3s_spi_ram_oled/makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/usb/ch376/proj/Makefile	/^VHDL_FILES = $/;"	m
+VHDL_FILES	examples/usb/proj/lattice/ulx3s/usbethernet/files.mk	/^VHDL_FILES = $(TOP_MODULE_FILE) \\$/;"	m
+VHDL_FILES	examples/usb/proj/lattice/ulx3s/usbhid_host/files.mk	/^VHDL_FILES = $(TOP_MODULE_FILE) \\$/;"	m
+VHDL_FILES	examples/usb/proj/lattice/ulx3s/usbhid_host/filesv.mk	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/usb/proj/lattice/ulx3s/usbkbd/filesv.mk	/^VHDL_FILES = \\$/;"	m
+VHDL_FILES	examples/usb/proj/lattice/ulx3s/usbserial_vhdl/files.mk	/^VHDL_FILES = $(TOP_MODULE_FILE) \\$/;"	m
+VHDL_FILES	scripts/diamond_main.mk	/^VHDL_FILES ?=$/;"	m
+VHDL_FILES	scripts/trellis_main.mk	/^VHDL_FILES ?=$/;"	m
+VHDL_FILES	scripts/trellis_main_ghdl.mk	/^VHDL_FILES ?=$/;"	m
+VHDL_FILES	scripts/trellis_main_sv.mk	/^VHDL_FILES ?=$/;"	m
+VHDL_TO_VERILOG_FILES	scripts/trellis_main.mk	/^VHDL_TO_VERILOG_FILES = $(VHDL_FILES:.vhd=.v)$/;"	m
+VHDL_TO_VERILOG_FILES	scripts/trellis_main_ghdl.mk	/^VHDL_TO_VERILOG_FILES = $(VHD2VL_FILES:.vhd=.v)$/;"	m
+VHDL_TO_VERILOG_FILES	scripts/trellis_main_sv.mk	/^VHDL_TO_VERILOG_FILES = $(VHDL_FILES:.vhd=.v)$/;"	m
+YOSYS	scripts/trellis_path.mk	/^YOSYS ?= yosys$/;"	m
+YOSYS_OPTIONS	examples/collatz/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/dvi_osd/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/eth/rmii/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/hex/dvi_hex/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/hex/lcd_lvds_hex/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/hex/lcd_st7789_hex/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/hex/oled_ssd1331_hex/proj/makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/hex/oled_ssd1351_hex/proj/makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/lcd_st7789/micropython/st7789_240x240/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/lcd_st7789/micropython/st7789_240x240_polyline/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/rtc/i2c_master/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/sdcard/micropython/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/sdram/memtest_mister/proj/ffmlfe5_memtest/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/sdram/memtest_mister/proj/ulx3s_memtest/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/sdram/sdram_mistery/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/sdram/sdram_pnru/proj/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/spi_display/proj/st7789_osd_verilog/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/spi_display/proj/st7789_vga_verilog/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/spi_slave/proj/ulx3s_spirw_hex_v/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/usb/proj/lattice/ulx3s/usbhid_host/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	examples/usb/proj/lattice/ulx3s/usbkbd/Makefile	/^YOSYS_OPTIONS = -abc9$/;"	m
+YOSYS_OPTIONS	scripts/diamond_main.mk	/^YOSYS_OPTIONS ?= $/;"	m
+YOSYS_OPTIONS	scripts/trellis_main.mk	/^YOSYS_OPTIONS ?=$/;"	m
+YOSYS_OPTIONS	scripts/trellis_main_ghdl.mk	/^YOSYS_OPTIONS ?=$/;"	m
+YOSYS_OPTIONS	scripts/trellis_main_sv.mk	/^YOSYS_OPTIONS ?=$/;"	m
+all	examples/multiboot/Makefile	/^all: multi$/;"	t
+all	examples/vhdlib/Makefile	/^all: $(PROJ).bit$/;"	t
+all	scripts/diamond_main.mk	/^all: $(BITSTREAM)$/;"	t
+all	scripts/trellis_main.mk	/^all: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf$/;"	t
+all	scripts/trellis_main_ghdl.mk	/^all: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf$/;"	t
+all	scripts/trellis_main_sv.mk	/^all: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf$/;"	t
+bitfile	examples/usb/proj/xilinx/ffm-a7100/ffm-a7100-vivado/makefile	/^bitfile=$(project).runs\/impl_1\/usbserial_ffm_a7100.bit$/;"	m
+bitfile	examples/usb/proj/xilinx/include/vivado.mk	/^bitfile?=$(project).runs\/impl_1\/glue.bit$/;"	m
+bitfile	multiplatform/xilinx/vivado/esa11-unimake/makefile	/^bitfile=$(project).runs\/impl_1\/blinky.bit$/;"	m
+bitfile	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^bitfile?=$(project).runs\/impl_1\/glue.bit$/;"	m
+bitstream_bin	examples/usb/proj/xilinx/include/xilinx.mk	/^bitstream_bin ?= $/;"	m
+build	examples/usb/proj/xilinx/include/vivado.mk	/^build: $(bitfile)$/;"	t
+build	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^build: $(bitfile)$/;"	t
+clean	examples/multiboot/Makefile	/^clean:$/;"	t
+clean	examples/usb/proj/xilinx/include/vivado.mk	/^clean:$/;"	t
+clean	examples/usb/proj/xilinx/include/xilinx.mk	/^clean::$/;"	t
+clean	examples/vhdlib/Makefile	/^clean:$/;"	t
+clean	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^clean:$/;"	t
+clean	scripts/diamond_main.mk	/^clean:$/;"	t
+clean	scripts/trellis_main.mk	/^clean:$/;"	t
+clean	scripts/trellis_main_ghdl.mk	/^clean:$/;"	t
+clean	scripts/trellis_main_sv.mk	/^clean:$/;"	t
+coregen_work_dir	examples/usb/proj/xilinx/include/xilinx.mk	/^coregen_work_dir ?= .\/coregen-tmp$/;"	m
+corengcs	examples/usb/proj/xilinx/include/xilinx.mk	/^corengcs = $(foreach core,$(xilinx_cores),$(core:.xco=.ngc))$/;"	m
+cp_template	examples/usb/proj/xilinx/include/xilinx.mk	/^define cp_template$/;"	m
+date	examples/usb/proj/xilinx/include/xilinx.mk	/^date = $(shell date +%F-%H-%M)$/;"	m
+default	examples/usb/proj/xilinx/include/xilinx.mk	/^default: $(project).bit $(bitstream_bin) $(project).mcs $(project).svf $(project).xsvf$/;"	t
+etwr	examples/usb/proj/xilinx/include/xilinx.mk	/^etwr: $(project)_err.twr$/;"	t
+flash	examples/multiboot/Makefile	/^flash: $(BUILD_TMP)\/multiboot.img$/;"	t
+flash	examples/usb/proj/xilinx/include/xilinx.mk	/^flash: $(project)_flash.svf$/;"	t
+flash	scripts/diamond_main.mk	/^flash: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash	scripts/trellis_main.mk	/^flash: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash	scripts/trellis_main_ghdl.mk	/^flash: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash	scripts/trellis_main_sv.mk	/^flash: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash_dfu	examples/flash_passthru/proj/Makefile	/^flash_dfu:$/;"	t
+flash_dfu	scripts/diamond_main.mk	/^flash_dfu: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash_dfu	scripts/trellis_main.mk	/^flash_dfu: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash_dfu	scripts/trellis_main_ghdl.mk	/^flash_dfu: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash_flea	scripts/diamond_main.mk	/^flash_flea: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT)_flash_$(FLASH_CHIP).vme$/;"	t
+flash_ofl	examples/multiboot/Makefile	/^flash_ofl: $(BUILD_TMP)\/multiboot.img$/;"	t
+flash_ofl	scripts/trellis_main.mk	/^flash_ofl: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash_ofl	scripts/trellis_main_ghdl.mk	/^flash_ofl: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash_tiny	scripts/diamond_main.mk	/^flash_tiny: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash_tiny	scripts/trellis_main.mk	/^flash_tiny: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash_tiny	scripts/trellis_main_ghdl.mk	/^flash_tiny: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flash_tiny	scripts/trellis_main_sv.mk	/^flash_tiny: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+flashsize	examples/usb/proj/xilinx/include/xilinx.mk	/^flashsize ?= 8192$/;"	m
+isedir	examples/usb/proj/xilinx/include/xilinx.mk	/^isedir ?= \/opt\/Xilinx\/ISE\/14.7\/ISE_DS$/;"	m
+jtag_spi_bridge	examples/usb/proj/xilinx/include/xilinx.mk	/^jtag_spi_bridge ?= ..\/..\/include\/bscan_xc6s_ftg256_blink.bit.xz$/;"	m
+junk	examples/usb/proj/xilinx/ffm-a7100/ffm-a7100-vivado/makefile	/^junk=*~$/;"	m
+junk	examples/usb/proj/xilinx/include/vivado.mk	/^junk?=junk.log$/;"	m
+junk	multiplatform/xilinx/vivado/esa11-unimake/makefile	/^junk=*~$/;"	m
+junk	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^junk?=junk.log$/;"	m
+libmks	examples/usb/proj/xilinx/include/xilinx.mk	/^libmks = $(patsubst %,$(libdir)\/%\/module.mk,$(libs)) $/;"	m
+libxsvf_host	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^struct libxsvf_host$/;"	s
+libxsvf_mem	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^enum libxsvf_mem {$/;"	g
+libxsvf_tap_state	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^enum libxsvf_tap_state {$/;"	g
+libxsvf_tap_walk	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/tap.cpp	/^int libxsvf_tap_walk(struct libxsvf_host *h, enum libxsvf_tap_state s)$/;"	f	typeref:typename:int
+local_corengcs	examples/usb/proj/xilinx/include/xilinx.mk	/^local_corengcs = $(foreach ngc,$(corengcs),$(notdir $(ngc)))$/;"	m
+main	examples/audio/testbench/sinewave.c	/^int main(int argc, char *argv[])$/;"	f	typeref:typename:int
+map_opts	examples/usb/proj/xilinx/include/xilinx.mk	/^map_opts ?= -timing -ol high -detail -pr b -register_duplication -w$/;"	m
+mimasv2_device	examples/usb/proj/xilinx/include/xilinx.mk	/^mimasv2_device ?= \/dev\/ttyACM0$/;"	m
+mimasv2_flash	examples/usb/proj/xilinx/include/xilinx.mk	/^mimasv2_flash: $(project).bin$/;"	t
+mkfiles	examples/usb/proj/xilinx/include/xilinx.mk	/^mkfiles = Makefile $(libmks) # xilinx.mk$/;"	m
+multi	examples/multiboot/Makefile	/^multi: $(BUILD_TMP)\/multiboot.img.gz$/;"	t
+openocd_interface	examples/usb/proj/xilinx/include/xilinx.mk	/^openocd_interface ?= interface\/altera-usb-blaster.cfg$/;"	m
+osd.mem	examples/dvi_osd/Makefile	/^osd.mem: osd.txt$/;"	t
+par_opts	examples/usb/proj/xilinx/include/xilinx.mk	/^par_opts ?= -ol high$/;"	m
+pos	examples/audio/testbench/sinewave.c	/^int32_t pos = 0;$/;"	v	typeref:typename:int32_t
+prog	examples/vhdlib/Makefile	/^prog: $(PROJ).bit$/;"	t
+prog	scripts/diamond_main.mk	/^prog: program$/;"	t
+prog	scripts/trellis_main.mk	/^prog: program$/;"	t
+prog	scripts/trellis_main_ghdl.mk	/^prog: program$/;"	t
+prog_ocd	scripts/diamond_main.mk	/^prog_ocd: program_ocd$/;"	t
+prog_ocd	scripts/trellis_main.mk	/^prog_ocd: program_ocd$/;"	t
+prog_ocd	scripts/trellis_main_ghdl.mk	/^prog_ocd: program_ocd$/;"	t
+prog_ofl	scripts/diamond_main.mk	/^prog_ofl: program_ofl$/;"	t
+prog_ofl	scripts/trellis_main.mk	/^prog_ofl: program_ofl$/;"	t
+prog_ofl	scripts/trellis_main_ghdl.mk	/^prog_ofl: program_ofl$/;"	t
+program	examples/usb/proj/xilinx/include/vivado.mk	/^program: xc3sprog$/;"	t
+program	examples/usb/proj/xilinx/include/xilinx.mk	/^program: $(project).svf$/;"	t
+program	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^program: xc3sprog$/;"	t
+program	scripts/diamond_main.mk	/^program: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+program	scripts/trellis_main.mk	/^program: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+program	scripts/trellis_main_ghdl.mk	/^program: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+program	scripts/trellis_main_sv.mk	/^program: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+program_flea	scripts/diamond_main.mk	/^program_flea: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme$/;"	t
+program_flea	scripts/trellis_main.mk	/^program_flea: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme$/;"	t
+program_flea	scripts/trellis_main_ghdl.mk	/^program_flea: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme$/;"	t
+program_flea	scripts/trellis_main_sv.mk	/^program_flea: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).vme$/;"	t
+program_ocd	scripts/diamond_main.mk	/^program_ocd: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf $(BOARD)_$(FPGA_SIZE)f.ocd$/;"	t
+program_ocd	scripts/trellis_main.mk	/^program_ocd: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf $(BOARD)_$(FPGA_SIZE)f.ocd$/;"	t
+program_ocd	scripts/trellis_main_ghdl.mk	/^program_ocd: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf $(BOARD)_$(FPGA_SIZE)f.ocd$/;"	t
+program_ocd	scripts/trellis_main_sv.mk	/^program_ocd: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).svf $(BOARD)_$(FPGA_SIZE)f.ocd$/;"	t
+program_ofl	scripts/diamond_main.mk	/^program_ofl: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+program_ofl	scripts/trellis_main.mk	/^program_ofl: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+program_ofl	scripts/trellis_main_ghdl.mk	/^program_ofl: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).bit$/;"	t
+programming_files	examples/usb/proj/xilinx/include/xilinx.mk	/^programming_files: $(project).bit $(project).bin $(project).mcs $(project).svf $(project).xsvf$/;"	t
+project	examples/usb/proj/xilinx/ffm-a7100/ffm-a7100-vivado/makefile	/^project=usbserial_ffm_a7100_v3r0_ffc_ca7_v2r0$/;"	m
+project	examples/usb/proj/xilinx/include/vivado.mk	/^project ?= project$/;"	m
+project	multiplatform/xilinx/vivado/esa11-unimake/makefile	/^project=blinky$/;"	m
+project	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^project ?= project$/;"	m
+project/project_project.bit	scripts/diamond_main.mk	/^project\/project_project.bit: $(BOARD)_$(FPGA_SIZE)f_$(PROJECT).ldf $(VERILOG_FILES) $(VHDL_FILE/;"	t
+scan	examples/jtag_slave/proj/ulx3s_jtag_hex_v/makefile	/^scan:$/;"	t
+scan	examples/jtag_slave/proj/ulx3s_jtagg_hex_v/Makefile	/^scan:$/;"	t
+scan	examples/ov7670_dvi/proj/ulx3s_ov7670_dvi/makefile	/^scan:$/;"	t
+spd	examples/audio/testbench/sinewave.c	/^int32_t spd = 277;$/;"	v	typeref:typename:int32_t
+tap_state	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/libxsvf.h	/^	enum libxsvf_tap_state tap_state;$/;"	m	struct:libxsvf_host	typeref:enum:libxsvf_tap_state
+tap_transition	examples/jtag_slave/proj/ulx3s_jtag_hex_passthru_v/Arduino/jtagwalkesp32/tap.cpp	/^static void tap_transition(struct libxsvf_host *h, int v)$/;"	f	typeref:typename:void	file:
+test	examples/flash_passthru/proj/Makefile	/^test:$/;"	t
+top_module	examples/usb/proj/xilinx/include/xilinx.mk	/^top_module ?= $(project)$/;"	m
+twr	examples/usb/proj/xilinx/include/xilinx.mk	/^twr: $(project).twr$/;"	t
+vivado	examples/usb/proj/xilinx/include/vivado.mk	/^vivado ?= \/opt\/Xilinx\/Vivado\/2018.1\/bin\/vivado$/;"	m
+vivado	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^vivado ?= \/opt\/Xilinx\/Vivado\/2017.3\/bin\/vivado$/;"	m
+write	examples/flash_passthru/proj/Makefile	/^write: ulx3s_$(FPGA_SIZE)f_flash_passthru.bit flashrom.layout$/;"	t
+xc3sprog	examples/usb/proj/xilinx/include/vivado.mk	/^xc3sprog:$/;"	t
+xc3sprog	examples/usb/proj/xilinx/include/xilinx.mk	/^xc3sprog: $(project).bit$/;"	t
+xc3sprog	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^xc3sprog:$/;"	t
+xc3sprog_device	examples/usb/proj/xilinx/include/vivado.mk	/^xc3sprog_device ?= 0$/;"	m
+xc3sprog_device	examples/usb/proj/xilinx/include/xilinx.mk	/^xc3sprog_device ?= 0$/;"	m
+xc3sprog_device	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^xc3sprog_device ?= 0$/;"	m
+xc3sprog_flash	examples/usb/proj/xilinx/include/xilinx.mk	/^xc3sprog_flash: $(project).bit$/;"	t
+xc3sprog_force	examples/usb/proj/xilinx/include/xilinx.mk	/^xc3sprog_force:$/;"	t
+xc3sprog_interface	examples/usb/proj/xilinx/ffm-a7100/ffm-a7100-vivado/makefile	/^xc3sprog_interface = ft4232h_fast$/;"	m
+xc3sprog_interface	examples/usb/proj/xilinx/include/vivado.mk	/^xc3sprog_interface ?= ftdi$/;"	m
+xc3sprog_interface	examples/usb/proj/xilinx/include/xilinx.mk	/^xc3sprog_interface ?= xpc$/;"	m
+xc3sprog_interface	multiplatform/xilinx/vivado/esa11-unimake/makefile	/^xc3sprog_interface = ft4232h_fast$/;"	m
+xc3sprog_interface	multiplatform/xilinx/vivado/esa11-unimake/vivado.mk	/^xc3sprog_interface ?= ftdi$/;"	m
+xil_env	examples/usb/proj/xilinx/include/xilinx.mk	/^xil_env ?= . $(isedir)\/settings32.sh$/;"	m
+xilinx_cores	examples/usb/proj/xilinx/include/xilinx.mk	/^xilinx_cores: $(corengcs)$/;"	t

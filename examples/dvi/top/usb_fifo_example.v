@@ -117,7 +117,7 @@ always  @(posedge clk or negedge rst_n)begin
         slwr    <=  1'b1;
     end
     else if(state_n[1])begin 
-        slwr    <=  1'b0;
+        slwr    <=  1'b0; // start writing out to fx3
     end
     else begin
         slwr    <=  1'b1;
@@ -130,7 +130,7 @@ always  @(posedge clk or negedge rst_n)begin
         slrd    <=  1'b1;
     end
     else if(state_n[2])begin
-        slrd    <=  1'b0;
+        slrd    <=  1'b0; // start reading from fx3
     end
     else begin
         slrd    <=  1'b1;

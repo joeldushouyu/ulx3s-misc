@@ -1,0 +1,85 @@
+{
+"Synplify Pro (R) Job Log" : {
+	"Date" : "12:26:21    13-Feb-2024",
+	"Working Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/project",
+	"CDPL Log file" : "-",
+	"Install" : "/usr/local/diamond/3.13/synpbase"
+},
+"project" :{
+   "Start Time" : "12:26:21",
+   "Runtime" : "00s",
+   "Executable Run Time" : "00s",
+   "synthesis" : {
+      "Start Time" : "12:26:21",
+      "Runtime" : "00s",
+      "Executable Run Time" : "00s",
+      "compile" : {
+         "Start Time" : "12:26:21",
+         "Runtime" : "00s",
+         "Executable Run Time" : "00s",
+         "compile_flow" : {
+            "Start Time" : "12:26:21",
+            "Runtime" : "00s",
+            "Executable Run Time" : "00s",
+            "compiler" : {
+               "executable" : "bin/c_hdl",
+               "Run Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/project",
+               "Run State" : "Complete",
+               "Return Code" : "2",
+               "Has Errors" : "yes",
+               "Run Start Time" : "12:26:21",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "2.632000",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            },
+            "multi_srs_gen" : {
+               "executable" : "bin/syn_nfilter",
+               "Run Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/project",
+               "Run State" : "Canceled",
+               "Return Code" : "-",
+               "Has Errors" : "yes",
+               "Run Start Time" : "-",
+               "Run Time" : "00s",
+               "Exe Run Time" : "00s",
+               "Memory Usage" : "-",
+               "CDPL" : "off",
+               "Up-to-date (run skipped)" : "no"
+            }
+         },
+         "premap" : {
+            "executable" : "bin/m_gen_lattice",
+            "Run Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/project",
+            "Run State" : "Canceled",
+            "Return Code" : "-",
+            "Has Errors" : "yes",
+            "Run Start Time" : "-",
+            "Run Time" : "00s",
+            "Exe Run Time" : "00s",
+            "Memory Usage" : "-",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      },
+      "map" : {
+         "Start Time" : "-",
+         "Runtime" : "00s",
+         "Executable Run Time" : "00s",
+         "fpga_mapper" : {
+            "executable" : "bin/m_gen_lattice",
+            "Run Directory" : "/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/proj/ulx3s_sdram_hex_v/project",
+            "Run State" : "Canceled",
+            "Return Code" : "-",
+            "Has Errors" : "yes",
+            "Run Start Time" : "-",
+            "Run Time" : "00s",
+            "Exe Run Time" : "00s",
+            "Memory Usage" : "-",
+            "CDPL" : "off",
+            "Up-to-date (run skipped)" : "no"
+         }
+      }
+   }
+}
+}

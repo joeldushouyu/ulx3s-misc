@@ -1,0 +1,21 @@
+@P:  Worst Slack : -0.750
+@P:  clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock - Estimated Frequency : 216.4 MHz
+@P:  clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock - Requested Frequency : 239.1 MHz
+@P:  clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock - Estimated Period : 4.621
+@P:  clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock - Requested Period : 4.183
+@P:  clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock - Slack : -0.438
+@P:  clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock - Estimated Frequency : 200.1 MHz
+@P:  clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock - Requested Frequency : 235.4 MHz
+@P:  clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock - Estimated Period : 4.998
+@P:  clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock - Requested Period : 4.249
+@P:  clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock - Slack : -0.750
+@P:  System - Estimated Frequency : NA
+@P:  System - Requested Frequency : 1.0 MHz
+@P:  System - Estimated Period : 0.000
+@P:  System - Requested Period : 1000.000
+@P:  System - Slack : 1000.000
+@P:  Total Area : 310.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  Total Area : 0.0
+@P:  CPU Time : 0h:00m:02s

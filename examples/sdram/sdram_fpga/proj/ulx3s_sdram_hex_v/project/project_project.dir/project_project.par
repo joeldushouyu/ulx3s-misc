@@ -1,0 +1,26 @@
+PAR: Place And Route Diamond (64-bit) 3.13.0.56.2.
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+Copyright (c) 1995 AT&T Corp.   All rights reserved.
+Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+Copyright (c) 2001 Agere Systems   All rights reserved.
+Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights reserved.
+Sat Feb 17 17:03:04 2024
+
+/usr/local/diamond/3.13/ispfpga/bin/lin64/par -f project_project.p2t
+project_project_map.ncd project_project.dir project_project.prf
+
+
+Preference file: project_project.prf.
+
+Level/       Number       Worst        Timing       Worst        Timing       Run          NCD
+Cost [ncd]   Unrouted     Slack        Score        Slack(hold)  Score(hold)  Time         Status
+----------   --------     -----        ------       -----------  -----------  ----         ------
+5_1   *      0            1.341        0            0.174        0            13           Completed
+
+* : Design saved.
+
+Total (real) run time for 1-seed: 13 secs 
+
+par done!
+
+Note: user must run 'Trace' for timing closure signoff.

@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<BaliProject version="3.2" title="project" device="LFE5U-12F-6BG381C" default_implementation="project">
+  <Options/>
+  <Implementation title="project" dir="project" description="project" synthesis="synplify" default_strategy="Strategy1">
+    <Options def_top="sdram_hex_oled" top="sdram_hex_oled"/>
+    <Source name="../../../sdram_16bit/hdl/top/sdram_hex_oled.v" type="Verilog" type_short="Verilog">
+      <Options top_module="sdram_hex_oled"/>
+    </Source>
+    <Source name="../../../sdram_16bit/hdl/top/clk_25_125_25_12_100.v" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="../../../sdram_16bit/hdl/sdram_16bit.v" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="../../../../oled/hdl/ssd1331_video_verilog/oled_video.v" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="../../../../oled/hdl/ssd1331_video_verilog/hex_decoder.v" type="Verilog" type_short="Verilog">
+      <Options/>
+    </Source>
+    <Source name="../../../../../constraints/ulx3s_v20_segpdi.lpf" type="Logic Preference" type_short="LPF">
+      <Options/>
+    </Source>
+    <Source name="../../../../../scripts//ulx3s_sram.xcf" type="Programming Project File" type_short="Programming">
+      <Options/>
+    </Source>
+  </Implementation>
+  <Strategy name="Strategy1" file="../../../../../scripts//ulx3s.sty"/>
+</BaliProject>

@@ -1,0 +1,19 @@
+Runtime Summary:
+================
+
+	The following design units have negligible CPU times:
+	=====================================================
+		*Library: work, Entity: clk_25M_100M_7M5_12M_60M, Architecture: structure
+			Hardware Generation Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: sdram_0bject, Architecture: arch
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: oled_hex_decoder, Architecture: rtl
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: sdram_fpga_hex_oled, Architecture: behavioral
+			Hardware Generation Phase, Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: VHI, Architecture: syn_black_box
+			Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: VLO, Architecture: syn_black_box
+			Initial Cleanup Phase, Optimization Phase: Negligible CPU time
+		*Library: work, Entity: EHXPLLL, Architecture: syn_black_box
+			Initial Cleanup Phase, Optimization Phase: Negligible CPU time

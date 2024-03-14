@@ -1,0 +1,1524 @@
+
+     Lattice Mapping Report File for Design Module 'sdram_fpga_hex_oled'
+
+
+Design Information
+------------------
+
+Command line:   map -a ECP5U -p LFE5U-45F -t CABGA381 -s 6 -oc Commercial
+     project_project.ngd -o project_project_map.ncd -pr project_project.prf -mp
+     project_project.mrp
+     /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_segpdi.lpf
+     -retime -tdm -split_node -td_pack 
+Target Vendor:  LATTICE
+Target Device:  LFE5U-45FCABGA381
+Target Performance:   6
+Mapper:  sa5p00,  version:  Diamond (64-bit) 3.13.0.56.2
+Mapped on:  02/17/24  17:03:02
+
+     No retiming is necessary for the given constraints
+
+Design Summary
+--------------
+
+   Number of registers:    299 out of 44457 (1%)
+      PFU registers:          280 out of 43848 (1%)
+      PIO registers:           19 out of   609 (3%)
+   Number of SLICEs:       294 out of 21924 (1%)
+      SLICEs as Logic/ROM:    294 out of 21924 (1%)
+      SLICEs as RAM:            0 out of 16443 (0%)
+      SLICEs as Carry:         42 out of 21924 (0%)
+   Number of LUT4s:        418 out of 43848 (1%)
+      Number used as logic LUTs:        334
+      Number used as distributed RAM:     0
+      Number used as ripple logic:       84
+      Number used as shift registers:     0
+   Number of PIO sites used: 61 out of 203 (30%)
+   Number of block RAMs:  0 out of 108 (0%)
+   Number of GSRs:  1 out of 1 (100%)
+   JTAG used :      No
+   Readback used :  No
+   Oscillator used :  No
+   Startup used :   No
+   DTR used :   No
+   Number of Dynamic Bank Controller (BCINRD):  0 out of 4 (0%)
+   Number of Dynamic Bank Controller (BCLVDSOB):  0 out of 4 (0%)
+   Number of DCC:  0 out of 60 (0%)
+   Number of DCS:  0 out of 2 (0%)
+   Number of PLLs:  1 out of 4 (25%)
+   Number of DDRDLLs:  0 out of 4 (0%)
+   Number of CLKDIV:  0 out of 4 (0%)
+   Number of ECLKSYNC:  0 out of 10 (0%)
+   Number of ECLKBRIDGECS:  0 out of 2 (0%)
+   Notes:-
+      1. Total number of LUT4s = (Number of logic LUT4s) + 2*(Number of
+     distributed RAMs) + 2*(Number of ripple logic)
+      2. Number of logic LUT4s does not include count of distributed RAM and
+     ripple logic.
+
+        Number Of Mapped DSP Components:
+   --------------------------------
+   MULT18X18D          0
+   MULT9X9D            0
+
+                                    Page 1
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Summary (cont)
+---------------------
+   ALU54B              0
+   ALU24B              0
+   PRADD18A            0
+   PRADD9A             0
+   --------------------------------
+   Number of Used DSP MULT Sites:  0 out of 144 (0 %)
+   Number of Used DSP ALU Sites:  0 out of 72 (0 %)
+   Number of Used DSP PRADD Sites:  0 out of 144 (0 %)
+   Number of clocks:  3
+     Net clk_25mhz_c: 1 loads, 1 rising, 0 falling (Driver: PIO clk_25mhz )
+     Net clk_100MHz: 101 loads, 101 rising, 0 falling (Driver: clk_pll/PLLInst_0
+     )
+     Net clk_12MHz: 79 loads, 79 rising, 0 falling (Driver: clk_pll/PLLInst_0 )
+   Number of Clock Enables:  13
+     Net R_counter[0]: 14 loads, 14 LSLICEs
+     Net un1_R_state_2_0_a2: 1 loads, 1 LSLICEs
+     Net R_request_1_sqmuxa_i: 1 loads, 1 LSLICEs
+     Net q_regce[16]: 16 loads, 0 LSLICEs
+     Net un9_r_write_enable: 28 loads, 28 LSLICEs
+     Net oled_inst/R_data_index_1_sqmuxa: 3 loads, 3 LSLICEs
+     Net oled_inst/un1_r_reset_cnt10_i: 8 loads, 8 LSLICEs
+     Net oled_inst/R_indexed_data_1_sqmuxa: 4 loads, 4 LSLICEs
+     Net oled_inst/R_indexed_color_1_sqmuxa: 4 loads, 4 LSLICEs
+     Net oled_inst/R_data_1_sqmuxa: 31 loads, 31 LSLICEs
+     Net oled_inst/R_data_index_0_sqmuxa: 3 loads, 3 LSLICEs
+     Net sdram_0bject_inst/un4_start: 5 loads, 5 LSLICEs
+     Net sdram_0bject_inst/q_regce[0]: 8 loads, 8 LSLICEs
+   Number of local set/reset loads for net R_reset merged into GSR:  34
+   Number of LSRs:  3
+     Net r_request9: 5 loads, 5 LSLICEs
+     Net un1_r_request9_0_a2: 1 loads, 1 LSLICEs
+     Net sdram_0bject_inst/N_217_i_i: 1 loads, 1 LSLICEs
+   Number of nets driven by tri-state buffers:  0
+   Top 10 highest fanout non-clock nets:
+     Net oled_inst/R_indexed_data[3]: 43 loads
+     Net oled_inst/R_indexed_data[1]: 40 loads
+     Net oled_inst/R_data_index[0]: 39 loads
+     Net oled_inst/R_indexed_data[2]: 39 loads
+     Net oled_inst/R_indexed_data[0]: 38 loads
+     Net oled_inst/R_data_1_sqmuxa: 31 loads
+     Net B_data_mux.un5_sdram_dq6: 29 loads
+     Net un9_r_write_enable: 28 loads
+     Net oled_inst/R_data_index[1]: 24 loads
+     Net oled_inst/R_spi_data_1_0_areg[0]: 23 loads
+
+
+
+
+   Number of warnings:  269
+   Number of errors:    0
+     
+
+Design Errors/Warnings
+----------------------
+
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+
+                                    Page 2
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     egpdi.lpf(23): Semantic error in "IOBUF PORT "ftdi_txd" PULLMODE=UP
+     IO_TYPE=LVCMOS33 ;": Port "ftdi_txd" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(24): Semantic error in "IOBUF PORT "ftdi_nrts" PULLMODE=UP
+     IO_TYPE=LVCMOS33 ;": Port "ftdi_nrts" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(25): Semantic error in "IOBUF PORT "ftdi_ndtr" PULLMODE=UP
+     IO_TYPE=LVCMOS33 ;": Port "ftdi_ndtr" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(26): Semantic error in "IOBUF PORT "ftdi_txden" PULLMODE=UP
+     IO_TYPE=LVCMOS33 ;": Port "ftdi_txden" does not exist in the design. This
+     preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(57): Semantic error in "IOBUF PORT "btn[3]" PULLMODE=DOWN
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "btn[3]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(58): Semantic error in "IOBUF PORT "btn[4]" PULLMODE=DOWN
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "btn[4]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(59): Semantic error in "IOBUF PORT "btn[5]" PULLMODE=DOWN
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "btn[5]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(60): Semantic error in "IOBUF PORT "btn[6]" PULLMODE=DOWN
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "btn[6]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(63): Semantic error in "LOCATE COMP "sw[0]" SITE "E8" ;": COMP
+     "sw[0]" cannot be found in design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(67): Semantic error in "IOBUF PORT "sw[0]" PULLMODE=DOWN
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sw[0]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(68): Semantic error in "IOBUF PORT "sw[1]" PULLMODE=DOWN
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sw[1]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(69): Semantic error in "IOBUF PORT "sw[2]" PULLMODE=DOWN
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sw[2]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(70): Semantic error in "IOBUF PORT "sw[3]" PULLMODE=DOWN
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sw[3]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(85): Semantic error in "LOCATE COMP "flash_csn" SITE "R2" ;":
+     COMP "flash_csn" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(86): Semantic error in "LOCATE COMP "flash_clk" SITE "U3" ;":
+
+                                    Page 3
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     COMP "flash_clk" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(87): Semantic error in "LOCATE COMP "flash_mosi" SITE "W2" ;":
+     COMP "flash_mosi" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(88): Semantic error in "LOCATE COMP "flash_miso" SITE "V2" ;":
+     COMP "flash_miso" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(89): Semantic error in "LOCATE COMP "flash_holdn" SITE "W1" ;":
+     COMP "flash_holdn" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(90): Semantic error in "LOCATE COMP "flash_wpn" SITE "Y2" ;":
+     COMP "flash_wpn" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(98): Semantic error in "IOBUF PORT "flash_csn" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "flash_csn" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(99): Semantic error in "IOBUF PORT "flash_clk" PULLMODE=DOWN
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "flash_clk" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(100): Semantic error in "IOBUF PORT "flash_mosi" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "flash_mosi" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(101): Semantic error in "IOBUF PORT "flash_miso" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "flash_miso" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(102): Semantic error in "IOBUF PORT "flash_holdn" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "flash_holdn" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(103): Semantic error in "IOBUF PORT "flash_wpn" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "flash_wpn" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(114): Semantic error in "LOCATE COMP "sd_cmd" SITE "J1" ;": COMP
+     "sd_cmd" cannot be found in design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(115): Semantic error in "LOCATE COMP "sd_d[0]" SITE "J3" ;": COMP
+     "sd_d[0]" cannot be found in design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(116): Semantic error in "LOCATE COMP "sd_d[1]" SITE "H1" ;": COMP
+     "sd_d[1]" cannot be found in design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(117): Semantic error in "LOCATE COMP "sd_d[2]" SITE "K1" ;": COMP
+     "sd_d[2]" cannot be found in design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(118): Semantic error in "LOCATE COMP "sd_d[3]" SITE "K2" ;": COMP
+
+                                    Page 4
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     "sd_d[3]" cannot be found in design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(121): Semantic error in "IOBUF PORT "sd_clk" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sd_clk" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(122): Semantic error in "IOBUF PORT "sd_cmd" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sd_cmd" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(123): Semantic error in "IOBUF PORT "sd_d[0]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sd_d[0]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(124): Semantic error in "IOBUF PORT "sd_d[1]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sd_d[1]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(125): Semantic error in "IOBUF PORT "sd_d[2]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sd_d[2]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(126): Semantic error in "IOBUF PORT "sd_d[3]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sd_d[3]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(127): Semantic error in "IOBUF PORT "sd_wp" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sd_wp" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(128): Semantic error in "IOBUF PORT "sd_cdn" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "sd_cdn" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(131): Semantic error in "LOCATE COMP "adc_csn" SITE "R17" ;":
+     COMP "adc_csn" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(132): Semantic error in "LOCATE COMP "adc_mosi" SITE "R16" ;":
+     COMP "adc_mosi" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(133): Semantic error in "LOCATE COMP "adc_miso" SITE "U16" ;":
+     COMP "adc_miso" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(134): Semantic error in "LOCATE COMP "adc_sclk" SITE "P17" ;":
+     COMP "adc_sclk" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(135): Semantic error in "IOBUF PORT "adc_csn" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "adc_csn" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(136): Semantic error in "IOBUF PORT "adc_mosi" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "adc_mosi" does not exist in the design.
+
+                                    Page 5
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(137): Semantic error in "IOBUF PORT "adc_miso" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "adc_miso" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(138): Semantic error in "IOBUF PORT "adc_sclk" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "adc_sclk" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(147): Semantic error in "LOCATE COMP "audio_l[3]" SITE "B3" ;":
+     COMP "audio_l[3]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(148): Semantic error in "LOCATE COMP "audio_l[2]" SITE "C3" ;":
+     COMP "audio_l[2]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(149): Semantic error in "LOCATE COMP "audio_l[1]" SITE "D3" ;":
+     COMP "audio_l[1]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(150): Semantic error in "LOCATE COMP "audio_l[0]" SITE "E4" ;":
+     COMP "audio_l[0]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(151): Semantic error in "LOCATE COMP "audio_r[3]" SITE "C5" ;":
+     COMP "audio_r[3]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(152): Semantic error in "LOCATE COMP "audio_r[2]" SITE "D5" ;":
+     COMP "audio_r[2]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(153): Semantic error in "LOCATE COMP "audio_r[1]" SITE "B5" ;":
+     COMP "audio_r[1]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(154): Semantic error in "LOCATE COMP "audio_r[0]" SITE "A3" ;":
+     COMP "audio_r[0]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(155): Semantic error in "LOCATE COMP "audio_v[3]" SITE "E5" ;":
+     COMP "audio_v[3]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(156): Semantic error in "LOCATE COMP "audio_v[2]" SITE "F5" ;":
+     COMP "audio_v[2]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(157): Semantic error in "LOCATE COMP "audio_v[1]" SITE "F2" ;":
+     COMP "audio_v[1]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(158): Semantic error in "LOCATE COMP "audio_v[0]" SITE "H5" ;":
+     COMP "audio_v[0]" cannot be found in design. This preference has been
+
+                                    Page 6
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(159): Semantic error in "IOBUF PORT "audio_l[3]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_l[3]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(160): Semantic error in "IOBUF PORT "audio_l[2]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_l[2]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(161): Semantic error in "IOBUF PORT "audio_l[1]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_l[1]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(162): Semantic error in "IOBUF PORT "audio_l[0]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_l[0]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(163): Semantic error in "IOBUF PORT "audio_r[3]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_r[3]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(164): Semantic error in "IOBUF PORT "audio_r[2]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_r[2]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(165): Semantic error in "IOBUF PORT "audio_r[1]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_r[1]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(166): Semantic error in "IOBUF PORT "audio_r[0]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_r[0]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(167): Semantic error in "IOBUF PORT "audio_v[3]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_v[3]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(168): Semantic error in "IOBUF PORT "audio_v[2]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_v[2]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(169): Semantic error in "IOBUF PORT "audio_v[1]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_v[1]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(170): Semantic error in "IOBUF PORT "audio_v[0]" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "audio_v[0]" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(178): Semantic error in "LOCATE COMP "wifi_gpio5" SITE "N4" ;":
+     COMP "wifi_gpio5" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(180): Semantic error in "LOCATE COMP "wifi_gpio17" SITE "N3" ;":
+     COMP "wifi_gpio17" cannot be found in design. This preference has been
+
+                                    Page 7
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(184): Semantic error in "IOBUF PORT "wifi_txd" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "wifi_txd" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(186): Semantic error in "IOBUF PORT "wifi_gpio5" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "wifi_gpio5" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(187): Semantic error in "IOBUF PORT "wifi_gpio16" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "wifi_gpio16" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(188): Semantic error in "IOBUF PORT "wifi_gpio17" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "wifi_gpio17" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(192): Semantic error in "LOCATE COMP "ant_433mhz" SITE "G1" ;":
+     COMP "ant_433mhz" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(193): Semantic error in "IOBUF PORT "ant_433mhz" PULLMODE=NONE
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "ant_433mhz" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(198): Semantic error in "IOBUF PORT "usb_fpga_dp" PULLMODE=NONE
+     IO_TYPE=LVCMOS33D DRIVE=16 ;": Port "usb_fpga_dp" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(199): Semantic error in "IOBUF PORT "usb_fpga_dn" PULLMODE=NONE
+     IO_TYPE=LVCMOS33D DRIVE=16 ;": Port "usb_fpga_dn" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(200): Semantic error in "LOCATE COMP "usb_fpga_bd_dp" SITE "D15"
+     ;": COMP "usb_fpga_bd_dp" cannot be found in design. This preference has
+     been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(201): Semantic error in "LOCATE COMP "usb_fpga_bd_dn" SITE "E15"
+     ;": COMP "usb_fpga_bd_dn" cannot be found in design. This preference has
+     been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(202): Semantic error in "IOBUF PORT "usb_fpga_bd_dp"
+     PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "usb_fpga_bd_dp" does not
+     exist in the design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(203): Semantic error in "IOBUF PORT "usb_fpga_bd_dn"
+     PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "usb_fpga_bd_dn" does not
+     exist in the design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(204): Semantic error in "LOCATE COMP "usb_fpga_pu_dp" SITE "B12"
+     ;": COMP "usb_fpga_pu_dp" cannot be found in design. This preference has
+     been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(205): Semantic error in "LOCATE COMP "usb_fpga_pu_dn" SITE "C12"
+     ;": COMP "usb_fpga_pu_dn" cannot be found in design. This preference has
+
+                                    Page 8
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(206): Semantic error in "IOBUF PORT "usb_fpga_pu_dp"
+     PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "usb_fpga_pu_dp" does not
+     exist in the design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(207): Semantic error in "IOBUF PORT "usb_fpga_pu_dn"
+     PULLMODE=NONE IO_TYPE=LVCMOS33 DRIVE=16 ;": Port "usb_fpga_pu_dn" does not
+     exist in the design. This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(303): Semantic error in "LOCATE COMP "gpdi_dp[0]" SITE "A16" ;":
+     COMP "gpdi_dp[0]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(304): Semantic error in "LOCATE COMP "gpdi_dn[0]" SITE "B16" ;":
+     COMP "gpdi_dn[0]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(305): Semantic error in "LOCATE COMP "gpdi_dp[1]" SITE "A14" ;":
+     COMP "gpdi_dp[1]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(306): Semantic error in "LOCATE COMP "gpdi_dn[1]" SITE "C14" ;":
+     COMP "gpdi_dn[1]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(307): Semantic error in "LOCATE COMP "gpdi_dp[2]" SITE "A12" ;":
+     COMP "gpdi_dp[2]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(308): Semantic error in "LOCATE COMP "gpdi_dn[2]" SITE "A13" ;":
+     COMP "gpdi_dn[2]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(309): Semantic error in "LOCATE COMP "gpdi_dp[3]" SITE "A17" ;":
+     COMP "gpdi_dp[3]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(310): Semantic error in "LOCATE COMP "gpdi_dn[3]" SITE "B18" ;":
+     COMP "gpdi_dn[3]" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(311): Semantic error in "LOCATE COMP "gpdi_ethp" SITE "A19" ;":
+     COMP "gpdi_ethp" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(312): Semantic error in "LOCATE COMP "gpdi_ethn" SITE "B20" ;":
+     COMP "gpdi_ethn" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(313): Semantic error in "LOCATE COMP "gpdi_cec" SITE "A18" ;":
+     COMP "gpdi_cec" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(314): Semantic error in "LOCATE COMP "gpdi_sda" SITE "B19" ;":
+     COMP "gpdi_sda" cannot be found in design. This preference has been
+
+                                    Page 9
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(315): Semantic error in "LOCATE COMP "gpdi_scl" SITE "E12" ;":
+     COMP "gpdi_scl" cannot be found in design. This preference has been
+     disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(316): Semantic error in "IOBUF PORT "gpdi_dp[0]" IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_dp[0]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(317): Semantic error in "IOBUF PORT "gpdi_dn[0]" IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_dn[0]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(318): Semantic error in "IOBUF PORT "gpdi_dp[1]" IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_dp[1]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(319): Semantic error in "IOBUF PORT "gpdi_dn[1]" IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_dn[1]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(320): Semantic error in "IOBUF PORT "gpdi_dp[2]" IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_dp[2]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(321): Semantic error in "IOBUF PORT "gpdi_dn[2]" IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_dn[2]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(322): Semantic error in "IOBUF PORT "gpdi_dp[3]" IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_dp[3]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(323): Semantic error in "IOBUF PORT "gpdi_dn[3]" IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_dn[3]" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(324): Semantic error in "IOBUF PORT "gpdi_ethp" IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_ethp" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(325): Semantic error in "IOBUF PORT "gpdi_ethn" IO_TYPE=LVCMOS33
+     DRIVE=4 ;": Port "gpdi_ethn" does not exist in the design. This preference
+     has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(326): Semantic error in "IOBUF PORT "gpdi_cec" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gpdi_cec" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(327): Semantic error in "IOBUF PORT "gpdi_sda" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gpdi_sda" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(328): Semantic error in "IOBUF PORT "gpdi_scl" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gpdi_scl" does not exist in the design.
+
+                                   Page 10
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(350): Semantic error in "IOBUF PORT "gp[0]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[0]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(351): Semantic error in "IOBUF PORT "gn[0]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[0]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(352): Semantic error in "IOBUF PORT "gp[1]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[1]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(353): Semantic error in "IOBUF PORT "gn[1]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[1]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(354): Semantic error in "IOBUF PORT "gp[2]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[2]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(355): Semantic error in "IOBUF PORT "gn[2]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[2]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(356): Semantic error in "IOBUF PORT "gp[3]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[3]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(357): Semantic error in "IOBUF PORT "gn[3]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[3]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(358): Semantic error in "IOBUF PORT "gp[4]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[4]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(359): Semantic error in "IOBUF PORT "gn[4]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[4]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(360): Semantic error in "IOBUF PORT "gp[5]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[5]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(361): Semantic error in "IOBUF PORT "gn[5]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[5]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(362): Semantic error in "IOBUF PORT "gp[6]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[6]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(363): Semantic error in "IOBUF PORT "gn[6]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[6]" does not exist in the design.
+
+                                   Page 11
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(378): Semantic error in "IOBUF PORT "gp[7]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[7]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(379): Semantic error in "IOBUF PORT "gn[7]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[7]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(380): Semantic error in "IOBUF PORT "gp[8]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[8]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(381): Semantic error in "IOBUF PORT "gn[8]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[8]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(382): Semantic error in "IOBUF PORT "gp[9]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[9]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(383): Semantic error in "IOBUF PORT "gn[9]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[9]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(384): Semantic error in "IOBUF PORT "gp[10]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[10]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(385): Semantic error in "IOBUF PORT "gn[10]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[10]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(386): Semantic error in "IOBUF PORT "gp[11]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[11]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(387): Semantic error in "IOBUF PORT "gn[11]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[11]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(388): Semantic error in "IOBUF PORT "gp[12]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[12]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(389): Semantic error in "IOBUF PORT "gn[12]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[12]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(390): Semantic error in "IOBUF PORT "gp[13]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[13]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(391): Semantic error in "IOBUF PORT "gn[13]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[13]" does not exist in the design.
+
+                                   Page 12
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(406): Semantic error in "IOBUF PORT "gp[14]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[14]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(407): Semantic error in "IOBUF PORT "gn[14]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[14]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(408): Semantic error in "IOBUF PORT "gp[15]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[15]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(409): Semantic error in "IOBUF PORT "gn[15]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[15]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(410): Semantic error in "IOBUF PORT "gp[16]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[16]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(411): Semantic error in "IOBUF PORT "gn[16]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[16]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(412): Semantic error in "IOBUF PORT "gp[17]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[17]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(413): Semantic error in "IOBUF PORT "gn[17]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[17]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(414): Semantic error in "IOBUF PORT "gp[18]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[18]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(415): Semantic error in "IOBUF PORT "gn[18]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[18]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(416): Semantic error in "IOBUF PORT "gp[19]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[19]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(417): Semantic error in "IOBUF PORT "gn[19]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[19]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(418): Semantic error in "IOBUF PORT "gp[20]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[20]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(419): Semantic error in "IOBUF PORT "gn[20]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[20]" does not exist in the design.
+
+                                   Page 13
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(434): Semantic error in "IOBUF PORT "gp[21]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[21]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(435): Semantic error in "IOBUF PORT "gn[21]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[21]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(436): Semantic error in "IOBUF PORT "gp[22]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[22]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(437): Semantic error in "IOBUF PORT "gn[22]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[22]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(438): Semantic error in "IOBUF PORT "gp[23]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[23]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(439): Semantic error in "IOBUF PORT "gn[23]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[23]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(440): Semantic error in "IOBUF PORT "gp[24]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[24]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(441): Semantic error in "IOBUF PORT "gn[24]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[24]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(442): Semantic error in "IOBUF PORT "gp[25]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[25]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(443): Semantic error in "IOBUF PORT "gn[25]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[25]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(444): Semantic error in "IOBUF PORT "gp[26]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[26]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(445): Semantic error in "IOBUF PORT "gn[26]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[26]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(446): Semantic error in "IOBUF PORT "gp[27]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gp[27]" does not exist in the design.
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(447): Semantic error in "IOBUF PORT "gn[27]" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "gn[27]" does not exist in the design.
+
+                                   Page 14
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+     This preference has been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(451): Semantic error in "LOCATE COMP "user_programn" SITE "M4"
+     ;": COMP "user_programn" cannot be found in design. This preference has
+     been disabled.
+WARNING - map: /home/shouyu/4.2/designProblem/ulx3s-misc/constraints/ulx3s_v20_s
+     egpdi.lpf(452): Semantic error in "IOBUF PORT "user_programn" PULLMODE=UP
+     IO_TYPE=LVCMOS33 DRIVE=4 ;": Port "user_programn" does not exist in the
+     design. This preference has been disabled.
+WARNING - map: PULLMODE=UP for ftdi_rxd_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: PULLMODE=DOWN for shutdown_pad/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: PULLMODE=UP for oled_resn_pad/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: PULLMODE=UP for oled_dc_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: PULLMODE=UP for oled_mosi_pad/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: PULLMODE=UP for oled_clk_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: PULLMODE=UP for oled_csn_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: DRIVE=4 for btn_pad[2]/IOBUF violates legal combination and is
+     ignored.
+WARNING - map: DRIVE=4 for btn_pad[1]/IOBUF violates legal combination and is
+     ignored.
+WARNING - map: DRIVE=4 for btn_pad[0]/IOBUF violates legal combination and is
+     ignored.
+WARNING - map: PULLMODE=UP for wifi_gpio0_pad/IOBUF violates legal combination
+     and is ignored.
+WARNING - map: PULLMODE=UP for wifi_en_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: PULLMODE=UP for wifi_rxd_pad/IOBUF violates legal combination and
+     is ignored.
+WARNING - map: Using local reset signal 'R_reset' to infer global GSR net.
+WARNING - map: IO buffer missing for top level port ftdi_txd...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port ftdi_ndtr...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port ftdi_ndsr...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port ftdi_nrts...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port ftdi_txden...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port wifi_txd...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port wifi_gpio2...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port wifi_gpio15...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port wifi_gpio16...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port btn[6:0](6)...logic will be
+     discarded.
+
+                                   Page 15
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: IO buffer missing for top level port btn[6:0](5)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port btn[6:0](4)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port btn[6:0](3)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sw[1:4](3)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sw[1:4](2)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sw[1:4](1)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sw[1:4](0)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](27)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](26)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](25)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](24)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](23)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](22)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](21)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](20)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](19)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](18)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](17)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](16)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](15)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](14)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](13)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](12)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](11)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](10)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](9)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](8)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](7)...logic will be
+     discarded.
+
+                                   Page 16
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: IO buffer missing for top level port gp[27:0](6)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](5)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](4)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](3)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](2)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](1)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gp[27:0](0)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](27)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](26)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](25)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](24)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](23)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](22)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](21)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](20)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](19)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](18)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](17)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](16)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](15)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](14)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](13)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](12)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](11)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](10)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](9)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](8)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](7)...logic will be
+     discarded.
+
+                                   Page 17
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Design Errors/Warnings (cont)
+-----------------------------
+WARNING - map: IO buffer missing for top level port gn[27:0](6)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](5)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](4)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](3)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](2)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](1)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port gn[27:0](0)...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port usb_fpga_dp...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port usb_fpga_dn...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_dat3_csn...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_cmd_di...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_dat0_do...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_dat1_irq...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_dat2...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_clk...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_cdn...logic will be
+     discarded.
+WARNING - map: IO buffer missing for top level port sd_wp...logic will be
+     discarded.
+
+IO (PIO) Attributes
+-------------------
+
++---------------------+-----------+-----------+------------+
+| IO Name             | Direction | Levelmode | IO         |
+|                     |           |  IO_TYPE  | Register   |
++---------------------+-----------+-----------+------------+
+| sdram_d[0]          | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| led[5]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| ftdi_rxd            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| clk_25mhz           | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_d[15]         | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[14]         | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[13]         | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+
+                                   Page 18
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+IO (PIO) Attributes (cont)
+--------------------------
+| sdram_d[12]         | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[11]         | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[10]         | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[9]          | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[8]          | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[7]          | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[6]          | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[5]          | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[4]          | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[3]          | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[2]          | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_d[1]          | BIDIR     | LVCMOS33  | IN         |
++---------------------+-----------+-----------+------------+
+| sdram_dqm[1]        | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_dqm[0]        | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_ba[1]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_ba[0]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[12]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[11]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[10]         | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[9]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[8]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[7]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[6]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[5]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[4]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[3]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[2]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_a[1]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+                                   Page 19
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+IO (PIO) Attributes (cont)
+--------------------------
+| sdram_a[0]          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_wen           | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| sdram_casn          | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| sdram_rasn          | OUTPUT    | LVCMOS33  | OUT        |
++---------------------+-----------+-----------+------------+
+| sdram_cke           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_clk           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| sdram_csn           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| shutdown            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_resn           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_dc             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_mosi           | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_clk            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| oled_csn            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| btn[2]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| btn[1]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| btn[0]              | INPUT     | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[7]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[6]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[4]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[3]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[2]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[1]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| led[0]              | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| wifi_gpio0          | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| wifi_en             | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+| wifi_rxd            | OUTPUT    | LVCMOS33  |            |
++---------------------+-----------+-----------+------------+
+
+
+
+
+
+                                   Page 20
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+Removed logic
+-------------
+
+Block clk_pll/VCC undriven or does not drive anything - clipped.
+Block sdram_0bject_inst/GND undriven or does not drive anything - clipped.
+Block oled_inst/GND undriven or does not drive anything - clipped.
+Signal state1_i was merged into signal sdram_0bject_inst/state1
+Signal GND undriven or does not drive anything - clipped.
+Signal VCC undriven or does not drive anything - clipped.
+Signal sdram_0bject_inst/VCC undriven or does not drive anything - clipped.
+Signal oled_inst/VCC undriven or does not drive anything - clipped.
+Signal R_state_cry_0_S0[0] undriven or does not drive anything - clipped.
+Signal N_1 undriven or does not drive anything - clipped.
+Signal clk_pll/CLKINTFB undriven or does not drive anything - clipped.
+Signal clk_pll/REFCLK undriven or does not drive anything - clipped.
+Signal clk_pll/INTLOCK undriven or does not drive anything - clipped.
+Signal clk_pll/LOCK undriven or does not drive anything - clipped.
+Signal clk_pll/CLKOS3 undriven or does not drive anything - clipped.
+Signal clk_pll/CLKOS undriven or does not drive anything - clipped.
+Signal sdram_0bject_inst/wait_counter_s_0_S1[13] undriven or does not drive
+     anything - clipped.
+Signal sdram_0bject_inst/wait_counter_s_0_COUT[13] undriven or does not drive
+     anything - clipped.
+Signal sdram_0bject_inst/wait_counter_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+Signal sdram_0bject_inst/N_1 undriven or does not drive anything - clipped.
+Signal sdram_0bject_inst/refresh_counter_s_0_S1[9] undriven or does not drive
+     anything - clipped.
+Signal sdram_0bject_inst/refresh_counter_s_0_COUT[9] undriven or does not drive
+     anything - clipped.
+Signal sdram_0bject_inst/refresh_counter_cry_0_S0[0] undriven or does not drive
+     anything - clipped.
+Signal sdram_0bject_inst/N_2 undriven or does not drive anything - clipped.
+Signal oled_inst/R_increment_6_s_9_0_S1 undriven or does not drive anything -
+     clipped.
+Signal oled_inst/R_increment_6_s_9_0_COUT undriven or does not drive anything -
+     clipped.
+Signal oled_inst/R_increment_6_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal oled_inst/N_1 undriven or does not drive anything - clipped.
+Signal oled_inst/R_init_cnt_2_s_15_0_S1 undriven or does not drive anything -
+     clipped.
+Signal oled_inst/R_init_cnt_2_s_15_0_COUT undriven or does not drive anything -
+     clipped.
+Signal oled_inst/R_init_cnt_2_cry_0_0_S0 undriven or does not drive anything -
+     clipped.
+Signal oled_inst/N_2 undriven or does not drive anything - clipped.
+Signal R_state_s_0_S1[23] undriven or does not drive anything - clipped.
+Signal R_state_s_0_COUT[23] undriven or does not drive anything - clipped.
+Block sdram_0bject_inst/state_RNI3IDF[1] was optimized away.
+Block GND was optimized away.
+Block VCC was optimized away.
+Block sdram_0bject_inst/VCC was optimized away.
+Block oled_inst/VCC was optimized away.
+
+     
+
+
+
+                                   Page 21
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+PLL/DLL Summary
+---------------
+
+PLL 1:                                     Pin/Node Value
+  PLL Instance Name:                                clk_pll/PLLInst_0
+  PLL Type:                                         EHXPLLL
+  Input Clock:                             PIN      clk_25mhz_c
+  Input Clock2:                                     NONE
+  Input Clock select:                               NONE
+  Output Clock(P):                         NODE     clk_100MHz
+  Output Clock(S):                                  NONE
+  Output Clock(S2):                        NODE     clk_12MHz
+  Output Clock(S3):                                 NONE
+  Feedback Signal:                         NODE     clk_100MHz
+  Reset Signal:                                     NONE
+  Standby Signal:                          NODE     clk_pll/GND
+  PLL LOCK signal:                                  NONE
+  PLL Internal LOCK Signal:                         NONE
+  Input Clock Frequency (MHz):                      25.0000
+  Output Clock(P) Frequency (MHz):                  100.0000
+  Output Clock(S) Frequency (MHz):                  NA
+  Output Clock(S2) Frequency (MHz):                 12.0000
+  Output Clock(S3) Frequency (MHz):                 NA
+  CLKOP Post Divider A Input:                       DIVA
+  CLKOS Post Divider B Input:                       DIVB
+  CLKOS2 Post Divider C Input:                      DIVC
+  CLKOS3 Post Divider D Input:                      DIVD
+  Pre Divider A Input:                              NONE
+  Pre Divider B Input:                              NONE
+  Pre Divider C Input:                              NONE
+  Pre Divider D Input:                              NONE
+  FB_MODE:                                          CLKOP
+  CLKI Divider:                                     1
+  CLKFB Divider:                                    4
+  CLKOP Divider:                                    6
+  CLKOS Divider:                                    80
+  CLKOS2 Divider:                                   50
+  CLKOS3 Divider:                                   10
+  Fractional N Divider:                             NONE
+  CLKOP Desired Phase Shift(degree):                0
+  CLKOP Trim Option Rising/Falling:                 FALLING
+  CLKOP Trim Option Delay:                          0
+  CLKOS Desired Phase Shift(degree):                0
+  CLKOS Trim Option Rising/Falling:                 FALLING
+  CLKOS Trim Option Delay:                          0
+  CLKOS2 Desired Phase Shift(degree):               0
+  CLKOS2 Trim Option Rising/Falling:                NONE
+  CLKOS2 Trim Option Delay:                         NONE
+  CLKOS3 Desired Phase Shift(degree):               0
+  CLKOS3 Trim Option Rising/Falling:                NONE
+  CLKOS3 Trim Option Delay:                         NONE
+
+ASIC Components
+---------------
+
+Instance Name: clk_pll/PLLInst_0
+         Type: EHXPLLL
+
+
+                                   Page 22
+
+
+
+
+Design:  sdram_fpga_hex_oled                           Date:  02/17/24  17:03:02
+
+GSR Usage
+---------
+
+GSR Component:
+   The local reset signal 'R_reset' of the design has been inferred as Global
+        Set Reset (GSR). The reset signal used for GSR control is 'R_reset'.
+        
+
+     GSR Property:
+   The design components with GSR property set to ENABLED will respond to global
+        set reset while the components with GSR property set to DISABLED will
+        not.
+        
+
+Run Time and Memory Usage
+-------------------------
+
+   Total CPU Time: 1 secs  
+   Total REAL Time: 0 secs  
+   Peak Memory Usage: 336 MB
+        
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                                   Page 23
+
+
+Copyright (c) 1991-1994 by NeoCAD Inc. All rights reserved.
+     Copyright (c) 1995 AT&T Corp.   All rights reserved.
+     Copyright (c) 1995-2001 Lucent Technologies Inc.  All rights reserved.
+     Copyright (c) 2001 Agere Systems   All rights reserved.
+     Copyright (c) 2002-2023 Lattice Semiconductor Corporation,  All rights
+     reserved.

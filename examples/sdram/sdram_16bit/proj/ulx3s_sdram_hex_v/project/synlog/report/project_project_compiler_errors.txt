@@ -1,0 +1,2 @@
+@E: CG596 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_16bit/hdl/top/sdram_hex_oled.v":153:9:153:20|Parameter C_color_bits cannot be found in module oled_video.
+

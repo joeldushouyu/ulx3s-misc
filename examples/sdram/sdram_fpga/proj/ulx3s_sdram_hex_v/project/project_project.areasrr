@@ -1,0 +1,88 @@
+----------------------------------------------------------------------
+Report for cell sdram_fpga_hex_oled.behavioral
+
+Register bits: 299 of 43848 (1%)
+PIC Latch:       0
+I/O cells:       61
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                                 BB       16       100.0
+                              CCU2C       42       100.0
+                            EHXPLLL        1       100.0
+                            FD1P3AX      191       100.0
+                            FD1P3AY        4       100.0
+                            FD1P3JX        2       100.0
+                            FD1S3AX       42       100.0
+                            FD1S3AY        2       100.0
+                            FD1S3BX        1       100.0
+                            FD1S3DX       30       100.0
+                            FD1S3IX        5       100.0
+                            FD1S3JX        3       100.0
+                                GSR        1       100.0
+                                 IB        4       100.0
+                           IFS1P3DX       16       100.0
+                                INV        7       100.0
+                            L6MUX21        7       100.0
+                                 OB       38       100.0
+                                OBZ        3       100.0
+                           OFS1P3BX        3       100.0
+                           ORCALUT4      303       100.0
+                              PFUMX       40       100.0
+                                PUR        1       100.0
+                           ROM16X1A        8       100.0
+                           ROM32X1A        8       100.0
+                                VHI        4       100.0
+                                VLO        4       100.0
+SUB MODULES 
+           clk_25M_100M_7M5_12M_60M        1       100.0
+                   oled_hex_decoder        1       100.0
+                       sdram_0bject        1       100.0
+                            
+                         TOTAL           789           
+----------------------------------------------------------------------
+Report for cell oled_hex_decoder.netlist
+     Instance path:  oled_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       15        35.7
+                            FD1P3AX      111        58.1
+                            FD1P3AY        4       100.0
+                            FD1S3AX       14        33.3
+                            FD1S3AY        2       100.0
+                                INV        2        28.6
+                            L6MUX21        7       100.0
+                           ORCALUT4      177        58.4
+                              PFUMX       40       100.0
+                           ROM16X1A        8       100.0
+                           ROM32X1A        8       100.0
+                                VHI        1        25.0
+                                VLO        1        25.0
+                            
+                         TOTAL           390           
+----------------------------------------------------------------------
+Report for cell sdram_0bject.netlist
+     Instance path:  sdram_0bject_inst
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                              CCU2C       14        33.3
+                            FD1P3AX       24        12.6
+                            FD1S3BX        1       100.0
+                            FD1S3DX       30       100.0
+                            FD1S3IX        1        20.0
+                                INV        1        14.3
+                           ORCALUT4      110        36.3
+                                VHI        1        25.0
+                                VLO        1        25.0
+                            
+                         TOTAL           183           
+----------------------------------------------------------------------
+Report for cell clk_25M_100M_7M5_12M_60M.netlist
+     Instance path:  clk_pll
+                                          Cell usage:
+                               cell       count    Res Usage(%)
+                            EHXPLLL        1       100.0
+                                INV        1        14.3
+                                VHI        1        25.0
+                                VLO        1        25.0
+                            
+                         TOTAL             4           

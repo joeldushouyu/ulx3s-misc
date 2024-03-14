@@ -81,6 +81,7 @@ module sdram_controller(
 							delay=11; //waiting state for any amount of delay needed
 							
 	//minimum time specs needed(in clks for 165MHz(6ns))
+	// modify for 65MHZ, don't change????
 	localparam[3:0] t_RP=3, //15ns(precharge) 
 					t_RC=10, //60ns(active to active,ref to ref)
 					t_MRD=2, //2 clk,(mode register) /2/

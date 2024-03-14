@@ -1,0 +1,238 @@
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /usr/local/diamond/3.13/synpbase
+OS: Ubuntu 20.04.6 LTS
+Hostname: shouyu-LOQ-15APH8
+max virtual memory: unlimited (bytes)
+max user processes: 92689
+max stack size: 8388608 (bytes)
+
+
+Implementation : project
+Synopsys HDL Compiler, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /usr/local/diamond/3.13/synpbase
+OS: Ubuntu 20.04.6 LTS
+Hostname: shouyu-LOQ-15APH8
+max virtual memory: unlimited (bytes)
+max user processes: 92689
+max stack size: 8388608 (bytes)
+
+
+Implementation : project
+Synopsys VHDL Compiler, Version comp202303synp1, Build 173R, Built Aug 31 2023 03:52:31, @4910518
+
+@N|Running in 64-bit mode
+Location map warning "/usr/local/diamond/3.13/synpbase/lib/vhd/location.map":46 - Attempted redefinition of package mach.components
+@N|stack limit increased to max
+@N:"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":17:7:17:25|Top entity is set to sdram_fpga_hex_oled.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/usr/local/diamond/3.13/cae_library/synthesis/vhdl/ecp5u.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_init_pack.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_font_pack.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/proj/ulx3s_hex_vhdl/clock/clk_25M_100M_7M5_12M_60M.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd'.
+@W: CD266 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":238:12:238:20|oled_resn is not readable.  This may cause a simulation mismatch.
+@W: CD266 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":239:12:239:19|oled_csn is not readable.  This may cause a simulation mismatch.
+@W: CD266 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":240:12:240:18|oled_dc is not readable.  This may cause a simulation mismatch.
+@W: CD266 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":241:12:241:19|oled_clk is not readable.  This may cause a simulation mismatch.
+@W: CD266 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":242:12:242:20|oled_mosi is not readable.  This may cause a simulation mismatch.
+VHDL syntax check successful!
+@N: CD630 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":17:7:17:25|Synthesizing work.sdram_fpga_hex_oled.behavioral.
+@W: CD326 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":134:28:135:8|Port sdram_cs_n of entity work.sdram_0bject is unconnected. If a port needs to remain unconnected, use the keyword open.
+@N: CD630 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":15:7:15:22|Synthesizing work.oled_hex_decoder.rtl.
+Post processing for work.oled_hex_decoder.rtl
+Running optimization stage 1 on oled_hex_decoder .......
+Finished optimization stage 1 on oled_hex_decoder (CPU Time 0h:00m:00s, Memory Used current: 133MB peak: 133MB)
+@N: CD630 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":31:7:31:18|Synthesizing work.sdram_0bject.arch.
+@N: CD231 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":186:15:186:16|Using onehot encoding for type state_t. For example, enumeration init is mapped to "1000000".
+Post processing for work.sdram_0bject.arch
+Running optimization stage 1 on sdram_0bject .......
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Register bit addr_reg(0) is always 0.
+@W: CL260 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Pruning register bit 0 of addr_reg(23 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+Finished optimization stage 1 on sdram_0bject (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+@N: CD630 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/proj/ulx3s_hex_vhdl/clock/clk_25M_100M_7M5_12M_60M.vhd":12:7:12:30|Synthesizing work.clk_25m_100m_7m5_12m_60m.structure.
+@N: CD630 :"/usr/local/diamond/3.13/cae_library/synthesis/vhdl/ecp5u.vhd":2081:10:2081:16|Synthesizing work.ehxplll.syn_black_box.
+Post processing for work.ehxplll.syn_black_box
+@N: CD630 :"/usr/local/diamond/3.13/cae_library/synthesis/vhdl/ecp5u.vhd":830:10:830:12|Synthesizing work.vlo.syn_black_box.
+Post processing for work.vlo.syn_black_box
+@N: CD630 :"/usr/local/diamond/3.13/cae_library/synthesis/vhdl/ecp5u.vhd":823:10:823:12|Synthesizing work.vhi.syn_black_box.
+Post processing for work.vhi.syn_black_box
+Post processing for work.clk_25m_100m_7m5_12m_60m.structure
+Running optimization stage 1 on clk_25M_100M_7M5_12M_60M .......
+@W: CL168 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/proj/ulx3s_hex_vhdl/clock/clk_25M_100M_7M5_12M_60M.vhd":53:4:53:17|Removing instance scuba_vhi_inst because it does not drive other instances. To preserve this instance, use the syn_noprune synthesis directive.
+Finished optimization stage 1 on clk_25M_100M_7M5_12M_60M (CPU Time 0h:00m:00s, Memory Used current: 134MB peak: 134MB)
+Post processing for work.sdram_fpga_hex_oled.behavioral
+Running optimization stage 1 on sdram_fpga_hex_oled .......
+@W: CL240 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":71:2:71:10|Signal sdram_csn is floating; a simulation mismatch is possible.
+@W: CL240 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":36:2:36:9|Signal wifi_rxd is floating; a simulation mismatch is possible.
+@W: CL240 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":27:2:27:9|Signal ftdi_rxd is floating; a simulation mismatch is possible.
+@W: CL265 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Removing unused bit 23 of R_addr_5(23 downto 0). Either assign all bits or reduce the width of the signal.
+Finished optimization stage 1 on sdram_fpga_hex_oled (CPU Time 0h:00m:00s, Memory Used current: 135MB peak: 135MB)
+Running optimization stage 2 on clk_25M_100M_7M5_12M_60M .......
+Finished optimization stage 2 on clk_25M_100M_7M5_12M_60M (CPU Time 0h:00m:00s, Memory Used current: 135MB peak: 135MB)
+Running optimization stage 2 on sdram_0bject .......
+@N: CL201 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":315:4:315:5|Trying to extract state machine for register state.
+Extracted state machine for register state
+State machine has 7 reachable states with original encodings of:
+   0000001
+   0000010
+   0000100
+   0001000
+   0010000
+   0100000
+   1000000
+Finished optimization stage 2 on sdram_0bject (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+Running optimization stage 2 on oled_hex_decoder .......
+Finished optimization stage 2 on oled_hex_decoder (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+Running optimization stage 2 on sdram_fpga_hex_oled .......
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":199:4:199:5|Register bit R_valid_latch is always 1.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(0) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(1) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(2) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(3) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(4) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(5) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(6) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(7) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(8) is always 1.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(9) is always 1.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(11) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(12) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(13) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(14) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(15) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(16) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(17) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(18) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(19) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(20) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(21) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_addr(22) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(1) is always 1.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(2) is always 1.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(5) is always 1.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(6) is always 1.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(12) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(13) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(14) is always 1.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(16) is always 1.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(20) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(22) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(23) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(25) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(26) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(27) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(28) is always 0.
+@N: CL189 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Register bit R_write_data(31) is always 0.
+@W: CL260 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Pruning register bit 31 of R_write_data(31 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL279 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Pruning register bits 28 to 25 of R_write_data(31 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Pruning register bits 23 to 22 of R_write_data(31 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL260 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Pruning register bit 20 of R_write_data(31 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL260 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Pruning register bit 16 of R_write_data(31 downto 0). If this is not the intended behavior, drive the input with valid values, or an input from the top level.
+@W: CL279 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Pruning register bits 14 to 12 of R_write_data(31 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Pruning register bits 6 to 5 of R_write_data(31 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Pruning register bits 2 to 1 of R_write_data(31 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Pruning register bits 22 to 11 of R_addr(22 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL279 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Pruning register bits 9 to 0 of R_addr(22 downto 0). If this is not the intended behavior, drive the inputs with valid values, or inputs from the top level.
+@W: CL246 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":47:2:47:4|Input port bits 6 to 3 of btn(6 downto 0) are unused. Assign logic for all port bits or change the input port size.
+@N: CL159 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":28:2:28:9|Input ftdi_txd is unused.
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":30:2:30:10|Inout ftdi_ndtr is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":31:2:31:10|Inout ftdi_ndsr is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":32:2:32:10|Inout ftdi_nrts is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":33:2:33:11|Inout ftdi_txden is unused
+@N: CL159 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":37:2:37:9|Input wifi_txd is unused.
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":41:2:41:11|Inout wifi_gpio2 is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":42:2:42:12|Inout wifi_gpio15 is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":43:2:43:12|Inout wifi_gpio16 is unused
+@N: CL159 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":48:2:48:3|Input sw is unused.
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":52:2:52:3|Inout gp is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":52:6:52:7|Inout gn is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":55:2:55:12|Inout usb_fpga_dp is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":55:15:55:25|Inout usb_fpga_dn is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":83:2:83:12|Inout sd_dat3_csn is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":83:15:83:23|Inout sd_cmd_di is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":83:26:83:35|Inout sd_dat0_do is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":83:38:83:48|Inout sd_dat1_irq is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":83:51:83:57|Inout sd_dat2 is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":84:2:84:7|Inout sd_clk is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":85:2:85:7|Inout sd_cdn is unused
+@W: CL158 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":85:10:85:14|Inout sd_wp is unused
+Finished optimization stage 2 on sdram_fpga_hex_oled (CPU Time 0h:00m:00s, Memory Used current: 137MB peak: 137MB)
+
+For a summary of runtime per design unit, please see file:
+==========================================================
+@L: /home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/project/synwork/layer0.duruntime
+
+
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 137MB peak: 137MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Feb 17 17:02:57 2024
+
+###########################################################]
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /usr/local/diamond/3.13/synpbase
+OS: Ubuntu 20.04.6 LTS
+Hostname: shouyu-LOQ-15APH8
+max virtual memory: unlimited (bytes)
+max user processes: 92689
+max stack size: 8388608 (bytes)
+
+
+Implementation : project
+Synopsys Synopsys Netlist Linker, Version comp202303synp1, Build 155R, Built Aug 10 2023 09:58:08, @4875095
+
+@N|Running in 64-bit mode
+
+At syn_nfilter Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 136MB peak: 136MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Feb 17 17:02:57 2024
+
+###########################################################]
+
+For a summary of runtime and memory usage for all design units, please see file:
+==========================================================
+@L: /home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/project/synwork/project_project_comp.rt.csv
+
+@END
+
+At c_hdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 33MB peak: 33MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Feb 17 17:02:57 2024
+
+###########################################################]

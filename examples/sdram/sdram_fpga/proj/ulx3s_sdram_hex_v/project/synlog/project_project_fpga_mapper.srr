@@ -1,0 +1,1112 @@
+# Sat Feb 17 17:02:59 2024
+
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /usr/local/diamond/3.13/synpbase
+OS: Ubuntu 20.04.6 LTS
+Hostname: shouyu-LOQ-15APH8
+max virtual memory: unlimited (bytes)
+max user processes: 92689
+max stack size: 8388608 (bytes)
+
+
+Implementation : project
+Synopsys Lattice Technology Mapper, Version map202303lat, Build 132R, Built Aug 31 2023 03:56:57, @4910518
+
+
+Mapper Startup Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 213MB peak: 213MB)
+
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+
+Design Input Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+
+Mapper Initialization Complete (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 225MB peak: 225MB)
+
+
+Start loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 229MB peak: 229MB)
+
+
+Finished loading timing files (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 240MB peak: 240MB)
+
+
+
+Starting Optimization and Mapping (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 289MB peak: 289MB)
+
+@N: MO111 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":46:2:46:4|Tristate driver led_1 (in view: work.sdram_fpga_hex_oled(behavioral)) on net led[7] (in view: work.sdram_fpga_hex_oled(behavioral)) has its enable tied to GND.
+@N: MO111 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":46:2:46:4|Tristate driver led_2 (in view: work.sdram_fpga_hex_oled(behavioral)) on net led[6] (in view: work.sdram_fpga_hex_oled(behavioral)) has its enable tied to GND.
+@N: MO111 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":46:2:46:4|Tristate driver led_3 (in view: work.sdram_fpga_hex_oled(behavioral)) on net led[5] (in view: work.sdram_fpga_hex_oled(behavioral)) has its enable tied to GND.
+
+Available hyper_sources - for debug and ip models
+	None Found
+
+@N: MT206 |Auto Constrain mode is enabled
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|ROM un37_r_char_line[29:34] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|ROM un37_r_char_line[24:26] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|ROM un37_r_char_line[9:22] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|ROM un37_r_char_line[4:5] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":159:33:159:43|ROM R_indexed_color_1[7:6] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":159:33:159:43|ROM R_indexed_color_1[4:0] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|ROM un37_r_char_line[29:34] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: MO106 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|Found ROM un37_r_char_line[29:34] (in view: work.oled_hex_decoder(rtl)) with 16 words by 6 bits.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|ROM un37_r_char_line[24:26] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: MO106 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|Found ROM un37_r_char_line[24:26] (in view: work.oled_hex_decoder(rtl)) with 16 words by 3 bits.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|ROM un37_r_char_line[9:22] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: MO106 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|Found ROM un37_r_char_line[9:22] (in view: work.oled_hex_decoder(rtl)) with 16 words by 14 bits.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|ROM un37_r_char_line[7] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: MO106 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|Found ROM un37_r_char_line[7] (in view: work.oled_hex_decoder(rtl)) with 16 words by 1 bit.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|ROM un37_r_char_line[4:5] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: MO106 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|Found ROM un37_r_char_line[4:5] (in view: work.oled_hex_decoder(rtl)) with 16 words by 2 bits.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|ROM un37_r_char_line[0] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: MO106 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":160:29:160:39|Found ROM un37_r_char_line[0] (in view: work.oled_hex_decoder(rtl)) with 16 words by 1 bit.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":159:33:159:43|ROM R_indexed_color_1[7:6] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: MO106 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":159:33:159:43|Found ROM R_indexed_color_1[7:6] (in view: work.oled_hex_decoder(rtl)) with 16 words by 2 bits.
+@N: BZ173 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":159:33:159:43|ROM R_indexed_color_1[4:0] (in view: work.oled_hex_decoder(rtl)) mapped in logic.
+@N: MO106 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":159:33:159:43|Found ROM R_indexed_color_1[4:0] (in view: work.oled_hex_decoder(rtl)) with 16 words by 5 bits.
+
+Finished RTL optimizations (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 291MB peak: 291MB)
+
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Removing sequential instance R_write_data[30] (in view: work.sdram_fpga_hex_oled(behavioral)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Boundary register R_write_data[30] (in view: work.sdram_fpga_hex_oled(behavioral)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Removing instance R_write_data[8] because it is equivalent to instance R_write_data[10]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Removing instance R_write_data[9] because it is equivalent to instance R_write_data[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Removing instance R_write_data[7] because it is equivalent to instance R_write_data[11]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Removing instance R_write_data[19] because it is equivalent to instance R_write_data[18]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: MO231 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":128:4:128:5|Found counter in view:work.sdram_fpga_hex_oled(behavioral) instance R_state[23:0] 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[23] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[22] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[21] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[20] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[19] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[18] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[17] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[16] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[15] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[14] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[13] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[12] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[10] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[8] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[7] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[6] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[5] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[4] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[3] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[2] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[31] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[30] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[29] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[28] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[27] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[26] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[25] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[24] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[23] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[22] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[21] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[20] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[16] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[14] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[13] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[6] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[5] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[4] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance data_reg[2] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing instance sdram_0bject_inst.data_reg[12] because it is equivalent to instance sdram_0bject_inst.addr_reg[1]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing instance sdram_0bject_inst.data_reg[1] because it is equivalent to instance sdram_0bject_inst.addr_reg[9]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":315:4:315:5|Removing sequential instance cmd[3] (in view: work.sdram_0bject(arch)) of type view:PrimLib.dffr(prim) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":315:4:315:5|Boundary register cmd[3] (in view: work.sdram_0bject(arch)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: MO231 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":328:4:328:5|Found counter in view:work.sdram_0bject(arch) instance wait_counter[13:0] 
+@N: MO231 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":342:4:342:5|Found counter in view:work.sdram_0bject(arch) instance refresh_counter[9:0] 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[9] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing sequential instance addr_reg[1] (in view: work.sdram_0bject(arch)) because it does not drive other instances.
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[127] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[127] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[126] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[126] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[125] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[125] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[124] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[124] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[123] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[123] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[122] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[122] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[121] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[121] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[120] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[120] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[119] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[119] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[118] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[118] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[117] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[117] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[116] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[116] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[112] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[112] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[110] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[110] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[109] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[109] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[108] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[108] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[102] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[102] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[101] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[101] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[100] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[100] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[98] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[98] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[97] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[97] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[63] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[63] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[62] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[62] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[61] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[61] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[59] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[59] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[58] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[58] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[57] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[57] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[56] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[56] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[55] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[55] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[54] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[54] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[53] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[53] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[52] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[52] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[51] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[51] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[50] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[50] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[49] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[49] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[48] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[48] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[47] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[47] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[46] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[46] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[45] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[45] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[44] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[44] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[43] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[43] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[42] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[42] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[41] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[41] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[40] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[40] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[39] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[39] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[38] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[38] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[37] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[37] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[36] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[36] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[35] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[35] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[34] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[34] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[33] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[33] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[32] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[32] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[31] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[31] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[30] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[30] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[29] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[29] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[28] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[28] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: BN362 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing sequential instance R_data[27] (in view: work.oled_hex_decoder(rtl)) because it does not drive other instances.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[27] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+
+Only the first 100 messages of id 'BN362' are reported. To see all messages use 'report_messages -log /home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/project/synlog/project_project_fpga_mapper.srr -id BN362' in the Tcl shell. To see all messages in future runs, use the command 'message_override -limit {BN362} -count unlimited' in the Tcl shell.
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[26] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[25] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@N: FX493 |Applying initial value "0" on instance R_reset_cnt[0].
+@W: FX474 |User-specified initial value defined for some sequential elements which can prevent optimum synthesis results from being achieved. 
+@N: FX493 |Applying initial value "0" on instance R_reset_cnt[1].
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[60] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+@A: BN291 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Boundary register R_data[24] (in view: work.oled_hex_decoder(rtl)) is packed into a complex cell. To disable register packing, set syn_keep=1 on the net between the register and the complex cell. 
+
+Starting factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 295MB peak: 295MB)
+
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing instance oled_inst.R_data[115] because it is equivalent to instance oled_inst.R_data[114]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing instance oled_inst.R_data[105] because it is equivalent to instance oled_inst.R_data[103]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing instance oled_inst.R_data[107] because it is equivalent to instance oled_inst.R_data[103]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing instance oled_inst.R_data[106] because it is equivalent to instance oled_inst.R_data[104]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing instance sdram_0bject_inst.data_reg[19] because it is equivalent to instance sdram_0bject_inst.data_reg[18]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing instance sdram_0bject_inst.data_reg[9] because it is equivalent to instance sdram_0bject_inst.data_reg[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing instance sdram_0bject_inst.data_reg[11] because it is equivalent to instance sdram_0bject_inst.data_reg[7]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing instance sdram_0bject_inst.data_reg[10] because it is equivalent to instance sdram_0bject_inst.data_reg[8]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished factoring (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 297MB peak: 297MB)
+
+NConnInternalConnection caching is on
+
+Finished generic timing optimizations - Pass 1 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 298MB peak: 298MB)
+
+
+Starting Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 300MB peak: 300MB)
+
+
+Finished Early Timing Optimization (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 301MB peak: 301MB)
+
+
+Finished generic timing optimizations - Pass 2 (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 301MB peak: 301MB)
+
+@N: FX214 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":141:39:141:53|Generating ROM oled_inst.R_spi_data_1_0[7:0] (in view: work.sdram_fpga_hex_oled(behavioral)).
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":168:4:168:5|Removing instance R_write_data[29] because it is equivalent to instance R_write_data[15]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Removing instance oled_inst.R_data[111] because it is equivalent to instance oled_inst.R_data[99]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+@W: BN132 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd":356:4:356:5|Removing instance sdram_0bject_inst.data_reg[15] because it is equivalent to instance sdram_0bject_inst.data_reg[3]. To keep the instance, apply constraint syn_preserve=1 on the instance.
+
+Finished preparing to map (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 301MB peak: 301MB)
+
+
+Finished technology mapping (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 320MB peak: 320MB)
+
+Pass		 CPU time		Worst Slack		Luts / Registers
+------------------------------------------------------------
+   1		0h:00m:01s		    -1.72ns		 298 /       297
+   2		0h:00m:01s		    -1.72ns		 296 /       297
+   3		0h:00m:01s		    -1.72ns		 296 /       297
+@N: FX271 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":131:4:131:5|Replicating instance oled_inst.R_init_cnt[0] (in view: work.sdram_fpga_hex_oled(behavioral)) with 4 loads 1 time to improve timing.
+@N: FX271 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":212:4:212:5|Replicating instance R_counter[0] (in view: work.sdram_fpga_hex_oled(behavioral)) with 31 loads 1 time to improve timing.
+@N: FX271 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd":182:9:182:44|Replicating instance oled_inst.R_init_cnt_5[4] (in view: work.sdram_fpga_hex_oled(behavioral)) with 2 loads 1 time(s) to improve timing.
+Timing driven replication report
+Added 2 Registers via timing driven replication
+Added 2 LUTs via timing driven replication
+
+   4		0h:00m:01s		    -1.72ns		 303 /       299
+   5		0h:00m:01s		    -1.72ns		 303 /       299
+   6		0h:00m:01s		    -1.72ns		 304 /       299
+
+
+   7		0h:00m:01s		    -1.72ns		 304 /       299
+
+Finished technology timing optimizations and critical path resynthesis (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 320MB peak: 320MB)
+
+@N: FX164 |The option to pack registers in the IOB has not been specified. Please set syn_useioff attribute.  
+@N: MO111 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":46:2:46:4|Tristate driver led_obuft_5_.un1[0] (in view: work.sdram_fpga_hex_oled(behavioral)) on net led[5] (in view: work.sdram_fpga_hex_oled(behavioral)) has its enable tied to GND.
+@N: MO111 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":46:2:46:4|Tristate driver led_obuft_6_.un1[0] (in view: work.sdram_fpga_hex_oled(behavioral)) on net led[6] (in view: work.sdram_fpga_hex_oled(behavioral)) has its enable tied to GND.
+@N: MO111 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":46:2:46:4|Tristate driver led_obuft_7_.un1[0] (in view: work.sdram_fpga_hex_oled(behavioral)) on net led[7] (in view: work.sdram_fpga_hex_oled(behavioral)) has its enable tied to GND.
+
+Finished restoring hierarchy (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:01s; Memory used current: 320MB peak: 320MB)
+
+
+Starting CDBProcessSetClockGroups... (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 320MB peak: 320MB)
+
+
+Finished with CDBProcessSetClockGroups (Real Time elapsed 0h:00m:01s; CPU Time elapsed 0h:00m:02s; Memory used current: 320MB peak: 320MB)
+
+
+Start Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 320MB peak: 320MB)
+
+Writing Analyst data base /home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/project/synwork/project_project_m.srm
+
+Finished Writing Netlist Databases (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 320MB peak: 320MB)
+
+Writing EDIF Netlist and constraint files
+@N: FX1056 |Writing EDF file: /home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/proj/ulx3s_sdram_hex_v/project/project_project.edi
+@W: BW268 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":134:28:135:8|Ignoring parameter T_REFI with floating-point value in -edn file
+@W: BW268 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":134:28:135:8|Ignoring parameter T_WR with floating-point value in -edn file
+@W: BW268 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":134:28:135:8|Ignoring parameter T_RP with floating-point value in -edn file
+@W: BW268 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":134:28:135:8|Ignoring parameter T_RCD with floating-point value in -edn file
+@W: BW268 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":134:28:135:8|Ignoring parameter T_RC with floating-point value in -edn file
+@W: BW268 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":134:28:135:8|Ignoring parameter T_MRD with floating-point value in -edn file
+@W: BW268 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":134:28:135:8|Ignoring parameter T_DESL with floating-point value in -edn file
+@W: BW268 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":134:28:135:8|Ignoring parameter CLK_FREQ with floating-point value in -edn file
+@N: BW106 |Synplicity Constraint File capacitance units using default value of 1pF 
+
+Finished Writing EDIF Netlist and constraint files (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 325MB peak: 325MB)
+
+
+Finished Writing Netlists (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 325MB peak: 325MB)
+
+
+Start final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 325MB peak: 325MB)
+
+@W: MT246 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/proj/ulx3s_hex_vhdl/clock/clk_25M_100M_7M5_12M_60M.vhd":59:4:59:12|Blackbox EHXPLLL is missing a user supplied timing model. This may have a negative effect on timing analysis and optimizations (Quality of Results)
+@W: MT420 |Found inferred clock clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock with period 4.18ns. Please declare a user-defined clock on net clk_pll.clk_100MHz.
+@W: MT420 |Found inferred clock clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock with period 4.25ns. Please declare a user-defined clock on net clk_pll.clk_12MHz.
+
+
+##### START OF TIMING REPORT #####[
+# Timing report written on Sat Feb 17 17:03:02 2024
+#
+
+
+Top view:               sdram_fpga_hex_oled
+Requested Frequency:    235.4 MHz
+Wire load mode:         top
+Paths requested:        5
+Constraint File(s):    
+@N: MT320 |This timing report is an estimate of place and route data. For final timing results, use the FPGA vendor place and route report.
+
+@N: MT322 |Clock constraints include only register-to-register paths associated with each individual clock.
+
+
+
+Performance Summary
+*******************
+
+
+Worst slack in design: -0.750
+
+@N: MT286 |System clock period 0.000 stretches to negative invalid value -- ignoring stretching.
+                                                   Requested     Estimated     Requested     Estimated                  Clock        Clock          
+Starting Clock                                     Frequency     Frequency     Period        Period        Slack        Type         Group          
+----------------------------------------------------------------------------------------------------------------------------------------------------
+clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock      239.1 MHz     216.4 MHz     4.183         4.621         -0.438       inferred     (multiple)     
+clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     235.4 MHz     200.1 MHz     4.249         4.998         -0.750       inferred     (multiple)     
+System                                             1.0 MHz       NA            1000.000      0.000         1000.000     system       system_clkgroup
+====================================================================================================================================================
+Estimated period and frequency reported as NA means no slack depends directly on the clock waveform
+
+
+
+
+
+Clock Relationships
+*******************
+
+Clocks                                                                                          |    rise  to  rise      |    fall  to  fall   |    rise  to  fall   |    fall  to  rise 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Starting                                        Ending                                          |  constraint  slack     |  constraint  slack  |  constraint  slack  |  constraint  slack
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+System                                          System                                          |  1000.000    1000.000  |  No paths    -      |  No paths    -      |  No paths    -    
+clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock   clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock   |  4.183       -0.438    |  No paths    -      |  No paths    -      |  No paths    -    
+clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock   clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock  |  Diff grp    -         |  No paths    -      |  No paths    -      |  No paths    -    
+clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock  clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock  |  4.249       -0.750    |  No paths    -      |  No paths    -      |  No paths    -    
+=========================================================================================================================================================================================
+ Note: 'No paths' indicates there are no paths in the design for that pair of clock edges.
+       'Diff grp' indicates that paths exist but the starting clock and ending clock are in different clock groups.
+
+
+
+Interface Information 
+*********************
+
+No IO constraint found
+
+
+
+====================================
+Detailed Report for Clock: clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                                       Starting                                                                                   Arrival           
+Instance                               Reference                                         Type        Pin     Net                  Time        Slack 
+                                       Clock                                                                                                        
+----------------------------------------------------------------------------------------------------------------------------------------------------
+sdram_0bject_inst.wait_counter[8]      clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1S3DX     Q       wait_counter[8]      0.907       -0.438
+sdram_0bject_inst.wait_counter[9]      clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1S3DX     Q       wait_counter[9]      0.907       -0.438
+sdram_0bject_inst.wait_counter[10]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1S3DX     Q       wait_counter[10]     0.907       -0.438
+sdram_0bject_inst.wait_counter[11]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1S3DX     Q       wait_counter[11]     0.907       -0.438
+sdram_0bject_inst.wait_counter[0]      clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1S3DX     Q       un5_sdram_dq6        1.108       -0.210
+sdram_0bject_inst.wait_counter[4]      clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1S3DX     Q       wait_counter[4]      0.907       -0.102
+sdram_0bject_inst.wait_counter[5]      clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1S3DX     Q       wait_counter[5]      0.907       -0.102
+sdram_0bject_inst.wait_counter[6]      clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1S3DX     Q       wait_counter[6]      0.907       -0.102
+sdram_0bject_inst.wait_counter[7]      clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1S3DX     Q       wait_counter[7]      0.907       -0.102
+sdram_0bject_inst.data_reg[3]          clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1P3AX     Q       data_reg[3]          0.985       -0.087
+====================================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                               Starting                                                                                                 Required           
+Instance                       Reference                                         Type         Pin     Net                               Time         Slack 
+                               Clock                                                                                                                       
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+sdram_0bject_inst_cmdio[1]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     OFS1P3BX     D       sdram_0bject_inst.next_cmd[1]     4.129        -0.438
+sdram_0bject_inst_cmdio[2]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     OFS1P3BX     D       sdram_0bject_inst.next_cmd[2]     4.129        -0.438
+sdram_0bject_inst.q_reg[0]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1P3AX      D       sdram_d_in[0]                     4.129        -0.210
+sdram_0bject_inst.q_reg[1]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1P3AX      D       sdram_d_in[1]                     4.129        -0.210
+sdram_0bject_inst.q_reg[2]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1P3AX      D       sdram_d_in[2]                     4.129        -0.210
+sdram_0bject_inst.q_reg[3]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1P3AX      D       sdram_d_in[3]                     4.129        -0.210
+sdram_0bject_inst.q_reg[4]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1P3AX      D       sdram_d_in[4]                     4.129        -0.210
+sdram_0bject_inst.q_reg[5]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1P3AX      D       sdram_d_in[5]                     4.129        -0.210
+sdram_0bject_inst.q_reg[7]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1P3AX      D       sdram_d_in[7]                     4.129        -0.210
+sdram_0bject_inst.q_reg[8]     clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock     FD1P3AX      D       sdram_d_in[8]                     4.129        -0.210
+===========================================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      4.183
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.129
+
+    - Propagation time:                      4.567
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.438
+
+    Number of logic level(s):                6
+    Starting point:                          sdram_0bject_inst.wait_counter[8] / Q
+    Ending point:                            sdram_0bject_inst_cmdio[1] / D
+    The start point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.091 period=4.183) on pin CK
+    The end   point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.091 period=4.183) on pin SCLK
+
+Instance / Net                                                            Pin      Pin               Arrival     No. of    
+Name                                                         Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------
+sdram_0bject_inst.wait_counter[8]                            FD1S3DX      Q        Out     0.907     0.907 r     -         
+wait_counter[8]                                              Net          -        -       -         -           2         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_3            ORCALUT4     A        In      0.000     0.907 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_3            ORCALUT4     Z        Out     0.738     1.645 r     -         
+un1_wait_counter_12_0_o2_3                                   Net          -        -       -         -           4         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2              ORCALUT4     A        In      0.000     1.645 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2              ORCALUT4     Z        Out     0.768     2.413 r     -         
+N_347                                                        Net          -        -       -         -           6         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_RNIKNNV1     ORCALUT4     A        In      0.000     2.413 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_RNIKNNV1     ORCALUT4     Z        Out     0.708     3.121 f     -         
+next_cmd_3_sqmuxa                                            Net          -        -       -         -           3         
+sdram_0bject_inst.fsm\.un6_wait_counter_RNIIKTH2             ORCALUT4     B        In      0.000     3.121 f     -         
+sdram_0bject_inst.fsm\.un6_wait_counter_RNIIKTH2             ORCALUT4     Z        Out     0.606     3.727 r     -         
+un1_next_state_0_sqmuxa_1_s3_0                               Net          -        -       -         -           1         
+sdram_0bject_inst.un1_state_4_RNIMVSN4                       ORCALUT4     B        In      0.000     3.727 r     -         
+sdram_0bject_inst.un1_state_4_RNIMVSN4                       ORCALUT4     Z        Out     0.660     4.387 r     -         
+un1_next_state_0_sqmuxa_1_s3                                 Net          -        -       -         -           2         
+sdram_0bject_inst.next_cmd_0_iv[1]                           ORCALUT4     C        In      0.000     4.387 r     -         
+sdram_0bject_inst.next_cmd_0_iv[1]                           ORCALUT4     Z        Out     0.180     4.567 r     -         
+next_cmd[1]                                                  Net          -        -       -         -           1         
+sdram_0bject_inst_cmdio[1]                                   OFS1P3BX     D        In      0.000     4.567 r     -         
+===========================================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      4.183
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.129
+
+    - Propagation time:                      4.567
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.438
+
+    Number of logic level(s):                6
+    Starting point:                          sdram_0bject_inst.wait_counter[9] / Q
+    Ending point:                            sdram_0bject_inst_cmdio[1] / D
+    The start point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.091 period=4.183) on pin CK
+    The end   point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.091 period=4.183) on pin SCLK
+
+Instance / Net                                                            Pin      Pin               Arrival     No. of    
+Name                                                         Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------
+sdram_0bject_inst.wait_counter[9]                            FD1S3DX      Q        Out     0.907     0.907 r     -         
+wait_counter[9]                                              Net          -        -       -         -           2         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_3            ORCALUT4     B        In      0.000     0.907 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_3            ORCALUT4     Z        Out     0.738     1.645 r     -         
+un1_wait_counter_12_0_o2_3                                   Net          -        -       -         -           4         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2              ORCALUT4     A        In      0.000     1.645 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2              ORCALUT4     Z        Out     0.768     2.413 r     -         
+N_347                                                        Net          -        -       -         -           6         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_RNIKNNV1     ORCALUT4     A        In      0.000     2.413 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_RNIKNNV1     ORCALUT4     Z        Out     0.708     3.121 f     -         
+next_cmd_3_sqmuxa                                            Net          -        -       -         -           3         
+sdram_0bject_inst.fsm\.un6_wait_counter_RNIIKTH2             ORCALUT4     B        In      0.000     3.121 f     -         
+sdram_0bject_inst.fsm\.un6_wait_counter_RNIIKTH2             ORCALUT4     Z        Out     0.606     3.727 r     -         
+un1_next_state_0_sqmuxa_1_s3_0                               Net          -        -       -         -           1         
+sdram_0bject_inst.un1_state_4_RNIMVSN4                       ORCALUT4     B        In      0.000     3.727 r     -         
+sdram_0bject_inst.un1_state_4_RNIMVSN4                       ORCALUT4     Z        Out     0.660     4.387 r     -         
+un1_next_state_0_sqmuxa_1_s3                                 Net          -        -       -         -           2         
+sdram_0bject_inst.next_cmd_0_iv[1]                           ORCALUT4     C        In      0.000     4.387 r     -         
+sdram_0bject_inst.next_cmd_0_iv[1]                           ORCALUT4     Z        Out     0.180     4.567 r     -         
+next_cmd[1]                                                  Net          -        -       -         -           1         
+sdram_0bject_inst_cmdio[1]                                   OFS1P3BX     D        In      0.000     4.567 r     -         
+===========================================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      4.183
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.129
+
+    - Propagation time:                      4.567
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.438
+
+    Number of logic level(s):                6
+    Starting point:                          sdram_0bject_inst.wait_counter[10] / Q
+    Ending point:                            sdram_0bject_inst_cmdio[1] / D
+    The start point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.091 period=4.183) on pin CK
+    The end   point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.091 period=4.183) on pin SCLK
+
+Instance / Net                                                            Pin      Pin               Arrival     No. of    
+Name                                                         Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------
+sdram_0bject_inst.wait_counter[10]                           FD1S3DX      Q        Out     0.907     0.907 r     -         
+wait_counter[10]                                             Net          -        -       -         -           2         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_3            ORCALUT4     C        In      0.000     0.907 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_3            ORCALUT4     Z        Out     0.738     1.645 r     -         
+un1_wait_counter_12_0_o2_3                                   Net          -        -       -         -           4         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2              ORCALUT4     A        In      0.000     1.645 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2              ORCALUT4     Z        Out     0.768     2.413 r     -         
+N_347                                                        Net          -        -       -         -           6         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_RNIKNNV1     ORCALUT4     A        In      0.000     2.413 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_RNIKNNV1     ORCALUT4     Z        Out     0.708     3.121 f     -         
+next_cmd_3_sqmuxa                                            Net          -        -       -         -           3         
+sdram_0bject_inst.fsm\.un6_wait_counter_RNIIKTH2             ORCALUT4     B        In      0.000     3.121 f     -         
+sdram_0bject_inst.fsm\.un6_wait_counter_RNIIKTH2             ORCALUT4     Z        Out     0.606     3.727 r     -         
+un1_next_state_0_sqmuxa_1_s3_0                               Net          -        -       -         -           1         
+sdram_0bject_inst.un1_state_4_RNIMVSN4                       ORCALUT4     B        In      0.000     3.727 r     -         
+sdram_0bject_inst.un1_state_4_RNIMVSN4                       ORCALUT4     Z        Out     0.660     4.387 r     -         
+un1_next_state_0_sqmuxa_1_s3                                 Net          -        -       -         -           2         
+sdram_0bject_inst.next_cmd_0_iv[1]                           ORCALUT4     C        In      0.000     4.387 r     -         
+sdram_0bject_inst.next_cmd_0_iv[1]                           ORCALUT4     Z        Out     0.180     4.567 r     -         
+next_cmd[1]                                                  Net          -        -       -         -           1         
+sdram_0bject_inst_cmdio[1]                                   OFS1P3BX     D        In      0.000     4.567 r     -         
+===========================================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      4.183
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.129
+
+    - Propagation time:                      4.567
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.438
+
+    Number of logic level(s):                6
+    Starting point:                          sdram_0bject_inst.wait_counter[11] / Q
+    Ending point:                            sdram_0bject_inst_cmdio[1] / D
+    The start point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.091 period=4.183) on pin CK
+    The end   point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.091 period=4.183) on pin SCLK
+
+Instance / Net                                                            Pin      Pin               Arrival     No. of    
+Name                                                         Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------
+sdram_0bject_inst.wait_counter[11]                           FD1S3DX      Q        Out     0.907     0.907 r     -         
+wait_counter[11]                                             Net          -        -       -         -           2         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_3            ORCALUT4     D        In      0.000     0.907 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_3            ORCALUT4     Z        Out     0.738     1.645 r     -         
+un1_wait_counter_12_0_o2_3                                   Net          -        -       -         -           4         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2              ORCALUT4     A        In      0.000     1.645 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2              ORCALUT4     Z        Out     0.768     2.413 r     -         
+N_347                                                        Net          -        -       -         -           6         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_RNIKNNV1     ORCALUT4     A        In      0.000     2.413 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_RNIKNNV1     ORCALUT4     Z        Out     0.708     3.121 f     -         
+next_cmd_3_sqmuxa                                            Net          -        -       -         -           3         
+sdram_0bject_inst.fsm\.un6_wait_counter_RNIIKTH2             ORCALUT4     B        In      0.000     3.121 f     -         
+sdram_0bject_inst.fsm\.un6_wait_counter_RNIIKTH2             ORCALUT4     Z        Out     0.606     3.727 r     -         
+un1_next_state_0_sqmuxa_1_s3_0                               Net          -        -       -         -           1         
+sdram_0bject_inst.un1_state_4_RNIMVSN4                       ORCALUT4     B        In      0.000     3.727 r     -         
+sdram_0bject_inst.un1_state_4_RNIMVSN4                       ORCALUT4     Z        Out     0.660     4.387 r     -         
+un1_next_state_0_sqmuxa_1_s3                                 Net          -        -       -         -           2         
+sdram_0bject_inst.next_cmd_0_iv[1]                           ORCALUT4     C        In      0.000     4.387 r     -         
+sdram_0bject_inst.next_cmd_0_iv[1]                           ORCALUT4     Z        Out     0.180     4.567 r     -         
+next_cmd[1]                                                  Net          -        -       -         -           1         
+sdram_0bject_inst_cmdio[1]                                   OFS1P3BX     D        In      0.000     4.567 r     -         
+===========================================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      4.183
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.129
+
+    - Propagation time:                      4.567
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.438
+
+    Number of logic level(s):                6
+    Starting point:                          sdram_0bject_inst.wait_counter[8] / Q
+    Ending point:                            sdram_0bject_inst_cmdio[2] / D
+    The start point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.091 period=4.183) on pin CK
+    The end   point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOP_inferred_clock [rising] (rise=0.000 fall=2.091 period=4.183) on pin SCLK
+
+Instance / Net                                                            Pin      Pin               Arrival     No. of    
+Name                                                         Type         Name     Dir     Delay     Time        Fan Out(s)
+---------------------------------------------------------------------------------------------------------------------------
+sdram_0bject_inst.wait_counter[8]                            FD1S3DX      Q        Out     0.907     0.907 r     -         
+wait_counter[8]                                              Net          -        -       -         -           2         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_3            ORCALUT4     A        In      0.000     0.907 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_3            ORCALUT4     Z        Out     0.738     1.645 r     -         
+un1_wait_counter_12_0_o2_3                                   Net          -        -       -         -           4         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2              ORCALUT4     A        In      0.000     1.645 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2              ORCALUT4     Z        Out     0.768     2.413 r     -         
+N_347                                                        Net          -        -       -         -           6         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_RNIKNNV1     ORCALUT4     A        In      0.000     2.413 r     -         
+sdram_0bject_inst.fsm\.un1_wait_counter_12_0_o2_RNIKNNV1     ORCALUT4     Z        Out     0.708     3.121 f     -         
+next_cmd_3_sqmuxa                                            Net          -        -       -         -           3         
+sdram_0bject_inst.fsm\.un6_wait_counter_RNIIKTH2             ORCALUT4     B        In      0.000     3.121 f     -         
+sdram_0bject_inst.fsm\.un6_wait_counter_RNIIKTH2             ORCALUT4     Z        Out     0.606     3.727 r     -         
+un1_next_state_0_sqmuxa_1_s3_0                               Net          -        -       -         -           1         
+sdram_0bject_inst.un1_state_4_RNIMVSN4                       ORCALUT4     B        In      0.000     3.727 r     -         
+sdram_0bject_inst.un1_state_4_RNIMVSN4                       ORCALUT4     Z        Out     0.660     4.387 r     -         
+un1_next_state_0_sqmuxa_1_s3                                 Net          -        -       -         -           2         
+sdram_0bject_inst.next_cmd_1_iv[2]                           ORCALUT4     C        In      0.000     4.387 r     -         
+sdram_0bject_inst.next_cmd_1_iv[2]                           ORCALUT4     Z        Out     0.180     4.567 r     -         
+next_cmd[2]                                                  Net          -        -       -         -           1         
+sdram_0bject_inst_cmdio[2]                                   OFS1P3BX     D        In      0.000     4.567 r     -         
+===========================================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                             Starting                                                                                     Arrival           
+Instance                     Reference                                          Type        Pin     Net                   Time        Slack 
+                             Clock                                                                                                          
+--------------------------------------------------------------------------------------------------------------------------------------------
+oled_inst.R_dc               clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     Q       led_c[2]              1.039       -0.750
+oled_inst.R_reset_cnt[0]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     Q       led_c[1]              1.027       -0.738
+R_counter_fast[0]            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     Q       R_counter_fast[0]     0.985       -0.696
+oled_inst.R_init_cnt[4]      clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1P3AX     Q       R_init_cnt[4]         0.985       -0.696
+oled_inst.R_init_cnt[5]      clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1P3AX     Q       R_init_cnt[5]         0.985       -0.696
+oled_inst.R_init_cnt[6]      clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1P3AX     Q       R_init_cnt[6]         0.985       -0.696
+oled_inst.R_init_cnt[7]      clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1P3AX     Q       R_init_cnt[7]         0.985       -0.696
+oled_inst.R_init_cnt[8]      clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1P3AX     Q       R_init_cnt[8]         0.985       -0.696
+oled_inst.R_init_cnt[9]      clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1P3AX     Q       R_init_cnt[9]         0.985       -0.696
+oled_inst.R_init_cnt[14]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1P3AX     Q       R_init_cnt[14]        0.985       -0.696
+============================================================================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                             Starting                                                                                       Required           
+Instance                     Reference                                          Type        Pin     Net                     Time         Slack 
+                             Clock                                                                                                             
+-----------------------------------------------------------------------------------------------------------------------------------------------
+oled_inst.R_increment[9]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     D       R_increment_6[9]        4.195        -0.750
+oled_inst.R_increment[7]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     D       R_increment_6[7]        4.195        -0.689
+oled_inst.R_increment[8]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     D       R_increment_6[8]        4.195        -0.689
+oled_inst.R_increment[5]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     D       R_increment_6[5]        4.195        -0.628
+oled_inst.R_increment[6]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     D       R_increment_6[6]        4.195        -0.628
+oled_inst.R_increment[3]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     D       R_increment_6[3]        4.195        -0.567
+oled_inst.R_increment[4]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     D       R_increment_6[4]        4.195        -0.567
+oled_inst.R_increment[1]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     D       R_increment_6[1]        4.195        -0.506
+oled_inst.R_increment[2]     clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1S3AX     D       R_increment_6[2]        4.195        -0.506
+oled_inst.R_init_cnt[4]      clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock     FD1P3AX     D       R_init_cnt_5_4_rep1     4.195        -0.279
+===============================================================================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      4.249
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.195
+
+    - Propagation time:                      4.944
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (critical) :                     -0.750
+
+    Number of logic level(s):                9
+    Starting point:                          oled_inst.R_dc / Q
+    Ending point:                            oled_inst.R_increment[9] / D
+    The start point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock [rising] (rise=0.000 fall=2.124 period=4.249) on pin CK
+    The end   point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock [rising] (rise=0.000 fall=2.124 period=4.249) on pin CK
+
+Instance / Net                                        Pin      Pin               Arrival     No. of    
+Name                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+oled_inst.R_dc                           FD1S3AX      Q        Out     1.039     1.039 r     -         
+led_c[2]                                 Net          -        -       -         -           8         
+oled_inst.R_reset_cnt_RNICMQO[1]         ORCALUT4     C        In      0.000     1.039 r     -         
+oled_inst.R_reset_cnt_RNICMQO[1]         ORCALUT4     Z        Out     0.660     1.699 r     -         
+G_41_1                                   Net          -        -       -         -           2         
+oled_inst.R_indexed_color_1_sqmuxa_1     ORCALUT4     A        In      0.000     1.699 r     -         
+oled_inst.R_indexed_color_1_sqmuxa_1     ORCALUT4     Z        Out     0.606     2.305 r     -         
+R_indexed_color_1_sqmuxa_1               Net          -        -       -         -           1         
+oled_inst.R_indexed_color_1_sqmuxa       ORCALUT4     C        In      0.000     2.305 r     -         
+oled_inst.R_indexed_color_1_sqmuxa       ORCALUT4     Z        Out     0.798     3.103 r     -         
+R_indexed_color_1_sqmuxa                 Net          -        -       -         -           9         
+oled_inst.R_increment_6_cry_0_0          CCU2C        B0       In      0.000     3.103 r     -         
+oled_inst.R_increment_6_cry_0_0          CCU2C        COUT     Out     0.900     4.003 r     -         
+R_increment_6_cry_0                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_1_0          CCU2C        CIN      In      0.000     4.003 r     -         
+oled_inst.R_increment_6_cry_1_0          CCU2C        COUT     Out     0.061     4.064 r     -         
+R_increment_6_cry_2                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_3_0          CCU2C        CIN      In      0.000     4.064 r     -         
+oled_inst.R_increment_6_cry_3_0          CCU2C        COUT     Out     0.061     4.125 r     -         
+R_increment_6_cry_4                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_5_0          CCU2C        CIN      In      0.000     4.125 r     -         
+oled_inst.R_increment_6_cry_5_0          CCU2C        COUT     Out     0.061     4.186 r     -         
+R_increment_6_cry_6                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_7_0          CCU2C        CIN      In      0.000     4.186 r     -         
+oled_inst.R_increment_6_cry_7_0          CCU2C        COUT     Out     0.061     4.247 r     -         
+R_increment_6_cry_8                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_s_9_0            CCU2C        CIN      In      0.000     4.247 r     -         
+oled_inst.R_increment_6_s_9_0            CCU2C        S0       Out     0.698     4.944 r     -         
+R_increment_6[9]                         Net          -        -       -         -           1         
+oled_inst.R_increment[9]                 FD1S3AX      D        In      0.000     4.944 r     -         
+=======================================================================================================
+
+
+Path information for path number 2: 
+      Requested Period:                      4.249
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.195
+
+    - Propagation time:                      4.933
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.738
+
+    Number of logic level(s):                9
+    Starting point:                          oled_inst.R_reset_cnt[0] / Q
+    Ending point:                            oled_inst.R_increment[9] / D
+    The start point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock [rising] (rise=0.000 fall=2.124 period=4.249) on pin CK
+    The end   point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock [rising] (rise=0.000 fall=2.124 period=4.249) on pin CK
+
+Instance / Net                                        Pin      Pin               Arrival     No. of    
+Name                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+oled_inst.R_reset_cnt[0]                 FD1S3AX      Q        Out     1.027     1.027 r     -         
+led_c[1]                                 Net          -        -       -         -           7         
+oled_inst.R_reset_cnt_RNICMQO[1]         ORCALUT4     B        In      0.000     1.027 r     -         
+oled_inst.R_reset_cnt_RNICMQO[1]         ORCALUT4     Z        Out     0.660     1.687 f     -         
+G_41_1                                   Net          -        -       -         -           2         
+oled_inst.R_indexed_color_1_sqmuxa_1     ORCALUT4     A        In      0.000     1.687 f     -         
+oled_inst.R_indexed_color_1_sqmuxa_1     ORCALUT4     Z        Out     0.606     2.293 f     -         
+R_indexed_color_1_sqmuxa_1               Net          -        -       -         -           1         
+oled_inst.R_indexed_color_1_sqmuxa       ORCALUT4     C        In      0.000     2.293 f     -         
+oled_inst.R_indexed_color_1_sqmuxa       ORCALUT4     Z        Out     0.798     3.091 f     -         
+R_indexed_color_1_sqmuxa                 Net          -        -       -         -           9         
+oled_inst.R_increment_6_cry_0_0          CCU2C        B0       In      0.000     3.091 f     -         
+oled_inst.R_increment_6_cry_0_0          CCU2C        COUT     Out     0.900     3.991 r     -         
+R_increment_6_cry_0                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_1_0          CCU2C        CIN      In      0.000     3.991 r     -         
+oled_inst.R_increment_6_cry_1_0          CCU2C        COUT     Out     0.061     4.052 r     -         
+R_increment_6_cry_2                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_3_0          CCU2C        CIN      In      0.000     4.052 r     -         
+oled_inst.R_increment_6_cry_3_0          CCU2C        COUT     Out     0.061     4.113 r     -         
+R_increment_6_cry_4                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_5_0          CCU2C        CIN      In      0.000     4.113 r     -         
+oled_inst.R_increment_6_cry_5_0          CCU2C        COUT     Out     0.061     4.174 r     -         
+R_increment_6_cry_6                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_7_0          CCU2C        CIN      In      0.000     4.174 r     -         
+oled_inst.R_increment_6_cry_7_0          CCU2C        COUT     Out     0.061     4.235 r     -         
+R_increment_6_cry_8                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_s_9_0            CCU2C        CIN      In      0.000     4.235 r     -         
+oled_inst.R_increment_6_s_9_0            CCU2C        S0       Out     0.698     4.933 r     -         
+R_increment_6[9]                         Net          -        -       -         -           1         
+oled_inst.R_increment[9]                 FD1S3AX      D        In      0.000     4.933 r     -         
+=======================================================================================================
+
+
+Path information for path number 3: 
+      Requested Period:                      4.249
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.195
+
+    - Propagation time:                      4.891
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.696
+
+    Number of logic level(s):                9
+    Starting point:                          R_counter_fast[0] / Q
+    Ending point:                            oled_inst.R_increment[9] / D
+    The start point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock [rising] (rise=0.000 fall=2.124 period=4.249) on pin CK
+    The end   point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock [rising] (rise=0.000 fall=2.124 period=4.249) on pin CK
+
+Instance / Net                                        Pin      Pin               Arrival     No. of    
+Name                                     Type         Name     Dir     Delay     Time        Fan Out(s)
+-------------------------------------------------------------------------------------------------------
+R_counter_fast[0]                        FD1S3AX      Q        Out     0.985     0.985 r     -         
+R_counter_fast[0]                        Net          -        -       -         -           4         
+oled_inst.R_reset_cnt_RNICMQO[1]         ORCALUT4     A        In      0.000     0.985 r     -         
+oled_inst.R_reset_cnt_RNICMQO[1]         ORCALUT4     Z        Out     0.660     1.645 r     -         
+G_41_1                                   Net          -        -       -         -           2         
+oled_inst.R_indexed_color_1_sqmuxa_1     ORCALUT4     A        In      0.000     1.645 r     -         
+oled_inst.R_indexed_color_1_sqmuxa_1     ORCALUT4     Z        Out     0.606     2.251 r     -         
+R_indexed_color_1_sqmuxa_1               Net          -        -       -         -           1         
+oled_inst.R_indexed_color_1_sqmuxa       ORCALUT4     C        In      0.000     2.251 r     -         
+oled_inst.R_indexed_color_1_sqmuxa       ORCALUT4     Z        Out     0.798     3.049 r     -         
+R_indexed_color_1_sqmuxa                 Net          -        -       -         -           9         
+oled_inst.R_increment_6_cry_0_0          CCU2C        B0       In      0.000     3.049 r     -         
+oled_inst.R_increment_6_cry_0_0          CCU2C        COUT     Out     0.900     3.949 r     -         
+R_increment_6_cry_0                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_1_0          CCU2C        CIN      In      0.000     3.949 r     -         
+oled_inst.R_increment_6_cry_1_0          CCU2C        COUT     Out     0.061     4.010 r     -         
+R_increment_6_cry_2                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_3_0          CCU2C        CIN      In      0.000     4.010 r     -         
+oled_inst.R_increment_6_cry_3_0          CCU2C        COUT     Out     0.061     4.071 r     -         
+R_increment_6_cry_4                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_5_0          CCU2C        CIN      In      0.000     4.071 r     -         
+oled_inst.R_increment_6_cry_5_0          CCU2C        COUT     Out     0.061     4.132 r     -         
+R_increment_6_cry_6                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_7_0          CCU2C        CIN      In      0.000     4.132 r     -         
+oled_inst.R_increment_6_cry_7_0          CCU2C        COUT     Out     0.061     4.193 r     -         
+R_increment_6_cry_8                      Net          -        -       -         -           1         
+oled_inst.R_increment_6_s_9_0            CCU2C        CIN      In      0.000     4.193 r     -         
+oled_inst.R_increment_6_s_9_0            CCU2C        S0       Out     0.698     4.891 r     -         
+R_increment_6[9]                         Net          -        -       -         -           1         
+oled_inst.R_increment[9]                 FD1S3AX      D        In      0.000     4.891 r     -         
+=======================================================================================================
+
+
+Path information for path number 4: 
+      Requested Period:                      4.249
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.195
+
+    - Propagation time:                      4.891
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.696
+
+    Number of logic level(s):                9
+    Starting point:                          oled_inst.R_init_cnt[4] / Q
+    Ending point:                            oled_inst.R_increment[9] / D
+    The start point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock [rising] (rise=0.000 fall=2.124 period=4.249) on pin CK
+    The end   point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock [rising] (rise=0.000 fall=2.124 period=4.249) on pin CK
+
+Instance / Net                                      Pin      Pin               Arrival     No. of    
+Name                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------
+oled_inst.R_init_cnt[4]                FD1P3AX      Q        Out     0.985     0.985 r     -         
+R_init_cnt[4]                          Net          -        -       -         -           4         
+oled_inst.R_init_cnt_RNIQ6IK1[4]       ORCALUT4     A        In      0.000     0.985 r     -         
+oled_inst.R_init_cnt_RNIQ6IK1[4]       ORCALUT4     Z        Out     0.606     1.591 r     -         
+m17_i_a4_6                             Net          -        -       -         -           1         
+oled_inst.R_init_cnt_RNIIMPH2[14]      ORCALUT4     A        In      0.000     1.591 r     -         
+oled_inst.R_init_cnt_RNIIMPH2[14]      ORCALUT4     Z        Out     0.660     2.251 r     -         
+m17_i_a4_9                             Net          -        -       -         -           2         
+oled_inst.R_indexed_color_1_sqmuxa     ORCALUT4     B        In      0.000     2.251 r     -         
+oled_inst.R_indexed_color_1_sqmuxa     ORCALUT4     Z        Out     0.798     3.049 f     -         
+R_indexed_color_1_sqmuxa               Net          -        -       -         -           9         
+oled_inst.R_increment_6_cry_0_0        CCU2C        B0       In      0.000     3.049 f     -         
+oled_inst.R_increment_6_cry_0_0        CCU2C        COUT     Out     0.900     3.949 r     -         
+R_increment_6_cry_0                    Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_1_0        CCU2C        CIN      In      0.000     3.949 r     -         
+oled_inst.R_increment_6_cry_1_0        CCU2C        COUT     Out     0.061     4.010 r     -         
+R_increment_6_cry_2                    Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_3_0        CCU2C        CIN      In      0.000     4.010 r     -         
+oled_inst.R_increment_6_cry_3_0        CCU2C        COUT     Out     0.061     4.071 r     -         
+R_increment_6_cry_4                    Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_5_0        CCU2C        CIN      In      0.000     4.071 r     -         
+oled_inst.R_increment_6_cry_5_0        CCU2C        COUT     Out     0.061     4.132 r     -         
+R_increment_6_cry_6                    Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_7_0        CCU2C        CIN      In      0.000     4.132 r     -         
+oled_inst.R_increment_6_cry_7_0        CCU2C        COUT     Out     0.061     4.193 r     -         
+R_increment_6_cry_8                    Net          -        -       -         -           1         
+oled_inst.R_increment_6_s_9_0          CCU2C        CIN      In      0.000     4.193 r     -         
+oled_inst.R_increment_6_s_9_0          CCU2C        S0       Out     0.698     4.891 r     -         
+R_increment_6[9]                       Net          -        -       -         -           1         
+oled_inst.R_increment[9]               FD1S3AX      D        In      0.000     4.891 r     -         
+=====================================================================================================
+
+
+Path information for path number 5: 
+      Requested Period:                      4.249
+    - Setup time:                            0.054
+    + Clock delay at ending point:           0.000 (ideal)
+    = Required time:                         4.195
+
+    - Propagation time:                      4.891
+    - Clock delay at starting point:         0.000 (ideal)
+    = Slack (non-critical) :                 -0.696
+
+    Number of logic level(s):                9
+    Starting point:                          oled_inst.R_init_cnt[5] / Q
+    Ending point:                            oled_inst.R_increment[9] / D
+    The start point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock [rising] (rise=0.000 fall=2.124 period=4.249) on pin CK
+    The end   point is clocked by            clk_25M_100M_7M5_12M_60M|CLKOS2_inferred_clock [rising] (rise=0.000 fall=2.124 period=4.249) on pin CK
+
+Instance / Net                                      Pin      Pin               Arrival     No. of    
+Name                                   Type         Name     Dir     Delay     Time        Fan Out(s)
+-----------------------------------------------------------------------------------------------------
+oled_inst.R_init_cnt[5]                FD1P3AX      Q        Out     0.985     0.985 r     -         
+R_init_cnt[5]                          Net          -        -       -         -           4         
+oled_inst.R_init_cnt_RNIOF7T[14]       ORCALUT4     A        In      0.000     0.985 r     -         
+oled_inst.R_init_cnt_RNIOF7T[14]       ORCALUT4     Z        Out     0.606     1.591 f     -         
+m17_i_a4_7                             Net          -        -       -         -           1         
+oled_inst.R_init_cnt_RNIIMPH2[14]      ORCALUT4     B        In      0.000     1.591 f     -         
+oled_inst.R_init_cnt_RNIIMPH2[14]      ORCALUT4     Z        Out     0.660     2.251 f     -         
+m17_i_a4_9                             Net          -        -       -         -           2         
+oled_inst.R_indexed_color_1_sqmuxa     ORCALUT4     B        In      0.000     2.251 f     -         
+oled_inst.R_indexed_color_1_sqmuxa     ORCALUT4     Z        Out     0.798     3.049 r     -         
+R_indexed_color_1_sqmuxa               Net          -        -       -         -           9         
+oled_inst.R_increment_6_cry_0_0        CCU2C        B0       In      0.000     3.049 r     -         
+oled_inst.R_increment_6_cry_0_0        CCU2C        COUT     Out     0.900     3.949 r     -         
+R_increment_6_cry_0                    Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_1_0        CCU2C        CIN      In      0.000     3.949 r     -         
+oled_inst.R_increment_6_cry_1_0        CCU2C        COUT     Out     0.061     4.010 r     -         
+R_increment_6_cry_2                    Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_3_0        CCU2C        CIN      In      0.000     4.010 r     -         
+oled_inst.R_increment_6_cry_3_0        CCU2C        COUT     Out     0.061     4.071 r     -         
+R_increment_6_cry_4                    Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_5_0        CCU2C        CIN      In      0.000     4.071 r     -         
+oled_inst.R_increment_6_cry_5_0        CCU2C        COUT     Out     0.061     4.132 r     -         
+R_increment_6_cry_6                    Net          -        -       -         -           1         
+oled_inst.R_increment_6_cry_7_0        CCU2C        CIN      In      0.000     4.132 r     -         
+oled_inst.R_increment_6_cry_7_0        CCU2C        COUT     Out     0.061     4.193 r     -         
+R_increment_6_cry_8                    Net          -        -       -         -           1         
+oled_inst.R_increment_6_s_9_0          CCU2C        CIN      In      0.000     4.193 r     -         
+oled_inst.R_increment_6_s_9_0          CCU2C        S0       Out     0.698     4.891 r     -         
+R_increment_6[9]                       Net          -        -       -         -           1         
+oled_inst.R_increment[9]               FD1S3AX      D        In      0.000     4.891 r     -         
+=====================================================================================================
+
+
+
+
+====================================
+Detailed Report for Clock: System
+====================================
+
+
+
+Starting Points with Worst Slack
+********************************
+
+                      Starting                                        Arrival             
+Instance              Reference     Type        Pin       Net         Time        Slack   
+                      Clock                                                               
+------------------------------------------------------------------------------------------
+clk_pll.PLLInst_0     System        EHXPLLL     CLKOP     CLKOP_i     0.000       1000.000
+==========================================================================================
+
+
+Ending Points with Worst Slack
+******************************
+
+                      Starting                                        Required             
+Instance              Reference     Type        Pin       Net         Time         Slack   
+                      Clock                                                                
+-------------------------------------------------------------------------------------------
+clk_pll.PLLInst_0     System        EHXPLLL     CLKFB     CLKOP_i     1000.000     1000.000
+===========================================================================================
+
+
+
+Worst Path Information
+***********************
+
+
+Path information for path number 1: 
+      Requested Period:                      1000.000
+    - Setup time:                            0.000
+    + Clock delay at ending point:           0.000 (ideal)
+    + Estimated clock delay at ending point: 0.000
+    = Required time:                         1000.000
+
+    - Propagation time:                      0.000
+    - Clock delay at starting point:         0.000 (ideal)
+    - Estimated clock delay at start point:  -0.000
+    = Slack (non-critical) :                 1000.000
+
+    Number of logic level(s):                0
+    Starting point:                          clk_pll.PLLInst_0 / CLKOP
+    Ending point:                            clk_pll.PLLInst_0 / CLKFB
+    The start point is clocked by            System [rising]
+    The end   point is clocked by            System [rising]
+
+Instance / Net                    Pin       Pin               Arrival     No. of    
+Name                  Type        Name      Dir     Delay     Time        Fan Out(s)
+------------------------------------------------------------------------------------
+clk_pll.PLLInst_0     EHXPLLL     CLKOP     Out     0.000     0.000 r     -         
+CLKOP_i               Net         -         -       -         -           168       
+clk_pll.PLLInst_0     EHXPLLL     CLKFB     In      0.000     0.000 r     -         
+====================================================================================
+
+
+
+##### END OF TIMING REPORT #####]
+
+Timing exceptions that could not be applied
+
+Finished final timing analysis (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 325MB peak: 325MB)
+
+
+Finished timing report (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 325MB peak: 325MB)
+
+---------------------------------------
+Resource Usage Report
+Part: lfe5u_45f-6
+
+Register bits: 299 of 43848 (1%)
+PIC Latch:       0
+I/O cells:       61
+
+
+Details:
+BB:             16
+CCU2C:          42
+EHXPLLL:        1
+FD1P3AX:        191
+FD1P3AY:        4
+FD1P3JX:        2
+FD1S3AX:        42
+FD1S3AY:        2
+FD1S3BX:        1
+FD1S3DX:        30
+FD1S3IX:        5
+FD1S3JX:        3
+GSR:            1
+IB:             4
+IFS1P3DX:       16
+INV:            7
+L6MUX21:        7
+OB:             38
+OBZ:            3
+OFS1P3BX:       3
+ORCALUT4:       303
+PFUMX:          40
+PUR:            1
+ROM16X1A:       8
+ROM32X1A:       8
+VHI:            4
+VLO:            4
+Mapper successful!
+
+At Mapper Exit (Real Time elapsed 0h:00m:02s; CPU Time elapsed 0h:00m:02s; Memory used current: 325MB peak: 325MB)
+
+Process took 0h:00m:02s realtime, 0h:00m:02s cputime
+# Sat Feb 17 17:03:02 2024
+
+###########################################################]

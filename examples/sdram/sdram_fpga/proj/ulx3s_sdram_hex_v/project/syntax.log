@@ -1,0 +1,45 @@
+###########################################################[
+
+Copyright (C) 1994-2023 Synopsys, Inc.
+This Synopsys software and all associated documentation are proprietary to Synopsys, Inc.
+and may only be used pursuant to the terms and conditions of a written license agreement
+with Synopsys, Inc. All other use, reproduction, modification, or distribution of the
+Synopsys software or the associated documentation is strictly prohibited.
+Tool: Synplify Pro (R)
+Build: U-2023.03L-SP1
+Install: /usr/local/diamond/3.13/synpbase
+OS: Ubuntu 20.04.6 LTS
+Hostname: shouyu-LOQ-15APH8
+max virtual memory: unlimited (bytes)
+max user processes: 92689
+max stack size: 8388608 (bytes)
+
+
+Implementation : project
+Synopsys VHDL Compiler, Version comp202303synp1, Build 173R, Built Aug 31 2023 03:52:31, @4910518
+
+@N|Running in 64-bit mode
+Location map warning "/usr/local/diamond/3.13/synpbase/lib/vhd/location.map":46 - Attempted redefinition of package mach.components
+@N|stack limit increased to max
+@N:"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":17:7:17:25|Top entity is set to sdram_fpga_hex_oled.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/usr/local/diamond/3.13/cae_library/synthesis/vhdl/ecp5u.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/sdram_0bject.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_init_pack.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_font_pack.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/proj/ulx3s_hex_vhdl/clock/clk_25M_100M_7M5_12M_60M.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/oled/hdl/ssd1331_hex_vhdl/oled_hex_decoder.vhd'.
+@N: CD140 :	| Using the VHDL 1993 Standard for file '/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd'.
+@W: CD266 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":238:12:238:20|oled_resn is not readable.  This may cause a simulation mismatch.
+@W: CD266 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":239:12:239:19|oled_csn is not readable.  This may cause a simulation mismatch.
+@W: CD266 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":240:12:240:18|oled_dc is not readable.  This may cause a simulation mismatch.
+@W: CD266 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":241:12:241:19|oled_clk is not readable.  This may cause a simulation mismatch.
+@W: CD266 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":242:12:242:20|oled_mosi is not readable.  This may cause a simulation mismatch.
+
+At c_vhdl Exit (Real Time elapsed 0h:00m:00s; CPU Time elapsed 0h:00m:00s; Memory used current: 127MB peak: 127MB)
+
+Process took 0h:00m:01s realtime, 0h:00m:01s cputime
+
+Process completed successfully.
+# Sat Feb 17 17:02:57 2024
+
+###########################################################]

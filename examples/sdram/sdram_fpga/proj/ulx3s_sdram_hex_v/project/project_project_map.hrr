@@ -1,0 +1,42 @@
+---------------------------------------------------
+Report for cell sdram_fpga_hex_oled
+   Instance path: sdram_fpga_hex_oled
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     294.00        100.0
+                                 IOLGC	      19.00        100.0
+                                  LUT4	     334.00        100.0
+                                 IOREG	         19        100.0
+                                 IOBUF	         61        100.0
+                                PFUREG	        280        100.0
+                                RIPPLE	         42        100.0
+SUB MODULES
+                                  cell	      count    SLC Usage(%)
+                          sdram_0bject	          1        29.6
+                      oled_hex_decoder	          1        51.2
+              clk_25M_100M_7M5_12M_60M	          1         0.7
+---------------------------------------------------
+Report for cell oled_hex_decoder
+   Instance path: sdram_fpga_hex_oled/oled_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	     150.67        51.2
+                                  LUT4	     203.00        60.8
+                                PFUREG	        131        46.8
+                                RIPPLE	         15        35.7
+---------------------------------------------------
+Report for cell sdram_0bject
+   Instance path: sdram_fpga_hex_oled/sdram_0bject_inst
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	      87.17        29.6
+                                  LUT4	     110.00        32.9
+                                PFUREG	         56        20.0
+                                RIPPLE	         14        33.3
+---------------------------------------------------
+Report for cell clk_25M_100M_7M5_12M_60M
+   Instance path: sdram_fpga_hex_oled/clk_pll
+                     Cell usage:
+                                  cell	      count    Res Usage(%)
+                                  SLIC	       2.00         0.7
+                                  LUT4	       2.00         0.6

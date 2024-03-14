@@ -193,10 +193,10 @@ module ecp5pll
   // diamond: won't compile this, comment it out. Workaround follows using division by zero
  initial begin
     // Print out the values during simulation
-    $display("clock0 error 0  = %0d",  (out0_hz - params_fout) );
-    $display("clock0 error 1  = %0d",  (out1_hz - params_fvco / params_secondary1_div));
-    $display("clock0 error 2  = %0d",  (out2_hz - params_fvco / params_secondary2_div));
-    $display("clock0 error 3  = %0d",  (out2_hz - params_fvco / params_secondary3_div));
+    $display("clock0 %0d clock0 error 0  = %0d", out0_hz, (out0_hz - params_fout) );
+    $display("clock1 %d clock1 error 1  = %0d", out1_hz, (out1_hz - params_fvco / params_secondary1_div));
+    $display("clock2 %d error 2  = %0d",out2_hz,  (out2_hz - params_fvco / params_secondary2_div));
+    $display("clock3 %d error 3  = %0d",out3_hz, (out3_hz - params_fvco / params_secondary3_div));
   end
   if(error_out0_hz)begin
      $error("out0_hz tolerance exceeds out0_tol_hz");

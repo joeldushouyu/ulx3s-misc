@@ -1,0 +1,15 @@
+@N: MF916 |Option synthesis_strategy=base is enabled. 
+@N: MF248 |Running in 64-bit mode.
+@N: MF666 |Clock conversion enabled. (Command "set_option -fix_gated_and_generated_clocks 1" in the project file.)
+@N: FX493 |Applying initial value "0" on instance R_dc.
+@N: FX493 |Applying initial value "00000000" on instance R_spi_data[7:0].
+@N: FX493 |Applying initial value "01110" on instance R_char_line[4:0].
+@N: FX493 |Applying initial value "00010" on instance R_data_index[4:0].
+@N: FX493 |Applying initial value "001" on instance R_cpixel[2:0].
+@N: FX493 |Applying initial value "0000000001" on instance R_increment[9:0].
+@N: FX493 |Applying initial value "000000000000000000000000" on instance R_state_latch[23:0].
+@N: MO111 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":46:2:46:4|Tristate driver led_1 (in view: work.sdram_fpga_hex_oled(behavioral)) on net led[7] (in view: work.sdram_fpga_hex_oled(behavioral)) has its enable tied to GND.
+@N: MO111 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":46:2:46:4|Tristate driver led_2 (in view: work.sdram_fpga_hex_oled(behavioral)) on net led[6] (in view: work.sdram_fpga_hex_oled(behavioral)) has its enable tied to GND.
+@N: MO111 :"/home/shouyu/4.2/designProblem/ulx3s-misc/examples/sdram/sdram_fpga/hdl/top/sdram_fpga_hex_oled.vhd":46:2:46:4|Tristate driver led_3 (in view: work.sdram_fpga_hex_oled(behavioral)) on net led[5] (in view: work.sdram_fpga_hex_oled(behavioral)) has its enable tied to GND.
+@N: FX1184 |Applying syn_allowed_resources blockrams=108 on top level netlist sdram_fpga_hex_oled 
+@N: FX1143 |Skipping assigning INTERNAL_VREF to iobanks, because the table of mapping from pin to iobank is not initialized.
