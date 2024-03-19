@@ -13,6 +13,16 @@ module top_usbtest #(parameter x = 640,     // pixels
                     
                      inout  [27:0] gn,
                      inout  [27:0] gp,
+                     output sdram_clk,
+                     output sdram_cke,
+                     output sdram_csn,
+                     output sdram_wen,
+                     output sdram_rasn,
+                     output sdram_casn,
+                     output [12:0]sdram_a,
+                     output [1:0]sdram_ba,
+                     output [1:0]sdram_dqm,
+                     inout [15:0]sdram_d 
                     // inout wire [1:0]gp,
 
                      );
@@ -51,13 +61,42 @@ module top_usbtest #(parameter x = 640,     // pixels
     // wifi_gpio0 = 1 keeps board from rebooting
     // hold btn0 to let ESP32 take control over the board
     assign wifi_gpio0 = btn[0];
-    
-    // // press BTN0 to exit this bitstream
+    // the reset button
+
+    // wire [6:0] btnd, btnr, btnf;
+    // btn_debounce
+    // #(
+    //     .bits(16),
+    //     .btns(7)
+    // )
+    // btn_debounce_i
+    // (
+    //     .clk(clk_pixel),
+    //     .btn(btn),
+    //     .debounce(btnd),
+    //     .rising(btnr),
+    //     .falling(btnf)
+    // );
+
+
+    // // // press BTN0 to exit this bitstream
     // reg [19:0] R_delay_reload = 0;
     // always @(posedge clk_25mhz)
     //   if (R_delay_reload[19] == 0)
     //     R_delay_reload <= R_delay_reload+1;
     // assign user_programn = btn[0] | ~R_delay_reload[19];
+    wire rst = ~btn[5];
+    //wire reset = rst;//TODO:
+    // reg [7:0]data ;
+    // assign led = data;
+    // always @(  negedge rst) begin
+    //     if(~rst)begin
+    //     data <= data+1;
+    //     end else begin
+    //         data <= data;
+    //     end
+ 
+    // end
     // clock generator
     wire clk_locked;
     wire [3:0] clocks;
@@ -132,7 +171,7 @@ module top_usbtest #(parameter x = 640,     // pixels
     
     reg [20:0] countx = 0;    reg [20:0] county = 0;
 
-    assign led[0] = ableToRead;
+    //assign led[0] = ableToRead;
 
 
     reg [63:0] clk_pixel_count = 0;
@@ -153,7 +192,7 @@ module top_usbtest #(parameter x = 640,     // pixels
 
         end
         if(clk_pixel_count == 65000000) begin
-            led = countInMHZ;
+            //led = countInMHZ;
             countInMHZ = 0;
             clear_count = 0;
             clk_pixel_count = 0;
@@ -365,12 +404,10 @@ module top_usbtest #(parameter x = 640,     // pixels
     // // FLAGA,B,C,D is input only
 
     assign gp[0] = usb_clk;
-    
-
 
     wire SLCS,SLWR, SLOE,SLRD, PKTEND;
     wire [1:0] address; //A1, A0
-    wire reset = 1; //TODO:
+
 
     assign gn[13] = SLCS;
     assign gn[14] = SLWR;
@@ -386,23 +423,23 @@ module top_usbtest #(parameter x = 640,     // pixels
 
     
 
-    usb_stream_in_example usb_write_instace(
+    // usb_stream_in_example usb_write_instace(
 
-        .clk(usb_clk),
-        .rst_n(reset),
-        .flag_a(FLAGA),
-        .flag_b(FLAGB),
-        .flag_c(FLAGC),
-        .flag_d(FLAGD),
-        .slcs(SLCS),
-        .sloe(SLOE),
-        .slrd(SLRD),
-        .slwr(SLWR),
-        .pktend(PKTEND),
-        .fifo_addr(address),
-        .usb_data(databus)
+    //     .clk(usb_clk),
+    //     .rst_n(reset),
+    //     .flag_a(FLAGA),
+    //     .flag_b(FLAGB),
+    //     .flag_c(FLAGC),
+    //     .flag_d(FLAGD),
+    //     .slcs(SLCS),
+    //     .sloe(SLOE),
+    //     .slrd(SLRD),
+    //     .slwr(SLWR),
+    //     .pktend(PKTEND),
+    //     .fifo_addr(address),
+    //     .usb_data(databus)
 
-    );
+    // );
 
 //     //FOr fifo experiment only
 //     // wire                            cmd_flag;
@@ -446,478 +483,815 @@ module top_usbtest #(parameter x = 640,     // pixels
 //     //     //     led = 8'b00000001;
 //     //     // end
 //     // end
-//     // parameter master_mode_loopback = 3'b000;
-//     // parameter master_mode_stream_out = 3'b001;
-//     // parameter master_mode_stream_in = 3'b010;
-//     // parameter master_mode_ZLP = 3'b011;
-//     // parameter master_mode_partial = 3'b100;
-//     // parameter master_mode_idle = 3'b101;
+    // parameter master_mode_loopback = 3'b000;
+    // parameter master_mode_stream_out = 3'b001;
+    // parameter master_mode_stream_in = 3'b010;
+    // parameter master_mode_ZLP = 3'b011;
+    // parameter master_mode_partial = 3'b100;
+    // parameter master_mode_idle = 3'b101;
 
-//     // // // stream in 
-//     // parameter stream_in_idle           = 2'b00;
-//     // parameter stream_in_wait_flagb     = 2'b01;
-//     // parameter stream_in_write          = 2'b10;
-//     // parameter stream_in_write_wr_delay = 2'b11;
-//     // // // stream_in 
-//     // reg [1:0] stream_in_mode;
-//     // reg [2:0] current_master, next_master;
-//     // reg [15:0] counter;
-//     // usb_stream_in #(
-//     //     .master_mode_loopback(master_mode_loopback),
-//     //     .master_mode_stream_out(master_mode_stream_out),
-//     //     .master_mode_stream_in(master_mode_stream_in),
-//     //     .master_mode_ZLP(master_mode_ZLP),
-//     //     .master_mode_partial(master_mode_partial),
-//     //     .master_mode_idle(master_mode_idle),
-//     //     .stream_in_idle(stream_in_idle),
-//     //     .stream_in_wait_flagb(stream_in_wait_flagb),
-//     //     .stream_in_write(stream_in_write),
-//     //     .stream_in_write_wr_delay(stream_in_write_wr_delay)
-//     // ) usb_stream_in_instance(
+    // // // stream in 
+    // parameter stream_in_idle           = 2'b00;
+    // parameter stream_in_wait_flagb     = 2'b01;
+    // parameter stream_in_write          = 2'b10;
+    // parameter stream_in_write_wr_delay = 2'b11;
+    // // // stream_in 
+    // reg [1:0] stream_in_mode;
+    // reg [2:0] current_master, next_master;
+    // reg [15:0] counter;
+    // usb_stream_in #(
+    //     .master_mode_loopback(master_mode_loopback),
+    //     .master_mode_stream_out(master_mode_stream_out),
+    //     .master_mode_stream_in(master_mode_stream_in),
+    //     .master_mode_ZLP(master_mode_ZLP),
+    //     .master_mode_partial(master_mode_partial),
+    //     .master_mode_idle(master_mode_idle),
+    //     .stream_in_idle(stream_in_idle),
+    //     .stream_in_wait_flagb(stream_in_wait_flagb),
+    //     .stream_in_write(stream_in_write),
+    //     .stream_in_write_wr_delay(stream_in_write_wr_delay)
+    // ) usb_stream_in_instance(
+    //     .clk(usb_clk),
+    //     .rst_n(rst),
+    //     .master_mode(current_master),
+    //     .data_out(counter),
+    //     .PKTEND(PKTEND),
+    //     .SLOE(SLOE),
+    //     .SLRD(SLRD),
+    //     .SLCS(SLCS),
+    //     .SLWR(SLWR),
+    //     .A(address),
+    //     .FLAGA(FLAGA),
+    //     .FLAGB(FLAGB),
+    //     .DQ(databus),
+    //     .current_stream_in_mode(stream_in_mode),
 
-//     //     .clk(usb_clk),
-//     //     .rst_n(reset),
-//     //     .master_mode(current_master),
-//     //     .data_out(counter),
-//     //     .PKTEND(PKTEND),
-//     //     .SLOE(SLOE),
-//     //     .SLRD(SLRD),
-//     //     .SLCS(SLCS),
-//     //     .SLWR(SLWR),
-//     //     .A(address),
-//     //     .FLAGA(FLAGA),
-//     //     .FLAGB(FLAGB),
-//     //     .DQ(databus),
-//     //     .current_stream_in_mode(stream_in_mode),
+    // );
+    // always @(posedge usb_clk ) begin
 
-//     // );
-
-//     // always @(posedge usb_clk) begin
-//     //     current_master <= next_master;
-//     //     counter <= counter+1;
-//     // end 
-//     // //Test case , write all iteration of the 16 bit letter
+    //     // if(~rst) begin
+    //     //     //counter<=0;
+    //     //     current_master <= master_mode_idle;
+    //     // end
+    //     // else begin
+    //         //counter <= counter+1;
+    //         current_master <= master_mode_stream_in;
+    //     // end
+    // end
+    // always @(posedge usb_clk) begin
+    //     current_master <= next_master;
+    //     // counter <= counter+1;
+    // end 
+    // //Test case , write all iteration of the 16 bit letter
 
     
-//     // always @(*) begin
-//     //     case(current_master)
-//     //         master_mode_idle: begin
-//     //             //SLCS = 1;
-//     //             next_master = master_mode_stream_in;
-//     //         end
-//     //         master_mode_stream_in: begin
-//     //             //counter = counter + 1;
-//     //             next_master = master_mode_stream_in;
-//     //         end
+    // always @(*) begin
+    //     case(current_master)
+    //         master_mode_idle: begin
+    //             //SLCS = 1;
+    //             next_master = master_mode_stream_in;
+    //         end
+    //         master_mode_stream_in: begin
+    //             //counter = counter + 1;
+    //             next_master = master_mode_stream_in;
+    //         end
 
-//     //         default: begin
-//     //             next_master = master_mode_idle;
-//     //         end
-//     //     endcase
+    //         default: begin
+    //             next_master = master_mode_idle;
+    //         end
+    //     endcase
 
-//     // end
+    // end
 
-//     // always @(current_master) begin
-//     //     if(current_master == master_mode_stream_in ) begin
-//     //         counter <= counter+1;
-//     //     end
-//     //     else begin
-//     //         counter <= 0;
-//     //     end
-//     // end
-
-
+    // // always @(current_master) begin
+    // //     if(current_master == master_mode_stream_in ) begin
+    // //         counter <= counter+1;
+    // //     end
+    // //     else begin
+    // //         counter <= 0;
+    // //     end
+    // // end
 
 
 
+// sram for testing
+
+
+	// wire CLK_OUT;
+	// assign CLK_OUT = usb_clk; // input 165.5MHZ
+	 
+	//  //FSM state declarationss
+	//  localparam idle=0,
+	// 				//write test-data to all addresses
+	// 				new_write=1,
+	// 				write_burst=2,
+	// 				//read test-data written to all addresses
+	// 				new_read=3,
+	// 				read_burst=4;
+					
+	//  reg[2:0] state_q=idle,state_d;
+	//  reg[14:0] f_addr_q=0,f_addr_d; 
+	//  reg[9:0] burst_index_q=0,burst_index_d;
+	//  reg[3:0] led_q=0,led_d;
+	//  reg[19:0] error_q=0,error_d;
+	 
+	//  reg rw,rw_en;
+	//  reg[15:0] f2s_data;
+	//  wire ready,s2f_data_valid,f2s_data_valid;
+	//  wire[15:0] s2f_data;
+	//  wire key0_tick,key1_tick;
+	//  wire[5:0] in0,in1,in2,in3,in4,in5; //format: {dp,char[4:0]} , dp is active high
+	 
+	//  (*KEEP="TRUE"*)reg[36:0] counter_q,index_q,index_d; //counter_q increments until 1 second(165_000_000 clk cycles). Index_q holds the number of words read/written(check the value at chipscope)	
+	// 							//Memory Bandwidth: index_q*2 = X bytes/seconds
+	// 							// RESULT: 190MB/s (100MHz with t_CL=2)
+	// 							// RESULT: 316MB/s (165MHz clk with t_CL=3)
+
+	//  //register operations
+	//  always @(posedge CLK_OUT,negedge rst_n) begin
+	// 	if(!rst_n) begin
+	// 		state_q<=0;
+	// 		f_addr_q<=0;
+	// 		burst_index_q<=0;
+	// 		led_q<=0;
+	// 		error_q<=0;
+	// 		counter_q<=0;
+	// 		index_q<=0;
+	// 	end
+	// 	else begin
+	// 		state_q<=state_d;
+	// 		f_addr_q<=f_addr_d;
+	// 		burst_index_q<=burst_index_d;
+	// 		led_q<=led_d;
+	// 		error_q<=error_d;	
+	// 		counter_q<=(state_q==idle) ?0:counter_q+1'b1;
+	// 		index_q<=index_d;
+	// 	end
+	//  end
+	 
+	//  //FSM next-state logic
+	//  always @* begin
+	//  state_d=state_q;
+ 	//  f_addr_d=f_addr_q;
+	//  burst_index_d=burst_index_q;
+	//  led_d=led_q;
+	//  error_d=error_q;
+	//  rw=0;
+	//  rw_en=0;
+	//  f2s_data=0;
+	//  index_d=index_q;
+	 
+	//  case(state_q)		
+	// 	  		 idle: begin  //wait until either button is toggled
+	// 						f_addr_d=0;
+	// 						burst_index_d=0;
+	// 						if(key0_tick) begin
+	// 							state_d=new_write; 
+	// 							index_d=0;
+	// 						end
+	// 						if(key1_tick) begin
+	// 							state_d=new_read;
+	// 							error_d=0;
+	// 							index_d=0;
+	// 						end
+	// 					 end
+	// 	  new_write: if(ready) begin  //write a deterministic data to all possible addresses of sdram
+	// 						led_d[1]=1'b1;
+	// 						rw_en=1;
+	// 						rw=0;
+	// 						state_d=write_burst;
+	// 						burst_index_d=0;
+	// 					 end
+	// 	write_burst: begin 
+	// 						f2s_data=f_addr_q+burst_index_q;
+	// 						if(!key[2] && (f_addr_q==13000 || f_addr_q==100)) f2s_data=9999; //Inject errors when key[2] is pressed. The output error must be 512*2*10=10240
+	// 						if(f2s_data_valid) begin
+	// 							burst_index_d=burst_index_q+1; //track the number of already bursted data
+	// 							index_d=index_q+1'b1; //holds the total number of words written to sdram
+	// 						end
+	// 						else if(burst_index_q==512) begin //last data must be 512th(for full page mode), since index starts at zero, the 512th is expected to have deasserted f2s_data_valid
+	// 							if(counter_q>=165_000_000) begin //1 second had passed
+	// 								led_d[1:0]=2'b11; 
+	// 								state_d=idle;
+	// 							end
+	// 							else begin
+	// 								f_addr_d=f_addr_q+1;
+	// 								state_d=new_write;
+	// 							end
+	// 						end
+	// 					 end
+	// 	   new_read: if(ready) begin //read each data from all addresses and test if it matches the deterministic data we assigned earlier
+	// 						led_d[2]=1'b1;
+	// 						rw_en=1;
+	// 						rw=1;
+	// 						state_d=read_burst;
+	// 						burst_index_d=0;
+	// 					 end
+	// 	 read_burst: begin
+	// 						if(s2f_data_valid) begin
+	// 							if(s2f_data!=f_addr_q+burst_index_q) error_d=error_q+1'b1; //count the errors in which the read output does not match the expected assigned data
+	// 							burst_index_d=burst_index_q+1;
+	// 							index_d=index_q+1'b1; //holds the total number of words read from sdram
+	// 						end
+	// 						else if(burst_index_q==512) begin
+	// 							if(counter_q>=165_000_000) begin //1 second had passed
+	// 								led_d[3:0]=4'b1111; //all leds on after successfull write
+	// 								state_d=idle;
+	// 							end
+	// 							else begin
+	// 								f_addr_d=f_addr_q+1;
+	// 								state_d=new_read;
+	// 							end
+	// 						end
+	// 					 end
+	// 	    default: state_d=idle;
+	//  endcase
+	//  end
+	 
+	//  assign led=led_q;
+	
+	// //module instantiations
+	//  sdram_controller m0
+	//  (
+	// 	//fpga to controller
+	// 	.clk(CLK_OUT), //clk=100MHz
+	// 	.rst_n(0),  
+	// 	.rw(rw), // 1:read , 0:write
+	// 	.rw_en(rw_en), //must be asserted before read/write
+	// 	.f_addr(f_addr_q), //23:11=row  , 10:9=bank  , no need for column address since full page mode will always start from zero and end with 511 words
+	// 	.f2s_data(f2s_data), //fpga-to-sdram data
+	// 	.s2f_data(s2f_data), //sdram to fpga data
+	// 	.s2f_data_valid(s2f_data_valid),  //asserts while  burst-reading(data is available at output UNTIL the next rising edge)
+	// 	.f2s_data_valid(f2s_data_valid), //asserts while burst-writing(data must be available at input BEFORE the next rising edge)
+	// 	.ready(ready), //"1" if sdram is available for nxt read/write operation
+	// 	//controller to sdram
+	// 	.s_clk(sdram_clk),
+	// 	.s_cke(sdram_cke), 
+	// 	.s_cs_n(sdram_csn),
+	// 	.s_ras_n(sdram_rasn ), 
+	// 	.s_cas_n(sdram_casn),
+	// 	.s_we_n(sdram_wen), 
+	// 	.s_addr(sdram_a), 
+	// 	.s_ba(sdram_ba), 
+	// 	.LDQM(sdram_dqm[0]),
+	// 	.HDQM(sdram_dqm[1]),
+	// 	.s_dq(sdram_d) 
+    // );
+
+
+	//  debounce_explicit m1
+	// (
+	// 	.clk(CLK_OUT),
+	// 	.rst_n(rst_n),
+	// 	.sw({!{btn[0]}}),
+	// 	.db_level(),
+	// 	.db_tick(key0_tick)
+    // );
+	 
+	//   debounce_explicit m2
+	// (
+	// 	.clk(CLK_OUT),
+	// 	.rst_n(rst_n),
+	// 	.sw({!{btn[1]}}),
+	// 	.db_level(),
+	// 	.db_tick(key1_tick)
+    // );
+	 
 
 
 
 
+//cypress fx3 master verilog code
 
+reg [2:0] mode; 	
 
+reg  [31:0] data_out;
+reg  [1:0] oe_delay_cnt;	
+reg  [1:0] fifo_address;   
+reg  [1:0] fifo_address_d;   
+reg       slrd_;
+reg       slcs_;       
+reg       slwr_;
+reg      sloe_;
+wire      usb_clk;
+reg[7:0] conter; 		
+wire clk_out_temp;	
+reg rd_oe_delay_cnt; 
+reg first_time;
+reg[15:0] index ;
+reg[15:0] DataCount_i ;
+reg slrd1_d_ ;
+reg slrd2_d_ ;
+wire reset_;
+wire [31:0]data_out_loopback;
+wire [31:0]data_out_partial;
+wire [31:0]data_out_zlp;
+wire [31:0]data_out_stream_in;
 
+reg [31:0]loopback_data_from_fx3;
+reg [31:0]stream_out_data_from_fx3;
+reg flaga_d;
+reg flagb_d;
+reg flagc_d;
+reg flagd_d;
 
+reg [2:0]current_fpga_master_mode_d;
 
-// reg [2:0] mode; 	
-
-// reg  [31:0] data_out;
-// reg  [1:0] oe_delay_cnt;	
-// reg  [1:0] fifo_address;   
-// reg  [1:0] fifo_address_d;   
-// reg       slrd_;
-// reg       slcs_;       
-// reg       slwr_;
-// reg      sloe_;
-// wire      usb_clk;
-// reg[7:0] conter; 		
-// wire clk_out_temp;	
-// reg rd_oe_delay_cnt; 
-// reg first_time;
-// reg[15:0] index ;
-// reg[15:0] DataCount_i ;
-// reg slrd1_d_ ;
-// reg slrd2_d_ ;
-// wire reset_;
-// wire [31:0]data_out_loopback;
-// wire [31:0]data_out_partial;
-// wire [31:0]data_out_zlp;
-// wire [31:0]data_out_stream_in;
-
-// reg [31:0]loopback_data_from_fx3;
-// reg [31:0]stream_out_data_from_fx3;
-// reg flaga_d;
-// reg flagb_d;
-// reg flagc_d;
-// reg flagd_d;
-
-// reg [2:0]current_fpga_master_mode_d;
-
-// reg [2:0]current_fpga_master_mode;
-// reg [2:0]next_fpga_master_mode;
+reg [2:0]current_fpga_master_mode;
+reg [2:0]next_fpga_master_mode;
  
 
 
-// wire lock;
-// reg short_pkt_strob;
+wire lock;
+reg short_pkt_strob;
 
-// reg pktend_;
-
-
-// reg [31:0]fdata_d;
+reg pktend_;
 
 
-// wire slwr_loopback_;
-// wire slwr_streamIN_;
-// wire slwr_zlp_;
-// wire slwr_partial_;
-// wire pktend_partial_;
-// wire pktend_zlp_;
-
-// wire loopback_mode_selected;   
-// wire partial_mode_selected;   
-// wire zlp_mode_selected;       
-// wire stream_in_mode_selected;
-// wire stream_out_mode_selected;
+reg [31:0]fdata_d;
 
 
-// //parameters for transfers mode (fixed value)
-// parameter [2:0] PARTIAL    = 3'd1;   //switch position on the Board 001
-// parameter [2:0] ZLP        = 3'd2;   //switch position on the Board 010
-// parameter [2:0] STREAM_IN  = 3'd3;   //switch position on the Board 011
-// parameter [2:0] STREAM_OUT = 3'd4;   //switch position on the Board 100
-// parameter [2:0] LOOPBACK   = 3'd5;   //switch position on the Board 101
+wire slwr_loopback_;
+wire slwr_streamIN_;
+wire slwr_zlp_;
+wire slwr_partial_;
+wire pktend_partial_;
+wire pktend_zlp_;
+
+wire loopback_mode_selected;   
+wire partial_mode_selected;   
+wire zlp_mode_selected;       
+wire stream_in_mode_selected;
+wire stream_out_mode_selected;
 
 
-// //parameters for fpga master mode state machine
-// parameter [2:0] fpga_master_mode_idle             = 3'd0;
-// parameter [2:0] fpga_master_mode_partial          = 3'd1;
-// parameter [2:0] fpga_master_mode_zlp              = 3'd2;
-// parameter [2:0] fpga_master_mode_stream_in        = 3'd3;
-// parameter [2:0] fpga_master_mode_stream_out       = 3'd4;
-// parameter [2:0] fpga_master_mode_loopback         = 3'd5;
+//parameters for transfers mode (fixed value)
+parameter [2:0] PARTIAL    = 3'd1;   //switch position on the Board 001
+parameter [2:0] ZLP        = 3'd2;   //switch position on the Board 010
+parameter [2:0] STREAM_IN  = 3'd3;   //switch position on the Board 011
+parameter [2:0] STREAM_OUT = 3'd4;   //switch position on the Board 100
+parameter [2:0] LOOPBACK   = 3'd5;   //switch position on the Board 101
 
 
-// //output signal assignment
-// assign SLRD = slrd_;
-// assign SLWR = slwr_d1_;   
-// assign address = fifo_address_d;
-// assign SLOE = sloe_;
-// assign databus = (slwr_d1_) ? 32'dz : data_out_d;	
-// assign PMODE = 2'b11;		
-// assign RESET = 1'b1;	
-// assign SLCS = slcs_;
-// assign PKTEND = pktend_d1_;
+//parameters for fpga master mode state machine
+parameter [2:0] fpga_master_mode_idle             = 3'd0;
+parameter [2:0] fpga_master_mode_partial          = 3'd1;
+parameter [2:0] fpga_master_mode_zlp              = 3'd2;
+parameter [2:0] fpga_master_mode_stream_in        = 3'd3;
+parameter [2:0] fpga_master_mode_stream_out       = 3'd4;
+parameter [2:0] fpga_master_mode_loopback         = 3'd5;
+
+
+//output signal assignment
+assign SLRD = slrd_;
+assign SLWR = slwr_d1_;   
+assign address = fifo_address_d;
+assign SLOE = sloe_;
+assign databus = (slwr_d1_) ? 32'dz : data_out_d;	
+assign PMODE = 2'b11;		
+assign RESET = 1'b1;	
+assign SLCS = slcs_;
+assign PKTEND = pktend_d1_;
 	
-// reg sync_d;	
+reg sync_d;	
 
 
 
-// //assign usb_clk = clk;   //used for TB
+//assign usb_clk = clk;   //used for TB
 
 
 
 
+//instantiation of stream_in mode	
+slaveFIFO2b_streamIN stream_in_inst
+	(
+	 .reset_(reset_),
+         .clk_100(usb_clk),
+         .stream_in_mode_selected(stream_in_mode_selected),
+         .flaga_d(flaga_d),
+         .flagb_d(flagb_d),
+         .data_for_output(cnt),
+         .slwr_streamIN_(slwr_streamIN_),
+         .data_out_stream_in(data_out_stream_in)
+	); 
 
-// //instantiation of stream_in mode	
-// slaveFIFO2b_streamIN stream_in_inst
+// //instantiation of stream_out mode	
+// slaveFIFO2b_streamOUT stream_out_inst
 // 	(
-// 	 .reset_(reset_),
+//  	 .reset_(reset_),
 //          .clk_100(usb_clk),
-//          .stream_in_mode_selected(stream_in_mode_selected),
-//          .flaga_d(flaga_d),
-//          .flagb_d(flagb_d),
-//          .slwr_streamIN_(slwr_streamIN_),
-//          .data_out_stream_in(data_out_stream_in)
-// 	); 
-
-// // //instantiation of stream_out mode	
-// // slaveFIFO2b_streamOUT stream_out_inst
-// // 	(
-// //  	 .reset_(reset_),
-// //          .clk_100(usb_clk),
-// //          .stream_out_mode_selected(stream_out_mode_selected),
-// //          .flagc_d(flagc_d),
-// //          .flagd_d(flagd_d),
-// //          .stream_out_data_from_fx3(stream_out_data_from_fx3),
-// //          .slrd_streamOUT_(slrd_streamOUT_),
-// //          .sloe_streamOUT_(sloe_streamOUT_)
-// // 	);
+//          .stream_out_mode_selected(stream_out_mode_selected),
+//          .flagc_d(flagc_d),
+//          .flagd_d(flagd_d),
+//          .stream_out_data_from_fx3(stream_out_data_from_fx3),
+//          .slrd_streamOUT_(slrd_streamOUT_),
+//          .sloe_streamOUT_(sloe_streamOUT_)
+// 	);
 
 
-// // assign reset2pll = !reset_in_;
-// // assign reset_ = lock;
-// assign reset_ = reset;
+// assign reset2pll = !reset_in_;
+// assign reset_ = lock;
+assign reset_ = reset;
 
 
-// //assign loopback_data_from_fx3 = databus;
-// //flopping the input data
-// always @(posedge usb_clk)begin
+//assign loopback_data_from_fx3 = databus;
+//flopping the input data
+always @(posedge usb_clk)begin
 
 	
-// 		fdata_d = databus;
+		fdata_d = databus;
 	
-// end		
+end		
 
-// //selection of input data
-// always@(*)begin
-// 	if(current_fpga_master_mode == fpga_master_mode_loopback)begin
-// 		loopback_data_from_fx3   = fdata_d;
-// 		stream_out_data_from_fx3 = 32'd0;
-// 	end else if(current_fpga_master_mode == fpga_master_mode_stream_out)begin
-// 		loopback_data_from_fx3   = 32'd0;
-// 		stream_out_data_from_fx3 = fdata_d;
-// 	end else begin
-// 		loopback_data_from_fx3   = 32'd0;
-// 		stream_out_data_from_fx3 = 32'd0;
-// 	end
-// end	
+//selection of input data
+always@(*)begin
+	if(current_fpga_master_mode == fpga_master_mode_loopback)begin
+		loopback_data_from_fx3   = fdata_d;
+		stream_out_data_from_fx3 = 32'd0;
+	end else if(current_fpga_master_mode == fpga_master_mode_stream_out)begin
+		loopback_data_from_fx3   = 32'd0;
+		stream_out_data_from_fx3 = fdata_d;
+	end else begin
+		loopback_data_from_fx3   = 32'd0;
+		stream_out_data_from_fx3 = 32'd0;
+	end
+end	
 
-// //floping the INPUT mode
-// always @(posedge usb_clk)begin
+//floping the INPUT mode
+always @(posedge usb_clk)begin
 
-// 		mode <= mode_p;
+		mode <= mode_p;
 	
-// end
+end
 
-// ///flopping the INPUTs flags
-// always @(posedge usb_clk)begin
+///flopping the INPUTs flags
+always @(posedge usb_clk)begin
 
-// 		flaga_d <= FLAGA;
-// 		flagb_d <= FLAGB;
-// 		flagc_d <= FLAGC;
-// 		flagd_d <= FLAGD;
+		flaga_d <= FLAGA;
+		flagb_d <= FLAGB;
+		flagc_d <= FLAGC;
+		flagd_d <= FLAGD;
 	
-// end
+end
 
 
 
-// //chip selection
-// always@(*)begin
-// 	if(current_fpga_master_mode == fpga_master_mode_idle)begin
-// 		slcs_ = 1'b1;
-// 	end else begin
-// 		slcs_ = 1'b0;
-// 	end	
-// end
+//chip selection
+always@(*)begin
+	if(current_fpga_master_mode == fpga_master_mode_idle)begin
+		slcs_ = 1'b1;
+	end else begin
+		slcs_ = 1'b0;
+	end	
+end
 
-// //selection of slave fifo address
-// always@(*)begin
-// 	if((current_fpga_master_mode == fpga_master_mode_stream_out))begin
-// 		fifo_address = 2'b11;
-// 	end else if((current_fpga_master_mode == fpga_master_mode_stream_in))begin
-// 		fifo_address = 2'b00;
-// 	end else
-// 		fifo_address = 2'b10;
-// end	
+//selection of slave fifo address
+always@(*)begin
+	if((current_fpga_master_mode == fpga_master_mode_stream_out))begin
+		fifo_address = 2'b11;
+	end else if((current_fpga_master_mode == fpga_master_mode_stream_in))begin
+		fifo_address = 2'b00;
+	end else
+		fifo_address = 2'b10;
+end	
 
-// //flopping the output fifo address
-// always @(posedge usb_clk)begin
+//flopping the output fifo address
+always @(posedge usb_clk)begin
 
  
-// 		fifo_address_d <= fifo_address;
+		fifo_address_d <= fifo_address;
 	
-// end
+end
 
-// //SLRD an SLOE signal assignments based on mode
-// always @(*)begin
-// 	case(current_fpga_master_mode)
-// 	fpga_master_mode_loopback:begin
-// 		slrd_ = slrd_loopback_;
-// 		sloe_ = sloe_loopback_;
-// 	end
-// 	fpga_master_mode_stream_out:begin
-// 		slrd_ = slrd_streamOUT_;
-// 		sloe_ = sloe_streamOUT_;
-// 	end
-// 	default:begin
-// 		slrd_ = 1'b1;
-// 		sloe_ = 1'b1;
-// 	end	
-// 	endcase
-// end
+//SLRD an SLOE signal assignments based on mode
+always @(*)begin
+	case(current_fpga_master_mode)
+	fpga_master_mode_loopback:begin
+		slrd_ = slrd_loopback_;
+		sloe_ = sloe_loopback_;
+	end
+	fpga_master_mode_stream_out:begin
+		slrd_ = slrd_streamOUT_;
+		sloe_ = sloe_streamOUT_;
+	end
+	default:begin
+		slrd_ = 1'b1;
+		sloe_ = 1'b1;
+	end	
+	endcase
+end
 
-// //SLWR signal assignment based on mode	
-// always @(*)begin
-// 	case(current_fpga_master_mode)
-// 	fpga_master_mode_partial:begin
-// 		slwr_ = slwr_partial_;
-// 	end
-// 	fpga_master_mode_zlp:begin
-// 		slwr_ = slwr_zlp_;
-// 	end	
-// 	fpga_master_mode_stream_in:begin
-// 		slwr_ = slwr_streamIN_;
-// 	end
-// 	fpga_master_mode_loopback:begin
-// 		slwr_ = slwr_loopback_;
-// 	end
-// 	default:begin
-// 		slwr_ = 1'b1;
-// 	end	
-// 	endcase
-// end
+//SLWR signal assignment based on mode	
+always @(*)begin
+	case(current_fpga_master_mode)
+	fpga_master_mode_partial:begin
+		slwr_ = slwr_partial_;
+	end
+	fpga_master_mode_zlp:begin
+		slwr_ = slwr_zlp_;
+	end	
+	fpga_master_mode_stream_in:begin
+		slwr_ = slwr_streamIN_;
+	end
+	fpga_master_mode_loopback:begin
+		slwr_ = slwr_loopback_;
+	end
+	default:begin
+		slwr_ = 1'b1;
+	end	
+	endcase
+end
 
-// reg slwr_d1_;
-// always @(posedge usb_clk)begin
+reg slwr_d1_;
+always @(posedge usb_clk)begin
 
 	
-// 		slwr_d1_ <= slwr_;
+		slwr_d1_ <= slwr_;
 	
+end
+
+
+
+//PKTEND signal assignment based on mode
+always @(*)begin
+	case(current_fpga_master_mode)
+	default:begin
+		pktend_ = 1'b1;
+	end	
+	endcase
+end	
+
+reg pktend_d1_;
+always @(posedge usb_clk)begin
+
+		pktend_d1_ <= pktend_;
+	
+end
+
+//mode selection
+assign loopback_mode_selected   = (current_fpga_master_mode == fpga_master_mode_loopback);
+assign partial_mode_selected    = (current_fpga_master_mode == fpga_master_mode_partial);
+assign zlp_mode_selected        = (current_fpga_master_mode == fpga_master_mode_zlp);
+assign stream_in_mode_selected  = (current_fpga_master_mode == fpga_master_mode_stream_in);
+assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_stream_out);
+
+reg fin_cur;
+reg fin_next;
+//Mode select state machine
+always @(posedge usb_clk  or negedge rst)begin
+    if(rst == 0) begin
+
+        current_fpga_master_mode <= fpga_master_mode_idle;
+        fin_cur <= 0;
+    end
+    else begin
+		current_fpga_master_mode <= next_fpga_master_mode;
+        fin_cur <= fin_next;
+    end
+
+end
+
+
+
+// reg  [15:0] buffers [4:0];
+// reg [3:0]countStore;
+// reg [12:0] stream_out_count;
+// reg [3:0]countRead ;
+// reg [12:0] stream_in_count;
+
+// // change of state logic
+// always @(*) begin
+//     case(current_fpga_master_mode)
+//         fpga_master_mode_idle: begin
+//             countStore = 0;
+//             countRead = 0;
+//             stream_out_count = 0;
+//             stream_in_count = 0;
+//             next_fpga_master_mode = fpga_master_mode_stream_out; // read data first
+//         end
+
+//         fpga_master_mode_stream_out: begin
+//             if(stream_out_count == 4096-1) begin
+//                 // already have data to read
+//                 next_fpga_master_mode = fpga_master_mode_stream_in; // stream it out
+//             end
+//             else begin
+//                 next_fpga_master_mode = fpga_master_mode_stream_out;
+//             end
+//         end
+
+//         fpga_master_mode_stream_in : begin 
+//             if(stream_in_count == 4096-1) begin
+//                 next_fpga_master_mode = fpga_master_mode_idle;
+//             end
+//             else begin
+//                 next_fpga_master_mode = fpga_master_mode_stream_in;
+//             end
+//         end
+//     endcase
+
 // end
 
 
+always @(*) begin
+    //fin_next = fin_cur;
+	case(current_fpga_master_mode)
+	fpga_master_mode_idle:begin
+        if(fin_cur == 1 )begin
+            next_fpga_master_mode = fpga_master_mode_idle;
+            fin_next = 1;
+        end
+        else begin
+            next_fpga_master_mode = fpga_master_mode_stream_in;
+            fin_next = 0;
+        end
+	end
+	fpga_master_mode_stream_in:begin
+        if(cnt >32'h1000 )begin
+            fin_next = 1;
+            next_fpga_master_mode = fpga_master_mode_idle;
+        end
+        else begin
+            next_fpga_master_mode = fpga_master_mode_stream_in;
+            fin_next = 0;
+        end
+	end
+	default:begin
+		next_fpga_master_mode = fpga_master_mode_idle;
+        fin_next = 0;
+	end	
+	endcase
+    // case (current_fpga_master_mode)
+    //     fpga_master_mode_idle: begin
+    //         if(cnt == 0 )begin
+    //             next_fpga_master_mode = fpga_master_mode_stream_in;
+    //         end
+    //         else begin
+    //             next_fpga_master_mode = fpga_master_mode_idle;
+    //         end
 
-// //PKTEND signal assignment based on mode
-// always @(*)begin
-// 	case(current_fpga_master_mode)
-// 	default:begin
-// 		pktend_ = 1'b1;
-// 	end	
-// 	endcase
-// end	
+    //     end
+    //     fpga_master_mode_stream_in: begin
 
-// reg pktend_d1_;
-// always @(posedge usb_clk)begin
+    //         if(cnt ==4096) begin
+    //             next_fpga_master_mode = fpga_master_mode_idle;
+    //         end
+    //         else begin
+    //             next_fpga_master_mode = fpga_master_mode_stream_in;
+    //         end 
 
-// 		pktend_d1_ <= pktend_;
-	
-// end
+    //     end
+    //     default: begin 
+    //         next_fpga_master_mode = fpga_master_mode_idle;
+    //         cnt = 0;
+    //     end
 
-// //mode selection
-// assign loopback_mode_selected   = (current_fpga_master_mode == fpga_master_mode_loopback);
-// assign partial_mode_selected    = (current_fpga_master_mode == fpga_master_mode_partial);
-// assign zlp_mode_selected        = (current_fpga_master_mode == fpga_master_mode_zlp);
-// assign stream_in_mode_selected  = (current_fpga_master_mode == fpga_master_mode_stream_in);
-// assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_stream_out);
+    // endcase
+    // if(cnt > 4096)begin
+    //     next_fpga_master_mode = fpga_master_mode_idle;
+    // end
+    // else begin
+    //     // if(alreadyWrite == 0)begin
+    //         next_fpga_master_mode = fpga_master_mode_stream_in;
+    //     // end
+    //     // else begin
+    //     // next_fpga_master_mode = fpga_master_mode_idle;
+    //     // end
+
+    // end
+end
+
+reg     [31: 0]                 cnt  ; 
+assign  add_cnt     =       slwr_streamIN_ == 1'b0;       
+assign  end_cnt     =       add_cnt && cnt == 4096-1;  
+
+//data generator counter for Partial, ZLP, StreamIN modes
+always @(posedge usb_clk)begin
+	// if(!reset_)begin 
+	// 	data_gen_stream_in <= 32'd0;
+	// end else 
+	// if((slwr_streamIN_ == 1'b0) & (stream_in_mode_selected)) begin
+    //     // if(end_cnt) begin
+    //     //     cnt <= 0;
+	// 	// end
+    //     // else begin
+    //         cnt <= cnt + 1;
+	// 	// end
+	// end else if (!stream_in_mode_selected) begin
+	// 	cnt<= 0;
+	// end	
+    if(current_fpga_master_mode == fpga_master_mode_stream_in)begin
+        cnt <= cnt+1;
+    end
+    else begin
+        cnt <= 0;
+        
+    end
+    // cnt <= cnt+1;
+end
 
 
-// //Mode select state machine
-// always @(posedge usb_clk)begin
 
-// 		current_fpga_master_mode <= next_fpga_master_mode;
-	
-// end
 // assign next_fpga_master_mode = fpga_master_mode_stream_in;
-// // //Mode select state machine combo   
-// // always @(*)   
-// // begin
-// //     //TODO:
-// //     next_fpga_master_mode = fpga_master_mode_stream_in;
-// // 	// next_fpga_master_mode = current_fpga_master_mode;
-// // 	// case (current_fpga_master_mode)
-// // 	// fpga_master_mode_idle:begin
-// // 	// 	case(mode)
-// // 	// 	LOOPBACK:begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_loopback;
-// // 	// 	end
-// // 	// 	PARTIAL:begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_partial;
-// // 	// 	end
-// // 	// 	ZLP:begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_zlp;
-// // 	// 	end
-// // 	// 	STREAM_IN:begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_stream_in;
-// // 	// 	end
-// // 	// 	STREAM_OUT:begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_stream_out;
-// // 	// 	end
-// // 	// 	default:begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_idle;
-// //     //             end
-// // 	// 	endcase
-// // 	// end	
-// // 	// fpga_master_mode_loopback:begin
-// // 	// 	if(mode == LOOPBACK)begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_loopback;
-// // 	// 	end else begin
-// // 	// 	        next_fpga_master_mode = fpga_master_mode_idle;
-// // 	// 	end	
-// // 	// end
-// // 	// fpga_master_mode_partial:begin
-// // 	// 	if(mode == PARTIAL)begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_partial;
-// // 	// 	end else begin 
-// // 	// 		next_fpga_master_mode = fpga_master_mode_idle;
-// // 	// 	end
-// // 	// end
-// // 	// fpga_master_mode_zlp:begin
-// // 	// 	if(mode == ZLP)begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_zlp;
-// // 	// 	end else begin 
-// // 	// 		next_fpga_master_mode = fpga_master_mode_idle;
-// // 	// 	end
-// // 	// end	
-// // 	// fpga_master_mode_stream_in:begin
-// // 	// 	if(mode == STREAM_IN)begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_stream_in;
-// // 	// 	end else begin 
-// // 	// 		next_fpga_master_mode = fpga_master_mode_idle;
-// // 	// 	end
-// // 	// end	
-// // 	// fpga_master_mode_stream_out:begin
-// // 	// 	if(mode == STREAM_OUT)begin
-// // 	// 		next_fpga_master_mode = fpga_master_mode_stream_out;
-// // 	// 	end else begin 
-// // 	// 		next_fpga_master_mode = fpga_master_mode_idle;
-// // 	// 	end
-// // 	// end	
-// // 	// default:begin
-// // 	// 	next_fpga_master_mode = fpga_master_mode_idle;
-// // 	// end
-// // 	// endcase
+// //Mode select state machine combo   
+// always @(*)   
+// begin
+//     //TODO:
+//     next_fpga_master_mode = fpga_master_mode_stream_in;
+// 	// next_fpga_master_mode = current_fpga_master_mode;
+// 	// case (current_fpga_master_mode)
+// 	// fpga_master_mode_idle:begin
+// 	// 	case(mode)
+// 	// 	LOOPBACK:begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_loopback;
+// 	// 	end
+// 	// 	PARTIAL:begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_partial;
+// 	// 	end
+// 	// 	ZLP:begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_zlp;
+// 	// 	end
+// 	// 	STREAM_IN:begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_stream_in;
+// 	// 	end
+// 	// 	STREAM_OUT:begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_stream_out;
+// 	// 	end
+// 	// 	default:begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_idle;
+//     //             end
+// 	// 	endcase
+// 	// end	
+// 	// fpga_master_mode_loopback:begin
+// 	// 	if(mode == LOOPBACK)begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_loopback;
+// 	// 	end else begin
+// 	// 	        next_fpga_master_mode = fpga_master_mode_idle;
+// 	// 	end	
+// 	// end
+// 	// fpga_master_mode_partial:begin
+// 	// 	if(mode == PARTIAL)begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_partial;
+// 	// 	end else begin 
+// 	// 		next_fpga_master_mode = fpga_master_mode_idle;
+// 	// 	end
+// 	// end
+// 	// fpga_master_mode_zlp:begin
+// 	// 	if(mode == ZLP)begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_zlp;
+// 	// 	end else begin 
+// 	// 		next_fpga_master_mode = fpga_master_mode_idle;
+// 	// 	end
+// 	// end	
+// 	// fpga_master_mode_stream_in:begin
+// 	// 	if(mode == STREAM_IN)begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_stream_in;
+// 	// 	end else begin 
+// 	// 		next_fpga_master_mode = fpga_master_mode_idle;
+// 	// 	end
+// 	// end	
+// 	// fpga_master_mode_stream_out:begin
+// 	// 	if(mode == STREAM_OUT)begin
+// 	// 		next_fpga_master_mode = fpga_master_mode_stream_out;
+// 	// 	end else begin 
+// 	// 		next_fpga_master_mode = fpga_master_mode_idle;
+// 	// 	end
+// 	// end	
+// 	// default:begin
+// 	// 	next_fpga_master_mode = fpga_master_mode_idle;
+// 	// end
+// 	// endcase
 
-// // end
-
-
-
-// //selection of data_out based on current mode
-// always @(*)begin
-// 	case(current_fpga_master_mode)
-// 	fpga_master_mode_partial:begin
-// 		data_out = data_out_partial;
-// 	end
-// 	fpga_master_mode_zlp:begin
-// 		data_out = data_out_zlp;
-// 	end	
-// 	fpga_master_mode_stream_in:begin
-// 		data_out = data_out_stream_in;
-// 	end
-// 	fpga_master_mode_loopback:begin
-// 		data_out = data_out_loopback;
-// 	end
-// 	default:begin
-// 		data_out = 32'd0;
-// 	end	
-// 	endcase
-// end	
-
-
-// reg [31:0]data_out_d;
-// always @(posedge usb_clk)begin
-// 		data_out_d <= data_out;
 // end
+
+
+
+//selection of data_out based on current mode
+always @(*)begin
+	case(current_fpga_master_mode)
+	fpga_master_mode_partial:begin
+		data_out = data_out_partial;
+	end
+	fpga_master_mode_zlp:begin
+		data_out = data_out_zlp;
+	end	
+	fpga_master_mode_stream_in:begin
+		data_out = data_out_stream_in;
+	end
+	fpga_master_mode_loopback:begin
+		data_out = data_out_loopback;
+	end
+	default:begin
+		data_out = 32'd0;
+	end	
+	endcase
+end	
+
+
+reg [31:0]data_out_d;
+always @(posedge usb_clk)begin
+		data_out_d <= data_out;
+end
 
 
 

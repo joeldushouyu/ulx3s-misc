@@ -105,6 +105,9 @@ always @(*)begin
 			next_stream_out_state = stream_out_read_oe_delay;
 		end
 	end
+	default: begin
+		next_stream_out_state = stream_out_idle;// the default case
+	end
 	endcase
 end
 

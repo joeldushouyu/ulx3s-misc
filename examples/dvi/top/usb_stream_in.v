@@ -3,7 +3,7 @@
 // almost_full
 // full
 module usb_stream_in(input clk,
-                     rst_n,                 // clk max at 100 MHZ
+                     input rst_n,                 // clk max at 100 MHZ
                      input [2:0]master_mode,
                      input [31:0] data_out,
                      output reg PKTEND,
@@ -20,7 +20,7 @@ module usb_stream_in(input clk,
                      );
     
     
-    parameter write_watermark = 4;
+    //parameter write_watermark = 4;
     //parameter delay_propagation =1'b1; //0 or 1, see end of page 38
     parameter master_mode_loopback = 3'b000;
     parameter master_mode_stream_out = 3'b001;
@@ -30,11 +30,11 @@ module usb_stream_in(input clk,
     parameter master_mode_idle = 3'b101;
     
 
-    // $display("Water mark is %h", write_watermark);
-    // the number of actual available write  32 bit data still can write after FLAGB->0
-    // equation from from Section 9.3 (1)
-    localparam write_delay = write_watermark > 4 ? write_watermark   - 4  : 0;
-    reg [3:0] delayCounter;
+    // // $display("Water mark is %h", write_watermark);
+    // // the number of actual available write  32 bit data still can write after FLAGB->0
+    // // equation from from Section 9.3 (1)
+    // localparam write_delay = write_watermark > 4 ? write_watermark   - 4  : 0;
+    // reg [3:0] delayCounter;
     //reg delayCounterChangeState; // when delay progation, dely change state from 
         // stream_in_write_wr to idle by 1 clock
     
@@ -54,22 +54,23 @@ module usb_stream_in(input clk,
     
     always @(posedge clk )begin
         
-        // if (rst_n == 0 || master_mode != master_mode_stream_in)begin
+        // if (~rst_n )begin
         //     // reset happens
         //     //SLWR          <= 1'b1;
-        //     next_state    <= stream_in_idle;
         //     current_state <= stream_in_idle;
         //     //$strobe("Current state is %2b ", current_stream_in_mode);
         //     end 
-        // else 
-        // begin
+        // // else if(master_mode != master_mode_stream_in)begin
+        //     current_state <= stream_in_idle;
+        // end
+        // else begin
             // normal, update variable if needed
             current_state <= next_state;
 
-            // sequential logic
-            if(delayCounter >0  ) begin
-                delayCounter <= delayCounter-1;
-            end 
+            // // sequential logic
+            // if(delayCounter >0  ) begin
+            //     delayCounter <= delayCounter-1;
+            // end 
         // end
 
     end
@@ -79,54 +80,47 @@ module usb_stream_in(input clk,
     // expose current mode for testing and calling
     assign current_stream_in_mode = current_state;
     always @(*) begin
-        if (current_state == stream_in_idle) begin
-            PKTEND =1;
-            SLOE = 1;
-            SLRD = 1;
-            SLCS = 0;
-            SLWR = 1;
-            A = 2'b00;
-        end else if(current_state == stream_in_wait_flagb) begin
-            // do nothing, wait for flagB turn 1
-        end
-        else begin
-            // // lets write the data
-            // for(integer i = 0; i < 32; i = i+1)begin
-            //     DQ[i] = data_out[i];
-            // end
 
-            if(current_state == stream_in_write) begin
-                PKTEND = 1;
-                SLOE = 1;
-                SLRD = 1;
-                SLCS = 0;
-                SLWR = 0;
-                A = 2'b00;
-            end 
-            else if (current_state == stream_in_write_wr_delay && delayCounter > 0) begin
-                PKTEND = 1;
-                SLOE = 1;
-                SLRD = 1;
-                SLCS = 0;
-                SLWR = 0;
+        case(current_state)
+            stream_in_idle:begin
+                PKTEND =1'b1;
+                SLOE = 1'b1;
+                SLRD = 1'b1;
+                SLCS = 1'b0;
+                SLWR = 1'b1;
                 A = 2'b00;
             end
-            else begin
 
-                PKTEND = 1;
-                SLOE = 1;
-                SLRD = 1;
-                SLCS = 0;
-                SLWR = 1;
+            stream_in_wait_flagb: begin
+                // do nothing
+            end
+
+            stream_in_write: begin
+                PKTEND =1'b1;
+                SLOE = 1'b1;
+                SLRD = 1'b1;
+                SLCS = 1'b0;
+                SLWR = 1'b0;
                 A = 2'b00;
             end
-        end
+
+            stream_in_write_wr_delay: begin
+                PKTEND =1'b1;
+                SLOE = 1'b1;
+                SLRD = 1'b1;
+                SLCS = 1'b0;
+                SLWR = 1'b1;
+                A = 2'b00;
+            end
+
+        endcase
 
     end
     
     
     // now, the change state things happens
     always @(*)begin
+        next_state = current_state;
         case(current_state)
             stream_in_idle: begin
 
@@ -140,38 +134,11 @@ module usb_stream_in(input clk,
                     next_state = stream_in_write;
                 end
             end
+            /// since the flag is set to 4, leave no room for delay
             stream_in_write: begin
-                if(FLAGB == 0 ) begin
-
-                    //TODO: the delay counter
-                    // According to the suggestion of manual on page 38
-                    //"Considering a one-cycle progagation delay through the FPGA and to the interface" 
-                    delayCounter =  write_delay  > 0 ?   write_delay : 0;
-                    //$display("delay is %d", delayCounter);
-                    if(delayCounter == 0)begin
-                        // same moment, turn off write
-                        SLWR =1;
-                        next_state = stream_in_idle;
-                    end
-                    else begin
-                        next_state = stream_in_write_wr_delay;
-                  
-                    end
-                    
+                if(FLAGB == 0)begin
+                    next_state = stream_in_idle;
                 end
-            end
-            stream_in_write_wr_delay:begin
-                //$strobe("delay is %d", delayCounter);
-                if(delayCounter  == 0) begin
-                        // means no more write, the write buffer is already full
-                        next_state = stream_in_idle;
-  
-
-                end
-                else begin
-                    next_state = stream_in_write_wr_delay;
-                end
-
             end
             default: begin
                 next_state = stream_in_idle;

@@ -4,6 +4,7 @@ module slaveFIFO2b_streamIN(
 	input  stream_in_mode_selected,
 	input  flaga_d,
 	input  flagb_d,
+	input [31:0] data_for_output,
 	output reg slwr_streamIN_,
 	output [31:0] data_out_stream_in
 );
@@ -63,29 +64,29 @@ always @(*)begin
 	end
 	endcase
 end
-//for coungint
-reg     [31: 0]                 cnt  ; 
-assign  add_cnt     =       slwr_streamIN_ == 1'b0;       
-assign  end_cnt     =       add_cnt && cnt == 4096-1;  
+// //for coungint
+// reg     [31: 0]                 cnt  ; 
+// assign  add_cnt     =       slwr_streamIN_ == 1'b0;       
+// assign  end_cnt     =       add_cnt && cnt == 4096-1;  
 
-//data generator counter for Partial, ZLP, StreamIN modes
-always @(posedge clk_100)begin
-	// if(!reset_)begin 
-	// 	data_gen_stream_in <= 32'd0;
-	// end else 
-	if((slwr_streamIN_ == 1'b0) & (stream_in_mode_selected)) begin
-        if(end_cnt) begin
-            cnt <= 0;
-		end
-        else begin
-            cnt <= cnt + 1;
-		end
-	end else if (!stream_in_mode_selected) begin
-		data_gen_stream_in <= 32'd0;
-		cnt<= 32'b0;
-	end	
-end
+// //data generator counter for Partial, ZLP, StreamIN modes
+// always @(posedge clk_100)begin
+// 	// if(!reset_)begin 
+// 	// 	data_gen_stream_in <= 32'd0;
+// 	// end else 
+// 	if((slwr_streamIN_ == 1'b0) & (stream_in_mode_selected)) begin
+//         if(end_cnt) begin
+//             cnt <= 0;
+// 		end
+//         else begin
+//             cnt <= cnt + 1;
+// 		end
+// 	end else if (!stream_in_mode_selected) begin
+// 		data_gen_stream_in <= 32'd0;
+// 		cnt<= 0;
+// 	end	
+// end
 
-assign data_out_stream_in = cnt;
+assign data_out_stream_in = data_for_output;
 
 endmodule

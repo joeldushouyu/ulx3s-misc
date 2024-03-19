@@ -26,6 +26,7 @@ VERILOG_FILES = \
   $(TOP_MODULE_FILE) \
   hdl/vga.v \
   ../ecp5pll/hdl/sv/ecp5pll.sv \
+  ../btn_debounce/hdl/btn_debounce.v \
   top/usb_stream_in.v\
   top/usb_stream_out.v\
   top/usb_stream_in_example.v\
@@ -33,6 +34,8 @@ VERILOG_FILES = \
   top/usb_fifo_example.v\
   top/slaveFIFO2b_streamIN.v\
   top/slaveFIFO2b_streamOUT.v\
+  top/debounce_explicit.v\
+  top/sdram_controller.v\
 
 
 # *.vhd those files will be converted to *.v files with vhdl2vl (warning overwriting/deleting)
