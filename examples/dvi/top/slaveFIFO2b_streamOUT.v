@@ -6,7 +6,7 @@ module slaveFIFO2b_streamOUT(
 	input  flagd_d,
 	input  [31:0]stream_out_data_from_fx3,
 	output slrd_streamOUT_,
-	output sloe_streamOUT_
+	output sloe_streamOUT_,
 );
 
 
@@ -29,7 +29,7 @@ assign slrd_streamOUT_ = ((current_stream_out_state == stream_out_read) | (curre
 assign sloe_streamOUT_ = ((current_stream_out_state == stream_out_read) | (current_stream_out_state == stream_out_read_rd_and_oe_delay) | (current_stream_out_state == stream_out_read_oe_delay)) ? 1'b0 : 1'b1;
 
 //counter to delay the read and output enable signal
-always @(posedge clk_100, negedge reset_)begin
+always @(posedge clk_100  or negedge reset_)begin
 	if(!reset_)begin 
 		rd_oe_delay_cnt <= 1'b0;
 	end else if(current_stream_out_state == stream_out_read) begin
@@ -42,7 +42,7 @@ always @(posedge clk_100, negedge reset_)begin
 end
 
 //Counter to delay the OUTPUT Enable(oe) signal
-always @(posedge clk_100, negedge reset_)begin
+always @(posedge clk_100 or  negedge reset_)begin
 	if(!reset_)begin 
 		oe_delay_cnt <= 2'd0;
 	end else if(current_stream_out_state == stream_out_read_rd_and_oe_delay) begin
@@ -55,7 +55,7 @@ always @(posedge clk_100, negedge reset_)begin
 end
 
 //streamOUT mode state machine
-always @(posedge clk_100, negedge reset_)begin
+always @(posedge clk_100 or  negedge reset_)begin
 	if(!reset_)begin 
 		current_stream_out_state <= stream_out_idle;
 	end else begin

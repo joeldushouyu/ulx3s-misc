@@ -63,20 +63,20 @@ module top_usbtest #(parameter x = 640,     // pixels
     assign wifi_gpio0 = btn[0];
     // the reset button
 
-    // wire [6:0] btnd, btnr, btnf;
-    // btn_debounce
-    // #(
-    //     .bits(16),
-    //     .btns(7)
-    // )
-    // btn_debounce_i
-    // (
-    //     .clk(clk_pixel),
-    //     .btn(btn),
-    //     .debounce(btnd),
-    //     .rising(btnr),
-    //     .falling(btnf)
-    // );
+    wire [6:0] btnd, btnr, btnf;
+    btn_debounce
+    #(
+        .bits(16),
+        .btns(7)
+    )
+    btn_debounce_i
+    (
+        .clk(usb_clk),
+        .btn(btn),
+        .debounce(btnd),
+        .rising(btnr),
+        .falling(btnf)
+    );
 
 
     // // // press BTN0 to exit this bitstream
@@ -865,7 +865,7 @@ reg sync_d;
 //instantiation of stream_in mode	
 slaveFIFO2b_streamIN stream_in_inst
 	(
-	 .reset_(reset_),
+	     .reset_(rst),
          .clk_100(usb_clk),
          .stream_in_mode_selected(stream_in_mode_selected),
          .flaga_d(flaga_d),
@@ -875,23 +875,23 @@ slaveFIFO2b_streamIN stream_in_inst
          .data_out_stream_in(data_out_stream_in)
 	); 
 
-// //instantiation of stream_out mode	
-// slaveFIFO2b_streamOUT stream_out_inst
-// 	(
-//  	 .reset_(reset_),
-//          .clk_100(usb_clk),
-//          .stream_out_mode_selected(stream_out_mode_selected),
-//          .flagc_d(flagc_d),
-//          .flagd_d(flagd_d),
-//          .stream_out_data_from_fx3(stream_out_data_from_fx3),
-//          .slrd_streamOUT_(slrd_streamOUT_),
-//          .sloe_streamOUT_(sloe_streamOUT_)
-// 	);
+//instantiation of stream_out mode	
+slaveFIFO2b_streamOUT stream_out_inst
+	(
+ 	     .reset_(rst),
+         .clk_100(usb_clk),
+         .stream_out_mode_selected(stream_out_mode_selected),
+         .flagc_d(flagc_d),
+         .flagd_d(flagd_d),
+         .stream_out_data_from_fx3(stream_out_data_from_fx3),
+         .slrd_streamOUT_(slrd_streamOUT_),
+         .sloe_streamOUT_(sloe_streamOUT_)
+	);
 
 
 // assign reset2pll = !reset_in_;
 // assign reset_ = lock;
-assign reset_ = reset;
+assign reset_ = rst;
 
 
 //assign loopback_data_from_fx3 = databus;

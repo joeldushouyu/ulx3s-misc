@@ -21,7 +21,7 @@
         }
       },
       "cells": {
-        "$specify$5304": {
+        "$specify$5445": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -605,7 +605,7 @@
         }
       },
       "cells": {
-        "$specify$1770": {
+        "$specify$1810": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -636,7 +636,7 @@
             "SRC": [ 2 ]
           }
         },
-        "$specify$1771": {
+        "$specify$1811": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -667,7 +667,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$1772": {
+        "$specify$1812": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -698,7 +698,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$1773": {
+        "$specify$1813": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -729,7 +729,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$1774": {
+        "$specify$1814": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -844,7 +844,7 @@
         }
       },
       "cells": {
-        "$specify$1775": {
+        "$specify$1815": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -875,7 +875,7 @@
             "SRC": [ 2 ]
           }
         },
-        "$specify$1776": {
+        "$specify$1816": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -906,7 +906,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$1777": {
+        "$specify$1817": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -937,7 +937,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$1778": {
+        "$specify$1818": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -968,7 +968,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$1779": {
+        "$specify$1819": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -999,7 +999,7 @@
             "SRC": [ 6 ]
           }
         },
-        "$specify$1780": {
+        "$specify$1820": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1125,7 +1125,7 @@
         }
       },
       "cells": {
-        "$specify$1781": {
+        "$specify$1821": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1156,7 +1156,7 @@
             "SRC": [ 2 ]
           }
         },
-        "$specify$1782": {
+        "$specify$1822": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1187,7 +1187,7 @@
             "SRC": [ 3 ]
           }
         },
-        "$specify$1783": {
+        "$specify$1823": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1218,7 +1218,7 @@
             "SRC": [ 4 ]
           }
         },
-        "$specify$1784": {
+        "$specify$1824": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1249,7 +1249,7 @@
             "SRC": [ 5 ]
           }
         },
-        "$specify$1785": {
+        "$specify$1825": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1280,7 +1280,7 @@
             "SRC": [ 6 ]
           }
         },
-        "$specify$1786": {
+        "$specify$1826": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -1311,7 +1311,7 @@
             "SRC": [ 7 ]
           }
         },
-        "$specify$1787": {
+        "$specify$1827": {
           "hide_name": 1,
           "type": "$specify2",
           "parameters": {
@@ -21798,7 +21798,7 @@
         }
       },
       "cells": {
-        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:138$1693": {
+        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:138$1726": {
           "hide_name": 1,
           "type": "$print",
           "parameters": {
@@ -21823,7 +21823,7 @@
             "TRG": [ ]
           }
         },
-        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:139$1694": {
+        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:139$1727": {
           "hide_name": 1,
           "type": "$print",
           "parameters": {
@@ -21848,7 +21848,7 @@
             "TRG": [ ]
           }
         },
-        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:140$1695": {
+        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:140$1728": {
           "hide_name": 1,
           "type": "$print",
           "parameters": {
@@ -21873,7 +21873,7 @@
             "TRG": [ ]
           }
         },
-        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:196$1697": {
+        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:196$1730": {
           "hide_name": 1,
           "type": "$print",
           "parameters": {
@@ -21898,7 +21898,7 @@
             "TRG": [ ]
           }
         },
-        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:197$1698": {
+        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:197$1731": {
           "hide_name": 1,
           "type": "$print",
           "parameters": {
@@ -21923,7 +21923,7 @@
             "TRG": [ ]
           }
         },
-        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:198$1699": {
+        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:198$1732": {
           "hide_name": 1,
           "type": "$print",
           "parameters": {
@@ -21948,7 +21948,7 @@
             "TRG": [ ]
           }
         },
-        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:199$1700": {
+        "$flatten\\ecp5pll_inst.$display$../ecp5pll/hdl/sv/ecp5pll.sv:199$1733": {
           "hide_name": 1,
           "type": "$print",
           "parameters": {
@@ -24854,7 +24854,7 @@
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000001000110010"
+            "INIT": "0000001100100010"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -24879,7 +24879,7 @@
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000000000110000"
+            "INIT": "0000001100000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -24904,7 +24904,7 @@
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1111010000000000"
+            "INIT": "1100010011000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -24976,7 +24976,7 @@
             "CLK": [ 38 ],
             "DI": [ 30 ],
             "LSR": [ "0" ],
-            "Q": [ 241 ]
+            "Q": [ 240 ]
           }
         },
         "g_i_TRELLIS_FF_Q": {
@@ -25614,12 +25614,12 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 242 ],
-            "D": [ 241 ],
+            "C": [ 240 ],
+            "D": [ 242 ],
             "Z": [ 255 ]
           }
         },
-        "slwr_streamIN__LUT4_Z_C_LUT4_Z": {
+        "slwr_streamIN__LUT4_Z_D_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -25640,7 +25640,7 @@
             "A": [ "0" ],
             "B": [ "0" ],
             "C": [ 239 ],
-            "D": [ 240 ],
+            "D": [ 241 ],
             "Z": [ 242 ]
           }
         },
@@ -25669,7 +25669,7 @@
             "CLK": [ 38 ],
             "DI": [ 238 ],
             "LSR": [ 258 ],
-            "Q": [ 240 ]
+            "Q": [ 241 ]
           }
         },
         "stream_in_inst.current_stream_in_state_TRELLIS_FF_Q_1": {
@@ -25853,11 +25853,11 @@
             "Z": [ 269 ]
           }
         },
-        "vga2dvid_instance.latched_blue_LUT4_C": {
+        "vga2dvid_instance.latched_blue_LUT4_B_4": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1100110011110000"
+            "INIT": "1111000011001100"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -25872,17 +25872,17 @@
           },
           "connections": {
             "A": [ "0" ],
-            "B": [ 270 ],
-            "C": [ 265 ],
+            "B": [ 265 ],
+            "C": [ 270 ],
             "D": [ 261 ],
             "Z": [ 271 ]
           }
         },
-        "vga2dvid_instance.latched_blue_LUT4_C_1": {
+        "vga2dvid_instance.latched_blue_LUT4_B_5": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1100110011110000"
+            "INIT": "1111000011001100"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -25897,13 +25897,13 @@
           },
           "connections": {
             "A": [ "0" ],
-            "B": [ 272 ],
-            "C": [ 259 ],
+            "B": [ 259 ],
+            "C": [ 272 ],
             "D": [ 261 ],
             "Z": [ 273 ]
           }
         },
-        "vga2dvid_instance.latched_blue_LUT4_C_2": {
+        "vga2dvid_instance.latched_blue_LUT4_C": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -25928,7 +25928,7 @@
             "Z": [ 275 ]
           }
         },
-        "vga2dvid_instance.latched_blue_LUT4_C_3": {
+        "vga2dvid_instance.latched_blue_LUT4_C_1": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -26031,7 +26031,7 @@
             "CLK": [ 166 ],
             "DI": [ 282 ],
             "LSR": [ "0" ],
-            "Q": [ 259 ]
+            "Q": [ 265 ]
           }
         },
         "vga2dvid_instance.latched_blue_TRELLIS_FF_Q_3": {
@@ -26058,7 +26058,7 @@
             "CLK": [ 166 ],
             "DI": [ 283 ],
             "LSR": [ "0" ],
-            "Q": [ 265 ]
+            "Q": [ 259 ]
           }
         },
         "vga2dvid_instance.latched_green_LUT4_B": {
@@ -26161,11 +26161,11 @@
             "Z": [ 293 ]
           }
         },
-        "vga2dvid_instance.latched_green_LUT4_C": {
+        "vga2dvid_instance.latched_green_LUT4_B_4": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1100110011110000"
+            "INIT": "1111000011001100"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -26180,17 +26180,17 @@
           },
           "connections": {
             "A": [ "0" ],
-            "B": [ 294 ],
-            "C": [ 289 ],
+            "B": [ 289 ],
+            "C": [ 294 ],
             "D": [ 261 ],
             "Z": [ 295 ]
           }
         },
-        "vga2dvid_instance.latched_green_LUT4_C_1": {
+        "vga2dvid_instance.latched_green_LUT4_B_5": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1100110011110000"
+            "INIT": "1111000011001100"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -26205,13 +26205,13 @@
           },
           "connections": {
             "A": [ "0" ],
-            "B": [ 296 ],
-            "C": [ 284 ],
+            "B": [ 284 ],
+            "C": [ 296 ],
             "D": [ 261 ],
             "Z": [ 297 ]
           }
         },
-        "vga2dvid_instance.latched_green_LUT4_C_2": {
+        "vga2dvid_instance.latched_green_LUT4_C": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -26236,7 +26236,7 @@
             "Z": [ 299 ]
           }
         },
-        "vga2dvid_instance.latched_green_LUT4_C_3": {
+        "vga2dvid_instance.latched_green_LUT4_C_1": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -28159,7 +28159,7 @@
           "connections": {
             "ALUT": [ 351 ],
             "BLUT": [ 352 ],
-            "C0": [ 347 ],
+            "C0": [ 341 ],
             "Z": [ 350 ]
           }
         },
@@ -28167,7 +28167,7 @@
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1111111100000000"
+            "INIT": "1111111111111111"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -28184,7 +28184,7 @@
             "A": [ "0" ],
             "B": [ "0" ],
             "C": [ "0" ],
-            "D": [ 341 ],
+            "D": [ "0" ],
             "Z": [ 351 ]
           }
         },
@@ -28192,7 +28192,7 @@
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1111111100000001"
+            "INIT": "0000000000000001"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -28209,7 +28209,7 @@
             "A": [ 342 ],
             "B": [ 344 ],
             "C": [ 346 ],
-            "D": [ 341 ],
+            "D": [ 347 ],
             "Z": [ 352 ]
           }
         },
@@ -28714,7 +28714,7 @@
           "hide_name": 0,
           "type": "TRELLIS_FF",
           "parameters": {
-            "CEMUX": "CE",
+            "CEMUX": "1 ",
             "CLKMUX": "CLK",
             "GSR": "DISABLED",
             "LSRMUX": "LSR",
@@ -28723,24 +28723,50 @@
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:112.3-152.6|hdl/vga2dvid.v:168.16-173.28|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+            "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:112.3-152.6|hdl/vga2dvid.v:168.16-173.28|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
           },
           "port_directions": {
-            "CE": "input",
             "CLK": "input",
             "DI": "input",
             "LSR": "input",
             "Q": "output"
           },
           "connections": {
-            "CE": [ 368 ],
             "CLK": [ 166 ],
-            "DI": [ 369 ],
+            "DI": [ 368 ],
             "LSR": [ 341 ],
-            "Q": [ 370 ]
+            "Q": [ 369 ]
           }
         },
         "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_1": {
+          "hide_name": 0,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "1 ",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:112.3-152.6|hdl/vga2dvid.v:168.16-173.28|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
+          },
+          "port_directions": {
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CLK": [ 166 ],
+            "DI": [ 370 ],
+            "LSR": [ 341 ],
+            "Q": [ 371 ]
+          }
+        },
+        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_2": {
           "hide_name": 0,
           "type": "TRELLIS_FF",
           "parameters": {
@@ -28763,14 +28789,69 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 368 ],
+            "CE": [ 369 ],
             "CLK": [ 166 ],
-            "DI": [ 371 ],
+            "DI": [ 372 ],
             "LSR": [ 341 ],
-            "Q": [ 372 ]
+            "Q": [ 373 ]
           }
         },
-        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_1_DI_LUT4_Z": {
+        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_2_DI_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000111111110000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:119.33-120.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ 373 ],
+            "D": [ 374 ],
+            "Z": [ 372 ]
+          }
+        },
+        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_3": {
+          "hide_name": 0,
+          "type": "TRELLIS_FF",
+          "parameters": {
+            "CEMUX": "CE",
+            "CLKMUX": "CLK",
+            "GSR": "DISABLED",
+            "LSRMUX": "LSR",
+            "REGSET": "RESET",
+            "SRMODE": "LSR_OVER_CE"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:112.3-152.6|hdl/vga2dvid.v:168.16-173.28|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:83.170-83.229"
+          },
+          "port_directions": {
+            "CE": "input",
+            "CLK": "input",
+            "DI": "input",
+            "LSR": "input",
+            "Q": "output"
+          },
+          "connections": {
+            "CE": [ 369 ],
+            "CLK": [ 166 ],
+            "DI": [ 375 ],
+            "LSR": [ 341 ],
+            "Q": [ 374 ]
+          }
+        },
+        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_3_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -28791,39 +28872,11 @@
             "A": [ "0" ],
             "B": [ "0" ],
             "C": [ "0" ],
-            "D": [ 372 ],
-            "Z": [ 371 ]
+            "D": [ 374 ],
+            "Z": [ 375 ]
           }
         },
-        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_2": {
-          "hide_name": 0,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "1 ",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:112.3-152.6|hdl/vga2dvid.v:168.16-173.28|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
-          },
-          "port_directions": {
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CLK": [ 166 ],
-            "DI": [ 373 ],
-            "LSR": [ 341 ],
-            "Q": [ 368 ]
-          }
-        },
-        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_2_DI_LUT4_Z": {
+        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_DI_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -28841,14 +28894,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 368 ],
-            "B": [ 374 ],
-            "C": [ 370 ],
-            "D": [ 372 ],
-            "Z": [ 375 ]
+            "A": [ 369 ],
+            "B": [ 371 ],
+            "C": [ 373 ],
+            "D": [ 374 ],
+            "Z": [ 370 ]
           }
         },
-        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_2_DI_LUT4_Z_1": {
+        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_DI_LUT4_Z_1": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -28866,64 +28919,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 368 ],
-            "B": [ 374 ],
-            "C": [ 370 ],
-            "D": [ 372 ],
-            "Z": [ 373 ]
-          }
-        },
-        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_3": {
-          "hide_name": 0,
-          "type": "TRELLIS_FF",
-          "parameters": {
-            "CEMUX": "1 ",
-            "CLKMUX": "CLK",
-            "GSR": "DISABLED",
-            "LSRMUX": "LSR",
-            "REGSET": "RESET",
-            "SRMODE": "LSR_OVER_CE"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:112.3-152.6|hdl/vga2dvid.v:168.16-173.28|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:68.164-68.215"
-          },
-          "port_directions": {
-            "CLK": "input",
-            "DI": "input",
-            "LSR": "input",
-            "Q": "output"
-          },
-          "connections": {
-            "CLK": [ 166 ],
-            "DI": [ 375 ],
-            "LSR": [ 341 ],
-            "Q": [ 374 ]
-          }
-        },
-        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_DI_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000111111110000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:119.33-120.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ 370 ],
-            "D": [ 372 ],
-            "Z": [ 369 ]
+            "A": [ 369 ],
+            "B": [ 371 ],
+            "C": [ 373 ],
+            "D": [ 374 ],
+            "Z": [ 368 ]
           }
         },
         "vga2dvid_instance.u23.encoded_TRELLIS_FF_Q": {
@@ -29005,7 +29005,7 @@
             "CLK": [ 166 ],
             "DI": [ 379 ],
             "LSR": [ "0" ],
-            "Q": [ 282 ]
+            "Q": [ 283 ]
           }
         },
         "vga2dvid_instance.u23.encoded_TRELLIS_FF_Q_3": {
@@ -29032,7 +29032,7 @@
             "CLK": [ 166 ],
             "DI": [ 380 ],
             "LSR": [ "0" ],
-            "Q": [ 283 ]
+            "Q": [ 282 ]
           }
         },
         "vga2dvid_instance.u23.encoded_TRELLIS_FF_Q_DI_LUT4_Z": {
@@ -29670,360 +29670,6 @@
             "Z": [ 387 ]
           }
         },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z": {
-          "hide_name": 0,
-          "type": "L6MUX21",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:184.21-184.63"
-          },
-          "port_directions": {
-            "D0": "input",
-            "D1": "input",
-            "SD": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "D0": [ 413 ],
-            "D1": [ 414 ],
-            "SD": [ 415 ],
-            "Z": [ 383 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z": {
-          "hide_name": 0,
-          "type": "L6MUX21",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:182.21-182.64"
-          },
-          "port_directions": {
-            "D0": "input",
-            "D1": "input",
-            "SD": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "D0": [ 416 ],
-            "D1": [ 417 ],
-            "SD": [ 418 ],
-            "Z": [ 413 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:178.19-178.65"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 419 ],
-            "BLUT": [ 420 ],
-            "C0": [ 421 ],
-            "Z": [ 416 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:160.39-161.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 419 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:158.39-159.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 420 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:179.19-179.65"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 422 ],
-            "BLUT": [ 423 ],
-            "C0": [ 421 ],
-            "Z": [ 417 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:165.39-166.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 422 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:163.39-164.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 423 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z": {
-          "hide_name": 0,
-          "type": "L6MUX21",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:183.21-183.64"
-          },
-          "port_directions": {
-            "D0": "input",
-            "D1": "input",
-            "SD": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "D0": [ 424 ],
-            "D1": [ 425 ],
-            "SD": [ 418 ],
-            "Z": [ 414 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:180.19-180.65"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 426 ],
-            "BLUT": [ 427 ],
-            "C0": [ 421 ],
-            "Z": [ 424 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:170.39-171.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 426 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:168.39-169.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 427 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:181.19-181.65"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 428 ],
-            "BLUT": [ 429 ],
-            "C0": [ 421 ],
-            "Z": [ 425 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:175.41-176.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 428 ]
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000010000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:173.41-174.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 384 ],
-            "B": [ 390 ],
-            "C": [ 396 ],
-            "D": [ 398 ],
-            "Z": [ 429 ]
-          }
-        },
         "vga_instance.CounterY_TRELLIS_FF_Q": {
           "hide_name": 0,
           "type": "TRELLIS_FF",
@@ -30047,11 +29693,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 431 ],
-            "LSR": [ 432 ],
-            "Q": [ 433 ]
+            "DI": [ 414 ],
+            "LSR": [ 415 ],
+            "Q": [ 416 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_1": {
@@ -30077,11 +29723,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 434 ],
-            "LSR": [ 432 ],
-            "Q": [ 435 ]
+            "DI": [ 417 ],
+            "LSR": [ 415 ],
+            "Q": [ 418 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_10": {
@@ -30107,11 +29753,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 436 ],
-            "LSR": [ 432 ],
-            "Q": [ 437 ]
+            "DI": [ 419 ],
+            "LSR": [ 415 ],
+            "Q": [ 420 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_2": {
@@ -30137,11 +29783,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 438 ],
-            "LSR": [ 432 ],
-            "Q": [ 439 ]
+            "DI": [ 421 ],
+            "LSR": [ 415 ],
+            "Q": [ 422 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_3": {
@@ -30167,11 +29813,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 440 ],
-            "LSR": [ 432 ],
-            "Q": [ 441 ]
+            "DI": [ 423 ],
+            "LSR": [ 415 ],
+            "Q": [ 424 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_4": {
@@ -30197,11 +29843,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 442 ],
-            "LSR": [ 432 ],
-            "Q": [ 443 ]
+            "DI": [ 425 ],
+            "LSR": [ 415 ],
+            "Q": [ 426 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_5": {
@@ -30227,11 +29873,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 444 ],
-            "LSR": [ 432 ],
-            "Q": [ 445 ]
+            "DI": [ 427 ],
+            "LSR": [ 415 ],
+            "Q": [ 428 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_6": {
@@ -30257,11 +29903,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 446 ],
-            "LSR": [ 432 ],
-            "Q": [ 447 ]
+            "DI": [ 429 ],
+            "LSR": [ 415 ],
+            "Q": [ 430 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_7": {
@@ -30287,11 +29933,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 448 ],
-            "LSR": [ 432 ],
-            "Q": [ 449 ]
+            "DI": [ 431 ],
+            "LSR": [ 415 ],
+            "Q": [ 432 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_8": {
@@ -30317,11 +29963,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 450 ],
-            "LSR": [ 432 ],
-            "Q": [ 451 ]
+            "DI": [ 433 ],
+            "LSR": [ 415 ],
+            "Q": [ 434 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_9": {
@@ -30347,390 +29993,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 452 ],
-            "LSR": [ 432 ],
-            "Q": [ 453 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z": {
-          "hide_name": 0,
-          "type": "L6MUX21",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:184.21-184.63"
-          },
-          "port_directions": {
-            "D0": "input",
-            "D1": "input",
-            "SD": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "D0": [ 454 ],
-            "D1": [ 455 ],
-            "SD": [ 415 ],
-            "Z": [ 430 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z": {
-          "hide_name": 0,
-          "type": "L6MUX21",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:182.21-182.64"
-          },
-          "port_directions": {
-            "D0": "input",
-            "D1": "input",
-            "SD": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "D0": [ 456 ],
-            "D1": [ 457 ],
-            "SD": [ 418 ],
-            "Z": [ 454 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:178.19-178.65"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 458 ],
-            "BLUT": [ 459 ],
-            "C0": [ 421 ],
-            "Z": [ 456 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111111111111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:160.39-161.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 458 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111111111111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:158.39-159.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 459 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:179.19-179.65"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 460 ],
-            "BLUT": [ 461 ],
-            "C0": [ 421 ],
-            "Z": [ 457 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111111111111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:165.39-166.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 460 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111111111111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:163.39-164.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 461 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z": {
-          "hide_name": 0,
-          "type": "L6MUX21",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:183.21-183.64"
-          },
-          "port_directions": {
-            "D0": "input",
-            "D1": "input",
-            "SD": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "D0": [ 462 ],
-            "D1": [ 463 ],
-            "SD": [ 418 ],
-            "Z": [ 455 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:180.19-180.65"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 464 ],
-            "BLUT": [ 465 ],
-            "C0": [ 421 ],
-            "Z": [ 462 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111111111111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:170.39-171.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 464 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111111111111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:168.39-169.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 465 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:181.19-181.65"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 466 ],
-            "BLUT": [ 467 ],
-            "C0": [ 421 ],
-            "Z": [ 463 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111111111111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:175.41-176.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 466 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111101111111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:173.41-174.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 384 ],
-            "B": [ 390 ],
-            "C": [ 396 ],
-            "D": [ 398 ],
-            "Z": [ 467 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000001000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 449 ],
-            "B": [ 451 ],
-            "C": [ 453 ],
-            "D": [ 437 ],
-            "Z": [ 468 ]
+            "DI": [ 435 ],
+            "LSR": [ 415 ],
+            "Q": [ 436 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0": {
@@ -30763,16 +30030,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 439 ],
-            "B1": [ 435 ],
+            "B0": [ 422 ],
+            "B1": [ 418 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
-            "CIN": [ 469 ],
-            "COUT": [ 470 ],
+            "CIN": [ 437 ],
+            "COUT": [ 438 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 438 ],
-            "S1": [ 434 ]
+            "S0": [ 421 ],
+            "S1": [ 417 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0_1": {
@@ -30805,16 +30072,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 443 ],
-            "B1": [ 441 ],
+            "B0": [ 426 ],
+            "B1": [ 424 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
-            "CIN": [ 471 ],
-            "COUT": [ 469 ],
+            "CIN": [ 439 ],
+            "COUT": [ 437 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 442 ],
-            "S1": [ 440 ]
+            "S0": [ 425 ],
+            "S1": [ 423 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0_2": {
@@ -30847,16 +30114,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 447 ],
-            "B1": [ 445 ],
+            "B0": [ 430 ],
+            "B1": [ 428 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
-            "CIN": [ 472 ],
-            "COUT": [ 471 ],
+            "CIN": [ 440 ],
+            "COUT": [ 439 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 446 ],
-            "S1": [ 444 ]
+            "S0": [ 429 ],
+            "S1": [ 427 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0_3": {
@@ -30889,16 +30156,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 451 ],
-            "B1": [ 449 ],
+            "B0": [ 434 ],
+            "B1": [ 432 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
-            "CIN": [ 473 ],
-            "COUT": [ 472 ],
+            "CIN": [ 441 ],
+            "COUT": [ 440 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 450 ],
-            "S1": [ 448 ]
+            "S0": [ 433 ],
+            "S1": [ 431 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0_4": {
@@ -30931,16 +30198,16 @@
           "connections": {
             "A0": [ "0" ],
             "A1": [ "0" ],
-            "B0": [ 433 ],
+            "B0": [ 416 ],
             "B1": [ "0" ],
             "C0": [ "0" ],
             "C1": [ "0" ],
-            "CIN": [ 470 ],
-            "COUT": [ 474 ],
+            "CIN": [ 438 ],
+            "COUT": [ 442 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 431 ],
-            "S1": [ 475 ]
+            "S0": [ 414 ],
+            "S1": [ 443 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S1": {
@@ -30973,16 +30240,16 @@
           "connections": {
             "A0": [ "1" ],
             "A1": [ "0" ],
-            "B0": [ 437 ],
-            "B1": [ 453 ],
+            "B0": [ 420 ],
+            "B1": [ 436 ],
             "C0": [ "0" ],
             "C1": [ "0" ],
             "CIN": [ "0" ],
-            "COUT": [ 473 ],
+            "COUT": [ 441 ],
             "D0": [ "1" ],
             "D1": [ "1" ],
-            "S0": [ 476 ],
-            "S1": [ 452 ]
+            "S0": [ 444 ],
+            "S1": [ 435 ]
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_LUT4_Z": {
@@ -31006,174 +30273,8 @@
             "A": [ "0" ],
             "B": [ "0" ],
             "C": [ "0" ],
-            "D": [ 437 ],
-            "Z": [ 436 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z": {
-          "hide_name": 0,
-          "type": "L6MUX21",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:154.21-154.62"
-          },
-          "port_directions": {
-            "D0": "input",
-            "D1": "input",
-            "SD": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "D0": [ 477 ],
-            "D1": [ 478 ],
-            "SD": [ 430 ],
-            "Z": [ 432 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:152.19-152.65"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 479 ],
-            "BLUT": [ 480 ],
-            "C0": [ 481 ],
-            "Z": [ 477 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0010000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:144.39-145.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 445 ],
-            "B": [ 447 ],
-            "C": [ 482 ],
-            "D": [ 468 ],
-            "Z": [ 479 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:142.39-143.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 480 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_PFUMX_Z": {
-          "hide_name": 0,
-          "type": "PFUMX",
-          "parameters": {
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:153.19-153.65"
-          },
-          "port_directions": {
-            "ALUT": "input",
-            "BLUT": "input",
-            "C0": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "ALUT": [ 483 ],
-            "BLUT": [ 484 ],
-            "C0": [ 481 ],
-            "Z": [ 478 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:149.39-150.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 483 ]
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:147.39-148.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ "0" ],
-            "Z": [ 484 ]
+            "D": [ 420 ],
+            "Z": [ 419 ]
           }
         },
         "vga_instance.R_blank_TRELLIS_FF_Q": {
@@ -31198,7 +30299,7 @@
           },
           "connections": {
             "CLK": [ 166 ],
-            "DI": [ 485 ],
+            "DI": [ 445 ],
             "LSR": [ "0" ],
             "Q": [ 341 ]
           }
@@ -31226,11 +30327,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 486 ],
-            "LSR": [ 487 ],
-            "Q": [ 485 ]
+            "DI": [ 446 ],
+            "LSR": [ 447 ],
+            "Q": [ 445 ]
           }
         },
         "vga_instance.R_disp_early_TRELLIS_FF_Q": {
@@ -31256,10 +30357,10 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 430 ],
+            "CE": [ 413 ],
             "CLK": [ 166 ],
-            "DI": [ 488 ],
-            "LSR": [ 487 ],
+            "DI": [ 448 ],
+            "LSR": [ 447 ],
             "Q": [ 256 ]
           }
         },
@@ -31279,17 +30380,17 @@
             "Z": "output"
           },
           "connections": {
-            "ALUT": [ 489 ],
-            "BLUT": [ 490 ],
-            "C0": [ 491 ],
-            "Z": [ 487 ]
+            "ALUT": [ 449 ],
+            "BLUT": [ 450 ],
+            "C0": [ 451 ],
+            "Z": [ 447 ]
           }
         },
         "vga_instance.R_disp_early_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1000000000000000"
+            "INIT": "0000000100000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -31303,11 +30404,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 400 ],
-            "B": [ 402 ],
-            "C": [ 388 ],
-            "D": [ 492 ],
-            "Z": [ 489 ]
+            "A": [ 384 ],
+            "B": [ 390 ],
+            "C": [ 452 ],
+            "D": [ 453 ],
+            "Z": [ 449 ]
           }
         },
         "vga_instance.R_disp_early_TRELLIS_FF_Q_LSR_PFUMX_Z_BLUT_LUT4_Z": {
@@ -31332,7 +30433,57 @@
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 490 ]
+            "Z": [ 450 ]
+          }
+        },
+        "vga_instance.R_disp_early_TRELLIS_FF_Q_LSR_PFUMX_Z_C0_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1100000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 400 ],
+            "C": [ 402 ],
+            "D": [ 388 ],
+            "Z": [ 453 ]
+          }
+        },
+        "vga_instance.R_disp_early_TRELLIS_FF_Q_LSR_PFUMX_Z_C0_LUT4_Z_1": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 396 ],
+            "B": [ 398 ],
+            "C": [ 404 ],
+            "D": [ 454 ],
+            "Z": [ 451 ]
           }
         },
         "vga_instance.R_hsync_TRELLIS_FF_Q": {
@@ -31358,10 +30509,10 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 493 ],
+            "CE": [ 455 ],
             "CLK": [ 166 ],
             "DI": [ "0" ],
-            "LSR": [ 494 ],
+            "LSR": [ 456 ],
             "Q": [ 381 ]
           }
         },
@@ -31385,9 +30536,9 @@
           "connections": {
             "A": [ 396 ],
             "B": [ 398 ],
-            "C": [ 495 ],
-            "D": [ 496 ],
-            "Z": [ 493 ]
+            "C": [ 457 ],
+            "D": [ 458 ],
+            "Z": [ 455 ]
           }
         },
         "vga_instance.R_hsync_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z": {
@@ -31410,9 +30561,9 @@
           "connections": {
             "A": [ 384 ],
             "B": [ 390 ],
-            "C": [ 421 ],
-            "D": [ 497 ],
-            "Z": [ 496 ]
+            "C": [ 452 ],
+            "D": [ 453 ],
+            "Z": [ 458 ]
           }
         },
         "vga_instance.R_hsync_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_1": {
@@ -31437,64 +30588,14 @@
             "B": [ 392 ],
             "C": [ 394 ],
             "D": [ 404 ],
-            "Z": [ 495 ]
-          }
-        },
-        "vga_instance.R_hsync_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_D_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1100000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ 400 ],
-            "C": [ 402 ],
-            "D": [ 388 ],
-            "Z": [ 497 ]
+            "Z": [ 457 ]
           }
         },
         "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1100000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ 498 ],
-            "C": [ 492 ],
-            "D": [ 415 ],
-            "Z": [ 494 ]
-          }
-        },
-        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_B_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000001000"
+            "INIT": "0000000100000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -31508,64 +30609,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 392 ],
-            "B": [ 394 ],
-            "C": [ 396 ],
-            "D": [ 398 ],
-            "Z": [ 498 ]
+            "A": [ 384 ],
+            "B": [ 390 ],
+            "C": [ 452 ],
+            "D": [ 459 ],
+            "Z": [ 456 ]
           }
         },
         "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_C_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000000000011"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ 384 ],
-            "C": [ 390 ],
-            "D": [ 421 ],
-            "Z": [ 492 ]
-          }
-        },
-        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_C_LUT4_Z_1": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1000000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 396 ],
-            "B": [ 398 ],
-            "C": [ 404 ],
-            "D": [ 418 ],
-            "Z": [ 491 ]
-          }
-        },
-        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -31587,10 +30638,10 @@
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ 386 ],
-            "Z": [ 421 ]
+            "Z": [ 452 ]
           }
         },
-        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_LUT4_Z_1": {
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_C_LUT4_Z_1": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -31612,10 +30663,815 @@
             "B": [ "0" ],
             "C": [ 392 ],
             "D": [ 394 ],
-            "Z": [ 418 ]
+            "Z": [ 454 ]
           }
         },
-        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_LUT4_Z_2": {
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z": {
+          "hide_name": 0,
+          "type": "PFUMX",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:138.19-138.63"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 460 ],
+            "BLUT": [ 461 ],
+            "C0": [ 462 ],
+            "Z": [ 459 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000001000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:136.39-137.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 392 ],
+            "B": [ 394 ],
+            "C": [ 396 ],
+            "D": [ 398 ],
+            "Z": [ 460 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:134.39-135.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 461 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD": {
+          "hide_name": 0,
+          "type": "L6MUX21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:184.21-184.63"
+          },
+          "port_directions": {
+            "D0": "input",
+            "D1": "input",
+            "SD": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "D0": [ 463 ],
+            "D1": [ 464 ],
+            "SD": [ 462 ],
+            "Z": [ 413 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1": {
+          "hide_name": 0,
+          "type": "L6MUX21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:184.21-184.63"
+          },
+          "port_directions": {
+            "D0": "input",
+            "D1": "input",
+            "SD": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "D0": [ 465 ],
+            "D1": [ 466 ],
+            "SD": [ 462 ],
+            "Z": [ 383 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z": {
+          "hide_name": 0,
+          "type": "L6MUX21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:182.21-182.64"
+          },
+          "port_directions": {
+            "D0": "input",
+            "D1": "input",
+            "SD": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "D0": [ 467 ],
+            "D1": [ 468 ],
+            "SD": [ 454 ],
+            "Z": [ 465 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D0_PFUMX_Z": {
+          "hide_name": 0,
+          "type": "PFUMX",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:178.19-178.65"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 469 ],
+            "BLUT": [ 470 ],
+            "C0": [ 452 ],
+            "Z": [ 467 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:160.39-161.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 469 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:158.39-159.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 470 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D1_PFUMX_Z": {
+          "hide_name": 0,
+          "type": "PFUMX",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:179.19-179.65"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 471 ],
+            "BLUT": [ 472 ],
+            "C0": [ 452 ],
+            "Z": [ 468 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:165.39-166.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 471 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:163.39-164.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 472 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z": {
+          "hide_name": 0,
+          "type": "L6MUX21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:183.21-183.64"
+          },
+          "port_directions": {
+            "D0": "input",
+            "D1": "input",
+            "SD": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "D0": [ 473 ],
+            "D1": [ 474 ],
+            "SD": [ 454 ],
+            "Z": [ 466 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D0_PFUMX_Z": {
+          "hide_name": 0,
+          "type": "PFUMX",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:180.19-180.65"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 475 ],
+            "BLUT": [ 476 ],
+            "C0": [ 452 ],
+            "Z": [ 473 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:170.39-171.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 475 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:168.39-169.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 476 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D1_PFUMX_Z": {
+          "hide_name": 0,
+          "type": "PFUMX",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:181.19-181.65"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 477 ],
+            "BLUT": [ 478 ],
+            "C0": [ 452 ],
+            "Z": [ 474 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:175.41-176.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 477 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000010000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:173.41-174.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 384 ],
+            "B": [ 390 ],
+            "C": [ 396 ],
+            "D": [ 398 ],
+            "Z": [ 478 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z": {
+          "hide_name": 0,
+          "type": "L6MUX21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:182.21-182.64"
+          },
+          "port_directions": {
+            "D0": "input",
+            "D1": "input",
+            "SD": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "D0": [ 479 ],
+            "D1": [ 480 ],
+            "SD": [ 454 ],
+            "Z": [ 463 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D0_PFUMX_Z": {
+          "hide_name": 0,
+          "type": "PFUMX",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:178.19-178.65"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 481 ],
+            "BLUT": [ 482 ],
+            "C0": [ 452 ],
+            "Z": [ 479 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111111111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:160.39-161.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 481 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111111111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:158.39-159.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 482 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D1_PFUMX_Z": {
+          "hide_name": 0,
+          "type": "PFUMX",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:179.19-179.65"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 483 ],
+            "BLUT": [ 484 ],
+            "C0": [ 452 ],
+            "Z": [ 480 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111111111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:165.39-166.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 483 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111111111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:163.39-164.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 484 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z": {
+          "hide_name": 0,
+          "type": "L6MUX21",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:183.21-183.64"
+          },
+          "port_directions": {
+            "D0": "input",
+            "D1": "input",
+            "SD": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "D0": [ 485 ],
+            "D1": [ 486 ],
+            "SD": [ 454 ],
+            "Z": [ 464 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D0_PFUMX_Z": {
+          "hide_name": 0,
+          "type": "PFUMX",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:180.19-180.65"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 487 ],
+            "BLUT": [ 488 ],
+            "C0": [ 452 ],
+            "Z": [ 485 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111111111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:170.39-171.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 487 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D0_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111111111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:168.39-169.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 488 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D1_PFUMX_Z": {
+          "hide_name": 0,
+          "type": "PFUMX",
+          "parameters": {
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:181.19-181.65"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 489 ],
+            "BLUT": [ 490 ],
+            "C0": [ 452 ],
+            "Z": [ 486 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111111111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:175.41-176.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ "0" ],
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 489 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111101111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:173.41-174.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 384 ],
+            "B": [ 390 ],
+            "C": [ 396 ],
+            "D": [ 398 ],
+            "Z": [ 490 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_Z_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000110000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 432 ],
+            "C": [ 436 ],
+            "D": [ 420 ],
+            "Z": [ 491 ]
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -31637,7 +31493,7 @@
             "B": [ 402 ],
             "C": [ 404 ],
             "D": [ 388 ],
-            "Z": [ 415 ]
+            "Z": [ 462 ]
           }
         },
         "vga_instance.R_vblank_TRELLIS_FF_Q": {
@@ -31663,11 +31519,11 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 499 ],
+            "CE": [ 492 ],
             "CLK": [ 166 ],
             "DI": [ "0" ],
-            "LSR": [ 500 ],
-            "Q": [ 486 ]
+            "LSR": [ 493 ],
+            "Q": [ 446 ]
           }
         },
         "vga_instance.R_vdisp_TRELLIS_FF_Q": {
@@ -31693,22 +31549,69 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 499 ],
+            "CE": [ 492 ],
             "CLK": [ 166 ],
             "DI": [ "1" ],
-            "LSR": [ 500 ],
-            "Q": [ 488 ]
+            "LSR": [ 493 ],
+            "Q": [ 448 ]
           }
         },
-        "vga_instance.R_vdisp_TRELLIS_FF_Q_CE_LUT4_Z": {
+        "vga_instance.R_vdisp_TRELLIS_FF_Q_CE_PFUMX_Z": {
           "hide_name": 0,
-          "type": "LUT4",
+          "type": "PFUMX",
           "parameters": {
-            "INIT": "0000111111111111"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:119.33-120.56"
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:138.19-138.63"
+          },
+          "port_directions": {
+            "ALUT": "input",
+            "BLUT": "input",
+            "C0": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "ALUT": [ 494 ],
+            "BLUT": [ 495 ],
+            "C0": [ 496 ],
+            "Z": [ 492 ]
+          }
+        },
+        "vga_instance.R_vdisp_TRELLIS_FF_Q_CE_PFUMX_Z_ALUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111101111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:136.39-137.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 432 ],
+            "B": [ 436 ],
+            "C": [ 420 ],
+            "D": [ 497 ],
+            "Z": [ 494 ]
+          }
+        },
+        "vga_instance.R_vdisp_TRELLIS_FF_Q_CE_PFUMX_Z_BLUT_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "1111111111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:134.39-135.56"
           },
           "port_directions": {
             "A": "input",
@@ -31720,9 +31623,9 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 468 ],
-            "D": [ 501 ],
-            "Z": [ 499 ]
+            "C": [ "0" ],
+            "D": [ "0" ],
+            "Z": [ 495 ]
           }
         },
         "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z": {
@@ -31741,17 +31644,17 @@
             "Z": "output"
           },
           "connections": {
-            "ALUT": [ 502 ],
-            "BLUT": [ 503 ],
-            "C0": [ 481 ],
-            "Z": [ 500 ]
+            "ALUT": [ 498 ],
+            "BLUT": [ 499 ],
+            "C0": [ 496 ],
+            "Z": [ 493 ]
           }
         },
         "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "1000000000000000"
+            "INIT": "0100000000000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -31765,11 +31668,11 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 453 ],
-            "B": [ 437 ],
-            "C": [ 482 ],
-            "D": [ 504 ],
-            "Z": [ 502 ]
+            "A": [ 428 ],
+            "B": [ 430 ],
+            "C": [ 432 ],
+            "D": [ 500 ],
+            "Z": [ 498 ]
           }
         },
         "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z_BLUT_LUT4_Z": {
@@ -31794,39 +31697,14 @@
             "B": [ "0" ],
             "C": [ "0" ],
             "D": [ "0" ],
-            "Z": [ 503 ]
+            "Z": [ 499 ]
           }
         },
-        "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z_C0_LUT4_Z": {
+        "vga_instance.R_vsync_LUT4_B": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000000000000011"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ 433 ],
-            "C": [ 435 ],
-            "D": [ 505 ],
-            "Z": [ 481 ]
-          }
-        },
-        "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z_C0_LUT4_Z_1": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0100000000000000"
+            "INIT": "1100101000111010"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -31840,89 +31718,14 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 445 ],
-            "B": [ 447 ],
-            "C": [ 449 ],
-            "D": [ 451 ],
-            "Z": [ 504 ]
-          }
-        },
-        "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z_C0_LUT4_Z_2": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1111000000000000"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:119.33-120.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ 441 ],
-            "D": [ 443 ],
-            "Z": [ 482 ]
-          }
-        },
-        "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z_C0_LUT4_Z_D_LUT4_Z": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "0000000011111111"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:114.33-115.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ "0" ],
-            "B": [ "0" ],
-            "C": [ "0" ],
-            "D": [ 439 ],
-            "Z": [ 505 ]
-          }
-        },
-        "vga_instance.R_vsync_LUT4_C": {
-          "hide_name": 0,
-          "type": "LUT4",
-          "parameters": {
-            "INIT": "1110001000101110"
-          },
-          "attributes": {
-            "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
-          },
-          "port_directions": {
-            "A": "input",
-            "B": "input",
-            "C": "input",
-            "D": "input",
-            "Z": "output"
-          },
-          "connections": {
-            "A": [ 368 ],
-            "B": [ 341 ],
-            "C": [ 506 ],
+            "A": [ 369 ],
+            "B": [ 501 ],
+            "C": [ 341 ],
             "D": [ 381 ],
             "Z": [ 378 ]
           }
         },
-        "vga_instance.R_vsync_LUT4_C_Z_LUT4_Z": {
+        "vga_instance.R_vsync_LUT4_B_Z_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -31941,13 +31744,13 @@
           },
           "connections": {
             "A": [ "0" ],
-            "B": [ 368 ],
+            "B": [ 369 ],
             "C": [ 341 ],
             "D": [ 381 ],
             "Z": [ 380 ]
           }
         },
-        "vga_instance.R_vsync_LUT4_C_Z_LUT4_Z_1": {
+        "vga_instance.R_vsync_LUT4_B_Z_LUT4_Z_1": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
@@ -31966,7 +31769,7 @@
           },
           "connections": {
             "A": [ "0" ],
-            "B": [ 368 ],
+            "B": [ 369 ],
             "C": [ 341 ],
             "D": [ 381 ],
             "Z": [ 379 ]
@@ -31995,18 +31798,43 @@
             "Q": "output"
           },
           "connections": {
-            "CE": [ 507 ],
+            "CE": [ 502 ],
             "CLK": [ 166 ],
             "DI": [ "0" ],
-            "LSR": [ 508 ],
-            "Q": [ 506 ]
+            "LSR": [ 503 ],
+            "Q": [ 501 ]
           }
         },
         "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0111111111111111"
+            "INIT": "0011111111111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 504 ],
+            "C": [ 500 ],
+            "D": [ 505 ],
+            "Z": [ 502 ]
+          }
+        },
+        "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z_B_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000000010"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -32020,22 +31848,72 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 453 ],
-            "B": [ 437 ],
-            "C": [ 509 ],
-            "D": [ 501 ],
-            "Z": [ 507 ]
+            "A": [ 428 ],
+            "B": [ 430 ],
+            "C": [ 432 ],
+            "D": [ 434 ],
+            "Z": [ 504 ]
           }
         },
         "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0000000000001111"
+            "INIT": "1000000000000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:119.33-120.56"
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 424 ],
+            "B": [ 426 ],
+            "C": [ 436 ],
+            "D": [ 420 ],
+            "Z": [ 500 ]
+          }
+        },
+        "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_1": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000000010000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 416 ],
+            "B": [ 418 ],
+            "C": [ 422 ],
+            "D": [ 506 ],
+            "Z": [ 496 ]
+          }
+        },
+        "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_1_D_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000011111111"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:114.33-115.56"
           },
           "port_directions": {
             "A": "input",
@@ -32047,16 +31925,41 @@
           "connections": {
             "A": [ "0" ],
             "B": [ "0" ],
-            "C": [ 449 ],
-            "D": [ 451 ],
-            "Z": [ 509 ]
+            "C": [ "0" ],
+            "D": [ 434 ],
+            "Z": [ 506 ]
           }
         },
         "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z_D_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0010000000000000"
+            "INIT": "0000001100000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 416 ],
+            "C": [ 418 ],
+            "D": [ 422 ],
+            "Z": [ 505 ]
+          }
+        },
+        "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z_D_LUT4_Z_1": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000100000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -32070,18 +31973,43 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 445 ],
-            "B": [ 447 ],
-            "C": [ 482 ],
-            "D": [ 481 ],
-            "Z": [ 501 ]
+            "A": [ 432 ],
+            "B": [ 434 ],
+            "C": [ 436 ],
+            "D": [ 420 ],
+            "Z": [ 507 ]
           }
         },
         "vga_instance.R_vsync_TRELLIS_FF_Q_LSR_LUT4_Z": {
           "hide_name": 0,
           "type": "LUT4",
           "parameters": {
-            "INIT": "0100000000000000"
+            "INIT": "1100000000000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:124.33-125.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ "0" ],
+            "B": [ 507 ],
+            "C": [ 497 ],
+            "D": [ 505 ],
+            "Z": [ 503 ]
+          }
+        },
+        "vga_instance.R_vsync_TRELLIS_FF_Q_LSR_LUT4_Z_C_LUT4_B": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000010000000"
           },
           "attributes": {
             "module_not_derived": "00000000000000000000000000000001",
@@ -32095,11 +32023,36 @@
             "Z": "output"
           },
           "connections": {
-            "A": [ 453 ],
-            "B": [ 437 ],
-            "C": [ 509 ],
-            "D": [ 501 ],
-            "Z": [ 508 ]
+            "A": [ 491 ],
+            "B": [ 497 ],
+            "C": [ 496 ],
+            "D": [ 413 ],
+            "Z": [ 415 ]
+          }
+        },
+        "vga_instance.R_vsync_TRELLIS_FF_Q_LSR_LUT4_Z_C_LUT4_Z": {
+          "hide_name": 0,
+          "type": "LUT4",
+          "parameters": {
+            "INIT": "0000000010000000"
+          },
+          "attributes": {
+            "module_not_derived": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:128.32-129.56"
+          },
+          "port_directions": {
+            "A": "input",
+            "B": "input",
+            "C": "input",
+            "D": "input",
+            "Z": "output"
+          },
+          "connections": {
+            "A": [ 424 ],
+            "B": [ 426 ],
+            "C": [ 428 ],
+            "D": [ 430 ],
+            "Z": [ 497 ]
           }
         }
       },
@@ -32210,6 +32163,23 @@
           "bits": [ 3, 4, 5, 6, 7, 8, 9 ],
           "attributes": {
             "src": "top/top_usbtest.v:9.34-9.37"
+          }
+        },
+        "btn_debounce_i.btn": {
+          "hide_name": 0,
+          "bits": [ 3, 4, 5, 6, 7, 8, 9 ],
+          "attributes": {
+            "hdlname": "btn_debounce_i btn",
+            "src": "top/top_usbtest.v:72.5-79.6|../btn_debounce/hdl/btn_debounce.v:10.21-10.24",
+            "unused_bits": "1 2 3 4 6"
+          }
+        },
+        "btn_debounce_i.clk": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "hdlname": "btn_debounce_i clk",
+            "src": "top/top_usbtest.v:72.5-79.6|../btn_debounce/hdl/btn_debounce.v:9.10-9.13"
           }
         },
         "clk_25mhz": {
@@ -32921,9 +32891,23 @@
         },
         "flagb_d": {
           "hide_name": 0,
-          "bits": [ 241 ],
+          "bits": [ 240 ],
           "attributes": {
             "src": "top/top_usbtest.v:794.5-794.12"
+          }
+        },
+        "flagc_d": {
+          "hide_name": 0,
+          "bits": [ "x" ],
+          "attributes": {
+            "src": "top/top_usbtest.v:795.5-795.12"
+          }
+        },
+        "flagd_d": {
+          "hide_name": 0,
+          "bits": [ "x" ],
+          "attributes": {
+            "src": "top/top_usbtest.v:796.5-796.12"
           }
         },
         "g_i": {
@@ -33107,11 +33091,25 @@
             "src": "top/top_usbtest.v:775.10-775.15"
           }
         },
+        "sloe_streamOUT_": {
+          "hide_name": 0,
+          "bits": [ "x" ],
+          "attributes": {
+            "src": "top/top_usbtest.v:888.27-888.42"
+          }
+        },
         "slrd_": {
           "hide_name": 0,
           "bits": [ "1" ],
           "attributes": {
             "src": "top/top_usbtest.v:772.11-772.16"
+          }
+        },
+        "slrd_streamOUT_": {
+          "hide_name": 0,
+          "bits": [ "x" ],
+          "attributes": {
+            "src": "top/top_usbtest.v:887.27-887.42"
           }
         },
         "slwr_d1_": {
@@ -33135,9 +33133,9 @@
             "src": "top/top_usbtest.v:815.6-815.20"
           }
         },
-        "slwr_streamIN__LUT4_Z_C": {
+        "slwr_streamIN__LUT4_Z_D": {
           "hide_name": 0,
-          "bits": [ 242, 510, 511 ],
+          "bits": [ 242, 508, 509 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "top/top_usbtest.v:866.22-876.3|top/slaveFIFO2b_streamIN.v:37.2-65.9|top/slaveFIFO2b_streamIN.v:0.0-0.0|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/techmap.v:573.22-573.23",
@@ -33161,7 +33159,7 @@
         },
         "stream_in_inst.current_stream_in_state": {
           "hide_name": 0,
-          "bits": [ 240, 239, "0" ],
+          "bits": [ 241, 239, "0" ],
           "attributes": {
             "hdlname": "stream_in_inst current_stream_in_state",
             "src": "top/top_usbtest.v:866.22-876.3|top/slaveFIFO2b_streamIN.v:13.10-13.33"
@@ -33199,7 +33197,7 @@
         },
         "stream_in_inst.flagb_d": {
           "hide_name": 0,
-          "bits": [ 241 ],
+          "bits": [ 240 ],
           "attributes": {
             "hdlname": "stream_in_inst flagb_d",
             "src": "top/top_usbtest.v:866.22-876.3|top/slaveFIFO2b_streamIN.v:6.9-6.16"
@@ -33234,6 +33232,61 @@
           "bits": [ 82 ],
           "attributes": {
             "src": "top/top_usbtest.v:824.6-824.29"
+          }
+        },
+        "stream_out_inst.clk_100": {
+          "hide_name": 0,
+          "bits": [ 38 ],
+          "attributes": {
+            "hdlname": "stream_out_inst clk_100",
+            "src": "top/top_usbtest.v:879.23-889.3|top/slaveFIFO2b_streamOUT.v:3.9-3.16"
+          }
+        },
+        "stream_out_inst.flagc_d": {
+          "hide_name": 0,
+          "bits": [ "x" ],
+          "attributes": {
+            "hdlname": "stream_out_inst flagc_d",
+            "src": "top/top_usbtest.v:879.23-889.3|top/slaveFIFO2b_streamOUT.v:5.9-5.16"
+          }
+        },
+        "stream_out_inst.flagd_d": {
+          "hide_name": 0,
+          "bits": [ "x" ],
+          "attributes": {
+            "hdlname": "stream_out_inst flagd_d",
+            "src": "top/top_usbtest.v:879.23-889.3|top/slaveFIFO2b_streamOUT.v:6.9-6.16"
+          }
+        },
+        "stream_out_inst.sloe_streamOUT_": {
+          "hide_name": 0,
+          "bits": [ "x" ],
+          "attributes": {
+            "hdlname": "stream_out_inst sloe_streamOUT_",
+            "src": "top/top_usbtest.v:879.23-889.3|top/slaveFIFO2b_streamOUT.v:9.9-9.24"
+          }
+        },
+        "stream_out_inst.slrd_streamOUT_": {
+          "hide_name": 0,
+          "bits": [ "x" ],
+          "attributes": {
+            "hdlname": "stream_out_inst slrd_streamOUT_",
+            "src": "top/top_usbtest.v:879.23-889.3|top/slaveFIFO2b_streamOUT.v:8.9-8.24"
+          }
+        },
+        "stream_out_inst.stream_out_mode_selected": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "hdlname": "stream_out_inst stream_out_mode_selected",
+            "src": "top/top_usbtest.v:879.23-889.3|top/slaveFIFO2b_streamOUT.v:4.9-4.33"
+          }
+        },
+        "stream_out_mode_selected": {
+          "hide_name": 0,
+          "bits": [ "0" ],
+          "attributes": {
+            "src": "top/top_usbtest.v:825.6-825.30"
           }
         },
         "tmds_blue": {
@@ -33297,7 +33350,7 @@
         },
         "vga2dvid_instance.c_blue": {
           "hide_name": 0,
-          "bits": [ 381, 506 ],
+          "bits": [ 381, 501 ],
           "attributes": {
             "hdlname": "vga2dvid_instance c_blue",
             "src": "top/top_usbtest.v:285.7-298.6|hdl/vga2dvid.v:102.12-102.18"
@@ -33321,7 +33374,7 @@
         },
         "vga2dvid_instance.encoded_blue": {
           "hide_name": 0,
-          "bits": [ 282, 282, 283, 282, 283, 282, 283, 282, 280, 278 ],
+          "bits": [ 283, 283, 282, 283, 282, 283, 282, 283, 280, 278 ],
           "attributes": {
             "hdlname": "vga2dvid_instance encoded_blue",
             "src": "top/top_usbtest.v:285.7-298.6|hdl/vga2dvid.v:92.62-92.74"
@@ -33393,7 +33446,7 @@
         },
         "vga2dvid_instance.in_vsync": {
           "hide_name": 0,
-          "bits": [ 506 ],
+          "bits": [ 501 ],
           "attributes": {
             "hdlname": "vga2dvid_instance in_vsync",
             "src": "top/top_usbtest.v:285.7-298.6|hdl/vga2dvid.v:70.12-70.20"
@@ -33421,14 +33474,6 @@
           "attributes": {
             "hdlname": "vga2dvid_instance latched_red",
             "src": "top/top_usbtest.v:285.7-298.6|hdl/vga2dvid.v:93.11-93.22"
-          }
-        },
-        "vga2dvid_instance.latched_red_LUT4_C_D": {
-          "hide_name": 0,
-          "bits": [ 284, 287, 261 ],
-          "attributes": {
-            "force_downto": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
           }
         },
         "vga2dvid_instance.out_blue": {
@@ -33515,6 +33560,14 @@
           "attributes": {
             "hdlname": "vga2dvid_instance shift_clock",
             "src": "top/top_usbtest.v:285.7-298.6|hdl/vga2dvid.v:96.11-96.22"
+          }
+        },
+        "vga2dvid_instance.shift_clock_LUT4_C_Z": {
+          "hide_name": 0,
+          "bits": [ 298, 289, 261 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
           }
         },
         "vga2dvid_instance.shift_green": {
@@ -33611,7 +33664,7 @@
         },
         "vga2dvid_instance.u21.dc_bias_TRELLIS_FF_Q_2_DI": {
           "hide_name": 0,
-          "bits": [ 348, 345, 512, 513 ],
+          "bits": [ 348, 345, 510, 511 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/techmap.v:270.26-270.27",
@@ -33620,7 +33673,7 @@
         },
         "vga2dvid_instance.u21.dc_bias_TRELLIS_FF_Q_3_DI": {
           "hide_name": 0,
-          "bits": [ 348, 514, 344, 342 ],
+          "bits": [ 348, 512, 344, 342 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/techmap.v:270.23-270.24",
@@ -33736,7 +33789,7 @@
         },
         "vga2dvid_instance.u22.data_word_disparity": {
           "hide_name": 0,
-          "bits": [ "0", "0", 515, 353 ],
+          "bits": [ "0", "0", 513, 353 ],
           "attributes": {
             "hdlname": "vga2dvid_instance u22 data_word_disparity",
             "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:73.12-73.31|hdl/vga2dvid.v:161.16-166.29",
@@ -33855,7 +33908,7 @@
         },
         "vga2dvid_instance.u23.c": {
           "hide_name": 0,
-          "bits": [ 381, 506 ],
+          "bits": [ 381, 501 ],
           "attributes": {
             "hdlname": "vga2dvid_instance u23 c",
             "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:60.18-60.19|hdl/vga2dvid.v:168.16-173.28"
@@ -33903,40 +33956,40 @@
         },
         "vga2dvid_instance.u23.dc_bias": {
           "hide_name": 0,
-          "bits": [ 372, 370, 374, 368 ],
+          "bits": [ 374, 373, 371, 369 ],
           "attributes": {
             "hdlname": "vga2dvid_instance u23 dc_bias",
             "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:74.11-74.18|hdl/vga2dvid.v:168.16-173.28"
           }
         },
-        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_1_DI": {
-          "hide_name": 0,
-          "bits": [ 371, 370, 516, 368 ],
-          "attributes": {
-            "force_downto": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/techmap.v:270.23-270.24",
-            "unused_bits": "2"
-          }
-        },
         "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_2_DI": {
           "hide_name": 0,
-          "bits": [ 375, 373 ],
-          "offset": 2,
-          "attributes": {
-          }
-        },
-        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_DI": {
-          "hide_name": 0,
-          "bits": [ 371, 369, 517, 518 ],
+          "bits": [ 375, 372, 514, 515 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/techmap.v:270.26-270.27",
             "unused_bits": "2 3"
           }
         },
+        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_3_DI": {
+          "hide_name": 0,
+          "bits": [ 375, 373, 516, 369 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/techmap.v:270.23-270.24",
+            "unused_bits": "2"
+          }
+        },
+        "vga2dvid_instance.u23.dc_bias_TRELLIS_FF_Q_DI": {
+          "hide_name": 0,
+          "bits": [ 370, 368 ],
+          "offset": 2,
+          "attributes": {
+          }
+        },
         "vga2dvid_instance.u23.encoded": {
           "hide_name": 0,
-          "bits": [ 282, 282, 283, 282, 283, 282, 283, 282, 280, 278 ],
+          "bits": [ 283, 283, 282, 283, 282, 283, 282, 283, 280, 278 ],
           "attributes": {
             "hdlname": "vga2dvid_instance u23 encoded",
             "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:62.18-62.25|hdl/vga2dvid.v:168.16-173.28"
@@ -33944,7 +33997,7 @@
         },
         "vga2dvid_instance.u23.encoded_TRELLIS_FF_Q_DI": {
           "hide_name": 0,
-          "bits": [ 519, 376, 520 ],
+          "bits": [ 517, 376, 518 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "top/top_usbtest.v:285.7-298.6|hdl/tmds_encoder.v:0.0-0.0|hdl/tmds_encoder.v:115.7-128.14|hdl/vga2dvid.v:168.16-173.28|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/techmap.v:575.21-575.22",
@@ -34074,227 +34127,17 @@
             "unused_bits": "0 "
           }
         },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR": {
-          "hide_name": 0,
-          "bits": [ 383 ],
-          "attributes": {
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0": {
-          "hide_name": 0,
-          "bits": [ 413 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.66-157.68"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D0": {
-          "hide_name": 0,
-          "bits": [ 416 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.50-157.52"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 419 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.22-157.24"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 420 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.18-157.20"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D1": {
-          "hide_name": 0,
-          "bits": [ 417 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.54-157.56"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 422 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.30-157.32"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 423 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.26-157.28"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1": {
-          "hide_name": 0,
-          "bits": [ 414 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.70-157.72"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D0": {
-          "hide_name": 0,
-          "bits": [ 424 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.58-157.60"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 426 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.38-157.40"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 427 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.34-157.36"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D1": {
-          "hide_name": 0,
-          "bits": [ 425 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.62-157.64"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 428 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.46-157.48"
-          }
-        },
-        "vga_instance.CounterX_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 429 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.42-157.44"
-          }
-        },
         "vga_instance.CounterY": {
           "hide_name": 0,
-          "bits": [ 437, 453, 451, 449, 447, 445, 443, 441, 439, 435, 433 ],
+          "bits": [ 420, 436, 434, 432, 430, 428, 426, 424, 422, 418, 416 ],
           "attributes": {
             "hdlname": "vga_instance CounterY",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:93.22-93.30"
           }
         },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE": {
-          "hide_name": 0,
-          "bits": [ 445, 447, 482, 468, 481, 430 ],
-          "attributes": {
-            "force_downto": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0": {
-          "hide_name": 0,
-          "bits": [ 454 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.66-157.68"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D0": {
-          "hide_name": 0,
-          "bits": [ 456 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.50-157.52"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 458 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.22-157.24"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 459 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.18-157.20"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D1": {
-          "hide_name": 0,
-          "bits": [ 457 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.54-157.56"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 460 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.30-157.32"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 461 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.26-157.28"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1": {
-          "hide_name": 0,
-          "bits": [ 455 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.70-157.72"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D0": {
-          "hide_name": 0,
-          "bits": [ 462 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.58-157.60"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 464 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.38-157.40"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D0_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 465 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.34-157.36"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1": {
-          "hide_name": 0,
-          "bits": [ 463 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.62-157.64"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 466 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.46-157.48"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_CE_L6MUX21_Z_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 467 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.42-157.44"
-          }
-        },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI": {
           "hide_name": 0,
-          "bits": [ 436, 452, 450, 448, 446, 444, 442, 440, 438, 434, 431 ],
+          "bits": [ 419, 435, 433, 431, 429, 427, 425, 423, 421, 417, 414 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:121.23-121.35|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:34.26-34.27"
@@ -34302,7 +34145,7 @@
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0_1_COUT": {
           "hide_name": 0,
-          "bits": [ 469 ],
+          "bits": [ 437 ],
           "attributes": {
             "abc9_carry": "00000000000000000000000000000001",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:121.23-121.35|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:74.7-80.4|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
@@ -34310,7 +34153,7 @@
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0_2_COUT": {
           "hide_name": 0,
-          "bits": [ 471 ],
+          "bits": [ 439 ],
           "attributes": {
             "abc9_carry": "00000000000000000000000000000001",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:121.23-121.35|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:74.7-80.4|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
@@ -34318,7 +34161,7 @@
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0_3_COUT": {
           "hide_name": 0,
-          "bits": [ 472 ],
+          "bits": [ 440 ],
           "attributes": {
             "abc9_carry": "00000000000000000000000000000001",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:121.23-121.35|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:74.7-80.4|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
@@ -34326,7 +34169,7 @@
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0_4_COUT": {
           "hide_name": 0,
-          "bits": [ 474 ],
+          "bits": [ 442 ],
           "attributes": {
             "abc9_carry": "00000000000000000000000000000001",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:121.23-121.35|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:74.7-80.4|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:82.9-82.13",
@@ -34335,14 +34178,14 @@
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0_4_S1": {
           "hide_name": 0,
-          "bits": [ 475 ],
+          "bits": [ 443 ],
           "attributes": {
             "unused_bits": "0 "
           }
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S0_COUT": {
           "hide_name": 0,
-          "bits": [ 470 ],
+          "bits": [ 438 ],
           "attributes": {
             "abc9_carry": "00000000000000000000000000000001",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:121.23-121.35|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:74.7-80.4|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
@@ -34350,7 +34193,7 @@
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S1_COUT": {
           "hide_name": 0,
-          "bits": [ 473 ],
+          "bits": [ 441 ],
           "attributes": {
             "abc9_carry": "00000000000000000000000000000001",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:121.23-121.35|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/arith_map.v:74.7-80.4|/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_sim.v:82.9-82.13"
@@ -34358,57 +34201,9 @@
         },
         "vga_instance.CounterY_TRELLIS_FF_Q_DI_CCU2C_S1_S0": {
           "hide_name": 0,
-          "bits": [ 476 ],
+          "bits": [ 444 ],
           "attributes": {
             "unused_bits": "0 "
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR": {
-          "hide_name": 0,
-          "bits": [ 432 ],
-          "attributes": {
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0": {
-          "hide_name": 0,
-          "bits": [ 477 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.34-141.36"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 479 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.22-141.24"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D0_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 480 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.18-141.20"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1": {
-          "hide_name": 0,
-          "bits": [ 478 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.38-141.40"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_PFUMX_Z_ALUT": {
-          "hide_name": 0,
-          "bits": [ 483 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.30-141.32"
-          }
-        },
-        "vga_instance.CounterY_TRELLIS_FF_Q_LSR_L6MUX21_Z_D1_PFUMX_Z_BLUT": {
-          "hide_name": 0,
-          "bits": [ 484 ],
-          "attributes": {
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:141.26-141.28"
           }
         },
         "vga_instance.R_blank": {
@@ -34421,7 +34216,7 @@
         },
         "vga_instance.R_blank_early": {
           "hide_name": 0,
-          "bits": [ 485 ],
+          "bits": [ 445 ],
           "attributes": {
             "hdlname": "vga_instance R_blank_early",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:107.5-107.18"
@@ -34437,22 +34232,30 @@
         },
         "vga_instance.R_disp_early_TRELLIS_FF_Q_LSR": {
           "hide_name": 0,
-          "bits": [ 487 ],
+          "bits": [ 447 ],
           "attributes": {
           }
         },
         "vga_instance.R_disp_early_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT": {
           "hide_name": 0,
-          "bits": [ 489 ],
+          "bits": [ 449 ],
           "attributes": {
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.22-133.24"
           }
         },
         "vga_instance.R_disp_early_TRELLIS_FF_Q_LSR_PFUMX_Z_BLUT": {
           "hide_name": 0,
-          "bits": [ 490 ],
+          "bits": [ 450 ],
           "attributes": {
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.18-133.20"
+          }
+        },
+        "vga_instance.R_disp_early_TRELLIS_FF_Q_LSR_PFUMX_Z_C0": {
+          "hide_name": 0,
+          "bits": [ 384, 390, 452, 453, 451 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
           }
         },
         "vga_instance.R_fetch_next": {
@@ -34473,21 +34276,13 @@
         },
         "vga_instance.R_hsync_TRELLIS_FF_Q_CE": {
           "hide_name": 0,
-          "bits": [ 493 ],
+          "bits": [ 455 ],
           "attributes": {
           }
         },
         "vga_instance.R_hsync_TRELLIS_FF_Q_CE_LUT4_Z_C": {
           "hide_name": 0,
-          "bits": [ 396, 398, 495, 496 ],
-          "attributes": {
-            "force_downto": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
-          }
-        },
-        "vga_instance.R_hsync_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_D": {
-          "hide_name": 0,
-          "bits": [ 384, 390, 421, 497 ],
+          "bits": [ 396, 398, 457, 458 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
@@ -34495,21 +34290,13 @@
         },
         "vga_instance.R_hsync_TRELLIS_FF_Q_LSR": {
           "hide_name": 0,
-          "bits": [ 494 ],
+          "bits": [ 456 ],
           "attributes": {
-          }
-        },
-        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_B": {
-          "hide_name": 0,
-          "bits": [ 498, 492, 415 ],
-          "attributes": {
-            "force_downto": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
           }
         },
         "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_C": {
           "hide_name": 0,
-          "bits": [ 400, 402, 388, 492, 491 ],
+          "bits": [ 384, 390, 396, 398, 452, 454, 462 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
@@ -34517,7 +34304,239 @@
         },
         "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D": {
           "hide_name": 0,
-          "bits": [ 384, 390, 396, 398, 421, 418, 415 ],
+          "bits": [ 384, 390, 452, 459 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 460 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.22-133.24"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 461 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.18-133.20"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0": {
+          "hide_name": 0,
+          "bits": [ 392, 394, 396, 398, 462 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0": {
+          "hide_name": 0,
+          "bits": [ 465 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.66-157.68"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D0": {
+          "hide_name": 0,
+          "bits": [ 467 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.50-157.52"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D0_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 469 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.22-157.24"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 470 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.18-157.20"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D1": {
+          "hide_name": 0,
+          "bits": [ 468 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.54-157.56"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 471 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.30-157.32"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 472 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.26-157.28"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1": {
+          "hide_name": 0,
+          "bits": [ 466 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.70-157.72"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D0": {
+          "hide_name": 0,
+          "bits": [ 473 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.58-157.60"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 475 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.38-157.40"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D0_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 476 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.34-157.36"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D1": {
+          "hide_name": 0,
+          "bits": [ 474 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.62-157.64"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 477 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.46-157.48"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 478 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.42-157.44"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_1_Z": {
+          "hide_name": 0,
+          "bits": [ 383 ],
+          "attributes": {
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0": {
+          "hide_name": 0,
+          "bits": [ 463 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.66-157.68"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D0": {
+          "hide_name": 0,
+          "bits": [ 479 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.50-157.52"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D0_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 481 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.22-157.24"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D0_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 482 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.18-157.20"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D1": {
+          "hide_name": 0,
+          "bits": [ 480 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.54-157.56"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D1_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 483 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.30-157.32"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D0_L6MUX21_Z_D1_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 484 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.26-157.28"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1": {
+          "hide_name": 0,
+          "bits": [ 464 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.70-157.72"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D0": {
+          "hide_name": 0,
+          "bits": [ 485 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.58-157.60"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D0_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 487 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.38-157.40"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D0_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 488 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.34-157.36"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D1": {
+          "hide_name": 0,
+          "bits": [ 486 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.62-157.64"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D1_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 489 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.46-157.48"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_D1_L6MUX21_Z_D1_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 490 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:157.42-157.44"
+          }
+        },
+        "vga_instance.R_hsync_TRELLIS_FF_Q_LSR_LUT4_Z_D_PFUMX_Z_C0_L6MUX21_SD_Z": {
+          "hide_name": 0,
+          "bits": [ 491, 497, 496, 413 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
@@ -34525,7 +34544,7 @@
         },
         "vga_instance.R_vblank": {
           "hide_name": 0,
-          "bits": [ 486 ],
+          "bits": [ 446 ],
           "attributes": {
             "hdlname": "vga_instance R_vblank",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:107.24-107.32"
@@ -34533,7 +34552,7 @@
         },
         "vga_instance.R_vdisp": {
           "hide_name": 0,
-          "bits": [ 488 ],
+          "bits": [ 448 ],
           "attributes": {
             "hdlname": "vga_instance R_vdisp",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:106.23-106.30"
@@ -34541,57 +34560,55 @@
         },
         "vga_instance.R_vdisp_TRELLIS_FF_Q_CE": {
           "hide_name": 0,
-          "bits": [ 499 ],
+          "bits": [ 492 ],
           "attributes": {
+          }
+        },
+        "vga_instance.R_vdisp_TRELLIS_FF_Q_CE_PFUMX_Z_ALUT": {
+          "hide_name": 0,
+          "bits": [ 494 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.22-133.24"
+          }
+        },
+        "vga_instance.R_vdisp_TRELLIS_FF_Q_CE_PFUMX_Z_BLUT": {
+          "hide_name": 0,
+          "bits": [ 495 ],
+          "attributes": {
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.18-133.20"
           }
         },
         "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR": {
           "hide_name": 0,
-          "bits": [ 500 ],
+          "bits": [ 493 ],
           "attributes": {
           }
         },
         "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z_ALUT": {
           "hide_name": 0,
-          "bits": [ 502 ],
+          "bits": [ 498 ],
           "attributes": {
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.22-133.24"
           }
         },
         "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z_BLUT": {
           "hide_name": 0,
-          "bits": [ 503 ],
+          "bits": [ 499 ],
           "attributes": {
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:133.18-133.20"
           }
         },
-        "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z_C0": {
-          "hide_name": 0,
-          "bits": [ 453, 437, 482, 504, 481 ],
-          "attributes": {
-            "force_downto": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
-          }
-        },
-        "vga_instance.R_vdisp_TRELLIS_FF_Q_LSR_PFUMX_Z_C0_LUT4_Z_D": {
-          "hide_name": 0,
-          "bits": [ 433, 435, 505 ],
-          "attributes": {
-            "force_downto": "00000000000000000000000000000001",
-            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
-          }
-        },
         "vga_instance.R_vsync": {
           "hide_name": 0,
-          "bits": [ 506 ],
+          "bits": [ 501 ],
           "attributes": {
             "hdlname": "vga_instance R_vsync",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:105.18-105.25"
           }
         },
-        "vga_instance.R_vsync_LUT4_C_Z": {
+        "vga_instance.R_vsync_LUT4_B_Z": {
           "hide_name": 0,
-          "bits": [ 380, 379, 521, 378 ],
+          "bits": [ 380, 379, 519, 378 ],
           "offset": 6,
           "attributes": {
             "unused_bits": "2"
@@ -34599,13 +34616,29 @@
         },
         "vga_instance.R_vsync_TRELLIS_FF_Q_CE": {
           "hide_name": 0,
-          "bits": [ 507 ],
+          "bits": [ 502 ],
           "attributes": {
+          }
+        },
+        "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z_B": {
+          "hide_name": 0,
+          "bits": [ 504, 500, 505 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
           }
         },
         "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z_C": {
           "hide_name": 0,
-          "bits": [ 453, 437, 509, 501 ],
+          "bits": [ 428, 430, 432, 500, 496 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
+          }
+        },
+        "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z_C_LUT4_Z_1_D": {
+          "hide_name": 0,
+          "bits": [ 416, 418, 422, 506 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
@@ -34613,7 +34646,7 @@
         },
         "vga_instance.R_vsync_TRELLIS_FF_Q_CE_LUT4_Z_D": {
           "hide_name": 0,
-          "bits": [ 468, 501 ],
+          "bits": [ 507, 497, 505 ],
           "attributes": {
             "force_downto": "00000000000000000000000000000001",
             "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
@@ -34621,13 +34654,27 @@
         },
         "vga_instance.R_vsync_TRELLIS_FF_Q_LSR": {
           "hide_name": 0,
-          "bits": [ 508 ],
+          "bits": [ 503 ],
+          "attributes": {
+          }
+        },
+        "vga_instance.R_vsync_TRELLIS_FF_Q_LSR_LUT4_Z_C": {
+          "hide_name": 0,
+          "bits": [ 432, 436, 420, 497, 496 ],
+          "attributes": {
+            "force_downto": "00000000000000000000000000000001",
+            "src": "/home/shouyu/4.2/designProblem/oss-cad-suite/lib/../share/yosys/ecp5/cells_map.v:108.23-108.24"
+          }
+        },
+        "vga_instance.R_vsync_TRELLIS_FF_Q_LSR_LUT4_Z_C_LUT4_B_Z": {
+          "hide_name": 0,
+          "bits": [ 415 ],
           "attributes": {
           }
         },
         "vga_instance.T": {
           "hide_name": 0,
-          "bits": [ 443, 443, 443, 443, 443, 443, 443, 443 ],
+          "bits": [ 426, 426, 426, 426, 426, 426, 426, 426 ],
           "attributes": {
             "hdlname": "vga_instance T",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:110.40-110.41"
@@ -34643,7 +34690,7 @@
         },
         "vga_instance.beam_y": {
           "hide_name": 0,
-          "bits": [ 437, 453, 451, 449, 447, 445, 443, 441, 439, 435, 433 ],
+          "bits": [ 420, 436, 434, 432, 430, 428, 426, 424, 422, 418, 416 ],
           "attributes": {
             "hdlname": "vga_instance beam_y",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:45.30-45.36"
@@ -34699,7 +34746,7 @@
         },
         "vga_instance.vga_vblank": {
           "hide_name": 0,
-          "bits": [ 486 ],
+          "bits": [ 446 ],
           "attributes": {
             "hdlname": "vga_instance vga_vblank",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:54.13-54.23"
@@ -34707,7 +34754,7 @@
         },
         "vga_instance.vga_vsync": {
           "hide_name": 0,
-          "bits": [ 506 ],
+          "bits": [ 501 ],
           "attributes": {
             "hdlname": "vga_instance vga_vsync",
             "src": "top/top_usbtest.v:149.7-157.6|hdl/vga.v:53.13-53.22"
@@ -34715,7 +34762,7 @@
         },
         "vga_vsync": {
           "hide_name": 0,
-          "bits": [ 506 ],
+          "bits": [ 501 ],
           "attributes": {
             "src": "top/top_usbtest.v:121.21-121.30"
           }
