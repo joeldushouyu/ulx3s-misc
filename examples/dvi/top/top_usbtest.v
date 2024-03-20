@@ -1,6 +1,6 @@
-module top_usbtest #(parameter x = 640,     // pixels
-                     parameter y = 480,     // pixels
-                     parameter f = 60,       // Hz 60, 50, 30
+module top_usbtest #(parameter x = 1920,     // pixels
+                     parameter y = 1080,     // pixels
+                     parameter f = 30,       // Hz 60, 50, 30
                      parameter xadjustf = 0, // or to fine-tune f
                      parameter yadjustf = 0, // or to fine-tune f
                      parameter c_ddr = 1    // 0:SDR 1:DDR
@@ -85,7 +85,7 @@ module top_usbtest #(parameter x = 640,     // pixels
     //   if (R_delay_reload[19] == 0)
     //     R_delay_reload <= R_delay_reload+1;
     // assign user_programn = btn[0] | ~R_delay_reload[19];
-    wire rst = ~btn[5];
+    wire rst = ~btn[6];
     //wire reset = rst;//TODO:
     // reg [7:0]data ;
     // assign led = data;
@@ -840,6 +840,7 @@ parameter [2:0] fpga_master_mode_zlp              = 3'd2;
 parameter [2:0] fpga_master_mode_stream_in        = 3'd3;
 parameter [2:0] fpga_master_mode_stream_out       = 3'd4;
 parameter [2:0] fpga_master_mode_loopback         = 3'd5;
+parameter [2:0] fpga_master_mode_delay = 3'd6;
 
 
 //output signal assignment
@@ -870,7 +871,7 @@ slaveFIFO2b_streamIN stream_in_inst
          .stream_in_mode_selected(stream_in_mode_selected),
          .flaga_d(flaga_d),
          .flagb_d(flagb_d),
-         .data_for_output(cnt),
+         .data_for_output(data_out_current),
          .slwr_streamIN_(slwr_streamIN_),
          .data_out_stream_in(data_out_stream_in)
 	); 
@@ -896,12 +897,15 @@ assign reset_ = rst;
 
 //assign loopback_data_from_fx3 = databus;
 //flopping the input data
-always @(posedge usb_clk)begin
 
-	
-		fdata_d = databus;
-	
+always @(posedge usb_clk or  negedge reset_)begin
+	if(!reset_)begin 
+		fdata_d <= 32'd0;
+	end else begin
+		fdata_d <= databus;
+	end	
 end		
+
 
 //selection of input data
 always@(*)begin
@@ -917,21 +921,30 @@ always@(*)begin
 	end
 end	
 
-//floping the INPUT mode
-always @(posedge usb_clk)begin
 
+//floping the INPUT mode
+always @(posedge usb_clk or  negedge reset_)begin
+	if(!reset_)begin 
+		mode <= 3'd0;
+	end else begin
 		mode <= mode_p;
-	
+	end	
 end
 
-///flopping the INPUTs flags
-always @(posedge usb_clk)begin
 
+///flopping the INPUTs flags
+always @(posedge usb_clk or  negedge reset_)begin
+	if(!reset_)begin 
+		flaga_d <= 1'd0;
+		flagb_d <= 1'd0;
+		flagc_d <= 1'd0;
+		flagd_d <= 1'd0;
+	end else begin
 		flaga_d <= FLAGA;
 		flagb_d <= FLAGB;
 		flagc_d <= FLAGC;
 		flagd_d <= FLAGD;
-	
+	end	
 end
 
 
@@ -954,6 +967,16 @@ always@(*)begin
 	end else
 		fifo_address = 2'b10;
 end	
+
+
+// //flopping the output fifo address
+// always @(posedge usb_clk or  negedge reset_)begin
+// 	if(!reset_)begin 
+// 		fifo_address_d <= 2'd0;
+//  	end else begin
+// 		fifo_address_d <= fifo_address;
+// 	end	
+// end
 
 //flopping the output fifo address
 always @(posedge usb_clk)begin
@@ -1012,9 +1035,16 @@ end
 
 
 
-//PKTEND signal assignment based on mode
+
+//pktend signal assignment based on mode
 always @(*)begin
 	case(current_fpga_master_mode)
+	fpga_master_mode_partial:begin
+		pktend_ = pktend_partial_;
+	end
+	fpga_master_mode_zlp:begin
+		pktend_ = pktend_zlp_;
+	end	
 	default:begin
 		pktend_ = 1'b1;
 	end	
@@ -1037,16 +1067,51 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 
 reg fin_cur;
 reg fin_next;
+reg [7:0] led_cur, led_next;
+assign led = led_cur;
 //Mode select state machine
+reg [31:0] buf0_c, buf1_c, buf2_c, buf3_c, buf4_c;
+reg [31:0] buf0_n, buf1_n, buf2_n, buf3_n, buf4_n;
+reg [5:0] current_buf_size, next_buf_size;
+
+reg [31:0] stream_out_count;
+
+reg [31:0] stream_in_count;
+
+reg[31:0] data_out_current, data_out_next;
+reg[31:0] delay_c, delay_n;
 always @(posedge usb_clk  or negedge rst)begin
-    if(rst == 0) begin
+    if(rst==0) begin
 
         current_fpga_master_mode <= fpga_master_mode_idle;
         fin_cur <= 0;
+        led_cur <=8'b00000000;
+        current_buf_size <=0;
+        data_out_current <=32'hdf;
+
+        buf0_c <=32'hfd;
+        buf1_c <=32'hfd;
+        buf2_c <=32'hfd;
+        buf3_c <=32'hfd;
+        buf4_c <=32'hfd;
+
+        delay_c <=32'd0;
     end
     else begin
 		current_fpga_master_mode <= next_fpga_master_mode;
         fin_cur <= fin_next;
+        led_cur <= led_next;
+        current_buf_size <= next_buf_size;
+        data_out_current <= data_out_next;
+
+
+        buf0_c <=buf0_n;
+        buf1_c <=buf1_n;
+        buf2_c <=buf2_n;
+        buf3_c <=buf3_n;
+        buf4_c <=buf4_n;
+
+        delay_c <=delay_n;
     end
 
 end
@@ -1094,27 +1159,121 @@ end
 
 
 always @(*) begin
-    //fin_next = fin_cur;
+    fin_next = fin_cur;
+    led_next = led_cur;
+    data_out_next =data_out_current;
+    next_buf_size = current_buf_size;
+    buf0_n = buf0_c;
+    buf1_n = buf1_c;
+    buf2_n = buf2_c;
+    buf3_n = buf3_c;
+    buf4_n = buf4_c;
+    delay_n = delay_c;
+
 	case(current_fpga_master_mode)
 	fpga_master_mode_idle:begin
+            led_next[4] = FLAGA;
+            led_next[5] = FLAGB;
+            led_next[6] = FLAGC;
+            led_next[7] = FLAGD;
+
         if(fin_cur == 1 )begin
             next_fpga_master_mode = fpga_master_mode_idle;
             fin_next = 1;
+
         end
         else begin
-            next_fpga_master_mode = fpga_master_mode_stream_in;
+            delay_n = 3;
+            next_fpga_master_mode = fpga_master_mode_delay; 
+            led_next = 8'b00000001;
             fin_next = 0;
+
+            next_buf_size = 0;
+            // //TODO: just for testing
+            //next_buf_size = 6'd5;
         end
 	end
+
+
+    fpga_master_mode_stream_out:begin
+        led_next = 8'b00000011;
+
+        if(current_buf_size <8 && FLAGC == 1 && FLAGD == 1 && slrd_streamOUT_ == 0)begin
+            // try 3 delay?
+            case(current_buf_size)  
+                3: begin buf0_n=fdata_d; end
+                4: begin buf1_n=fdata_d; end
+                5: begin buf2_n=fdata_d; end
+                6: begin buf3_n=fdata_d; end
+                7: begin buf4_n=fdata_d; end
+            
+            endcase
+            next_buf_size = next_buf_size+1;
+        end
+        // else, don't save
+
+
+        
+        if(stream_out_count >32'h1000  && FLAGC == 1)begin
+            next_fpga_master_mode = fpga_master_mode_delay;
+            delay_n=3;
+        end
+        else begin
+            next_fpga_master_mode = fpga_master_mode_stream_out;
+        end
+    end
+
+    //TODO: 3 cycle delay
+    fpga_master_mode_delay: begin
+        if(delay_c == 0)begin
+            if(next_buf_size ==0) begin next_fpga_master_mode=fpga_master_mode_stream_out; end
+            else begin  next_fpga_master_mode=fpga_master_mode_stream_in; next_buf_size = 5;   end // manual specific buf size
+        end
+        else begin
+            delay_n = delay_n-1;
+            next_fpga_master_mode = fpga_master_mode_delay;
+        end
+    end
 	fpga_master_mode_stream_in:begin
-        if(cnt >32'h1000 )begin
+
+
+        if(current_buf_size >=0 && current_buf_size <9)begin
+            if(current_buf_size == 0 )begin
+                next_buf_size=10; // make sure never enter again
+
+            end
+            case(current_buf_size)
+                4: begin data_out_next=buf0_c;  next_buf_size =next_buf_size -1;end
+                3: begin data_out_next=buf1_c;  next_buf_size =next_buf_size -1;end
+                2: begin data_out_next=buf2_c;  next_buf_size =next_buf_size -1;end
+                1: begin data_out_next=buf3_c;  next_buf_size =next_buf_size -1;end
+                0: begin data_out_next=buf4_c;  next_buf_size =next_buf_size -1;end
+                5: begin  data_out_next =32'hab;   next_buf_size =next_buf_size -1; end
+                default: begin data_out_next =32'hbb;  next_buf_size =next_buf_size -1;end //something very wrong
+            endcase
+
+            // else begin
+            //     next_buf_size =next_buf_size -1;
+            // end
+        end
+        else begin
+            //TODO: just for testign
+            data_out_next = 32'hcc;
+        end
+
+
+
+        if(stream_in_count >32'h1000 )begin
             fin_next = 1;
             next_fpga_master_mode = fpga_master_mode_idle;
+            led_next = 8'b00000111;
         end
         else begin
             next_fpga_master_mode = fpga_master_mode_stream_in;
             fin_next = 0;
         end
+    
+
 	end
 	default:begin
 		next_fpga_master_mode = fpga_master_mode_idle;
@@ -1180,12 +1339,18 @@ always @(posedge usb_clk)begin
 	// end else if (!stream_in_mode_selected) begin
 	// 	cnt<= 0;
 	// end	
-    if(current_fpga_master_mode == fpga_master_mode_stream_in)begin
+
+    if(current_fpga_master_mode == fpga_master_mode_stream_in && slwr_streamIN_ == 1'b0)begin
         cnt <= cnt+1;
+        stream_in_count <= stream_in_count+1;
+    end
+    else if(current_fpga_master_mode == fpga_master_mode_stream_out && slrd_streamOUT_ == 1'b0 && FLAGC == 1 )begin
+        stream_out_count <=stream_out_count+1;
     end
     else begin
         cnt <= 0;
-        
+        stream_in_count <=0;
+        stream_out_count <=0;
     end
     // cnt <= cnt+1;
 end
