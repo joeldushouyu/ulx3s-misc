@@ -1263,11 +1263,11 @@ always @(*) begin
         if(current_buf_size <8 && FLAGC == 1 && FLAGD == 1 && slrd_streamOUT_ == 0)begin
             // try 3 delay? could try to switch address+3 delay before got to sleep
             case(current_buf_size)  
-                3: begin buf0_n=fdata_d; end
-                4: begin buf1_n=fdata_d; end
-                5: begin buf2_n=fdata_d; end
-                6: begin buf3_n=fdata_d; end
-                7: begin buf4_n=fdata_d; end
+                3: begin buf0_n=stream_out_data_from_fx3; end
+                4: begin buf1_n=stream_out_data_from_fx3; end
+                5: begin buf2_n=stream_out_data_from_fx3; end
+                6: begin buf3_n=stream_out_data_from_fx3; end
+                7: begin buf4_n=stream_out_data_from_fx3; end
             
             endcase
             next_buf_size = next_buf_size+1;
