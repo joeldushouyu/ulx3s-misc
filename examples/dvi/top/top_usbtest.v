@@ -1,6 +1,6 @@
-module top_usbtest #(parameter x = 1920,     // pixels
-                     parameter y = 1080,     // pixels
-                     parameter f = 30,       // Hz 60, 50, 30
+module top_usbtest #(parameter x = 1024,     // pixels
+                     parameter y = 768,     // pixels
+                     parameter f = 60,       // Hz 60, 50, 30
                      parameter xadjustf = 0, // or to fine-tune f
                      parameter yadjustf = 0, // or to fine-tune f
                      parameter c_ddr = 1    // 0:SDR 1:DDR
@@ -147,6 +147,7 @@ module top_usbtest #(parameter x = 1920,     // pixels
     .c_bits_x(11),
     .c_bits_y(11)
     ) vga_instance (
+    .rst(rst),
     .clk_pixel(clk_pixel),
     .clk_pixel_ena(1'b1),
     .test_picture(1'b1),  // enable test picture generation
@@ -169,7 +170,9 @@ module top_usbtest #(parameter x = 1920,     // pixels
     reg changed;
     parameter red = 2'b00, green = 2'b01, blue = 2'b10;
     
-    reg [20:0] countx = 0;    reg [20:0] county = 0;
+    reg [31:0] counter, counter_n;
+    reg [20:0] countx_c, countx_n;    
+    reg [20:0] county_c, county_n;
 
     //assign led[0] = ableToRead;
 
@@ -177,99 +180,158 @@ module top_usbtest #(parameter x = 1920,     // pixels
     reg [63:0] clk_pixel_count = 0;
     reg [63:0] clear_count = 0;
     reg [7:0] countInMHZ = 0;
-    always@(posedge clk_pixel) begin
-
-        clk_pixel_count = clk_pixel_count + 1;
-        if(fetch_next == 1)
-        begin
-            clear_count = clear_count + 1;
-            if(clear_count==  1000000)begin
-                countInMHZ = countInMHZ + 1;
-                clear_count = 0;
-            end
-        
-        
-
-        end
-        if(clk_pixel_count == 65000000) begin
-            //led = countInMHZ;
-            countInMHZ = 0;
-            clear_count = 0;
-            clk_pixel_count = 0;
-        end
-
-        //add every 1000
 
 
-        if (fetch_next == 1 ) begin
-            r_i <= r_i_n;
-            g_i <= g_i_n;
-            b_i <= b_i_n;
-            if (countx == x-1)begin
-                
-                countx <= 0;
-                if (county == (y/2)-1) begin
-                    //pixelState <= pixelNextState;
-                    county     <= 0;
-                end
-                else begin
-                    county <= county+1;
-                end
-                
+    reg [20:0] countx = 0;    reg [20:0] county = 0;
+
+    reg enableVideo_c, enableVideo_n;
+    always@( posedge clk_pixel or negedge rst) begin
+      
+      if(!rst)begin
+        countx<=0;
+        county<=0;
+        enableVideo_c <=0;
+      end
+      else if(fetch_next) begin
+        if(countx == x-1 )begin
+
+            countx <= 0;
+            if(county == y-1)begin
+                county <=0;
+                countx<=0;
             end
             else begin
-                countx <= countx + 1;
+                county<= county+1;
             end
-            
-            // fetch a new pixel
-            readPixelSignal = ~ readPixelSignal;
-            
-            r_i_n = 255;
-            g_i_n = 255;
-            b_i_n = 0;
-            // r_i_n = r_i_n + 1;
-            // g_i_n = 255;
-            // b_i_n = 0;
+
         end
-        
-    end
+        else begin
+          countx <= countx + 1;
+        end
+
+        enableVideo_c <= enableVideo_n;
+
+        r_i <= r_i_n;
+        g_i <= g_i_n;
+        b_i <= b_i_n;
+      end
+
+    end    
     
 
+    // main idea:
+    // 1. sacrifice first frame time
+    // 2. 3 clock before start of 2nd screen enable the video frame
+    always @(*) begin
+        // last row of the 1(discarded) frame
+        // last 3 pixel of time already used in transition
+        //TODO:
+        if(enableVideo_c == 0 && county == y-1-1  && countx == x-1-3)begin
+            //TODO:
+            enableVideo_n =1;
+        end
+        else begin
+            enableVideo_n = enableVideo_c;// don't touch
+        end  
+        if(county > (y/2))begin
+                r_i_n               <= 255;
+                b_i_n               <= 0;
+                g_i_n               <= 0;
+        end
+        else begin
+
+                r_i_n               <= 0;
+                b_i_n               <= 255;
+                g_i_n               <= 0;
+        end
+       
+        
+    end
+    // always@( posedge fetch_next or negedge rst) begin
+
+    //     if(!rst) begin
+    //         countx_c <=0;
+    //         county_c <=0;
+    //         counter <=0;
+    //     end
+    //     else begin
+    //         countx_c <= countx_n;
+    //         county_c <= county_n;
+    //         r_i <= r_i_n;
+    //         b_i <= b_i_n;
+    //         g_i <= g_i_n;
+    //         counter <= counter_n;
+    //     end
+
+    // end
     
+    // always @(*)begin
+
+    //     countx_n = countx_c;
+    //     county_n = county_c;
+    //     counter_n = counter;
+    //     if(countx_c == x-1)begin
+    //         county_n = county_n + 1;
+    //         countx_n = 0;
+    //         counter_n = counter_n+1;
+    //     end
+    //     else if(county_c == y-1)begin
+    //         county_n = 0;
+    //         countx_n = 0;
+    //         counter_n = 0;
+    //     end
+    //     else begin
+    //         countx_n = countx_n +1;
+    //         county_n = county_c;
+    //         counter_n = counter_n+1;
+    //     end
+
+    //     if(county_c > y/2)begin
+    //         r_i_n = 255;
+    //         b_i_n = 0;
+    //         g_i_n = 0;
+
+    //     end
+    //     else begin
+    //         r_i_n = 0;
+    //         b_i_n = 255;
+    //         g_i_n = 0;
+    //     end 
+    // end
     // always @(posedge fetch_next) begin
         
     //     case (pixelState)
     //         red:
     //         begin
     //             // pixelNextState <= blue ;
-    //             r_i_n               <= 255;
-    //             b_i_n               <= 0;
-    //             g_i_n               <= 0;
+    //             r_i               <= 255;
+    //             b_i               <= 0;
+    //             g_i               <= 0;
     //             pixelNextState    <= blue ;
                 
     //         end
     //         blue:
     //         begin
     //             pixelNextState <= red;
-    //             r_i_n            <= 0;
-    //             b_i_n           <= 255;
-    //             g_i_n            <= 0;
+    //             r_i            <= 0;
+    //             b_i            <= 255;
+    //             g_i            <= 0;
     //         end
             
-    //             // green:
-    //             // begin
-    //             //     pixelNextState <= red;
-    //             //     r_i            <= 0;
-    //             //     b_i            <= 0;
-    //             //     g_i            <= 255;
-    //             // end
+    //         // green:
+    //         // begin
+    //         //     pixelNextState <= red;
+    //         //     r_i            <= 0;
+    //         //     b_i            <= 0;
+    //         //     g_i            <= 255;
+    //         // end
             
             
     //         default: pixelNextState <= red;
     //     endcase
         
     // end
-    
+
     // // // LED blinky
     // // assign led[7:6] = 0;
     // // assign led[0]   = vga_vsync;
@@ -1183,7 +1245,7 @@ always @(*) begin
 
         end
         else begin
-            delay_n = 3;
+            delay_n = 0;
             next_fpga_master_mode = fpga_master_mode_delay; 
             led_next = 8'b00000001;
             fin_next = 0;
@@ -1199,7 +1261,7 @@ always @(*) begin
         led_next = 8'b00000011;
 
         if(current_buf_size <8 && FLAGC == 1 && FLAGD == 1 && slrd_streamOUT_ == 0)begin
-            // try 3 delay?
+            // try 3 delay? could try to switch address+3 delay before got to sleep
             case(current_buf_size)  
                 3: begin buf0_n=fdata_d; end
                 4: begin buf1_n=fdata_d; end
@@ -1212,7 +1274,8 @@ always @(*) begin
         end
         // else, don't save
 
-
+        // // assume never exit stream_out, see if can continously send data from host to fpga
+        // next_fpga_master_mode = fpga_master_mode_stream_out;
         
         if(stream_out_count >32'h1000  && FLAGC == 1)begin
             next_fpga_master_mode = fpga_master_mode_delay;

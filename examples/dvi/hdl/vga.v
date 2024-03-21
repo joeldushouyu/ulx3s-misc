@@ -37,6 +37,7 @@
 // no timescale needed
 
 module vga(
+input  rst,
 input wire clk_pixel,
 input wire clk_pixel_ena,
 input wire test_picture,
@@ -110,8 +111,12 @@ reg [7:0] R_vga_r; reg [7:0] R_vga_g; reg [7:0] R_vga_b;  // test picture genera
 wire [7:0] W; wire [7:0] A; wire [7:0] T;
 wire [5:0] Z;
 
-  always @(posedge clk_pixel) begin
-    if(clk_pixel_ena == 1'b1) begin
+  always @(posedge clk_pixel or negedge rst) begin
+    if(!rst)begin
+        CounterX <=0;
+        CounterY <=0;
+    end
+    else if(clk_pixel_ena == 1'b1) begin
       if(CounterX == c_frame_x) begin
         CounterX <= {((c_bits_x - 1)-(0)+1){1'b0}};
         if(CounterY == c_frame_y) begin
