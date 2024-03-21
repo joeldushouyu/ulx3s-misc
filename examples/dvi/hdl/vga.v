@@ -54,7 +54,11 @@ output wire vga_hsync,
 output wire vga_vsync,
 output wire vga_vblank,
 output wire vga_blank,
-output wire vga_de
+output wire vga_de,
+output wire [c_bits_x - 1:0] vga_x_count, //TODO: match cbits
+output wire [c_bits_y - 1:0] vga_y_count,
+
+output wire pixelSignal,
 );
 
 parameter [31:0] c_resolution_x=640;
@@ -203,6 +207,8 @@ wire [5:0] Z;
     R_disp <= R_disp_early;
   end
 
+  assign pixelSignal =  ( R_disp_early == 1'b0) ? 0: clk_pixel;
+
   assign vga_r = R_vga_r;
   assign vga_g = R_vga_g;
   assign vga_b = R_vga_b;
@@ -211,5 +217,6 @@ wire [5:0] Z;
   assign vga_blank = R_blank;
   assign vga_vblank = R_vblank;
   assign vga_de = R_disp;
-
+  assign vga_x_count = CounterX;
+  assign vga_y_count = CounterY;
 endmodule

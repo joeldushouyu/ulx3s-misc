@@ -1,5 +1,5 @@
-module top_usbtest #(parameter x = 1024,     // pixels
-                     parameter y = 768,     // pixels
+module top_usbtest #(parameter x = 640,     // pixels
+                     parameter y = 480,     // pixels
                      parameter f = 60,       // Hz 60, 50, 30
                      parameter xadjustf = 0, // or to fine-tune f
                      parameter yadjustf = 0, // or to fine-tune f
@@ -102,7 +102,6 @@ module top_usbtest #(parameter x = 1024,     // pixels
     wire [3:0] clocks;
     wire clk_shift = clocks[0];
     wire clk_pixel = clocks[1];
-    wire usb_clk = fetch_next;
     ecp5pll #(
     .in_hz(25000000),
     .out0_hz(pixel_f*5*(c_ddr?1:2)),
@@ -133,8 +132,11 @@ module top_usbtest #(parameter x = 1024,     // pixels
     // end
 
     //assign gp[0] = clocks[0];
-    wire  fetch_next;
-    
+    reg  fetch_next;
+    wire clock_pixel;
+    localparam cbits_vga = 11;
+    reg [cbits_vga-1:0] countx, county;
+    wire [cbits_vga-1:0] countx_vga, county_vga;
     vga #(
     .c_resolution_x(x),
     .c_hsync_front_porch(hsync_front_porch),
@@ -144,8 +146,8 @@ module top_usbtest #(parameter x = 1024,     // pixels
     .c_vsync_front_porch(vsync_front_porch),
     .c_vsync_pulse(vsync_pulse_width),
     .c_vsync_back_porch(vsync_back_porch),
-    .c_bits_x(11),
-    .c_bits_y(11)
+    .c_bits_x(cbits_vga),
+    .c_bits_y(cbits_vga)
     ) vga_instance (
     .rst(rst),
     .clk_pixel(clk_pixel),
@@ -154,7 +156,10 @@ module top_usbtest #(parameter x = 1024,     // pixels
     .fetch_next(fetch_next),
     .vga_hsync(vga_hsync),
     .vga_vsync(vga_vsync),
-    .vga_blank(vga_blank)
+    .vga_blank(vga_blank),
+    .vga_x_count(countx_vga),
+    .vga_y_count(county_vga),
+    .pixelSignal(clock_pixel)
     );
     
     // buffer logic 
@@ -170,53 +175,107 @@ module top_usbtest #(parameter x = 1024,     // pixels
     reg changed;
     parameter red = 2'b00, green = 2'b01, blue = 2'b10;
     
-    reg [31:0] counter, counter_n;
-    reg [20:0] countx_c, countx_n;    
-    reg [20:0] county_c, county_n;
 
-    //assign led[0] = ableToRead;
-
-
-    reg [63:0] clk_pixel_count = 0;
-    reg [63:0] clear_count = 0;
-    reg [7:0] countInMHZ = 0;
-
-
-    reg [20:0] countx = 0;    reg [20:0] county = 0;
-
+  
+    reg signal;
     reg enableVideo_c, enableVideo_n;
-    always@( posedge clk_pixel or negedge rst) begin
+    wire usb_clk ;
+    assign usb_clk = clock_pixel;
+
+    // always@ (posedge clk_shift)begin
+    //     if(fetch_next)begin
+    //         signal <=1;
+    //     end
+    //     else begin
+    //         signal <=0;
+    //     end
+    // end
+
+    reg [31:0] counter;
+    // assign led = counter[19:12];
+    always@( posedge clock_pixel or negedge rst ) begin
       
       if(!rst)begin
         countx<=0;
         county<=0;
         enableVideo_c <=0;
+        //enableVideo_n <=0;
       end
-      else if(fetch_next) begin
+      else begin
+     
         if(countx == x-1 )begin
 
             countx <= 0;
             if(county == y-1)begin
                 county <=0;
                 countx<=0;
+                counter<=0;
+                //led <= counter/4096;
             end
             else begin
                 county<= county+1;
+                counter <= counter+1;
             end
 
         end
         else begin
           countx <= countx + 1;
+          counter <= counter+1;
         end
 
-        enableVideo_c <= enableVideo_n;
+            enableVideo_c <= enableVideo_n;
+        
+            r_i <= r_i_n;
+            g_i <= g_i_n;
+            b_i <= b_i_n;
+            // r_i <=  databus[7:0];
+            // g_i <= databus[7:0];
+            // b_i <= databus[7:0];
 
-        r_i <= r_i_n;
-        g_i <= g_i_n;
-        b_i <= b_i_n;
-      end
+        end    
+    end
 
-    end    
+    // always@( posedge clk_pixel or negedge rst) begin
+      
+    //   if(!rst)begin
+    //     countx<=0;
+    //     county<=0;
+    //     enableVideo_c <=0;
+    //     //enableVideo_n <=0;
+    //   end
+    //   else if(fetch_next)  begin
+
+    //     if(countx == x-1 )begin
+
+    //         countx <= 0;
+    //         if(county == y-1)begin
+    //             county <=0;
+    //             countx<=0;
+    //         end
+    //         else begin
+    //             county<= county+1;
+    //         end
+
+    //     end
+    //     else begin
+    //       countx <= countx + 1;
+    //     end
+
+    //     enableVideo_c <= enableVideo_n;
+    
+    //     r_i <= r_i_n;
+    //     g_i <= g_i_n;
+    //     b_i <= b_i_n;
+    //     // r_i <=  databus[7:0];
+    //     // g_i <= databus[7:0];
+    //     // b_i <= databus[7:0];
+
+    //   end
+    //   else begin
+    //     // when fetch_next is false
+    //   end
+
+    // end    
     
 
     // main idea:
@@ -226,7 +285,7 @@ module top_usbtest #(parameter x = 1024,     // pixels
         // last row of the 1(discarded) frame
         // last 3 pixel of time already used in transition
         //TODO:
-        if(enableVideo_c == 0 && county == y-1-1  && countx == x-1-3)begin
+        if( enableVideo_c == 0&& county == y-1  && countx == x-1-5)begin
             //TODO:
             enableVideo_n =1;
         end
@@ -244,93 +303,24 @@ module top_usbtest #(parameter x = 1024,     // pixels
                 b_i_n               <= 255;
                 g_i_n               <= 0;
         end
+        // if(counter == 32'h4AFFF)begin
+        //     led=8'b00000001;
+        // end
+        // if(enableVideo_c == 1 )begin
+        //         r_i_n               =  stream_out_data_from_fx3[7:0];
+        //         b_i_n               =  stream_out_data_from_fx3[7:0];
+        //         g_i_n               = stream_out_data_from_fx3[7:0];
+                
+        // end
+        // else begin
+
+        //         r_i_n               = 0;
+        //         b_i_n               = 0;
+        //         g_i_n               = 0;
+        // end
        
         
     end
-    // always@( posedge fetch_next or negedge rst) begin
-
-    //     if(!rst) begin
-    //         countx_c <=0;
-    //         county_c <=0;
-    //         counter <=0;
-    //     end
-    //     else begin
-    //         countx_c <= countx_n;
-    //         county_c <= county_n;
-    //         r_i <= r_i_n;
-    //         b_i <= b_i_n;
-    //         g_i <= g_i_n;
-    //         counter <= counter_n;
-    //     end
-
-    // end
-    
-    // always @(*)begin
-
-    //     countx_n = countx_c;
-    //     county_n = county_c;
-    //     counter_n = counter;
-    //     if(countx_c == x-1)begin
-    //         county_n = county_n + 1;
-    //         countx_n = 0;
-    //         counter_n = counter_n+1;
-    //     end
-    //     else if(county_c == y-1)begin
-    //         county_n = 0;
-    //         countx_n = 0;
-    //         counter_n = 0;
-    //     end
-    //     else begin
-    //         countx_n = countx_n +1;
-    //         county_n = county_c;
-    //         counter_n = counter_n+1;
-    //     end
-
-    //     if(county_c > y/2)begin
-    //         r_i_n = 255;
-    //         b_i_n = 0;
-    //         g_i_n = 0;
-
-    //     end
-    //     else begin
-    //         r_i_n = 0;
-    //         b_i_n = 255;
-    //         g_i_n = 0;
-    //     end 
-    // end
-    // always @(posedge fetch_next) begin
-        
-    //     case (pixelState)
-    //         red:
-    //         begin
-    //             // pixelNextState <= blue ;
-    //             r_i               <= 255;
-    //             b_i               <= 0;
-    //             g_i               <= 0;
-    //             pixelNextState    <= blue ;
-                
-    //         end
-    //         blue:
-    //         begin
-    //             pixelNextState <= red;
-    //             r_i            <= 0;
-    //             b_i            <= 255;
-    //             g_i            <= 0;
-    //         end
-            
-    //         // green:
-    //         // begin
-    //         //     pixelNextState <= red;
-    //         //     r_i            <= 0;
-    //         //     b_i            <= 0;
-    //         //     g_i            <= 255;
-    //         // end
-            
-            
-    //         default: pixelNextState <= red;
-    //     endcase
-        
-    // end
 
     // // // LED blinky
     // // assign led[7:6] = 0;
@@ -484,341 +474,6 @@ module top_usbtest #(parameter x = 1024,     // pixels
     assign gn[24] = address[1];//1'b0;
 
     
-
-    // usb_stream_in_example usb_write_instace(
-
-    //     .clk(usb_clk),
-    //     .rst_n(reset),
-    //     .flag_a(FLAGA),
-    //     .flag_b(FLAGB),
-    //     .flag_c(FLAGC),
-    //     .flag_d(FLAGD),
-    //     .slcs(SLCS),
-    //     .sloe(SLOE),
-    //     .slrd(SLRD),
-    //     .slwr(SLWR),
-    //     .pktend(PKTEND),
-    //     .fifo_addr(address),
-    //     .usb_data(databus)
-
-    // );
-
-//     //FOr fifo experiment only
-//     // wire                            cmd_flag;
-//     // reg    [31: 0]                 cmd_data; 
-//     // usb_fifo_example usb_fifo_instance(
-//     //     .clk(usb_clk),
-//     //     .rst_n(reset),
-//     //     .flag_a(FLAGA),
-//     //     .flag_b(FLAGB),
-//     //     .flag_c(FLAGC),
-//     //     .flag_d(FLAGD),
-//     //     .slcs(SLCS),
-//     //     .sloe(SLOE),
-//     //     .slrd(SLRD),
-//     //     .slwr(SLWR),
-//     //     .pktend(PKTEND),
-//     //     .fifo_addr(address),
-//     //     .usb_data(databus),
-//     //     .cmd_flag(cmd_flag),
-//     //     .cmd_data(cmd_data)
-//     // );
-    
-//     // use for led
-
-//     // always @(negedge cmd_flag)begin
-//     //     // if (cmd_flag == 1) begin
-//     //         // means have data
-//     //         // for testing, assume only one data
-//     //         // top of 16 bit
-//     //         led[7] = cmd_data[7];
-//     //         led[6] = cmd_data[6];
-//     //         led[5] = cmd_data[5];
-//     //         led[4] = cmd_data[4];
-//     //         led[3] = cmd_data[3];
-//     //         led[2] = cmd_data[2];
-//     //         led[1] = cmd_data[1];
-//     //         led[0] = cmd_data[0];
-//     //         //led = cmd_data;
-//     //     // end
-//     //     // else begin
-//     //     //     led = 8'b00000001;
-//     //     // end
-//     // end
-    // parameter master_mode_loopback = 3'b000;
-    // parameter master_mode_stream_out = 3'b001;
-    // parameter master_mode_stream_in = 3'b010;
-    // parameter master_mode_ZLP = 3'b011;
-    // parameter master_mode_partial = 3'b100;
-    // parameter master_mode_idle = 3'b101;
-
-    // // // stream in 
-    // parameter stream_in_idle           = 2'b00;
-    // parameter stream_in_wait_flagb     = 2'b01;
-    // parameter stream_in_write          = 2'b10;
-    // parameter stream_in_write_wr_delay = 2'b11;
-    // // // stream_in 
-    // reg [1:0] stream_in_mode;
-    // reg [2:0] current_master, next_master;
-    // reg [15:0] counter;
-    // usb_stream_in #(
-    //     .master_mode_loopback(master_mode_loopback),
-    //     .master_mode_stream_out(master_mode_stream_out),
-    //     .master_mode_stream_in(master_mode_stream_in),
-    //     .master_mode_ZLP(master_mode_ZLP),
-    //     .master_mode_partial(master_mode_partial),
-    //     .master_mode_idle(master_mode_idle),
-    //     .stream_in_idle(stream_in_idle),
-    //     .stream_in_wait_flagb(stream_in_wait_flagb),
-    //     .stream_in_write(stream_in_write),
-    //     .stream_in_write_wr_delay(stream_in_write_wr_delay)
-    // ) usb_stream_in_instance(
-    //     .clk(usb_clk),
-    //     .rst_n(rst),
-    //     .master_mode(current_master),
-    //     .data_out(counter),
-    //     .PKTEND(PKTEND),
-    //     .SLOE(SLOE),
-    //     .SLRD(SLRD),
-    //     .SLCS(SLCS),
-    //     .SLWR(SLWR),
-    //     .A(address),
-    //     .FLAGA(FLAGA),
-    //     .FLAGB(FLAGB),
-    //     .DQ(databus),
-    //     .current_stream_in_mode(stream_in_mode),
-
-    // );
-    // always @(posedge usb_clk ) begin
-
-    //     // if(~rst) begin
-    //     //     //counter<=0;
-    //     //     current_master <= master_mode_idle;
-    //     // end
-    //     // else begin
-    //         //counter <= counter+1;
-    //         current_master <= master_mode_stream_in;
-    //     // end
-    // end
-    // always @(posedge usb_clk) begin
-    //     current_master <= next_master;
-    //     // counter <= counter+1;
-    // end 
-    // //Test case , write all iteration of the 16 bit letter
-
-    
-    // always @(*) begin
-    //     case(current_master)
-    //         master_mode_idle: begin
-    //             //SLCS = 1;
-    //             next_master = master_mode_stream_in;
-    //         end
-    //         master_mode_stream_in: begin
-    //             //counter = counter + 1;
-    //             next_master = master_mode_stream_in;
-    //         end
-
-    //         default: begin
-    //             next_master = master_mode_idle;
-    //         end
-    //     endcase
-
-    // end
-
-    // // always @(current_master) begin
-    // //     if(current_master == master_mode_stream_in ) begin
-    // //         counter <= counter+1;
-    // //     end
-    // //     else begin
-    // //         counter <= 0;
-    // //     end
-    // // end
-
-
-
-// sram for testing
-
-
-	// wire CLK_OUT;
-	// assign CLK_OUT = usb_clk; // input 165.5MHZ
-	 
-	//  //FSM state declarationss
-	//  localparam idle=0,
-	// 				//write test-data to all addresses
-	// 				new_write=1,
-	// 				write_burst=2,
-	// 				//read test-data written to all addresses
-	// 				new_read=3,
-	// 				read_burst=4;
-					
-	//  reg[2:0] state_q=idle,state_d;
-	//  reg[14:0] f_addr_q=0,f_addr_d; 
-	//  reg[9:0] burst_index_q=0,burst_index_d;
-	//  reg[3:0] led_q=0,led_d;
-	//  reg[19:0] error_q=0,error_d;
-	 
-	//  reg rw,rw_en;
-	//  reg[15:0] f2s_data;
-	//  wire ready,s2f_data_valid,f2s_data_valid;
-	//  wire[15:0] s2f_data;
-	//  wire key0_tick,key1_tick;
-	//  wire[5:0] in0,in1,in2,in3,in4,in5; //format: {dp,char[4:0]} , dp is active high
-	 
-	//  (*KEEP="TRUE"*)reg[36:0] counter_q,index_q,index_d; //counter_q increments until 1 second(165_000_000 clk cycles). Index_q holds the number of words read/written(check the value at chipscope)	
-	// 							//Memory Bandwidth: index_q*2 = X bytes/seconds
-	// 							// RESULT: 190MB/s (100MHz with t_CL=2)
-	// 							// RESULT: 316MB/s (165MHz clk with t_CL=3)
-
-	//  //register operations
-	//  always @(posedge CLK_OUT,negedge rst_n) begin
-	// 	if(!rst_n) begin
-	// 		state_q<=0;
-	// 		f_addr_q<=0;
-	// 		burst_index_q<=0;
-	// 		led_q<=0;
-	// 		error_q<=0;
-	// 		counter_q<=0;
-	// 		index_q<=0;
-	// 	end
-	// 	else begin
-	// 		state_q<=state_d;
-	// 		f_addr_q<=f_addr_d;
-	// 		burst_index_q<=burst_index_d;
-	// 		led_q<=led_d;
-	// 		error_q<=error_d;	
-	// 		counter_q<=(state_q==idle) ?0:counter_q+1'b1;
-	// 		index_q<=index_d;
-	// 	end
-	//  end
-	 
-	//  //FSM next-state logic
-	//  always @* begin
-	//  state_d=state_q;
- 	//  f_addr_d=f_addr_q;
-	//  burst_index_d=burst_index_q;
-	//  led_d=led_q;
-	//  error_d=error_q;
-	//  rw=0;
-	//  rw_en=0;
-	//  f2s_data=0;
-	//  index_d=index_q;
-	 
-	//  case(state_q)		
-	// 	  		 idle: begin  //wait until either button is toggled
-	// 						f_addr_d=0;
-	// 						burst_index_d=0;
-	// 						if(key0_tick) begin
-	// 							state_d=new_write; 
-	// 							index_d=0;
-	// 						end
-	// 						if(key1_tick) begin
-	// 							state_d=new_read;
-	// 							error_d=0;
-	// 							index_d=0;
-	// 						end
-	// 					 end
-	// 	  new_write: if(ready) begin  //write a deterministic data to all possible addresses of sdram
-	// 						led_d[1]=1'b1;
-	// 						rw_en=1;
-	// 						rw=0;
-	// 						state_d=write_burst;
-	// 						burst_index_d=0;
-	// 					 end
-	// 	write_burst: begin 
-	// 						f2s_data=f_addr_q+burst_index_q;
-	// 						if(!key[2] && (f_addr_q==13000 || f_addr_q==100)) f2s_data=9999; //Inject errors when key[2] is pressed. The output error must be 512*2*10=10240
-	// 						if(f2s_data_valid) begin
-	// 							burst_index_d=burst_index_q+1; //track the number of already bursted data
-	// 							index_d=index_q+1'b1; //holds the total number of words written to sdram
-	// 						end
-	// 						else if(burst_index_q==512) begin //last data must be 512th(for full page mode), since index starts at zero, the 512th is expected to have deasserted f2s_data_valid
-	// 							if(counter_q>=165_000_000) begin //1 second had passed
-	// 								led_d[1:0]=2'b11; 
-	// 								state_d=idle;
-	// 							end
-	// 							else begin
-	// 								f_addr_d=f_addr_q+1;
-	// 								state_d=new_write;
-	// 							end
-	// 						end
-	// 					 end
-	// 	   new_read: if(ready) begin //read each data from all addresses and test if it matches the deterministic data we assigned earlier
-	// 						led_d[2]=1'b1;
-	// 						rw_en=1;
-	// 						rw=1;
-	// 						state_d=read_burst;
-	// 						burst_index_d=0;
-	// 					 end
-	// 	 read_burst: begin
-	// 						if(s2f_data_valid) begin
-	// 							if(s2f_data!=f_addr_q+burst_index_q) error_d=error_q+1'b1; //count the errors in which the read output does not match the expected assigned data
-	// 							burst_index_d=burst_index_q+1;
-	// 							index_d=index_q+1'b1; //holds the total number of words read from sdram
-	// 						end
-	// 						else if(burst_index_q==512) begin
-	// 							if(counter_q>=165_000_000) begin //1 second had passed
-	// 								led_d[3:0]=4'b1111; //all leds on after successfull write
-	// 								state_d=idle;
-	// 							end
-	// 							else begin
-	// 								f_addr_d=f_addr_q+1;
-	// 								state_d=new_read;
-	// 							end
-	// 						end
-	// 					 end
-	// 	    default: state_d=idle;
-	//  endcase
-	//  end
-	 
-	//  assign led=led_q;
-	
-	// //module instantiations
-	//  sdram_controller m0
-	//  (
-	// 	//fpga to controller
-	// 	.clk(CLK_OUT), //clk=100MHz
-	// 	.rst_n(0),  
-	// 	.rw(rw), // 1:read , 0:write
-	// 	.rw_en(rw_en), //must be asserted before read/write
-	// 	.f_addr(f_addr_q), //23:11=row  , 10:9=bank  , no need for column address since full page mode will always start from zero and end with 511 words
-	// 	.f2s_data(f2s_data), //fpga-to-sdram data
-	// 	.s2f_data(s2f_data), //sdram to fpga data
-	// 	.s2f_data_valid(s2f_data_valid),  //asserts while  burst-reading(data is available at output UNTIL the next rising edge)
-	// 	.f2s_data_valid(f2s_data_valid), //asserts while burst-writing(data must be available at input BEFORE the next rising edge)
-	// 	.ready(ready), //"1" if sdram is available for nxt read/write operation
-	// 	//controller to sdram
-	// 	.s_clk(sdram_clk),
-	// 	.s_cke(sdram_cke), 
-	// 	.s_cs_n(sdram_csn),
-	// 	.s_ras_n(sdram_rasn ), 
-	// 	.s_cas_n(sdram_casn),
-	// 	.s_we_n(sdram_wen), 
-	// 	.s_addr(sdram_a), 
-	// 	.s_ba(sdram_ba), 
-	// 	.LDQM(sdram_dqm[0]),
-	// 	.HDQM(sdram_dqm[1]),
-	// 	.s_dq(sdram_d) 
-    // );
-
-
-	//  debounce_explicit m1
-	// (
-	// 	.clk(CLK_OUT),
-	// 	.rst_n(rst_n),
-	// 	.sw({!{btn[0]}}),
-	// 	.db_level(),
-	// 	.db_tick(key0_tick)
-    // );
-	 
-	//   debounce_explicit m2
-	// (
-	// 	.clk(CLK_OUT),
-	// 	.rst_n(rst_n),
-	// 	.sw({!{btn[1]}}),
-	// 	.db_level(),
-	// 	.db_tick(key1_tick)
-    // );
-	 
 
 
 
@@ -1177,47 +832,6 @@ always @(posedge usb_clk  or negedge rst)begin
     end
 
 end
-
-
-
-// reg  [15:0] buffers [4:0];
-// reg [3:0]countStore;
-// reg [12:0] stream_out_count;
-// reg [3:0]countRead ;
-// reg [12:0] stream_in_count;
-
-// // change of state logic
-// always @(*) begin
-//     case(current_fpga_master_mode)
-//         fpga_master_mode_idle: begin
-//             countStore = 0;
-//             countRead = 0;
-//             stream_out_count = 0;
-//             stream_in_count = 0;
-//             next_fpga_master_mode = fpga_master_mode_stream_out; // read data first
-//         end
-
-//         fpga_master_mode_stream_out: begin
-//             if(stream_out_count == 4096-1) begin
-//                 // already have data to read
-//                 next_fpga_master_mode = fpga_master_mode_stream_in; // stream it out
-//             end
-//             else begin
-//                 next_fpga_master_mode = fpga_master_mode_stream_out;
-//             end
-//         end
-
-//         fpga_master_mode_stream_in : begin 
-//             if(stream_in_count == 4096-1) begin
-//                 next_fpga_master_mode = fpga_master_mode_idle;
-//             end
-//             else begin
-//                 next_fpga_master_mode = fpga_master_mode_stream_in;
-//             end
-//         end
-//     endcase
-
-// end
 
 
 always @(*) begin
