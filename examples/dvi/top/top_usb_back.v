@@ -102,15 +102,12 @@ module top_usbtest #(parameter x = 640,     // pixels
     wire [3:0] clocks;
     wire clk_shift = clocks[0];
     wire clk_pixel = clocks[1];
-    wire sram_clock = clocks[3]; //  is 166000000-666666 = 165333334 = 165MHZ
     ecp5pll #(
     .in_hz(25000000),
     .out0_hz(pixel_f*5*(c_ddr?1:2)),
     .out1_hz(pixel_f),
     .out2_hz(100000),
     .out2_tol_hz(0),
-    .out3_hz(166000000),
-    .out3_tol_hz(666666),
     ) ecp5pll_inst (
     .clk_i (clk_25mhz),
     .clk_o (clocks),
@@ -293,7 +290,7 @@ module top_usbtest #(parameter x = 640,     // pixels
         // last row of the 1(discarded) frame
         // last 3 pixel of time already used in transition
         //TODO:
-        if(frame_delay_counter == 32'd1 &&  enableVideo_c == 0&& county == y-1  && countx == x-1)begin
+        if(frame_delay_counter == 32'd120 &&  enableVideo_c == 0&& county == y-1  && countx == x-1)begin
             //TODO:
             enableVideo_n =1;
         end
@@ -314,18 +311,18 @@ module top_usbtest #(parameter x = 640,     // pixels
         // if(counter == 32'h4AFFF)begin
         //     led=8'b00000001;
         // end
-        if(enableVideo_c == 1 )begin
-                r_i_n               =0 ; //stream_out_data_from_fx3[7:0];
-                b_i_n               =  stream_out_data_from_fx3[7:0];
-                g_i_n               = stream_out_data_from_fx3[7:0];
+        // if(enableVideo_c == 1 )begin
+        //         r_i_n               =0 ; //stream_out_data_from_fx3[7:0];
+        //         b_i_n               =  stream_out_data_from_fx3[7:0];
+        //         g_i_n               = stream_out_data_from_fx3[7:0];
                 
-        end
-        else begin
+        // end
+        // else begin
 
-                r_i_n               = 0;
-                b_i_n               = 0;
-                g_i_n               = 0;
-        end
+        //         r_i_n               = 0;
+        //         b_i_n               = 0;
+        //         g_i_n               = 0;
+        // end
        
         
     end
@@ -793,7 +790,7 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 reg fin_cur;
 reg fin_next;
 reg [7:0] led_cur, led_next;
-//assign led = led_cur;
+assign led = led_cur;
 //Mode select state machine
 reg [31:0] buf0_c, buf1_c, buf2_c, buf3_c, buf4_c;
 reg [31:0] buf0_n, buf1_n, buf2_n, buf3_n, buf4_n;
@@ -842,8 +839,6 @@ always @(posedge usb_clk  or negedge rst)begin
 end
 
 
-
-
 always @(*) begin
     fin_next = fin_cur;
     led_next = led_cur;
@@ -858,26 +853,47 @@ always @(*) begin
 
 	case(current_fpga_master_mode)
 	fpga_master_mode_idle:begin
-            led_next[4] = FLAGA;
-            led_next[5] = FLAGB;
+            
+            // led_next[4] = FLAGA;
+            // led_next[5] = FLAGB;
             led_next[6] = FLAGC;
             led_next[7] = FLAGD;
+            // led_next[0] = 1'b1;
+            //led_next = 8'b00000001;
+        // if(fin_cur == 1 )begin
+        //     next_fpga_master_mode = fpga_master_mode_idle;
+        //     fin_next = 1;
+
+        // end
+        // else begin
+        //     delay_n = 0;
+        //     next_fpga_master_mode = fpga_master_mode_delay; 
+        //     led_next = 8'b00000001;
+        //     fin_next = 0;
+
+        //     next_buf_size = 0;
+        //     // //TODO: just for testing
+        //     //next_buf_size = 6'd5;
+        // end
 
         if(fin_cur == 1 )begin
             next_fpga_master_mode = fpga_master_mode_idle;
             fin_next = 1;
 
         end
-        else begin
+        else if(enableVideo_c == 1) begin
             delay_n = 0;
             next_fpga_master_mode = fpga_master_mode_delay; 
-            led_next = 8'b00000001;
             fin_next = 0;
 
             next_buf_size = 0;
             // //TODO: just for testing
             //next_buf_size = 6'd5;
         end
+        else begin
+            next_fpga_master_mode = fpga_master_mode_idle;
+        end
+
 	end
 
 
@@ -886,34 +902,53 @@ always @(*) begin
 
         if(current_buf_size <8 && FLAGC == 1 && FLAGD == 1 && slrd_streamOUT_ == 0)begin
             // try 3 delay? could try to switch address+3 delay before got to sleep
-            case(current_buf_size)  
-                3: begin buf0_n=stream_out_data_from_fx3; end
-                4: begin buf1_n=stream_out_data_from_fx3; end
-                5: begin buf2_n=stream_out_data_from_fx3; end
-                6: begin buf3_n=stream_out_data_from_fx3; end
-                7: begin buf4_n=stream_out_data_from_fx3; end
+            // case(current_buf_size)  
+            //     3: begin buf0_n=stream_out_data_from_fx3; end
+            //     4: begin buf1_n=stream_out_data_from_fx3; end
+            //     5: begin buf2_n=stream_out_data_from_fx3; end
+            //     6: begin buf3_n=stream_out_data_from_fx3; end
+            //     7: begin buf4_n=stream_out_data_from_fx3; end
             
-            endcase
-            next_buf_size = next_buf_size+1;
-        end
-        // else, don't save
+            // endcase
+            // next_buf_size = next_buf_size+1;
 
-        // // assume never exit stream_out, see if can continously send data from host to fpga
-        // next_fpga_master_mode = fpga_master_mode_stream_out;
+            if(current_buf_size == 3)begin
+                led_next =8'b00000111;
+            end
+            else begin
+                next_buf_size = next_buf_size+1;
+            end
+        end
         
-        if(stream_out_count >32'h1000  && FLAGC == 1)begin
-            next_fpga_master_mode = fpga_master_mode_delay;
-            delay_n=3;
+        
+        if(current_buf_size == 3 && (FLAGD==0 || FLAGC == 0)  )begin
+            // means have data broken in the flow
+            fin_next = 1;
+            led_next = 8'b00001111;
+            next_fpga_master_mode = fpga_master_mode_idle;
         end
         else begin
             next_fpga_master_mode = fpga_master_mode_stream_out;
+
         end
+
+        // assume never exit stream_out, see if can continously send data from host to fpga
+        // next_fpga_master_mode = fpga_master_mode_stream_out;
+
+
+        // if(stream_out_count >32'h1000  && FLAGC == 1)begin
+        //     next_fpga_master_mode = fpga_master_mode_delay;
+        //     delay_n=3;
+        // end
+        // else begin
+        //     next_fpga_master_mode = fpga_master_mode_stream_out;
+        // end
     end
 
     //TODO: 3 cycle delay
     fpga_master_mode_delay: begin
         if(delay_c == 0)begin
-            if(next_buf_size ==0) begin next_fpga_master_mode=fpga_master_mode_stream_out; end
+            if(current_buf_size ==0) begin next_fpga_master_mode=fpga_master_mode_stream_out; end
             else begin  next_fpga_master_mode=fpga_master_mode_stream_in; next_buf_size = 5;   end // manual specific buf size
         end
         else begin
@@ -921,47 +956,47 @@ always @(*) begin
             next_fpga_master_mode = fpga_master_mode_delay;
         end
     end
-	fpga_master_mode_stream_in:begin
+	// fpga_master_mode_stream_in:begin
 
 
-        if(current_buf_size >=0 && current_buf_size <9)begin
-            if(current_buf_size == 0 )begin
-                next_buf_size=10; // make sure never enter again
+    //     if(current_buf_size >=0 && current_buf_size <9)begin
+    //         if(current_buf_size == 0 )begin
+    //             next_buf_size=10; // make sure never enter again
 
-            end
-            case(current_buf_size)
-                4: begin data_out_next=buf0_c;  next_buf_size =next_buf_size -1;end
-                3: begin data_out_next=buf1_c;  next_buf_size =next_buf_size -1;end
-                2: begin data_out_next=buf2_c;  next_buf_size =next_buf_size -1;end
-                1: begin data_out_next=buf3_c;  next_buf_size =next_buf_size -1;end
-                0: begin data_out_next=buf4_c;  next_buf_size =next_buf_size -1;end
-                5: begin  data_out_next =32'hab;   next_buf_size =next_buf_size -1; end
-                default: begin data_out_next =32'hbb;  next_buf_size =next_buf_size -1;end //something very wrong
-            endcase
+    //         end
+    //         case(current_buf_size)
+    //             4: begin data_out_next=buf0_c;  next_buf_size =next_buf_size -1;end
+    //             3: begin data_out_next=buf1_c;  next_buf_size =next_buf_size -1;end
+    //             2: begin data_out_next=buf2_c;  next_buf_size =next_buf_size -1;end
+    //             1: begin data_out_next=buf3_c;  next_buf_size =next_buf_size -1;end
+    //             0: begin data_out_next=buf4_c;  next_buf_size =next_buf_size -1;end
+    //             5: begin  data_out_next =32'hab;   next_buf_size =next_buf_size -1; end
+    //             default: begin data_out_next =32'hbb;  next_buf_size =next_buf_size -1;end //something very wrong
+    //         endcase
 
-            // else begin
-            //     next_buf_size =next_buf_size -1;
-            // end
-        end
-        else begin
-            //TODO: just for testign
-            data_out_next = 32'hcc;
-        end
+    //         // else begin
+    //         //     next_buf_size =next_buf_size -1;
+    //         // end
+    //     end
+    //     else begin
+    //         //TODO: just for testign
+    //         data_out_next = 32'hcc;
+    //     end
 
 
 
-        if(stream_in_count >32'h1000 )begin
-            fin_next = 1;
-            next_fpga_master_mode = fpga_master_mode_idle;
-            led_next = 8'b00000111;
-        end
-        else begin
-            next_fpga_master_mode = fpga_master_mode_stream_in;
-            fin_next = 0;
-        end
+    //     if(stream_in_count >32'h1000 )begin
+    //         fin_next = 1;
+    //         next_fpga_master_mode = fpga_master_mode_idle;
+    //         led_next = 8'b00000111;
+    //     end
+    //     else begin
+    //         next_fpga_master_mode = fpga_master_mode_stream_in;
+    //         fin_next = 0;
+    //     end
     
 
-	end
+	// end
 	default:begin
 		next_fpga_master_mode = fpga_master_mode_idle;
         fin_next = 0;
@@ -1006,210 +1041,6 @@ always @(*) begin
 
     // end
 end
-
-//TODO: restore later
-// always @(*) begin
-//     fin_next = fin_cur;
-//     led_next = led_cur;
-//     data_out_next =data_out_current;
-//     next_buf_size = current_buf_size;
-//     buf0_n = buf0_c;
-//     buf1_n = buf1_c;
-//     buf2_n = buf2_c;
-//     buf3_n = buf3_c;
-//     buf4_n = buf4_c;
-//     delay_n = delay_c;
-
-// 	case(current_fpga_master_mode)
-// 	fpga_master_mode_idle:begin
-            
-//             // led_next[4] = FLAGA;
-//             // led_next[5] = FLAGB;
-//             led_next[6] = FLAGC;
-//             led_next[7] = FLAGD;
-//             // led_next[0] = 1'b1;
-//             //led_next = 8'b00000001;
-//         // if(fin_cur == 1 )begin
-//         //     next_fpga_master_mode = fpga_master_mode_idle;
-//         //     fin_next = 1;
-
-//         // end
-//         // else begin
-//         //     delay_n = 0;
-//         //     next_fpga_master_mode = fpga_master_mode_delay; 
-//         //     led_next = 8'b00000001;
-//         //     fin_next = 0;
-
-//         //     next_buf_size = 0;
-//         //     // //TODO: just for testing
-//         //     //next_buf_size = 6'd5;
-//         // end
-
-//         if(fin_cur == 1 )begin
-//             next_fpga_master_mode = fpga_master_mode_idle;
-//             fin_next = 1;
-
-//         end
-//         else if(enableVideo_c == 1) begin
-//             delay_n = 0;
-//             next_fpga_master_mode = fpga_master_mode_delay; 
-//             fin_next = 0;
-
-//             next_buf_size = 0;
-//             // //TODO: just for testing
-//             //next_buf_size = 6'd5;
-//         end
-//         else begin
-//             next_fpga_master_mode = fpga_master_mode_idle;
-//         end
-
-// 	end
-
-
-//     fpga_master_mode_stream_out:begin
-//         led_next = 8'b00000011;
-
-//         if(current_buf_size <8 && FLAGC == 1 && FLAGD == 1 && slrd_streamOUT_ == 0)begin
-//             // try 3 delay? could try to switch address+3 delay before got to sleep
-//             // case(current_buf_size)  
-//             //     3: begin buf0_n=stream_out_data_from_fx3; end
-//             //     4: begin buf1_n=stream_out_data_from_fx3; end
-//             //     5: begin buf2_n=stream_out_data_from_fx3; end
-//             //     6: begin buf3_n=stream_out_data_from_fx3; end
-//             //     7: begin buf4_n=stream_out_data_from_fx3; end
-            
-//             // endcase
-//             // next_buf_size = next_buf_size+1;
-
-//             if(current_buf_size == 3)begin
-//                 led_next =8'b00000111;
-//             end
-//             else begin
-//                 next_buf_size = next_buf_size+1;
-//             end
-//         end
-        
-        
-//         if(current_buf_size == 3 && (FLAGD==0 || FLAGC == 0)  )begin
-//             // means have data broken in the flow
-//             fin_next = 1;
-//             led_next = 8'b00001111;
-//             next_fpga_master_mode = fpga_master_mode_idle;
-//         end
-//         else begin
-//             next_fpga_master_mode = fpga_master_mode_stream_out;
-
-//         end
-
-//         // assume never exit stream_out, see if can continously send data from host to fpga
-//         // next_fpga_master_mode = fpga_master_mode_stream_out;
-
-
-//         // if(stream_out_count >32'h1000  && FLAGC == 1)begin
-//         //     next_fpga_master_mode = fpga_master_mode_delay;
-//         //     delay_n=3;
-//         // end
-//         // else begin
-//         //     next_fpga_master_mode = fpga_master_mode_stream_out;
-//         // end
-//     end
-
-//     //TODO: 3 cycle delay
-//     fpga_master_mode_delay: begin
-//         if(delay_c == 0)begin
-//             if(current_buf_size ==0) begin next_fpga_master_mode=fpga_master_mode_stream_out; end
-//             else begin  next_fpga_master_mode=fpga_master_mode_stream_in; next_buf_size = 5;   end // manual specific buf size
-//         end
-//         else begin
-//             delay_n = delay_n-1;
-//             next_fpga_master_mode = fpga_master_mode_delay;
-//         end
-//     end
-// 	// fpga_master_mode_stream_in:begin
-
-
-//     //     if(current_buf_size >=0 && current_buf_size <9)begin
-//     //         if(current_buf_size == 0 )begin
-//     //             next_buf_size=10; // make sure never enter again
-
-//     //         end
-//     //         case(current_buf_size)
-//     //             4: begin data_out_next=buf0_c;  next_buf_size =next_buf_size -1;end
-//     //             3: begin data_out_next=buf1_c;  next_buf_size =next_buf_size -1;end
-//     //             2: begin data_out_next=buf2_c;  next_buf_size =next_buf_size -1;end
-//     //             1: begin data_out_next=buf3_c;  next_buf_size =next_buf_size -1;end
-//     //             0: begin data_out_next=buf4_c;  next_buf_size =next_buf_size -1;end
-//     //             5: begin  data_out_next =32'hab;   next_buf_size =next_buf_size -1; end
-//     //             default: begin data_out_next =32'hbb;  next_buf_size =next_buf_size -1;end //something very wrong
-//     //         endcase
-
-//     //         // else begin
-//     //         //     next_buf_size =next_buf_size -1;
-//     //         // end
-//     //     end
-//     //     else begin
-//     //         //TODO: just for testign
-//     //         data_out_next = 32'hcc;
-//     //     end
-
-
-
-//     //     if(stream_in_count >32'h1000 )begin
-//     //         fin_next = 1;
-//     //         next_fpga_master_mode = fpga_master_mode_idle;
-//     //         led_next = 8'b00000111;
-//     //     end
-//     //     else begin
-//     //         next_fpga_master_mode = fpga_master_mode_stream_in;
-//     //         fin_next = 0;
-//     //     end
-    
-
-// 	// end
-// 	default:begin
-// 		next_fpga_master_mode = fpga_master_mode_idle;
-//         fin_next = 0;
-// 	end	
-// 	endcase
-//     // case (current_fpga_master_mode)
-//     //     fpga_master_mode_idle: begin
-//     //         if(cnt == 0 )begin
-//     //             next_fpga_master_mode = fpga_master_mode_stream_in;
-//     //         end
-//     //         else begin
-//     //             next_fpga_master_mode = fpga_master_mode_idle;
-//     //         end
-
-//     //     end
-//     //     fpga_master_mode_stream_in: begin
-
-//     //         if(cnt ==4096) begin
-//     //             next_fpga_master_mode = fpga_master_mode_idle;
-//     //         end
-//     //         else begin
-//     //             next_fpga_master_mode = fpga_master_mode_stream_in;
-//     //         end 
-
-//     //     end
-//     //     default: begin 
-//     //         next_fpga_master_mode = fpga_master_mode_idle;
-//     //         cnt = 0;
-//     //     end
-
-//     // endcase
-//     // if(cnt > 4096)begin
-//     //     next_fpga_master_mode = fpga_master_mode_idle;
-//     // end
-//     // else begin
-//     //     // if(alreadyWrite == 0)begin
-//     //         next_fpga_master_mode = fpga_master_mode_stream_in;
-//     //     // end
-//     //     // else begin
-//     //     // next_fpga_master_mode = fpga_master_mode_idle;
-//     //     // end
-
-//     // end
-// end
 
 reg     [31: 0]                 cnt  ; 
 assign  add_cnt     =       slwr_streamIN_ == 1'b0;       
@@ -1350,212 +1181,6 @@ always @(posedge usb_clk)begin
 end
 
 
-
-   // //button layout in ulx3s
-    // //                      0
-    // // 1(reset) 2         
-    // ///                     3
-    // //                  5   4   6
-
-
-    reg [7:0] seg_out;
-    reg [5:0] sel_out;
-    
-    reg [2:0] key;
-    assign key[0] = btn[5];
-    assign key[1] = btn[4];
-    assign key[2] = btn[1];
-    wire clk = sram_clock;
-    wire rst_n = rst;
-
-    // // // assign led[7:4] = 0;
-    // // // reg [3:0] o_led;
-    // // // assign led[0] = o_led[0];
-    // // // assign  led[1] = o_led[1];
-    // // // assign led[2] =  o_led[2] ;
-    // // // assign led[3]= o_led[3] ;
-    // // comprehensive_tb #() SRAMTest(
-    // //     .clk(sram_clock),
-    // //     .rst_n(rst),
-    // //     .key(input_key),
-    // //     .led(led),
-    // //     // .seg_out(seg_out),
-    // //     // .sel_out(sel_out),
-    // //     .sdram_clk(sdram_clk),
-    // //     .sdram_cke(sdram_cke),
-    // //     .sdram_cs_n(sdram_csn),
-    // //     .sdram_ras_n(sdram_rasn),
-    // //     .sdram_cas_n(sdram_casn),
-    // //     .sdram_we_n(sdram_wen),
-    // //     .sdram_addr(sdram_a),
-    // //     .sdram_ba(sdram_ba),
-    // //     .sdram_dqm(sdram_dqm),
-    // //     .sdram_dq(sdram_d)
-    // // );
-
-
-	wire CLK_OUT;
-	assign CLK_OUT = clk; // input 165.5MHZ
-	 
-	 //FSM state declarationss
-	 localparam idle=0,
-					//write test-data to all addresses
-					new_write=1,
-					write_burst=2,
-					//read test-data written to all addresses
-					new_read=3,
-					read_burst=4;
-					
-	 reg[2:0] state_q=idle,state_d;
-	 reg[14:0] f_addr_q=0,f_addr_d; 
-	 reg[9:0] burst_index_q=0,burst_index_d;
-	 reg[7:0] led_q=0,led_d;
-	 reg[19:0] error_q=0,error_d;
-	 
-	 reg rw,rw_en;
-	 reg[15:0] f2s_data;
-	 wire ready,s2f_data_valid,f2s_data_valid;
-	 wire[15:0] s2f_data;
-	 wire key0_tick,key1_tick;
-	 wire[5:0] in0,in1,in2,in3,in4,in5; //format: {dp,char[4:0]} , dp is active high
-	 
-	 (*KEEP="TRUE"*)reg[36:0] counter_q,index_q,index_d; //counter_q increments until 1 second(165_000_000 clk cycles). Index_q holds the number of words read/written(check the value at chipscope)	
-								//Memory Bandwidth: index_q*2 = X bytes/seconds
-								// RESULT: 190MB/s (100MHz with t_CL=2)
-								// RESULT: 316MB/s (165MHz clk with t_CL=3)
-
-	 //register operations
-	 always @(posedge CLK_OUT,negedge rst_n) begin
-		if(!rst_n) begin
-			state_q<=0;
-			f_addr_q<=0;
-			burst_index_q<=0;
-			led_q<=0;
-			error_q<=0;
-			counter_q<=0;
-			index_q<=0;
-		end
-		else begin
-			state_q<=state_d;
-			f_addr_q<=f_addr_d;
-			burst_index_q<=burst_index_d;
-			led_q<=led_d;
-			error_q<=error_d;	
-			counter_q<=(state_q==idle) ?0:counter_q+1'b1;
-			index_q<=index_d;
-		end
-	 end
-	 
-	 //FSM next-state logic
-	 always @* begin
-	 state_d=state_q;
- 	 f_addr_d=f_addr_q;
-	 burst_index_d=burst_index_q;
-	 led_d=led_q;
-	 error_d=error_q;
-	 rw=0;
-	 rw_en=0;
-	 f2s_data=0;
-	 index_d=index_q;
-	 
-	 case(state_q)		
-		  		 idle: begin  //wait until either button is toggled
-							f_addr_d=0;
-							burst_index_d=0;
-							if(key[0]) begin
-								state_d=new_write; 
-								index_d=0;
-							end
-							if(key[1]) begin
-								state_d=new_read;
-								error_d=0;
-								index_d=0;
-							end
-						 end
-		  new_write: if(ready) begin  //write a deterministic data to all possible addresses of sdram
-							led_d[1]=1'b1;
-							rw_en=1;
-							rw=0;
-							state_d=write_burst;
-							burst_index_d=0;
-						 end
-		write_burst: begin 
-							f2s_data=f_addr_q+burst_index_q;
-							//if(key[2] && (f_addr_q==13000 || f_addr_q==100)) f2s_data=9999; //Inject errors when key[2] is pressed. The output error must be 512*2*10=10240
-							if(f2s_data_valid) begin
-								burst_index_d=burst_index_q+1; //track the number of already bursted data
-								index_d=index_q+1'b1; //holds the total number of words written to sdram
-							end
-							else if(burst_index_q==512) begin //last data must be 512th(for full page mode), since index starts at zero, the 512th is expected to have deasserted f2s_data_valid
-								if(counter_q>=165_000_000) begin //1 second had passed
-									led_d[1:0]=2'b11; 
-									state_d=idle;
-								end
-								else begin
-									f_addr_d=f_addr_q+1;
-									state_d=new_write;
-								end
-							end
-						 end
-		   new_read: if(ready) begin //read each data from all addresses and test if it matches the deterministic data we assigned earlier
-							led_d[2]=1'b1;
-							rw_en=1;
-							rw=1;
-							state_d=read_burst;
-							burst_index_d=0;
-						 end
-		 read_burst: begin
-							if(s2f_data_valid) begin
-								if(s2f_data!=f_addr_q+burst_index_q) error_d=error_q+1'b1; //count the errors in which the read output does not match the expected assigned data
-								burst_index_d=burst_index_q+1;
-								index_d=index_q+1'b1; //holds the total number of words read from sdram
-								led_d[7:4]  = error_d;
-							end
-							else if(burst_index_q==512) begin
-								if(counter_q>=165_000_000) begin //1 second had passed
-									led_d[3:0]=4'b1111; //all leds on after successfull write
-									state_d=idle;
-								end
-								else begin
-									f_addr_d=f_addr_q+1;
-									state_d=new_read;
-								end
-							end
-						 end
-		    default: state_d=idle;
-	 endcase
-	 end
-	 
-	 assign led=led_q;
-	
-	//module instantiations
-	 sdram_controller m0
-	 (
-		//fpga to controller
-		.clk(CLK_OUT), //clk=100MHz
-		.rst_n(rst_n),  
-		.rw(rw), // 1:read , 0:write
-		.rw_en(rw_en), //must be asserted before read/write
-		.f_addr(f_addr_q), //23:11=row  , 10:9=bank  , no need for column address since full page mode will always start from zero and end with 511 words
-		.f2s_data(f2s_data), //fpga-to-sdram data
-		.s2f_data(s2f_data), //sdram to fpga data
-		.s2f_data_valid(s2f_data_valid),  //asserts while  burst-reading(data is available at output UNTIL the next rising edge)
-		.f2s_data_valid(f2s_data_valid), //asserts while burst-writing(data must be available at input BEFORE the next rising edge)
-		.ready(ready), //"1" if sdram is available for nxt read/write operation
-		//controller to sdram
-		.s_clk(sdram_clk),
-		.s_cke(sdram_cke), 
-		.s_cs_n(sdram_csn),
-		.s_ras_n(sdram_rasn ), 
-		.s_cas_n(sdram_casn),
-		.s_we_n(sdram_wen), 
-		.s_addr(sdram_a), 
-		.s_ba(sdram_ba), 
-		.LDQM(sdram_dqm[0]),
-		.HDQM(sdram_dqm[1]),
-		.s_dq(sdram_d) 
-    );
-	 
 
 
 endmodule

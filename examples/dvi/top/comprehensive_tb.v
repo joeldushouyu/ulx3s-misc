@@ -7,7 +7,7 @@
 module comprehensive_tb(
 	input clk,rst_n,
 	input[2:0] key, //key[0] for burst writing, key[1] for burst reading , press key[2] along with key[0] to inject 10240 errors to be displayed on the seven-segment LEDs
-	output[3:0] led, //led[1:0] will light up if burst writing is successfull, led[3:0] will light up if burst reading is successful
+	output[7:0] led, //led[1:0] will light up if burst writing is successfull, led[3:0] will light up if burst reading is successful
 	// output [7:0] seg_out,
 	// output [5:0] sel_out,
 	//FPGA to SDRAM
@@ -36,7 +36,7 @@ module comprehensive_tb(
 	 reg[2:0] state_q=idle,state_d;
 	 reg[14:0] f_addr_q=0,f_addr_d; 
 	 reg[9:0] burst_index_q=0,burst_index_d;
-	 reg[3:0] led_q=0,led_d;
+	 reg[7:0] led_q=0,led_d;
 	 reg[19:0] error_q=0,error_d;
 	 
 	 reg rw,rw_en;
@@ -89,11 +89,11 @@ module comprehensive_tb(
 		  		 idle: begin  //wait until either button is toggled
 							f_addr_d=0;
 							burst_index_d=0;
-							if(key0_tick) begin
+							if(key[0]) begin
 								state_d=new_write; 
 								index_d=0;
 							end
-							if(key1_tick) begin
+							if(key[1]) begin
 								state_d=new_read;
 								error_d=0;
 								index_d=0;
@@ -108,7 +108,7 @@ module comprehensive_tb(
 						 end
 		write_burst: begin 
 							f2s_data=f_addr_q+burst_index_q;
-							if(!key[2] && (f_addr_q==13000 || f_addr_q==100)) f2s_data=9999; //Inject errors when key[2] is pressed. The output error must be 512*2*10=10240
+							//if(key[2] && (f_addr_q==13000 || f_addr_q==100)) f2s_data=9999; //Inject errors when key[2] is pressed. The output error must be 512*2*10=10240
 							if(f2s_data_valid) begin
 								burst_index_d=burst_index_q+1; //track the number of already bursted data
 								index_d=index_q+1'b1; //holds the total number of words written to sdram
@@ -136,6 +136,7 @@ module comprehensive_tb(
 								if(s2f_data!=f_addr_q+burst_index_q) error_d=error_q+1'b1; //count the errors in which the read output does not match the expected assigned data
 								burst_index_d=burst_index_q+1;
 								index_d=index_q+1'b1; //holds the total number of words read from sdram
+								led_d[7:4]  = error_d;
 							end
 							else if(burst_index_q==512) begin
 								if(counter_q>=165_000_000) begin //1 second had passed
@@ -182,23 +183,23 @@ module comprehensive_tb(
 		.s_dq(sdram_dq) 
     );
 	 
-	 debounce_explicit m1
-	(
-		.clk(CLK_OUT),
-		.rst_n(rst_n),
-		.sw({!{key[0]}}),
-		.db_level(),
-		.db_tick(key0_tick)
-    );
+	//  debounce_explicit m1
+	// (
+	// 	.clk(CLK_OUT),
+	// 	.rst_n(rst_n),
+	// 	.sw({!{key[0]}}),
+	// 	.db_level(),
+	// 	.db_tick(key0_tick)
+    // );
 	 
-	  debounce_explicit m2
-	(
-		.clk(CLK_OUT),
-		.rst_n(rst_n),
-		.sw({!{key[1]}}),
-		.db_level(),
-		.db_tick(key1_tick)
-    );
+	//   debounce_explicit m2
+	// (
+	// 	.clk(CLK_OUT),
+	// 	.rst_n(rst_n),
+	// 	.sw({!{key[1]}}),
+	// 	.db_level(),
+	// 	.db_tick(key1_tick)
+    // );
 	 
 
 endmodule
