@@ -36,12 +36,12 @@ VERILOG_FILES = \
   top/slaveFIFO2b_streamOUT.v\
   top/debounce_explicit.v\
   top/sdram_controller.v\
-  top/asynchronous_fifo/async_fifo1.v\
-  top/asynchronous_fifo/fifomem.v\
-  top/asynchronous_fifo/rptr_empty.v\
-  top/asynchronous_fifo/sync_r2w.v\
-  top/asynchronous_fifo/sync_w2r.v\
-  top/asynchronous_fifo/wptr_full.v
+  top/async_fifo/rtl/async_fifo.v\
+  top/async_fifo/rtl/fifomem.v\
+  top/async_fifo/rtl/rptr_empty.v\
+  top/async_fifo/rtl/sync_r2w.v\
+  top/async_fifo/rtl/sync_w2r.v\
+  top/async_fifo/rtl/wptr_full.v
 
 
 # *.vhd those files will be converted to *.v files with vhdl2vl (warning overwriting/deleting)

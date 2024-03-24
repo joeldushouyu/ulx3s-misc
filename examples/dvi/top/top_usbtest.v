@@ -809,8 +809,9 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
   assign wclk = usb_clk;
   assign rclk = usb_clk;
 
+  wire awfull, arempty;
   // Instantiate the FIFO
-  async_fifo1 #(DSIZE, ASIZE) dut (
+  async_fifo #(DSIZE, ASIZE) dut (
     .winc(winc),
     .wclk(wclk),
     .wrst_n(wrst_n),
@@ -820,7 +821,9 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
     .wdata(wdata),
     .rdata(rdata),
     .wfull(wfull),
-    .rempty(rempty)
+    .rempty(rempty),
+    .arempty(arempty),
+    .awfull(awfull)
 
   );
 
