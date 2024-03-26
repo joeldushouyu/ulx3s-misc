@@ -15,6 +15,10 @@ module  usb_fifo_example(
         input                   flag_b                          ,
         input                   flag_c                          ,
         input                   flag_d                          ,
+        input        [31:0]     data_write_to_usb,
+        input                   master_in_write,
+        output                  reg start_write,
+        output                  reg k_write_finish,
         output  wire            pclk                            ,
         output  wire            slcs                            ,
         output  reg             sloe                            ,
@@ -47,7 +51,7 @@ reg     [15: 0]                 rd_data_len                     ;
 assign  slcs        =   1'b0;
 assign  pclk        =   pclk_in;
 assign  pktend      =   1'b1;
-assign  usb_data    =   (slwr) ? 32'dz : cnt;
+assign  usb_data    =   (slwr) ? 32'dz : data_write_to_usb;
 
 //state_c
 always@(posedge clk or negedge rst_n)begin
@@ -59,11 +63,13 @@ always@(posedge clk or negedge rst_n)begin
     end
 end
 
+
+assign start_write = (state_n == WRITE);
 //state_n
 always@(*)begin
     case(state_c)
         IDLE:begin
-            if(flag_a && flag_b)begin
+            if(flag_a && flag_b &&master_in_write)begin
                 state_n = WRITE;
             end
             else if(flag_c && flag_d)begin
@@ -76,13 +82,18 @@ always@(*)begin
         WRITE:begin
             if(flag_b == 1'b0)begin //写满
                 state_n = IDLE;
+
             end
             else begin
+       
                 state_n = state_c;
             end
         end
         READ:begin
             if(flag_d == 1'b0)begin //读空
+                state_n = IDLE;
+            end
+            else if(end_cnt)begin
                 state_n = IDLE;
             end
             else begin
@@ -193,5 +204,5 @@ end
 
 assign  add_cnt     =       slwr == 1'b0;       
 assign  end_cnt     =       add_cnt && cnt == 4096-1;     
-
+assign k_write_finish = end_cnt;
 endmodule

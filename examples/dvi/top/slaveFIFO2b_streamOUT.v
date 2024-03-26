@@ -7,6 +7,7 @@ module slaveFIFO2b_streamOUT(
 	input  [31:0]stream_out_data_from_fx3,
 	output slrd_streamOUT_,
 	output sloe_streamOUT_,
+	output streaming,
 );
 
 
@@ -27,7 +28,7 @@ reg rd_oe_delay_cnt;
 
 assign slrd_streamOUT_ = ((current_stream_out_state == stream_out_read) | (current_stream_out_state == stream_out_read_rd_and_oe_delay)) ? 1'b0 : 1'b1;
 assign sloe_streamOUT_ = ((current_stream_out_state == stream_out_read) | (current_stream_out_state == stream_out_read_rd_and_oe_delay) | (current_stream_out_state == stream_out_read_oe_delay)) ? 1'b0 : 1'b1;
-
+assign streaming = (current_stream_out_state == stream_out_read);
 //counter to delay the read and output enable signal
 always @(posedge clk_100  or negedge reset_)begin
 	if(!reset_)begin 

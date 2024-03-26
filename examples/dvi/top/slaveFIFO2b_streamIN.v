@@ -6,7 +6,9 @@ module slaveFIFO2b_streamIN(
 	input  flagb_d,
 	input [31:0] data_for_output,
 	output reg slwr_streamIN_,
-	output [31:0] data_out_stream_in
+	output [31:0] data_out_stream_in,
+	output writing,
+	output waiting_enter_writing,
 );
 
 
@@ -20,15 +22,19 @@ parameter [2:0] stream_in_wait_flagb              = 3'd1;
 parameter [2:0] stream_in_write                   = 3'd2;
 parameter [2:0] stream_in_write_wr_delay          = 3'd3;
 
-assign slwr_streamIN_ = ((current_stream_in_state == stream_in_write) && (flagb_d == 1'b1)) ? 1'b0 : 1'b1;
+reg [31:0] stream_in_write_counter ,stream_in_write_counter_next;
 
+assign slwr_streamIN_ = ((current_stream_in_state == stream_in_write) && (flagb_d == 1'b1)) ? 1'b0 : 1'b1;
+assign writing = (next_stream_in_state == stream_in_write);
+assign waiting_enter_writing = (current_stream_in_state  ==stream_in_wait_flagb );
 //streamIN mode state machine
-always @(posedge clk_100)begin
-	// if(!reset_)begin 
-	// 	current_stream_in_state <= stream_in_idle;
-	// end else begin
+always @(posedge clk_100 or negedge reset_)begin
+	if(!reset_)begin 
+		current_stream_in_state <= stream_in_idle;
+	end else begin
 		current_stream_in_state <= next_stream_in_state;
-	// end	
+	end	
+	
 end
 
 //StreamIN mode state machine combo
@@ -51,6 +57,10 @@ always @(*)begin
 	end
 	stream_in_write:begin
 		if(flagb_d == 1'b0)begin
+			next_stream_in_state = stream_in_idle;
+		end
+		else if(!stream_in_mode_selected)begin
+			
 			next_stream_in_state = stream_in_idle;
 		end else begin
 		 	next_stream_in_state = stream_in_write;
