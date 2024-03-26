@@ -1,0 +1,6 @@
+[submodule "examples/dvi/top/asynchronous_fifo"]
+	path = examples/dvi/top/asynchronous_fifo
+	url = https://github.com/joeldushouyu/asynchronous_fifo
+[submodule "examples/dvi/top/async_fifo"]
+	path = examples/dvi/top/async_fifo
+	url = https://github.com/joeldushouyu/async_fifo
