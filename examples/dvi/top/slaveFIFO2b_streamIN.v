@@ -25,7 +25,7 @@ parameter [2:0] stream_in_write_wr_delay          = 3'd3;
 reg [31:0] stream_in_write_counter ,stream_in_write_counter_next;
 
 assign slwr_streamIN_ = ((current_stream_in_state == stream_in_write) && (flagb_d == 1'b1)) ? 1'b0 : 1'b1;
-assign writing = (next_stream_in_state == stream_in_write);
+assign writing = (current_stream_in_state == stream_in_write);
 assign waiting_enter_writing = (current_stream_in_state  ==stream_in_wait_flagb );
 //streamIN mode state machine
 always @(posedge clk_100 or negedge reset_)begin
