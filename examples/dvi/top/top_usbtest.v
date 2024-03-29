@@ -939,9 +939,14 @@ always @(*) begin
         else begin
 
             winn = 1;
-            if(wfull)begin
-                next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
-                winn = 0;
+            if(end_stream_out_cnt)begin
+                if(!wfull) begin
+                    next_fpga_master_mode = fpga_master_mode_stream_out;
+                end
+                else begin
+                    next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
+                    winn = 0;
+                end
             end
             else begin
                 led_next = 8'b00111111;
