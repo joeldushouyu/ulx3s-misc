@@ -1373,7 +1373,7 @@ end
 reg     [31: 0]                 cnt  ; 
 wire  end_stream_in_cnt, end_stream_out_cnt;
    
-assign  end_stream_in_cnt     =      stream_in_count == 4096;  
+assign  end_stream_in_cnt     =      stream_in_count == 4096-1;  
 assign end_stream_out_cnt = stream_out_count == 4096-1;
 //data generator counter for  StreamIN modes
 always @(posedge usb_clk or negedge rst)begin
