@@ -104,7 +104,7 @@ module top_usbtest #(parameter x = 640,     // pixels
     wire clk_pixel = clocks[1];
     wire sram_clock = clocks[3]; //  is 166000000-666666 = 165333334 = 165MHZ
     wire usb_clk ;
-    assign usb_clk = clk_pixel;
+    assign usb_clk = clock_pixel;
     ecp5pll #(
     .in_hz(25000000),
     .out0_hz(pixel_f*5*(c_ddr?1:2)),
@@ -884,7 +884,7 @@ slaveFIFO2b_streamIN stream_in_inst
          .stream_in_mode_selected(stream_in_mode_selected),
          .flaga_d(flaga_d),
          .flagb_d(flagb_d),
-         .data_for_output(data_out_next),
+         .data_for_output(data_out_current),
          .slwr_streamIN_(slwr_streamIN_),
          .data_out_stream_in(data_out_stream_in),
          .writing(writing),
