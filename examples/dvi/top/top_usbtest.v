@@ -904,6 +904,7 @@ always @(*) begin
                 // else begin
                     next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
                     winn = 0;
+                    delay_n = 10;
                 // end
             end
             else begin
@@ -921,12 +922,16 @@ always @(*) begin
         //     next_fpga_master_mode = fpga_master_mode_delay;
         // end
         // else begin
-
+        if (delay_c != 0)begin  
+            delay_n = delay_c - 1;
+        end
         // if(!wfull)begin
         //     next_fpga_master_mode = fpga_master_mode_idle;
         // end
         // else begin
+        else begin
             next_fpga_master_mode = fpga_master_mode_stream_in;
+        end
         // end
         // end
         // end
