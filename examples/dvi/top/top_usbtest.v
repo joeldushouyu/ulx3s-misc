@@ -744,7 +744,7 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
   localparam DSIZE = 16;
   localparam ASIZE = 10; 
   localparam AREMPTYSIZE = 512-1;//512-1;
-  localparam AWFULLSIZE = 1; // should not matter
+  localparam AWFULLSIZE =  512; // should not matter
   reg [DSIZE-1:0] rdata;
   wire wfull;
   wire rempty;
@@ -898,7 +898,7 @@ always @(*) begin
 
             winn = 1;
             if(end_stream_out_cnt)begin
-                // if(!wfull) begin
+                // if(!awfull) begin
                 //     next_fpga_master_mode = fpga_master_mode_delay;
                 // end
                 // else begin
