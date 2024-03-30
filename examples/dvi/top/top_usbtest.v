@@ -916,12 +916,11 @@ always @(*) begin
         // else begin
         //     next_fpga_master_mode = fpga_master_mode_idle;
         // end
-        // if(arempty)begin
-        //     led_next = 255;
-        //     next_fpga_master_mode = fpga_master_mode_idle;
-        // end
-        // else 
-        if(FLAGC == 1 && FLAGD == 1)begin
+        if(arempty)begin
+            led_next = 255;
+            next_fpga_master_mode = fpga_master_mode_idle;
+        end
+        else if(FLAGC == 1 && FLAGD == 1)begin
             next_fpga_master_mode = fpga_master_mode_stream_out;
             stream_in_debug_count_next = stream_in_debug_count+1;
             fpga_master_mode_after_delay_next = fpga_master_mode_idle;
@@ -970,12 +969,12 @@ always @(*) begin
         // end
         // else begin
 
-        // if(!wfull)begin
-        //     next_fpga_master_mode = fpga_master_mode_idle;
-        // end
-        // else begin
+        if(!wfull)begin
+            next_fpga_master_mode = fpga_master_mode_idle;
+        end
+        else begin
             next_fpga_master_mode = fpga_master_mode_stream_in;
-        // end
+        end
         // end
         // end
         // else begin
