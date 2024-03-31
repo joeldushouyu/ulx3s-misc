@@ -104,12 +104,12 @@ module top_usbtest #(parameter x = 640,     // pixels
     wire clk_pixel = clocks[1];
     wire sram_clock = clocks[3]; //  is 166000000-666666 = 165333334 = 165MHZ
     wire usb_clk ;
-    assign usb_clk = clk_pixel;
+    assign usb_clk = clk_pixel;// clocks[2];
     ecp5pll #(
     .in_hz(25000000),
     .out0_hz(pixel_f*5*(c_ddr?1:2)),
     .out1_hz(pixel_f),
-    .out2_hz(40000000),
+    .out2_hz(30000000),
     .out2_tol_hz(2222222),
     // .out3_hz(166000000),
     // .out3_tol_hz(666666),
@@ -202,12 +202,11 @@ module top_usbtest #(parameter x = 640,     // pixels
       end
       else begin
      
-        if(countx == x-1 )begin
+        if(countx == x )begin
 
             countx <= 0;
             if(county == y-1)begin
                 county <=0;
-                countx<=0;
                 counter<=0;
                 frame_delay_counter <= frame_delay_counter+1;
                 //led <= counter/4096;
@@ -225,61 +224,14 @@ module top_usbtest #(parameter x = 640,     // pixels
 
             enableVideo_c <= enableVideo_n;
         
-            // r_i <= r_i_n;
-            // g_i <= g_i_n;
-            // b_i <= b_i_n;
-            // r_i <=  databus[7:0];
-            // g_i <= databus[7:0];
-            // b_i <= databus[7:0];
+            r_i <= r_i_n;
+            g_i <= g_i_n;
+            b_i <= b_i_n;
+
 
         end    
     end
-    // assign r_i = 0;
-    // assign b_i = (enableVideo_c == 1'b1 ) ? stream_out_data_from_fx3[7:0]:0;
-    // assign g_i = (enableVideo_c == 1'b1 ) ? stream_out_data_from_fx3[7:0]:0;
-    // // always@( posedge clk_pixel or negedge rst) begin
-      
-    //   if(!rst)begin
-    //     countx<=0;
-    //     county<=0;
-    //     enableVideo_c <=0;
-    //     //enableVideo_n <=0;
-    //   end
-    //   else if(fetch_next)  begin
-
-    //     if(countx == x-1 )begin
-
-    //         countx <= 0;
-    //         if(county == y-1)begin
-    //             county <=0;
-    //             countx<=0;
-    //         end
-    //         else begin
-    //             county<= county+1;
-    //         end
-
-    //     end
-    //     else begin
-    //       countx <= countx + 1;
-    //     end
-
-    //     enableVideo_c <= enableVideo_n;
     
-    //     r_i <= r_i_n;
-    //     g_i <= g_i_n;
-    //     b_i <= b_i_n;
-    //     // r_i <=  databus[7:0];
-    //     // g_i <= databus[7:0];
-    //     // b_i <= databus[7:0];
-
-    //   end
-    //   else begin
-    //     // when fetch_next is false
-    //   end
-
-    // end    
-    
-
     // main idea:
     // 1. sacrifice first frame time
     // 2. 3 clock before start of 2nd screen enable the video frame
@@ -287,40 +239,61 @@ module top_usbtest #(parameter x = 640,     // pixels
         // last row of the 1(discarded) frame
         // last 3 pixel of time already used in transition
         //TODO:
-        if(frame_delay_counter == 32'd1 &&  enableVideo_c == 0&& county == y-1  && countx == x-1)begin
+        if(frame_delay_counter == 32'd60 &&  enableVideo_c == 0&& county == y-1  && countx == x)begin
             //TODO:
             enableVideo_n =1;
         end
         else begin
             enableVideo_n = enableVideo_c;// don't touch
         end  
-        // if(county > (y/2))begin
-        //         r_i_n               <= 255;
-        //         b_i_n               <= 0;
-        //         g_i_n               <= 0;
-        // end
-        // else begin
+        if(enableVideo_c)begin      
+            if(county > y/2)begin
+                    r_i_n               = 255;
+                    b_i_n               = 255;
+                    g_i_n               =255 ;
+            end
+            else begin
+                    r_i_n               = 0;
+                    b_i_n               = 0;
+                    g_i_n               =0 ;
+            end      
+            // if(county == 1)begin
+            //         r_i_n               = 255;
+            //         b_i_n               = 255;
+            //         g_i_n               =255 ;
+            // end
+            // else if(county == y-1)begin
+            //         r_i_n               = 255;
+            //         b_i_n               = 255;
+            //         g_i_n               =255 ;
+            // end
+            // else if(countx == (x/2))begin
+            //         r_i_n               = 255;
+            //         b_i_n               = 0;
+            //         g_i_n               = 0;
+            // end
+            // else if(countx == 0)begin
+            //         r_i_n               = 255;
+            //         b_i_n               =255;
+            //         g_i_n               = 255;
+            // end
+            // else if(countx == x-1)begin
+            //         r_i_n               = 255;
+            //         b_i_n               = 255;
+            //         g_i_n               =255 ;
+            // end
+            // else begin
 
-        //         r_i_n               <= 0;
-        //         b_i_n               <= 255;
-        //         g_i_n               <= 0;
-        // end
-        // if(counter == 32'h4AFFF)begin
-        //     led=8'b00000001;
-        // end
-        if(enableVideo_c == 1 )begin
-                r_i_n               =0 ; //stream_out_data_from_fx3[7:0];
-                b_i_n               =  stream_out_data_from_fx3[7:0];
-                g_i_n               = stream_out_data_from_fx3[7:0];
-                
-        end
+            //         r_i_n               = 0;
+            //         b_i_n               = 255;
+            //         g_i_n               = 0;
+            // end
+        end 
         else begin
-
                 r_i_n               = 0;
                 b_i_n               = 0;
                 g_i_n               = 0;
         end
-       
         
     end
 
@@ -387,7 +360,6 @@ module top_usbtest #(parameter x = 640,     // pixels
     end
     endgenerate
 
-    
     //testing purpose
 
     // assign  gn[26] = usb_clk;
@@ -791,7 +763,8 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 //FIFO
   localparam DSIZE = 16;
   localparam ASIZE = 12;
-
+  localparam AREMPTYSIZE = 1;//512-1;
+  localparam AWFULLSIZE = 1; // should not matter
   reg [DSIZE-1:0] rdata;
   wire wfull;
   wire rempty;
@@ -809,7 +782,7 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 
   wire awfull, arempty;
   // Instantiate the FIFO
-  async_fifo #(DSIZE, ASIZE) dut (
+ async_fifo #( .DSIZE( DSIZE), .ASIZE(ASIZE), .AWFULLSIZE(AWFULLSIZE), .AREMPTYSIZE(AREMPTYSIZE)) dut (
     .winc(winc),
     .wclk(wclk),
     .wrst_n(wrst_n),
@@ -900,9 +873,9 @@ always @(*) begin
     stream_in_debug_count_next = stream_in_debug_count;
 	case(current_fpga_master_mode)
 	fpga_master_mode_idle:begin
-        led_next = 0;
-        // led_next[4] = FLAGA;
-        // led_next[5] = FLAGB;
+        led_next = 8'd0;
+        // // led_next[4] = FLAGA;
+        // // led_next[5] = FLAGB;
         led_next[6] = FLAGC;
         led_next[7] = FLAGD;
 
@@ -928,28 +901,29 @@ always @(*) begin
 
 
     fpga_master_mode_stream_out:begin
-        led_next = 8'b00000011;
+        led_next = 8'd1;
 
 
         if(delay_c != 0)begin
             delay_n = delay_c - 1;
             next_fpga_master_mode = fpga_master_mode_stream_out;
-            led_next = 8'b00011111;
+            led_next = 8'd2;
         end
         else begin
 
             winn = 1;
             if(end_stream_out_cnt)begin
-                if(!wfull) begin
-                    next_fpga_master_mode = fpga_master_mode_stream_out;
-                end
-                else begin
+                led_next = stream_out_count[15:8];
+                // if(!wfull) begin
+                //     next_fpga_master_mode = fpga_master_mode_delay;
+                // end
+                // else begin
                     next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
                     winn = 0;
-                end
+                // end
             end
             else begin
-                led_next = 8'b00111111;
+                led_next = 8'd3;
                 next_fpga_master_mode = fpga_master_mode_stream_out;
             end
         end
@@ -959,12 +933,9 @@ always @(*) begin
         //winn = 0;
         // if(delay_c == 0)begin
         // should be full now
-        if(!wfull)begin
-            next_fpga_master_mode = fpga_master_mode_delay;
-        end
-        else begin
+
             next_fpga_master_mode = fpga_master_mode_stream_in;
-        end
+
         // end
         // else begin
         //     delay_n = delay_c -1;
@@ -972,7 +943,7 @@ always @(*) begin
         // end 
     end
     fpga_master_mode_delay: begin
-        led_next = 8'b00001111;
+        led_next = 8'd4;
         next_fpga_master_mode = fpga_master_mode_delay;
         // if(delay_c == 0)begin
         //     next_fpga_master_mode = fpga_master_mode_after_delay;
@@ -983,7 +954,7 @@ always @(*) begin
         // end
     end
 	fpga_master_mode_stream_in:begin
-            led_next = 8'b00000111;
+            led_next = 8'd5;
      
             // if(fpga_master_mode_after_delay == fpga_master_mode_idle)begin
             //     delay_n = 0;
@@ -993,7 +964,7 @@ always @(*) begin
             // else begin
             if(writing )begin
                 if(end_stream_in_cnt)begin
-                    //led_next = 8'b00011111;
+                    led_next = 8'd8;
                     next_fpga_master_mode = fpga_master_mode_idle;
                     if(!rempty)begin
                         // debug, means did not finish reading
@@ -1009,7 +980,7 @@ always @(*) begin
 
                 end
                 else begin
-                    led_next = 8'b00111111;
+                    led_next = 8'd6;
                     rinn = 1;
                     data_out_next = rdata;
 
@@ -1025,7 +996,7 @@ always @(*) begin
             end
             else begin
                 data_out_next = 32'hcc;
-                //led_next = 8'b01111111;
+                led_next = 8'd7;
                 // idle for go into read mode
                 next_fpga_master_mode = fpga_master_mode_stream_in;
             end
@@ -1044,7 +1015,7 @@ reg     [31: 0]                 cnt  ;
 wire  end_stream_in_cnt, end_stream_out_cnt;
    
 assign  end_stream_in_cnt     =      stream_in_count == 4096-1;  
-assign end_stream_out_cnt = stream_out_count == 4096-1;
+assign end_stream_out_cnt = stream_out_count == 4096+1;
 //data generator counter for  StreamIN modes
 always @(posedge usb_clk or negedge rst)begin
     if(!rst)begin
@@ -1056,24 +1027,20 @@ always @(posedge usb_clk or negedge rst)begin
         cnt <= cnt+1;
         stream_in_count <= stream_in_count+1;
     end
-    else if( sloe_streamOUT_ == 1'b0 && delay_c == 0)begin
+    else if( current_fpga_master_mode == fpga_master_mode_stream_out && delay_c == 0)begin
         stream_out_count <=stream_out_count+1;
     end
-    else if(next_fpga_master_mode == fpga_master_mode_idle) begin
+    else  begin
         cnt <= 0;
         stream_in_count <=0;
         stream_out_count <=0;
     end
-    else begin
+    // else begin
+    //     stream_in_count <= stream_in_count;
+    //     stream_out_count <= stream_out_count;
 
-        cnt <=cnt;
-        stream_in_count <= stream_in_count;
+    // end
 
-        stream_out_count <= stream_out_count;
-
-
-
-    end
 
 end
 
