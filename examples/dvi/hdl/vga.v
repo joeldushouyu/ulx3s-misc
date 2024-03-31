@@ -207,6 +207,11 @@ wire [5:0] Z;
     R_disp <= R_disp_early;
   end
 
+  wire valid_x = (c_hsync_pulse + c_hsync_back_porch < CounterX) & (CounterX < c_hsync_pulse + c_hsync_back_porch  +c_resolution_x );
+  wire valid_y = (c_vsync_pulse + c_vsync_back_porch < CounterY)&(CounterY <c_frame_y );
+  //assign pixelSignal = ( valid_x) ? 0: clk_pixel;
+
+
   assign pixelSignal =  ( R_disp_early == 1'b0) ? 0: clk_pixel;
 
   assign vga_r = R_vga_r;
