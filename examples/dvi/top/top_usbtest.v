@@ -104,12 +104,12 @@ module top_usbtest #(parameter x = 640,     // pixels
     wire clk_pixel = clocks[1];
     wire sram_clock = clocks[3]; //  is 166000000-666666 = 165333334 = 165MHZ
     wire usb_clk ;
-    assign usb_clk = clock_pixel;
+    assign usb_clk = clk_pixel;
     ecp5pll #(
     .in_hz(25000000),
     .out0_hz(pixel_f*5*(c_ddr?1:2)),
     .out1_hz(pixel_f),
-    .out2_hz(70000000),
+    .out2_hz(40000000),
     .out2_tol_hz(2222222),
     // .out3_hz(166000000),
     // .out3_tol_hz(666666),
