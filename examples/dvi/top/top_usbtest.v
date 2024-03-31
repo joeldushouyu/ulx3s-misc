@@ -3,7 +3,7 @@ module top_usbtest #(parameter x = 640,     // pixels
                      parameter f = 60,       // Hz 60, 50, 30
                      parameter xadjustf = 0, // or to fine-tune f
                      parameter yadjustf = 0, // or to fine-tune f
-                     parameter c_ddr = 1    // 0:SDR 1:DDR
+                     parameter c_ddr = 0    // 0:SDR 1:DDR
                      )
                     (input clk_25mhz,
                      input [6:0] btn,
@@ -127,16 +127,8 @@ module top_usbtest #(parameter x = 640,     // pixels
     
     reg [7:0] r_i, g_i, b_i;
     reg [7:0] r_i_n, g_i_n, b_i_n;
-    initial r_i_n = 255;
-    initial g_i_n = 0;
-    initial b_i_n = 0; 
 
-    // initial gp[0] = 0;
-    // always @(posedge clk_25mhz) begin
-    //     gp[0] = ~gp[0];
-    // end
 
-    //assign gp[0] = clocks[0];
     reg  fetch_next;
     wire clock_pixel;
     localparam cbits_vga = 11;
@@ -247,47 +239,52 @@ module top_usbtest #(parameter x = 640,     // pixels
             enableVideo_n = enableVideo_c;// don't touch
         end  
         if(enableVideo_c)begin      
-            if(county > y/2)begin
-                    r_i_n               = 255;
-                    b_i_n               = 255;
-                    g_i_n               =255 ;
-            end
-            else begin
-                    r_i_n               = 0;
-                    b_i_n               = 0;
-                    g_i_n               =0 ;
-            end      
-            // if(county == 1)begin
-            //         r_i_n               = 255;
-            //         b_i_n               = 255;
-            //         g_i_n               =255 ;
-            // end
-            // else if(county == y-1)begin
-            //         r_i_n               = 255;
-            //         b_i_n               = 255;
-            //         g_i_n               =255 ;
-            // end
-            // else if(countx == (x/2))begin
-            //         r_i_n               = 255;
-            //         b_i_n               = 0;
-            //         g_i_n               = 0;
-            // end
-            // else if(countx == 0)begin
-            //         r_i_n               = 255;
-            //         b_i_n               =255;
-            //         g_i_n               = 255;
-            // end
-            // else if(countx == x-1)begin
+            // if(county > y/2)begin
             //         r_i_n               = 255;
             //         b_i_n               = 255;
             //         g_i_n               =255 ;
             // end
             // else begin
-
             //         r_i_n               = 0;
-            //         b_i_n               = 255;
-            //         g_i_n               = 0;
+            //         b_i_n               = 0;
+            //         g_i_n               =0 ;
             // end
+            if(county == 0 && countx == 200)begin
+                    r_i_n               = 0;
+                    b_i_n               = 0;
+                    g_i_n               =0 ;
+            end      
+            else if(county == 0)begin
+                    r_i_n               = 255;
+                    b_i_n               = 255;
+                    g_i_n               =255 ;
+            end
+            else if(county == y-1)begin
+                    r_i_n               = 255;
+                    b_i_n               = 255;
+                    g_i_n               =255 ;
+            end
+            else if(countx == (x/2))begin
+                    r_i_n               = 255;
+                    b_i_n               = 0;
+                    g_i_n               = 0;
+            end
+            else if(countx == 0)begin
+                    r_i_n               = 255;
+                    b_i_n               =255;
+                    g_i_n               = 255;
+            end
+            else if(countx == x-1)begin
+                    r_i_n               = 255;
+                    b_i_n               = 255;
+                    g_i_n               =255 ;
+            end
+            else begin
+
+                    r_i_n               = 0;
+                    b_i_n               = 255;
+                    g_i_n               = 0;
+            end
         end 
         else begin
                 r_i_n               = 0;
