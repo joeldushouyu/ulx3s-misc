@@ -892,7 +892,7 @@ always @(*) begin
             next_fpga_master_mode = fpga_master_mode_stream_out;
             stream_in_debug_count_next = stream_in_debug_count+1;
             fpga_master_mode_after_delay_next = fpga_master_mode_idle;
-            delay_n = 2+3; //need be tuned3 ? set to 0 at testing with stream_out_count
+            delay_n = 2+4; //need be tuned3 ? set to 0 at testing with stream_out_count
         end
         else begin
             next_fpga_master_mode = fpga_master_mode_idle;
@@ -908,19 +908,22 @@ always @(*) begin
             delay_n = delay_c - 1;
             next_fpga_master_mode = fpga_master_mode_stream_out;
             led_next = 8'd2;
+            if(delay_c == 1)begin
+                winn = 1 ;// turn on ahead
+            end
         end
         else begin
 
             if(end_stream_out_cnt)begin
                 
-                if(!awfull) begin
-                    next_fpga_master_mode = fpga_master_mode_delay;
-                end
-                else begin
+                // if(!awfull) begin
+                //     next_fpga_master_mode = fpga_master_mode_delay;
+                // end
+                // else begin
                     next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
                     winn = 0;
                     delay_n = 10;
-                end
+                // end
             end
             else begin
                 winn = 1;
@@ -934,10 +937,10 @@ always @(*) begin
         //winn = 0;
         // if(delay_c == 0)begin
         // should be full    now
-        // if(!awfull) begin
-        //     next_fpga_master_mode = fpga_master_mode_delay;
-        // end
-        // else begin
+        if(!awfull) begin
+            next_fpga_master_mode = fpga_master_mode_delay;
+        end
+        else begin
 
         if(delay_c == 0)begin
             next_fpga_master_mode = fpga_master_mode_stream_in;
@@ -946,7 +949,7 @@ always @(*) begin
             delay_n = delay_c -1;
         end
 
-        // end
+        end
         // else begin
         //     delay_n = delay_c -1;
         //     next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
@@ -976,7 +979,7 @@ always @(*) begin
                 if(end_stream_in_cnt)begin
                     led_next = 8'd8;
                     next_fpga_master_mode = fpga_master_mode_idle;
-                    if(!arempty)begin
+                    if(!rempty)begin
                         // debug, means did not finish reading
                         data_out_next = 32'hcc;
                         next_fpga_master_mode = fpga_master_mode_delay;
@@ -1026,7 +1029,7 @@ reg     [31: 0]                 cnt  ;
 wire  end_stream_in_cnt, end_stream_out_cnt;
    
 assign  end_stream_in_cnt     =      stream_in_count == 4096-1;  
-assign end_stream_out_cnt = stream_out_count == 4096+1;
+assign end_stream_out_cnt = stream_out_count == 4096-1;
 //data generator counter for  StreamIN modes
 always @(posedge usb_clk or negedge rst)begin
     if(!rst)begin
