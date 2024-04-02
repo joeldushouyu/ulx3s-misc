@@ -913,14 +913,14 @@ always @(*) begin
 
             if(end_stream_out_cnt)begin
                 
-                // if(!awfull) begin
-                //     next_fpga_master_mode = fpga_master_mode_delay;
-                // end
-                // else begin
+                if(!awfull) begin
+                    next_fpga_master_mode = fpga_master_mode_delay;
+                end
+                else begin
                     next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
                     winn = 0;
                     delay_n = 10;
-                // end
+                end
             end
             else begin
                 winn = 1;
@@ -976,10 +976,10 @@ always @(*) begin
                 if(end_stream_in_cnt)begin
                     led_next = 8'd8;
                     next_fpga_master_mode = fpga_master_mode_idle;
-                    if(!rempty)begin
+                    if(!arempty)begin
                         // debug, means did not finish reading
                         data_out_next = 32'hcc;
-                        //next_fpga_master_mode = fpga_master_mode_delay;
+                        next_fpga_master_mode = fpga_master_mode_delay;
                     end
                     else begin
                         data_out_next = rdata;
