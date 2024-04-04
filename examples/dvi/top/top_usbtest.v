@@ -759,37 +759,45 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 
 //FIFO
   localparam DSIZE = 16;
-  localparam ASIZE = 12;
+  localparam ASIZE_FIFO1 = 12;
+  localparam ASIZE_FIFO2 = 12;
   localparam AREMPTYSIZE = 1;//512-1;
   localparam AWFULLSIZE =  4096; // should not matter
-  reg [DSIZE-1:0] rdata_fifo1;
+  reg [DSIZE-1:0] rdata;
 
-  reg [DSIZE-1:0] wdata_fifo1;
+  reg [DSIZE-1:0] wdata;
 
-  reg winc_fifo1,winn_fifo1;
-  wire wclk_fifo1, wrst_n_fifo1;
-  reg rinc_fifo1, rinn_fifo1;
-  wire rclk_fifo1, rrst_n_fifo1;
+  reg winc,winn;
+  wire wclk, wrst_n;
+  reg rinc, rinn;
+  wire rclk, rrst_n;
 
-  assign wrst_n_fifo1 = rst;
-  assign rrst_n_fifo1 = rst;
-  assign wclk_fifo1 = usb_clk;
-  assign rclk_fifo1 = usb_clk;
+  assign wrst_n = rst;
+  assign rrst_n = rst;
+  assign wclk = usb_clk;
+  assign rclk = usb_clk;
 
   wire wfull_fifo1, rempty_fifo1;
   wire awfull_fifo1, arempty_fifo1;
   wire awfull_fifo2, arempty_fifo2;
   wire wfull_fifo2, rempty_fifo2;
   // Instantiate the FIFO
- async_fifo_combine #( .DSIZE( DSIZE), .ASIZE(ASIZE), .AWFULLSIZE(AWFULLSIZE), .AREMPTYSIZE(AREMPTYSIZE)) dut (
-    .winc(winc_fifo1),
-    .wclk(wclk_fifo1),
-    .wrst_n(wrst_n_fifo1),
-    .rinc(rinc_fifo1),
-    .rclk(rclk_fifo1),
-    .rrst_n(rrst_n_fifo1),
-    .wdata(wdata_fifo1),
-    .rdata(rdata_fifo1),
+ async_fifo_combine #( .DSIZE( DSIZE), 
+ .ASIZE_FIFO1(ASIZE_FIFO1), 
+ .ASIZE_FIFO2(ASIZE_FIFO2),
+ .AWFULLSIZE_FIFO1(AWFULLSIZE), 
+ .AREMPTYSIZE_FIFO1(AREMPTYSIZE),
+ .AWFULLSIZE_FIFO2(AWFULLSIZE), 
+ .AREMPTYSIZE_FIFO2(AREMPTYSIZE)
+ ) dut (
+    .winc(winc),
+    .wclk(wclk),
+    .wrst_n(wrst_n),
+    .rinc(rinc),
+    .rclk(rclk),
+    .rrst_n(rrst_n),
+    .wdata(wdata),
+    .rdata(rdata),
     .wfull_fifo1(wfull_fifo1),
     .awfull_fifo1(awfull_fifo1),
     .wfull_fifo2(wfull_fifo2),
@@ -805,15 +813,15 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 // fifo 1 updatea
 always @(posedge usb_clk  or negedge rst)begin
     if(!rst) begin
-        winc_fifo1 <=0;
-        rinc_fifo1 <=0;
+        winc <=0;
+        rinc <=0;
     end
     else begin
-        winc_fifo1 <= winn_fifo1;
-        rinc_fifo1 <= rinn_fifo1;
+        winc <= winn;
+        rinc <= rinn;
     end
 end
-assign wdata_fifo1 = stream_out_data_from_fx3;
+assign wdata = stream_out_data_from_fx3;
 
 reg fin_cur;
 reg fin_next;
@@ -846,7 +854,7 @@ always @(posedge usb_clk  or negedge rst)begin
         data_out_current <=32'hdf;
         delay_c <=32'd0;
         fpga_master_mode_after_delay <= fpga_master_mode_idle;
-        // wdata_fifo1 <= 32'haa;
+        // wdata <= 32'haa;
         stream_in_debug_count <=0;
     end
     else begin
@@ -877,8 +885,8 @@ always @(*) begin
 
 
     //fifo update
-    rinn_fifo1 = rinc_fifo1;
-    winn_fifo1 = winc_fifo1;
+    rinn = rinc;
+    winn = winc;
 
     // debug only
     stream_in_debug_count_next = stream_in_debug_count;
@@ -912,18 +920,18 @@ always @(*) begin
             next_fpga_master_mode = fpga_master_mode_stream_out;
             led_next = 8'd2;
             if(delay_c == 1)begin
-                winn_fifo1 = 1 ;// turn on ahead
+                winn = 1 ;// turn on ahead
             end
         end
         else begin
 
             if(end_stream_out_cnt)begin
                     next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
-                    winn_fifo1 = 0;
+                    winn = 0;
                     delay_n = 10;
             end
             else begin
-                winn_fifo1 = 1;
+                winn = 1;
                 led_next = 8'd3;
                 next_fpga_master_mode = fpga_master_mode_stream_out;
             end
@@ -959,18 +967,18 @@ always @(*) begin
                         next_fpga_master_mode = fpga_master_mode_delay;
                     end
                     else begin
-                        data_out_next = rdata_fifo1;
+                        data_out_next = rdata;
                     end
                     //data_out_next[15:8] = stream_in_debug_count;
                     //data_out_next [7:0] =stream_in_count [7:0]; // first one is skipped in writing for sure
-                    rinn_fifo1 = 0;
+                    rinn = 0;
                     delay_n = 10;
 
                 end
                 else begin
                     led_next = 8'd6;
-                    rinn_fifo1 = 1;
-                    data_out_next = rdata_fifo1;
+                    rinn = 1;
+                    data_out_next = rdata;
 
                     // if(rempty_fifo1)begin
                     //     data_out_next = 32'hcf;
