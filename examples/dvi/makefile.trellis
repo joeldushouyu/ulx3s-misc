@@ -42,7 +42,8 @@ VERILOG_FILES = \
   top/async_fifo/rtl/rptr_empty.v\
   top/async_fifo/rtl/sync_r2w.v\
   top/async_fifo/rtl/sync_w2r.v\
-  top/async_fifo/rtl/wptr_full.v
+  top/async_fifo/rtl/wptr_full.v\
+  top/async_fifo/rtl/async_fifo_combine.v\
 
 
 # *.vhd those files will be converted to *.v files with vhdl2vl (warning overwriting/deleting)

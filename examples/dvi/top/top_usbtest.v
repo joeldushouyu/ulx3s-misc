@@ -759,12 +759,11 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 
 //FIFO
   localparam DSIZE = 16;
-  localparam ASIZE = 13;
+  localparam ASIZE = 12;
   localparam AREMPTYSIZE = 1;//512-1;
   localparam AWFULLSIZE =  4096; // should not matter
   reg [DSIZE-1:0] rdata_fifo1;
-  wire wfull_fifo1;
-  wire rempty_fifo1;
+
   reg [DSIZE-1:0] wdata_fifo1;
 
   reg winc_fifo1,winn_fifo1;
@@ -777,9 +776,12 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
   assign wclk_fifo1 = usb_clk;
   assign rclk_fifo1 = usb_clk;
 
+  wire wfull_fifo1, rempty_fifo1;
   wire awfull_fifo1, arempty_fifo1;
+  wire awfull_fifo2, arempty_fifo2;
+  wire wfull_fifo2, rempty_fifo2;
   // Instantiate the FIFO
- async_fifo #( .DSIZE( DSIZE), .ASIZE(ASIZE), .AWFULLSIZE(AWFULLSIZE), .AREMPTYSIZE(AREMPTYSIZE)) dut (
+ async_fifo_combine #( .DSIZE( DSIZE), .ASIZE(ASIZE), .AWFULLSIZE(AWFULLSIZE), .AREMPTYSIZE(AREMPTYSIZE)) dut (
     .winc(winc_fifo1),
     .wclk(wclk_fifo1),
     .wrst_n(wrst_n_fifo1),
@@ -788,10 +790,14 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
     .rrst_n(rrst_n_fifo1),
     .wdata(wdata_fifo1),
     .rdata(rdata_fifo1),
-    .wfull(wfull_fifo1),
-    .rempty(rempty_fifo1),
-    .arempty(arempty_fifo1),
-    .awfull(awfull_fifo1)
+    .wfull_fifo1(wfull_fifo1),
+    .awfull_fifo1(awfull_fifo1),
+    .wfull_fifo2(wfull_fifo2),
+    .awfull_fifo2(awfull_fifo2),
+    .rempty_fifo1(rempty_fifo1),
+    .arempty_fifo1(arempty_fifo1),
+    .rempty_fifo2(rempty_fifo2),
+    .arempty_fifo2(arempty_fifo2)
   );
 
 
@@ -925,10 +931,7 @@ always @(*) begin
        
     end
     fpga_master_mode_delay_from_stream_out_to_stream_in: begin
-        if(!awfull_fifo1) begin
-            next_fpga_master_mode = fpga_master_mode_delay;
-        end
-        else begin
+
 
         if(delay_c == 0)begin
             next_fpga_master_mode = fpga_master_mode_stream_in;
@@ -937,7 +940,7 @@ always @(*) begin
             delay_n = delay_c -1;
         end
 
-        end
+
     end
     fpga_master_mode_delay: begin
         led_next = 8'b00001111;
@@ -969,9 +972,9 @@ always @(*) begin
                     rinn_fifo1 = 1;
                     data_out_next = rdata_fifo1;
 
-                    if(rempty_fifo1)begin
-                        data_out_next = 32'hcf;
-                    end
+                    // if(rempty_fifo1)begin
+                    //     data_out_next = 32'hcf;
+                    // end
                     //data_out_next[15:8] = stream_in_debug_count;
                     //data_out_next [7:0] =stream_in_count [7:0]; // first one is skipped in writing for sure
 
