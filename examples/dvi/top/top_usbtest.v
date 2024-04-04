@@ -795,6 +795,20 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
   );
 
 
+
+// fifo 1 updatea
+always @(posedge usb_clk  or negedge rst)begin
+    if(!rst) begin
+        winc_fifo1 <=0;
+        rinc_fifo1 <=0;
+    end
+    else begin
+        winc_fifo1 <= winn_fifo1;
+        rinc_fifo1 <= rinn_fifo1;
+    end
+end
+assign wdata_fifo1 = stream_out_data_from_fx3;
+
 reg fin_cur;
 reg fin_next;
 reg [7:0] led_cur, led_next;
@@ -814,10 +828,11 @@ reg[31:0] delay_c, delay_n;
 
 
 
+
+
+
 always @(posedge usb_clk  or negedge rst)begin
     if(!rst) begin
-        winc_fifo1 <=0;
-        rinc_fifo1 <=0;
         current_fpga_master_mode <= fpga_master_mode_idle;
         fin_cur <= 0;
         led_cur <=8'b00000000;
@@ -834,23 +849,15 @@ always @(posedge usb_clk  or negedge rst)begin
         led_cur <= led_next;
         current_buf_size <= next_buf_size;
         data_out_current <= data_out_next;
-
-
-        //wdata_fifo1 <= stream_out_count;
-        winc_fifo1 <= winn_fifo1;
-        rinc_fifo1 <= rinn_fifo1;
         delay_c <=delay_n;
         fpga_master_mode_after_delay <= fpga_master_mode_after_delay_next;
         
-
-
         // debug only
         stream_in_debug_count <=stream_in_debug_count_next;
     end
 
 end
 
-assign wdata_fifo1 = stream_out_data_from_fx3;
 
 always @(*) begin
     fin_next = fin_cur;
@@ -859,36 +866,26 @@ always @(*) begin
     next_buf_size = current_buf_size;
 
     next_fpga_master_mode = current_fpga_master_mode;
-    wdata_n = wdata_fifo1;
-    rinn_fifo1 = rinc_fifo1;
-    winn_fifo1 = winc_fifo1;
     delay_n = delay_c;
     fpga_master_mode_after_delay_next = fpga_master_mode_after_delay;
 
+
+    //fifo update
+    rinn_fifo1 = rinc_fifo1;
+    winn_fifo1 = winc_fifo1;
 
     // debug only
     stream_in_debug_count_next = stream_in_debug_count;
 	case(current_fpga_master_mode)
 	fpga_master_mode_idle:begin
         led_next = 8'd0;
-        // // led_next[4] = FLAGA;
-        // // led_next[5] = FLAGB;
         led_next[6] = FLAGC;
         led_next[7] = FLAGD;
 
-        // if(FLAGA == 1 && FLAGB==1)begin
-
-        //     next_fpga_master_mode = fpga_master_mode_stream_in;
-        //     stream_in_debug_count_next = stream_in_debug_count+1;
-        //     fpga_master_mode_after_delay_next = fpga_master_mode_idle;
-        // end
-        // else begin
-        //     next_fpga_master_mode = fpga_master_mode_idle;
-        // end
         if(delay_c != 0)begin
             delay_n = delay_c -1;
         end
-        else if(FLAGC == 1 && FLAGD == 1  && rempty_fifo1)begin
+        else if(FLAGC == 1 && FLAGD == 1  )begin
             next_fpga_master_mode = fpga_master_mode_stream_out;
             stream_in_debug_count_next = stream_in_debug_count+1;
             fpga_master_mode_after_delay_next = fpga_master_mode_idle;
@@ -915,15 +912,9 @@ always @(*) begin
         else begin
 
             if(end_stream_out_cnt)begin
-                
-                // if(!awfull_fifo1) begin
-                //     next_fpga_master_mode = fpga_master_mode_delay;
-                // end
-                // else begin
                     next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
                     winn_fifo1 = 0;
                     delay_n = 10;
-                // end
             end
             else begin
                 winn_fifo1 = 1;
@@ -934,9 +925,6 @@ always @(*) begin
        
     end
     fpga_master_mode_delay_from_stream_out_to_stream_in: begin
-        //winn_fifo1 = 0;
-        // if(delay_c == 0)begin
-        // should be full    now
         if(!awfull_fifo1) begin
             next_fpga_master_mode = fpga_master_mode_delay;
         end
@@ -950,31 +938,14 @@ always @(*) begin
         end
 
         end
-        // else begin
-        //     delay_n = delay_c -1;
-        //     next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
-        // end 
     end
     fpga_master_mode_delay: begin
         led_next = 8'b00001111;
         next_fpga_master_mode = fpga_master_mode_delay;
-        // if(delay_c == 0)begin
-        //     next_fpga_master_mode = fpga_master_mode_after_delay;
-        // end
-        // else begin
-        //     delay_n = delay_c-1;
-        //     next_fpga_master_mode = fpga_master_mode_delay;
-        // end
+
     end
 	fpga_master_mode_stream_in:begin
             led_next = 8'd5;
-     
-            // if(fpga_master_mode_after_delay == fpga_master_mode_idle)begin
-            //     delay_n = 0;
-            //     fpga_master_mode_after_delay_next = fpga_master_mode_stream_in;
-            //     next_fpga_master_mode = fpga_master_mode_delay;
-            // end
-            // else begin
             if(writing )begin
                 if(end_stream_in_cnt)begin
                     led_next = 8'd8;
