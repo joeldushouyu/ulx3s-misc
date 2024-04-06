@@ -214,7 +214,7 @@ module top_usbtest #(parameter x = 640,     // pixels
         county<=0;
         enableVideo_c <=0;
         frame_delay_counter <=0;
-        //enableVideo_n <=0;
+        enableVGAClock <= 0;
       end
       else if(fetch_next) begin
      
@@ -240,9 +240,9 @@ module top_usbtest #(parameter x = 640,     // pixels
 
             enableVideo_c <= enableVideo_n;
         
-            r_i <= r_i_n;
-            g_i <= g_i_n;
-            b_i <= b_i_n;
+            // r_i <= r_i_n;
+            // g_i <= g_i_n;
+            // b_i <= b_i_n;
 
 
         end    
@@ -254,21 +254,33 @@ module top_usbtest #(parameter x = 640,     // pixels
 
     //TODO: rinc with 
     // fifo open only if data is not empyt ??and already enable the clock pixel
+
+    reg rempty_fifo2_delay,rempty_fifo2_delay_2 ;
+    always @(posedge clk_pixel)begin
+        rempty_fifo2_delay <= rempty_fifo2;
+        rempty_fifo2_delay_2 <= rempty_fifo2_delay;
+    end
+
     assign rinc = !rempty_fifo2 & fetch_next;
-    assign enableVGAClock = !rempty_fifo2;
+    assign enableVGAClock = !rempty_fifo2_delay_2;
+
+    assign r_i               = rdata[7:0];
+    assign b_i               = rdata[7:0];
+    assign g_i               = rdata[7:0];
+
     always @(*) begin
 
-        if(enableVGAClock)begin
-            r_i_n               = rdata[7:0];
-            b_i_n               = rdata[7:0];
-            g_i_n               = rdata[7:0];
-        end
-        else begin
+        // if(enableVGAClock)begin
+        //     r_i_n               = rdata[7:0];
+        //     b_i_n               = rdata[7:0];
+        //     g_i_n               = rdata[7:0];
+        // end
+        // else begin
 
-            r_i_n               = 255;
-            b_i_n               = 0;
-            g_i_n               =0 ;
-        end
+        //     r_i_n               = 255;
+        //     b_i_n               = 0;
+        //     g_i_n               =0 ;
+        // end
         // last row of the 1(discarded) frame
         // last 3 pixel of time already used in transition
         //TODO:
@@ -872,7 +884,7 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 //FIFO
   localparam DSIZE = 16;
   localparam ASIZE_FIFO1 = 12;
-  localparam ASIZE_FIFO2 = 12;
+  localparam ASIZE_FIFO2 = 13;
   localparam AREMPTYSIZE = 1;//512-1;
   localparam AWFULLSIZE =  4096; // should not matter
   reg [DSIZE-1:0] rdata;
@@ -933,7 +945,7 @@ always @(posedge usb_clk  or negedge rst)begin
         // rinc <= rinn;
     end
 end
-assign wdata = usb_clk_row_count < 50? 32'h0: 32'hff;
+assign wdata =  usb_clk_row_count < 50? 32'h0: 32'hff;
 
 reg fin_cur;
 reg fin_next;
@@ -1029,7 +1041,8 @@ always @(*) begin
 
 
         //if(FLAGC == 1 && FLAGD == 1 && rempty_fifo1 == 1  )begin
-        if(rempty_fifo1 == 1  )begin
+        if(rempty_fifo1 == 1  && FLAGC == 1 && FLAGD == 1 )begin
+        //if(rempty_fifo1 == 1 )begin
             next_fpga_master_mode = fpga_master_mode_stream_out;
             stream_in_debug_count_next = stream_in_debug_count+1;
             fpga_master_mode_after_delay_next = fpga_master_mode_idle;
