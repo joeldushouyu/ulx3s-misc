@@ -148,7 +148,7 @@ module top_usbtest #(parameter x = 640,     // pixels
     ) vga_instance (
     .rst(rst),
     .clk_pixel(clk_pixel),
-    .clk_pixel_ena(1'b1),
+    .clk_pixel_ena(enableVGAClock),
     .test_picture(1'b1),  // enable test picture generation
     .fetch_next(fetch_next),
     .vga_hsync(vga_hsync),
@@ -176,14 +176,38 @@ module top_usbtest #(parameter x = 640,     // pixels
   
     reg signal;
     reg enableVideo_c, enableVideo_n;
-
+    reg enableVGAClock;
 
 
 
     reg [31:0] counter;
     reg[31:0] frame_delay_counter;
+
+
+    // The fifo things
+    assign rrst_n = rst;
+    assign rclk = clk_pixel;
+
+
+    // always @(posedge     clk_pixel or negedge rst)begin
+
+    //     if(!rst)begin
+    //         rinc <=0;
+    //     end
+    //     else begin
+    //         rinc <= rinn;
+    //     end
+    // end
+
+    //sync issue of the fifo
+    reg fifo2_wfull_temp, fifo2_wfull_pixel_clock;
+    always @(posedge clk_pixel)begin
+        {fifo2_wfull_pixel_clock, fifo2_wfull_temp } <= {fifo2_wfull_temp, wfull_fifo2};
+    end 
+
+
     // assign led = counter[19:12];
-    always@( posedge clock_pixel or negedge rst ) begin
+    always@( posedge clk_pixel or negedge rst ) begin
       
       if(!rst)begin
         countx<=0;
@@ -192,9 +216,9 @@ module top_usbtest #(parameter x = 640,     // pixels
         frame_delay_counter <=0;
         //enableVideo_n <=0;
       end
-      else begin
+      else if(fetch_next) begin
      
-        if(countx == x )begin
+        if(countx == x-1 )begin
 
             countx <= 0;
             if(county == y-1)begin
@@ -222,76 +246,164 @@ module top_usbtest #(parameter x = 640,     // pixels
 
 
         end    
+        else begin
+            // to nothing yet;
+        end
     end
     
-    // main idea:
-    // 1. sacrifice first frame time
-    // 2. 3 clock before start of 2nd screen enable the video frame
+
+    //TODO: rinc with 
+    // fifo open only if data is not empyt ??and already enable the clock pixel
+    assign rinc = !rempty_fifo2 & fetch_next;
+    assign enableVGAClock = !rempty_fifo2;
     always @(*) begin
+
+        if(enableVGAClock)begin
+            r_i_n               = rdata[7:0];
+            b_i_n               = rdata[7:0];
+            g_i_n               = rdata[7:0];
+        end
+        else begin
+
+            r_i_n               = 255;
+            b_i_n               = 0;
+            g_i_n               =0 ;
+        end
         // last row of the 1(discarded) frame
         // last 3 pixel of time already used in transition
         //TODO:
-        if(frame_delay_counter == 32'd60 &&  enableVideo_c == 0&& county == y-1  && countx == x)begin
-            //TODO:
-            enableVideo_n =1;
-        end
-        else begin
-            enableVideo_n = enableVideo_c;// don't touch
-        end  
-        if(enableVideo_c)begin      
-            // if(county > y/2)begin
-            //         r_i_n               = 255;
-            //         b_i_n               = 255;
-            //         g_i_n               =255 ;
-            // end
-            // else begin
-            //         r_i_n               = 0;
-            //         b_i_n               = 0;
-            //         g_i_n               =0 ;
-            // end
-            if(county == 0 && countx == 200)begin
-                    r_i_n               = 0;
-                    b_i_n               = 0;
-                    g_i_n               =0 ;
-            end      
-            else if(county == 0)begin
-                    r_i_n               = 255;
-                    b_i_n               = 255;
-                    g_i_n               =255 ;
-            end
-            else if(county == y-1)begin
-                    r_i_n               = 255;
-                    b_i_n               = 255;
-                    g_i_n               =255 ;
-            end
-            else if(countx == (x/2))begin
-                    r_i_n               = 255;
-                    b_i_n               = 0;
-                    g_i_n               = 0;
-            end
-            else if(countx == 0)begin
-                    r_i_n               = 255;
-                    b_i_n               =255;
-                    g_i_n               = 255;
-            end
-            else if(countx == x-1)begin
-                    r_i_n               = 255;
-                    b_i_n               = 255;
-                    g_i_n               =255 ;
-            end
-            else begin
 
-                    r_i_n               = 0;
-                    b_i_n               = 255;
-                    g_i_n               = 0;
-            end
-        end 
-        else begin
-                r_i_n               = 0;
-                b_i_n               = 0;
-                g_i_n               = 0;
-        end
+
+        // TODO: 
+        // if(county > y/2)begin
+        //         r_i_n               = 255;
+        //         b_i_n               = 255;
+        //         g_i_n               =255 ;
+        // end
+        // else begin
+        //         r_i_n               = 0;
+        //         b_i_n               = 0;
+        //         g_i_n               =0 ;
+        // end
+
+        // if(county == 0 && countx == 200)begin
+        //         r_i_n               = 0;
+        //         b_i_n               = 0;
+        //         g_i_n               =0 ;
+        // end      
+        // else if(county == 0)begin
+        //         r_i_n               = 255;
+        //         b_i_n               = 255;
+        //         g_i_n               =255 ;
+        // end
+        // else if(county == y-1)begin
+        //         r_i_n               = 255;
+        //         b_i_n               = 255;
+        //         g_i_n               =255 ;
+        // end
+        // else if(countx == (x/2))begin
+        //         r_i_n               = 255;
+        //         b_i_n               = 0;
+        //         g_i_n               = 0;
+        // end
+        // else if(countx == 0)begin
+        //         r_i_n               = 255;
+        //         b_i_n               =255;
+        //         g_i_n               = 255;
+        // end
+        // else if(countx == x-1)begin
+        //         r_i_n               = 255;
+        //         b_i_n               = 255;
+        //         g_i_n               =255 ;
+        // end
+        // else begin
+
+        //         r_i_n               = 0;
+        //         b_i_n               = 255;
+        //         g_i_n               = 0;
+        // end
+
+        // rinn = rinc;
+        // enableVideo_n = enableVideo_c;
+
+        // // whne the second fifo have something
+        // if(  fifo2_wfull_pixel_clock == 1  && enableVideo_c == 0&& county == y  && countx ==x)begin
+        //     //TODO:
+        //     enableVideo_n =1;
+        //     rinn = 1;
+        // end
+
+        // if(enableVideo_c && !rempty_fifo2 )begin   
+        //     r_i_n =    rdata[7:0];
+        //     b_i_n = rdata[7:0];
+        //     g_i_n = rdata[7:0];
+        //     // if(county > y/2)begin
+        //     //         r_i_n               = 255;
+        //     //         b_i_n               = 255;
+        //     //         g_i_n               =255 ;
+        //     // end
+        //     // else begin
+        //     //         r_i_n               = 0;
+        //     //         b_i_n               = 0;
+        //     //         g_i_n               =0 ;
+        //     // end
+        //     // if(county == 0 && countx == 200)begin
+        //     //         r_i_n               = 0;
+        //     //         b_i_n               = 0;
+        //     //         g_i_n               =0 ;
+        //     // end      
+        //     // else if(county == 0)begin
+        //     //         r_i_n               = 255;
+        //     //         b_i_n               = 255;
+        //     //         g_i_n               =255 ;
+        //     // end
+        //     // else if(county == y-1)begin
+        //     //         r_i_n               = 255;
+        //     //         b_i_n               = 255;
+        //     //         g_i_n               =255 ;
+        //     // end
+        //     // else if(countx == (x/2))begin
+        //     //         r_i_n               = 255;
+        //     //         b_i_n               = 0;
+        //     //         g_i_n               = 0;
+        //     // end
+        //     // else if(countx == 0)begin
+        //     //         r_i_n               = 255;
+        //     //         b_i_n               =255;
+        //     //         g_i_n               = 255;
+        //     // end
+        //     // else if(countx == x-1)begin
+        //     //         r_i_n               = 255;
+        //     //         b_i_n               = 255;
+        //     //         g_i_n               =255 ;
+        //     // end
+        //     // else begin
+
+        //     //         r_i_n               = 0;
+        //     //         b_i_n               = 255;
+        //     //         g_i_n               = 0;
+        //     // end
+        // end 
+        // else if(enableVideo_c)begin
+        //         r_i_n               = 255;
+        //         b_i_n               = 0;
+        //         g_i_n               = 0;
+        // end
+        // else begin
+        //         r_i_n               = 0;
+        //         b_i_n               = 0;
+        //         g_i_n               = 255;
+        // end
+
+        // if(countx*county  == 32'd0 && rdata[7:0] != 8'h0)begin
+        //     enableVideo_n = 0;
+        // end
+        // else if(countx* county == 32'd151552 && rdata[7:0] != 8'hff)begin
+        //     enableVideo_n = 1;   
+        // end
         
+
+
     end
 
     
@@ -760,7 +872,7 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 //FIFO
   localparam DSIZE = 16;
   localparam ASIZE_FIFO1 = 12;
-  localparam ASIZE_FIFO2 = 13;
+  localparam ASIZE_FIFO2 = 12;
   localparam AREMPTYSIZE = 1;//512-1;
   localparam AWFULLSIZE =  4096; // should not matter
   reg [DSIZE-1:0] rdata;
@@ -773,9 +885,9 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
   wire rclk, rrst_n;
 
   assign wrst_n = rst;
-  assign rrst_n = rst;
+//   assign rrst_n = rst;
   assign wclk = usb_clk;
-  assign rclk = usb_clk;
+//   assign rclk = usb_clk;
 
   wire wfull_fifo1, rempty_fifo1;
   wire awfull_fifo1, arempty_fifo1;
@@ -786,9 +898,9 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
  .ASIZE_FIFO1(ASIZE_FIFO1), 
  .ASIZE_FIFO2(ASIZE_FIFO2),
  .AWFULLSIZE_FIFO1(AWFULLSIZE), 
- .AREMPTYSIZE_FIFO1(AREMPTYSIZE),
- .AWFULLSIZE_FIFO2(AWFULLSIZE), 
- .AREMPTYSIZE_FIFO2(AREMPTYSIZE)
+ .AREMPTYSIZE_FIFO1(1),
+ .AWFULLSIZE_FIFO2(1), 
+ .AREMPTYSIZE_FIFO2(1)
  ) dut (
     .winc(winc),
     .wclk(wclk),
@@ -814,14 +926,14 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 always @(posedge usb_clk  or negedge rst)begin
     if(!rst) begin
         winc <=0;
-        rinc <=0;
+        // rinc <=0;
     end
     else begin
         winc <= winn;
-        rinc <= rinn;
+        // rinc <= rinn;
     end
 end
-assign wdata = stream_out_data_from_fx3;
+assign wdata = usb_clk_row_count < 50? 32'h0: 32'hff;
 
 reg fin_cur;
 reg fin_next;
@@ -842,6 +954,7 @@ reg[31:0] delay_c, delay_n;
 
 
 
+reg [31:0] usb_clk_row_count, usb_clk_row_count_next;
 
 
 
@@ -856,6 +969,7 @@ always @(posedge usb_clk  or negedge rst)begin
         fpga_master_mode_after_delay <= fpga_master_mode_idle;
         // wdata <= 32'haa;
         stream_in_debug_count <=0;
+        usb_clk_row_count <= 0;
     end
     else begin
 		current_fpga_master_mode <= next_fpga_master_mode;
@@ -868,6 +982,8 @@ always @(posedge usb_clk  or negedge rst)begin
         
         // debug only
         stream_in_debug_count <=stream_in_debug_count_next;
+        usb_clk_row_count <= usb_clk_row_count_next;
+
     end
 
 end
@@ -885,21 +1001,35 @@ always @(*) begin
 
 
     //fifo update
-    rinn = rinc;
+    // rinn = rinc;
     winn = winc;
 
     // debug only
     stream_in_debug_count_next = stream_in_debug_count;
+    usb_clk_row_count_next = usb_clk_row_count;
 	case(current_fpga_master_mode)
 	fpga_master_mode_idle:begin
         led_next = 8'd0;
         led_next[6] = FLAGC;
         led_next[7] = FLAGD;
 
-        if(delay_c != 0)begin
-            delay_n = delay_c -1;
-        end
-        else if(FLAGC == 1 && FLAGD == 1  )begin
+        // if(delay_c != 0)begin
+        //     delay_n = delay_c -1;
+        // end
+        // else if(FLAGC == 1 && FLAGD == 1  )begin
+        //     next_fpga_master_mode = fpga_master_mode_stream_out;
+        //     stream_in_debug_count_next = stream_in_debug_count+1;
+        //     fpga_master_mode_after_delay_next = fpga_master_mode_idle;
+        //     delay_n = 2+4; //need be tuned3 ? set to 0 at testing with stream_out_count
+        // end
+        // else begin
+        //     next_fpga_master_mode = fpga_master_mode_idle;
+        // end
+
+
+
+        //if(FLAGC == 1 && FLAGD == 1 && rempty_fifo1 == 1  )begin
+        if(rempty_fifo1 == 1  )begin
             next_fpga_master_mode = fpga_master_mode_stream_out;
             stream_in_debug_count_next = stream_in_debug_count+1;
             fpga_master_mode_after_delay_next = fpga_master_mode_idle;
@@ -929,11 +1059,22 @@ always @(*) begin
                     next_fpga_master_mode = fpga_master_mode_delay_from_stream_out_to_stream_in;
                     winn = 0;
                     delay_n = 10;
+    
+                    if(usb_clk_row_count == 74)begin
+                        usb_clk_row_count_next = 0;
+                    end
+                    else begin
+                        usb_clk_row_count_next =usb_clk_row_count +1;
+                    end
             end
             else begin
                 winn = 1;
                 led_next = 8'd3;
                 next_fpga_master_mode = fpga_master_mode_stream_out;
+
+                if(wfull_fifo1 == 1)begin
+                    next_fpga_master_mode = fpga_master_mode_delay;
+                end
             end
         end
        
@@ -942,7 +1083,7 @@ always @(*) begin
 
 
         if(delay_c == 0)begin
-            next_fpga_master_mode = fpga_master_mode_stream_in;
+            next_fpga_master_mode = fpga_master_mode_idle;
         end
         else begin
             delay_n = delay_c -1;
@@ -955,50 +1096,6 @@ always @(*) begin
         next_fpga_master_mode = fpga_master_mode_delay;
 
     end
-	fpga_master_mode_stream_in:begin
-            led_next = 8'd5;
-            if(writing )begin
-                if(end_stream_in_cnt)begin
-                    led_next = 8'd8;
-                    next_fpga_master_mode = fpga_master_mode_idle;
-                    if(!rempty_fifo1)begin
-                        // debug, means did not finish reading
-                        data_out_next = 32'hcc;
-                        next_fpga_master_mode = fpga_master_mode_delay;
-                    end
-                    else begin
-                        data_out_next = rdata;
-                    end
-                    //data_out_next[15:8] = stream_in_debug_count;
-                    //data_out_next [7:0] =stream_in_count [7:0]; // first one is skipped in writing for sure
-                    rinn = 0;
-                    delay_n = 10;
-
-                end
-                else begin
-                    led_next = 8'd6;
-                    rinn = 1;
-                    data_out_next = rdata;
-
-                    // if(rempty_fifo1)begin
-                    //     data_out_next = 32'hcf;
-                    // end
-                    //data_out_next[15:8] = stream_in_debug_count;
-                    //data_out_next [7:0] =stream_in_count [7:0]; // first one is skipped in writing for sure
-
-
-                    next_fpga_master_mode = fpga_master_mode_stream_in;
-                end
-            end
-            else begin
-                data_out_next = 32'hcc;
-                led_next = 8'd7;
-                // idle for go into read mode
-                next_fpga_master_mode = fpga_master_mode_stream_in;
-            end
-            // end
-
-	end
 	default:begin
 		next_fpga_master_mode = fpga_master_mode_idle;
 	end	
@@ -1031,11 +1128,6 @@ always @(posedge usb_clk or negedge rst)begin
         stream_in_count <=0;
         stream_out_count <=0;
     end
-    // else begin
-    //     stream_in_count <= stream_in_count;
-    //     stream_out_count <= stream_out_count;
-
-    // end
 
 
 end
