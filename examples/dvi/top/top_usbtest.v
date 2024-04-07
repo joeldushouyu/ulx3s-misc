@@ -264,9 +264,12 @@ module top_usbtest #(parameter x = 640,     // pixels
     assign rinc = !rempty_fifo2 & fetch_next;
     assign enableVGAClock = !rempty_fifo2_delay_2;
 
-    assign r_i               = rdata[7:0];
-    assign b_i               = rdata[7:0];
-    assign g_i               = rdata[7:0];
+
+    // rgb data
+    // 4 empty bit 4 bit red, 4 bit blue, 4 bit green
+    assign r_i               =  rdata[11:8]<<3;
+    assign g_i               =  rdata[7:4]<<3;
+    assign b_i               =  rdata[3:0]<<3;
 
     always @(*) begin
 
@@ -884,7 +887,7 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 //FIFO
   localparam DSIZE = 16;
   localparam ASIZE_FIFO1 = 12;
-  localparam ASIZE_FIFO2 = 13;
+  localparam ASIZE_FIFO2 = 12;
   localparam AREMPTYSIZE = 1;//512-1;
   localparam AWFULLSIZE =  4096; // should not matter
   reg [DSIZE-1:0] rdata;
@@ -945,7 +948,7 @@ always @(posedge usb_clk  or negedge rst)begin
         // rinc <= rinn;
     end
 end
-assign wdata =  usb_clk_row_count < 50? 32'h0: 32'hff;
+assign wdata =  stream_out_data_from_fx3;//  usb_clk_row_count < 50? 32'h0: 32'hff;
 
 reg fin_cur;
 reg fin_next;
