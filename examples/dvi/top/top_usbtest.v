@@ -267,9 +267,9 @@ module top_usbtest #(parameter x = 640,     // pixels
 
     // rgb data
     // 4 empty bit 4 bit red, 4 bit blue, 4 bit green
-    assign r_i               =  rdata[11:8]<<3;
-    assign g_i               =  rdata[7:4]<<3;
-    assign b_i               =  rdata[3:0]<<3;
+    assign r_i               =  rdata[11:8]<<4;
+    assign g_i               =  rdata[7:4]<<4;
+    assign b_i               =  rdata[3:0]<<4;
 
     always @(*) begin
 
