@@ -1,9 +1,9 @@
-module top_usbtest #(parameter x = 640,     // pixels
-                     parameter y = 480,     // pixels
-                     parameter f = 60,       // Hz 60, 50, 30
+module top_usbtest #(parameter x = 1920,     // pixels
+                     parameter y = 1080,     // pixels
+                     parameter f = 25,       // Hz 60, 50, 30
                      parameter xadjustf = 0, // or to fine-tune f
                      parameter yadjustf = 0, // or to fine-tune f
-                     parameter c_ddr = 0    // 0:SDR 1:DDR
+                     parameter c_ddr = 1    // 0:SDR 1:DDR
                      )
                     (input clk_25mhz,
                      input [6:0] btn,
@@ -104,13 +104,13 @@ module top_usbtest #(parameter x = 640,     // pixels
     wire clk_pixel = clocks[1];
     wire sram_clock = clocks[3]; //  is 166000000-666666 = 165333334 = 165MHZ
     wire usb_clk ;
-    assign usb_clk = clocks[2];
+    assign usb_clk = clk_pixel;
     ecp5pll #(
     .in_hz(25000000),
     .out0_hz(pixel_f*5*(c_ddr?1:2)),
     .out1_hz(pixel_f),
-    .out2_hz(35000000),
-    .out2_tol_hz(2222222),
+    .out2_hz(50000000),
+    .out2_tol_hz(4000000),
     // .out3_hz(166000000),
     // .out3_tol_hz(666666),
     ) ecp5pll_inst (
@@ -887,7 +887,7 @@ assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_
 //FIFO
   localparam DSIZE = 16;
   localparam ASIZE_FIFO1 = 12;
-  localparam ASIZE_FIFO2 = 12;
+  localparam ASIZE_FIFO2 = 13;
   localparam AREMPTYSIZE = 1;//512-1;
   localparam AWFULLSIZE =  4096; // should not matter
   reg [DSIZE-1:0] rdata;
