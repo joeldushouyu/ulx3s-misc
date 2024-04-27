@@ -884,10 +884,11 @@ assign stream_in_mode_selected  = (current_fpga_master_mode == fpga_master_mode_
 assign stream_out_mode_selected = (current_fpga_master_mode == fpga_master_mode_stream_out );
 
 
+
 //FIFO
   localparam DSIZE = 16;
   localparam ASIZE_FIFO1 = 12;
-  localparam ASIZE_FIFO2 = 13;
+  localparam ASIZE_FIFO2 = 6;
   localparam AREMPTYSIZE = 1;//512-1;
   localparam AWFULLSIZE =  4096; // should not matter
   reg [DSIZE-1:0] rdata;
